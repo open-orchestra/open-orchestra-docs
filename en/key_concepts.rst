@@ -1,103 +1,111 @@
-Concepts-clés
-=============
+Key concepts
+============
 
-Cette documentation vous expliquera les concepts les plus importants de OpenOrchestra.
+This document will explain the most important concepts to start with Open Orchestra.
 
-Les noeuds
-----------
+Nodes
+-----
 
-Les noeuds correspondent majoritairement aux pages que les utilisateurs voient sur le site, ce sont des conteneurs pour les zones et les blocs.
-Dans Open Orchestra il y a deux types de noeuds :
-* Les noeuds qui sont les pages du site.
-* Le noeud transverse qui contient les blocs transverses (bloc commun à plusieurs pages d'un site par exemple le bloc menu).
+Nodes are mainly pages that the visitors can see on the website, they are containers for zones and blocks.
+There are two types of nodes in Open Orchestra:
+* Nodes that represent pages of the website
+* The transverse node (which is unique) containing the transverse blocks (block that are common to multiple pages of a website, for instance the menu block).
 
-Les noeuds sont multilangues, multi-version et ont un workflow de validation.
+The nodes are multilingual, versionned and have a validation workflow.
 
-Voir aussi la documentation `Les paramètres d'un noeud`_.
+See also the documentation page about `node parameters`_.
 
-Les types de contenus
----------------------
-
-Les types de contenus permettent de créer de nouvelles sortes de contenu qu'il sera possible de contribuer. La création d'un type de contenu permet de définir les champs de ces futures contenus.
-
-Par exemple un contenus news a des champs différents d'un contenus article, ce qui nécessite donc deux types de contenu distincts. L'un pour les contenus news et l'autre pour les contenus article.
-
-Voir aussi `Présentation des types de contenus`_.
-
-Les contenus
-------------
-
-Dans Open orchestra les contenus permettent d'afficher des informations (articles, news, etc...).
-Les contenus sont définis par un type de contenu.
-Comme pour les noeuds les contenus sont multilangues, multi-version et ont un workflow de validation.
-
-Voir aussi `Présentation des contenus`_.
-
-Les templates
+Content types
 -------------
 
-Les templates permettent de préconfigurer des pages en y plaçant des zones. Open Orchestra permet d'utiliser un templates lors de la création d'un noeud.
+Content types are a way to create new kinds of content that will be available to contribution.
+Creating a content type allows to define the fields available in the future contents.
 
-Voir aussi `configuration d'un template`_.
+For instance, a 'news' content will have differents fields from an 'article' content,
+so there would be two distinct content types for these objects : one for the news contents and another for the article contents.
 
-Les zones
+See also `Presentation of the Content Types`_.
+
+Contents
+--------
+
+With Open Orchestra, contents are used to display contributed information (articles, news, etc.).
+The contents are defined by a content type.
+Like nodes, contents are multilingual, versionned and have a validation workflow.
+
+See also `Presentation of contents`_.
+
+Templates
 ---------
 
-Les zones permettent d'organiser l'architecture de la page. Les zones sont dans des noeuds et contiennent d'autres zones ou des blocs.
+Templates are used to preconfigure pages by setting zones that are commonly used accross pages.
+Open Orchestra let the user start with a template when creating a node.
 
-Voir aussi `configuration d'une zone`_.
+See also `configuring a template`_.
 
-Les blocs
+Zones
 ---------
 
-Le bloc est la brique de base représentant tout élément visible sur une page.
-L'agrégation des blocs dans un noeud permet de construire des pages variées.
+Zones are the way to organize the architecture of the page.
+They are embedded in the nodes and can contain other zones or blocks.
 
-Voir aussi la `liste des blocs`_ disponibles.
+See also `configuring a zone`_.
 
-Les blocs transverses
----------------------
-
-Les blocs transverses sont définis dans le noeud transverse, ils peuvent être utilisés par plusieurs noeuds d'un site.
-Tous les blocs peuvent être transverses, il suffit de les ajouter dans le noeud transverse.
-Les blocs transverses ne sont configurables que dans le noeud transverse.
-
-Les thèmes
-----------
-
-Un thème représente l'identité visuelle d'un site, notamment les thèmes regroupent les fichiers css et javascript qui ont une cohérence entre eux afin de pouvoir habiller des sites d'une certaine manière.
-
-Voir aussi comment ajouter un `thème`_.
-
-Les sites
+Blocks
 ---------
+
+A block is the base brick representing any visible element on a page.
+Aggregating blocks found in the nodes will lead to the construction of the pages.
+
+See also the `list of blocks`_ available.
+
+Transverses blocks
+------------------
+
+Transverses blocks are defined inside the transverse node, they can be shared by several nodes of a website.
+All blocks can be transverse, as long as they are added to the transverse node.
+Transverse blocks can only be conigured in the transverse node.
+
+Themes
+------
+
+A theme represents the visual identity of a website, they  CSS and JavaScript files
+that work together in order to render the websites in a certain way.
+
+See how to add a `theme`_.
+
+Websites
+--------
 
 Open Orchestra est multisite et permet de créer plusieurs sites depuis le même Back Office.
 
-Voir aussi conguration d'un `site`_.
+See also how to configure a `website`_.
 
-Les appareils
--------------
+Devices
+-------
 
-Open Orchestra est multi-device et permet d'afficher, sur le Front Office, un template différent en fonction de l'appareil utilisé.
+Open Orchestra is multi-device and is able to display, on the Front Office,
+different templates depending on the device of the visitor.
 
-Voir aussi `multi-devices`_.
+See also `multi-devices`_.
 
-Les mots-clés
--------------
+Keywords
+--------
 
-Dans Open Orchestra vous pouvez créer des mots-clés dans la partie administration du Back Office, que vous pourrez utiliser ensuite pour tagguer des contenus ou des médias.
+Keywords can be created in the Back Office, and then be used
+to tag contents and medias.
 
-Les utilisateurs
-----------------
+Users
+-----
 
-Les utilisateurs sont ceux pouvant se connecter au Back Office de Open Orchestra et y faire des contributions. Il y a aussi les utilisateurs Front Office qui peuvent se connecter sur les parties privées d'un site.
-Open Orchestra permet de donner des groupes aux utilisateurs.
+Users represent people that can connect to the Open Orchestra Back Office and make contributions.
+They also are the Front Office users who can access to the private pages of a website.
+It's also possible to assign groups to users.
 
-Voir aussi configuration d'un `utilisateur`_.
+See also how to configure a `user`_.
 
-Les rôles
----------
+Roles
+-----
 
 Les rôles permettent de définir des droits sur le Back Office.
 
