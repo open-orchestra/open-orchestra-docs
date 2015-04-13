@@ -49,24 +49,24 @@ This is done inside the varnish configuration file.
         }
     }
 
-The power of tags
------------------
+Selective flushing with tags
+----------------------------
 
 **This feature is not available with the Symfony HttpCache component.**
 
 Principle
 ~~~~~~~~~
 
-The main interest when using ESI tags is to have some parts of a cached page
-that can be flushed more often that the rest. While it's interesting to use this
+The main interest of ESI tags is to give the possibility to flush some parts
+of a cached page at different times. While it's interesting to use this
 ability by setting a time-to-live (TTL) to define the lifetime of a block,
 Open Orchestra uses Varnish's ability to flush ESI blocks on the fly on certain conditions.
 
 Whenever an ESI block is cached in Varnish, the HTTP headers of the response will
 be saved along with the content. This mecanism allows to set an X-Cache-Tags header
 with its value being a set of tags that indicate in which conditions it would be flushed.
-Therefore, when an actions lead to one of the tags being called for flush,
-a ban request is sent to varnish so it will flush all cached data linked to this tag.
+Therefore, when an action leads to one of the tags being marked as outdated,
+a request is sent to varnish so it will ban all cached data linked to this tag.
 
 Behavior for nodes and blocks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
