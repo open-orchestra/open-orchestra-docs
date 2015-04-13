@@ -133,7 +133,7 @@ Les bundles d'Open Orchestra :
  * open-orchestra-media-bundle contient tous ce qui est rattaché aux médias.
  * open-orchestra-user-bundle contient tous ce qui est rattaché aux utilisateurs.
 
- Pour utiliser une autre base de donnée ajoutez votre propre bundle implementant toutes les interfaces de open-orchestra-model-interface.
+ Pour utiliser une autre base de donnée ajoutez votre propre bundle implementant les interfaces de open-orchestra-model-interface.
 
 .. _rôle:
 .. _site:
