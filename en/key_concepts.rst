@@ -114,7 +114,7 @@ Voir aussi configuration d'un `groupe`_.
 Les bundles
 -----------
 
-Open Orchestra suis la modularité de Symfony et le code est donc organisé en bundles séparés.
+Open Orchestra suit la modularité de Symfony et le code est donc organisé en bundles séparés.
 
 Les bundles d'Open Orchestra :
 
