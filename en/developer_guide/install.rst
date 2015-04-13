@@ -83,7 +83,12 @@ as a prerequisite, update your python modules if required with those two
     $ aptitude install python-yaml
     $ aptitude install python-jinja2
 
-then go into openorchestra directory
+If running under Mac OS X, you would install them through `pip`
+
+    easy_install pip
+    pip install pyyaml jinja2
+
+Then go into openorchestra directory
 
 .. code-block:: bash
 
