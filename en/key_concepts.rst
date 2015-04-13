@@ -85,7 +85,7 @@ Voir aussi conguration d'un `site`_.
 Les appareils
 -------------
 
-Open Orchestra est multi-device et permet d'afficher, sur le Front Office, un template différent en fonction du device utilisé.
+Open Orchestra est multi-device et permet d'afficher, sur le Front Office, un template différent en fonction de l'appareil utilisé.
 
 Voir aussi `multi-devices`_.
 
