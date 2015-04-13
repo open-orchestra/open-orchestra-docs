@@ -11,7 +11,7 @@ Categories of events
 Nodes
 ~~~~~
 
-These events are defined in the class ``OpenOrchestra\ModelInterface\NodeEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\NodeEvent``
+These events are defined in the class ``OpenOrchestra\ModelInterface\NodeEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\NodeEvent``.
 
 * NodeEvent
     * Node creation : NODE_CREATION
@@ -29,12 +29,12 @@ These events are defined in the class ``OpenOrchestra\ModelInterface\NodeEvents`
 * NodeEvent : Block
     * Block update : NODE_UPDATE_BLOCK
     * Block position update : NODE_UPDATE_BLOCK_POSITION
-    * Bloc removal : NODE_DELETE_BLOCK
+    * Block removal : NODE_DELETE_BLOCK
 
 Template
 ~~~~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\TemplateEvents` and inherit ``OpenOrchestra\ModelInterface\Event\TemplateEvent``.
+These events are defined in the class ``OpenOrchestra\ModelInterface\TemplateEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\TemplateEvent``.
 
 * TemplateEvent
     * Template creation : TEMPLATE_CREATE
@@ -46,7 +46,7 @@ These events are defined in the class `OpenOrchestra\ModelInterface\TemplateEven
 Media
 ~~~~~
 
-These events are defined in the classes `OpenOrchestra\Media\MediaEvents` and `OpenOrchestra\Media\FolderEvents`
+These events are defined in the classes ``OpenOrchestra\Media\MediaEvents`` and ``OpenOrchestra\Media\FolderEvents``
 and inherit ``OpenOrchestra\Media\Event\MediaEvent`` and ``OpenOrchestra\Media\Event\FolderEvent`` respectively.
 
 * FolderEvent
@@ -65,7 +65,7 @@ and inherit ``OpenOrchestra\Media\Event\MediaEvent`` and ``OpenOrchestra\Media\E
 Content
 ~~~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\ContentEvents` and inherit `OpenOrchestra\ModelInterface\Event\ContentEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\ContentEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\ContentEvent``.
 
 * ContentEvent
     * Content creation : CONTENT_CREATION
@@ -80,7 +80,7 @@ Administration
 Content types
 ~~~~~~~~~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\ContentTypeEvents` and inherit `OpenOrchestra\ModelInterface\Event\ContentTypeEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\ContentTypeEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\ContentTypeEvent``.
 
 * ContentTypeEvent
     * Content type creation : CONTENT_TYPE_CREATE
@@ -90,7 +90,7 @@ These events are defined in the class `OpenOrchestra\ModelInterface\ContentTypeE
 Keyword
 ~~~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\KeywordEvents` and inherit `OpenOrchestra\ModelInterface\Event\KeywordEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\KeywordEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\KeywordEvent``.
 
 * KeyWordEvent
     * Keyword creation : KEYWORD_CREATE
@@ -99,7 +99,7 @@ These events are defined in the class `OpenOrchestra\ModelInterface\KeywordEvent
 Redirection
 ~~~~~~~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\RedirectionEvents` and inherit `OpenOrchestra\ModelInterface\Event\RedirectionEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\RedirectionEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\RedirectionEvent``.
 
 * RedirectionEvent
     * Redirection creation : REDIRECTION_CREATE
@@ -109,7 +109,7 @@ These events are defined in the class `OpenOrchestra\ModelInterface\RedirectionE
 Roles
 ~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\RoleEvents` and inherit `OpenOrchestra\ModelInterface\Event\RoleEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\RoleEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\RoleEvent``.
 
 * RoleEvent
     * Role creation : ROLE_CREATE
@@ -119,7 +119,7 @@ These events are defined in the class `OpenOrchestra\ModelInterface\RoleEvents` 
 Sites
 ~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\SiteEvents` and inherit `OpenOrchestra\ModelInterface\Event\SiteEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\SiteEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\SiteEvent``.
 
 * SiteEvent
     * Site creation : SITE_CREATE
@@ -129,7 +129,7 @@ These events are defined in the class `OpenOrchestra\ModelInterface\SiteEvents` 
 Status
 ~~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\StatusEvents` and inherit `OpenOrchestra\ModelInterface\Event\StatusEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\StatusEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\StatusEvent``.
 
 * StatusEvent
     * Création d'un status creation : STATUS_CREATE
@@ -144,7 +144,7 @@ StatusableEvent is use when changing status of a node, content or media referenc
 Themes
 ~~~~~~
 
-These events are defined in the class `OpenOrchestra\ModelInterface\ThemeEvents` and inherit `OpenOrchestra\ModelInterface\Event\ThemeEvent`.
+These events are defined in the class ``OpenOrchestra\ModelInterface\ThemeEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\ThemeEvent``.
 
 * ThemeEvent
     * Theme creation : THEME_CREATE
@@ -154,8 +154,8 @@ These events are defined in the class `OpenOrchestra\ModelInterface\ThemeEvents`
 Users
 ~~~~~
 
-These events are defined in the class `OpenOrchestra\UserBundle\GroupEvents` and `OpenOrchestra\UserBundle\UserEvents`
-and inherit `OpenOrchestra\UserBundle\Event\GroupEvent` and `OpenOrchestra\UserBundle\Event\UserEvent` respectively.
+These events are defined in the class ``OpenOrchestra\UserBundle\GroupEvents`` and ``OpenOrchestra\UserBundle\UserEvents``
+and inherit ``OpenOrchestra\UserBundle\Event\GroupEvent`` and ``OpenOrchestra\UserBundle\Event\UserEvent`` respectively.
 
 * GroupEvent
     * Group creation : GROUP_CREATE
