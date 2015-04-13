@@ -6,7 +6,7 @@ Cette documentation vous expliquera les concepts les plus importants de OpenOrch
 Les noeuds
 ----------
 
-Les noeuds correspondent aux pages que les utilisateurs voient sur le site, ce sont des conteneurs pour les zones et les blocs.
+Les noeuds correspondent majoritairement aux pages que les utilisateurs voient sur le site, ce sont des conteneurs pour les zones et les blocs.
 Dans Open Orchestra il y a deux types de noeuds :
 * Les noeuds qui sont les pages du site.
 * Le noeud transverse qui contient les blocs transverses (bloc commun à plusieurs pages d'un site par exemple le bloc menu).
@@ -18,15 +18,9 @@ Voir aussi la documentation `Les paramètres d'un noeud`_.
 Les types de contenus
 ---------------------
 
-Les types de contenus permettent de créer de nouvelle sorte de contenu que vous pourrez contribuer plus tard. La création d'un type de contenu permet de définir les champs de ces futures contenus.
+Les types de contenus permettent de créer de nouvelles sortes de contenu qu'il sera possible de contribuer. La création d'un type de contenu permet de définir les champs de ces futures contenus.
 
-Par exemple pour un type de contenus news avec les champs suivants :
-
-* Un champ titre de type text
-* Un champ date de type date
-* Un champ information de type textarea
-
-Lorsque vous créerez un contenu de type news vous devrez contribuer ces champs.
+Par exemple un contenus news a des champs différents d'un contenus article, ce qui nécessite donc deux types de contenu distincts. L'un pour les contenus news et l'autre pour les contenus article.
 
 Voir aussi `Présentation des types de contenus`_.
 
@@ -42,7 +36,7 @@ Voir aussi `Présentation des contenus`_.
 Les templates
 -------------
 
-Les templates permettent de préconfigurés des pages en y plaçant des zones. Open Orchestra permet d'utiliser un des templates déjà créé comme modèle pour la création des noeuds.
+Les templates permettent de préconfigurer des pages en y plaçant des zones. Open Orchestra permet d'utiliser un templates lors de la création d'un noeud.
 
 Voir aussi `configuration d'un template`_.
 
@@ -57,7 +51,7 @@ Les blocs
 ---------
 
 Le bloc est la brique de base représentant tout élément visible sur une page.
-L'agrégation des blocs dans un noeuds permet de construire des pages variées.
+L'agrégation des blocs dans un noeud permet de construire des pages variées.
 
 Voir aussi la `liste des blocs`_ disponibles.
 
@@ -66,7 +60,7 @@ Les blocs transverses
 
 Les blocs transverses sont définis dans le noeud transverse, ils peuvent être utilisés par plusieurs noeuds d'un site.
 Tous les blocs peuvent être transverses, il suffit de les ajouter dans le noeud transverse.
-Les blocs transverses sont configurables que dans le noeud transverse.
+Les blocs transverses ne sont configurables que dans le noeud transverse.
 
 Les thèmes
 ----------
