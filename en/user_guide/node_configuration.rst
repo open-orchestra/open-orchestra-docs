@@ -1,0 +1,106 @@
+Node configuration
+==================
+
+Here are the options available in the node configuration. Some of them are required
+in order to buld a node and must therefore be provided.
+
+Page (required)
+---------------
+
+The page attribute is the name of the node, it is also used to build the url pattern.
+
+Url pattern (required)
+----------------------
+
+The url pattern attribute is generated automatically with the name of the page,
+it represents the pattern that will be the URL of the page on the website.
+
+Scheme (required)
+-----------------
+
+The scheme permet de définir par quel protocole la page est accessible
+(http, https, etc...).
+By default Open Orchestra prend le protocole renseigné dans la configuration du site.
+
+Indicative periodicity of change
+--------------------------------
+
+This attribute is used to optimize the sitemap data.
+
+Relative importance compared to the other pages of the site
+-----------------------------------------------------------
+
+This attribute manages the importance of the page regarding the other pages.
+It is use in the sitemap generation.
+
+The theme (required)
+--------------------
+
+The theme to use on the page is choosen here.
+
+Show in menus
+-------------
+
+This attribute indicates if the page should appear in a menu.
+It is used when rendering a menu block.
+
+Show in footer
+--------------
+
+This attribute indicates if the page should appear in a footer.
+It is used when rendering a footer block.
+
+Meta
+----
+The meta attributes provide information about the nature and content of a web page,
+they are added in the page HTML header with the use of meta tags.
+These attributes are also provided in the website configuration, which value is used
+if they are not overriden by the page configuration.
+
+Meta keywords
+~~~~~~~~~~~~~
+
+This is a list of keywords asociated to the page and can be used by search engines for ranking.
+
+Meta description
+~~~~~~~~~~~~~~~~
+
+This is used by search engines to display a description of the page in the results list.
+
+Meta index
+~~~~~~~~~~
+
+This attribute defines whether or not the page should be referenced in search engines.
+
+Meta follow
+~~~~~~~~~~~
+
+This attribute indicates to search engines if they should follow the hypertext links
+on the page in order to index other documents.
+
+Role needed to display the page
+-------------------------------
+
+The role attribute defines which role is allowed to access the page.
+Pages are public by default, if a role is selected then only a user with the
+mandatory roles will be able to access the page.
+
+Max age of the response for the node
+------------------------------------
+
+This attribute is used to set up the lifetime of this page inside the cache.
+
+
+Attributes specific to page creation
+------------------------------------
+
+Page source
+~~~~~~~~~~~
+
+L'attribut page source permet de créer une nouvelle page en copiant une page déjà créée.
+
+Identifiant du template
+~~~~~~~~~~~~~~~~~~~~~~~
+
+L'attribut identifiant du template permet de définir le template à utiliser pour créer la page.
+Il vous faut soit l'attribut page source, soit identifiant template pour créer la page, ces attributs ne peuvent être vides en même temps.
