@@ -77,7 +77,7 @@ See how to add a `theme`_.
 Websites
 --------
 
-Open Orchestra est multisite et permet de créer plusieurs sites depuis le même Back Office.
+Open Orchestra is multisite and allows to create several websites from the same Back Office application.
 
 See also how to configure a `website`_.
 
@@ -92,8 +92,7 @@ See also `multi-devices`_.
 Keywords
 --------
 
-Keywords can be created in the Back Office, and then be used
-to tag contents and medias.
+Keywords can be created in the Back Office, and then be used to tag contents and medias.
 
 Users
 -----
@@ -107,35 +106,36 @@ See also how to configure a `user`_.
 Roles
 -----
 
-Les rôles permettent de définir des droits sur le Back Office.
+Roles allow to define authorization in the Back Office.
 
-Voir aussi création d'un `rôle`_.
+See also how to create a `role`_.
 
-Les groupes
+Groups
 -----------
 
-Les groupes agrègent des rôles et sont ensuite attribués aux utilisateurs.
-Les groupes ont plusieurs rôles.
+Groups combine roles and are assigned to users.
+Groups can have several roles.
 
-Voir aussi configuration d'un `groupe`_.
+See also how to create a `group`_.
 
-Les bundles
+Bundles
 -----------
 
-Open Orchestra suit la modularité de Symfony et le code est donc organisé en bundles séparés.
+Open Orchestra is built on Symfony so the code is split into different bundles.
 
-Les bundles d'Open Orchestra :
+Open Orchestra's bundles :
 
- * open-orchestra-base-bundle contient les méthodes commune au Back Office et Front Office.
- * open-orchestra-cms-bundle contient les méthodes d'affichage du Back Office.
- * open-orchestra-front-bundle contient les méthodes d'affichage du Front Office.
- * open-orchestra-display-bundle contient toutes les strategies d'affichage Front Office des blocs.
- * open-orchestra-model-interface est une description exhaustive des méthodes utilisées par les autres bundles.
- * open-orchestra-model-bundle contient tous ce qui rattaché à la base de donnée (doctrinemongodb).
- * open-orchestra-media-bundle contient tous ce qui est rattaché aux médias.
- * open-orchestra-user-bundle contient tous ce qui est rattaché aux utilisateurs.
+ * open-orchestra-base-bundle contains some transverse classes common to Back Office and Front Office.
+ * open-orchestra-cms-bundle is the application logic for the Back Office.
+ * open-orchestra-front-bundle is the application logic for the Front Office.
+ * open-orchestra-display-bundle contains all the block display strategies for the Front Office.
+ * open-orchestra-model-interface is a full description of the model classes used by other bundles.
+ * open-orchestra-model-bundle contains the database access logic (doctrinemongodb).
+ * open-orchestra-media-bundle contains the media functionnalities.
+ * open-orchestra-user-bundle groups all user logic.
 
- Pour utiliser une autre base de donnée ajoutez votre propre bundle implementant les interfaces de open-orchestra-model-interface.
+In order to use another database system one should had a new bundle which classes will implement
+the interfaces defined in open-orchestra-model-interface.
 
 .. _rôle:
 .. _site:
