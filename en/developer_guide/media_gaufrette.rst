@@ -17,8 +17,8 @@ All adapters that can be natively used are described in the `configuration docum
 along with the details of the configuration to set up.
 
 If another Gaufrette filesystem is used instead of the default one, it should be
-notified to Open Orchestra through the open_orchestra_media.filesystem configuration parameter,
-which exepects the identifier of the new filesystem to use.
+notified to Open Orchestra through the ``open_orchestra_media.filesystem`` configuration parameter,
+which expects the identifier of the new filesystem to use.
 
 Upload and resizing of images
 -----------------------------
