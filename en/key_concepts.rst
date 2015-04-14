@@ -9,7 +9,7 @@ Nodes
 Nodes are mainly pages that the visitors can see on the website, they are containers for zones and blocks.
 There are two types of nodes in Open Orchestra:
 * Nodes that represent pages of the website
-* The transverse node (which is unique) containing the transverse blocks (block that are common to multiple pages of a website, for instance the menu block).
+* The transverse node (which is unique) containing the transverse blocks (blocks that are common to multiple pages of a website, for instance the menu block).
 
 The nodes are multilingual, versionned and have a validation workflow.
 
@@ -69,7 +69,7 @@ Transverse blocks can only be conigured in the transverse node.
 Themes
 ------
 
-A theme represents the visual identity of a website, they  CSS and JavaScript files
+A theme represents the visual identity of a website, the  CSS and JavaScript files
 that work together in order to render the websites in a certain way.
 
 See how to add a `theme`_.
@@ -113,7 +113,7 @@ See also how to create a `role`_.
 Groups
 -----------
 
-Groups combine roles and are assigned to users.
+Groups combine roles (this combination depends on the website) and are assigned to users.
 Groups can have several roles.
 
 See also how to create a `group`_.
