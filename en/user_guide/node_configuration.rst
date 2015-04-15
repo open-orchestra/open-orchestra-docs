@@ -1,8 +1,8 @@
 Node configuration
 ==================
 
-Here are the options available in the node configuration. Some of them are required
-in order to buld a node and must therefore be provided.
+Here are the available options in the node configuration. Some of them are required
+in order to build a node and must therefore be provided.
 
 Page (required)
 ---------------
@@ -18,9 +18,8 @@ it represents the pattern that will be the URL of the page on the website.
 Scheme (required)
 -----------------
 
-The scheme permet de définir par quel protocole la page est accessible
-(http, https, etc...).
-By default Open Orchestra prend le protocole renseigné dans la configuration du site.
+The scheme defines which protocol the page can be accessed by (http, https, etc...).
+By default Open Orchestra uses the value set in the site configuration.
 
 Indicative periodicity of change
 --------------------------------
@@ -31,7 +30,7 @@ Relative importance compared to the other pages of the site
 -----------------------------------------------------------
 
 This attribute manages the importance of the page regarding the other pages.
-It is use in the sitemap generation.
+It is used in the sitemap generation.
 
 The theme (required)
 --------------------
@@ -41,7 +40,7 @@ The theme to use on the page is choosen here.
 Show in menus
 -------------
 
-This attribute indicates if the page should appear in a menu.
+This attribute indicates if the page should appear in the menus.
 It is used when rendering a menu block.
 
 Show in footer
