@@ -93,14 +93,14 @@ This attribute is used to set up the lifetime of this page inside the cache.
 
 Attributes specific to page creation
 ------------------------------------
+When creating a new page, one of the two following attributes must be used.
 
-Page source
+Source page
 ~~~~~~~~~~~
 
-L'attribut page source permet de créer une nouvelle page en copiant une page déjà créée.
+The source page attribute allows to create a new page by copying the content of an existing page.
 
-Identifiant du template
-~~~~~~~~~~~~~~~~~~~~~~~
+Template id
+~~~~~~~~~~~
 
-L'attribut identifiant du template permet de définir le template à utiliser pour créer la page.
-Il vous faut soit l'attribut page source, soit identifiant template pour créer la page, ces attributs ne peuvent être vides en même temps.
+The template id allows to define a template that should be use as a basis for the page.
