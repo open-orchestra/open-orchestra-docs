@@ -33,7 +33,7 @@ In the case we want to define the Content Type "Article", we should then contrib
 * **Content Type id**: that unique identifier allows Open Orchestra to distinguish our "Article" among
 others Content Type. Indicate "article"
 
-* ** Name in all the languages**: this is the name of the Content Type, displayed to contributors. It must
+* **Name in all the languages**: this is the name of the Content Type, displayed to contributors. It must
 be translated into the different languages ​​of the Back Office. Indicate "Article" for both English and French
 
 * **Status**: determines the status in which to create the Content Type. Choose "draft" for this
