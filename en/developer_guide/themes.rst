@@ -2,7 +2,7 @@ Themes
 ======
 
 The CSS and JS files of the themes are rendered with a call to the Twig functions ``openOrchestraCss()``
-and ``openOrchestraJs()``, each one is taking as a parameter the name of the theme to render.
+and ``openOrchestraJs()``, each one is taking as a parameter the theme name to render.
 
 See the `Twig extensions page`_ for more details.
 
@@ -26,7 +26,7 @@ Here is a full example of a valid configuration for a theme:
                 javascripts:
                     - AcmeBundle:bar:js/main.js
                     
-Here ``foobar`` is the identifier of the theme as referred in the call to the Twig functions.
+In this case ``foobar`` is the identifier of the theme as referred in the call to the Twig functions.
 Three keys can be defined for a theme : 
 
 * ``name`` is a required entry
