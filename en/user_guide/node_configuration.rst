@@ -1,7 +1,7 @@
 Node configuration
 ==================
 
-Here are the available options in the node configuration. Some of them are required
+Here are the available options in the `node`_ configuration. Some of them are required
 in order to build a node and must therefore be provided.
 
 Page (required)
@@ -12,8 +12,8 @@ The page attribute is the name of the node, it is also used to build the url pat
 Url pattern (required)
 ----------------------
 
-The url pattern attribute is generated automatically with the name of the page,
-it represents the pattern that will be the URL of the page on the website.
+The url pattern attribute is generated automatically with the name of the page.
+It represents the pattern that will be the URL of the page on the website.
 
 If the pattern starts with a slash, it will be appended to the  website's base url
 (domain + language prefix) to make the full page url. Otherwise, if the page has a parent,
@@ -120,3 +120,5 @@ Template id
 ~~~~~~~~~~~
 
 The template id allows to define a template that should be use as a basis for the page.
+
+.. _`node`: /en/user_guide/node.rst
