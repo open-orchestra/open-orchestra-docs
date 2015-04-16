@@ -85,12 +85,3 @@ Edition
 To edit an existing Content Type, from the list of Content Types, click the correct "Edit" button. The form
 used when creating the Content Type is displayed again, and it is possible to change what must be.
 Clicking the "Save" button will generate a new version of the Content Type, incorporating all changes.
-
-
-Front display
--------------
-
-The contents are not directly accessible in Front Office. Like everything visible in Front Office, the contents
-are displayed through blocks. See the documentation on the `blocks`_ for more information about it.
-
-.. _blocks:
