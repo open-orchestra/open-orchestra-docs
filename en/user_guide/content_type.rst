@@ -37,7 +37,7 @@ In the case we want to define the Content Type "Article", we should then contrib
   be translated into the different languages ​​of the Back Office. Indicate "Article" for both English and French
 
 * **Status**: determines the status in which to create the Content Type. In our case, three status are
-   available: draft, pending and published. Choose "draft" for this first version.
+  available: draft, pending and published. Choose "draft" for this first version.
 
 These three fields are systematically required when creating a Content Type, and identifies it among
 the others, but they do not characterize so far the "Article " Content Type. It remains to indicate
