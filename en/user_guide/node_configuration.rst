@@ -15,6 +15,23 @@ Url pattern (required)
 The url pattern attribute is generated automatically with the name of the page,
 it represents the pattern that will be the URL of the page on the website.
 
+If the pattern starts with a slash, it will be appended to the  website's base url
+(domain + language prefix) to make the full page url. Otherwise, if the page has a parent,
+the pattern will be appended to the parent's URL to generate the final URL.
+
+Here is a as example of some URL generated from the page patterns if the website's
+domain is "example.com" and the language is "en".
+
++---------+---------------------+------------------------+
+| pattern | parent page pattern | final URL              |
++=========+=====================+========================+
+| /foo    | /bar                | example.com/en/foo     |
++---------+---------------------+------------------------+
+| foo     | /bar                | example.com/en/bar/foo |
++---------+---------------------+------------------------+
+| foo     | no parent page      | example.com/en/foo     |
++---------+---------------------+------------------------+
+
 Scheme (required)
 -----------------
 
