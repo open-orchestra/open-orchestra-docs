@@ -36,8 +36,8 @@ others Content Type. Indicate "article"
 * **Name in all the languages**: this is the name of the Content Type, displayed to contributors. It must
 be translated into the different languages ​​of the Back Office. Indicate "Article" for both English and French
 
-* **Status**: determines the status in which to create the Content Type. In "out of the box" workflow, three
-status are available : draft, pending and published. Choose "draft" for this first version.
+* **Status**: determines the status in which to create the Content Type. In our case, three status are
+available: draft, pending and published. Choose "draft" for this first version.
 
 These three fields are systematically required when creating a Content Type, and identifies it among
 the others, but they do not characterize so far the "Article " Content Type. It remains to indicate
