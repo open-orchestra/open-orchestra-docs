@@ -1,6 +1,9 @@
 Node
 ====
 
+Nodes are mainly pages that the visitors can see on the website, they are containers for zones and `blocks`_.
+The nodes are multilingual, versioned and have a validation workflow.
+
 Node creation and Basic configuration
 -------------------------------------
 
@@ -99,7 +102,8 @@ The eye is visible only if the block is not a transverse block.
 
 
 .. _workflow:
-.. _node configuration:
-.. _site configuration:
+.. _node configuration: /en/user_guide/node_configuration.rst
+.. _site configuration: /en/user_guide/websites_creation.rst
 .. _node and block transverse:
-.. _block list:
+.. _block list: /en/user_guide/block_list.rst
+.. _blocks: /en/key_concepts.rst#blocks
