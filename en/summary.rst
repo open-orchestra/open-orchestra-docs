@@ -9,7 +9,7 @@ User guide
 ==========
 
 * First steps
-* Site creation
+* `Site creation`_
 * Template creation
 * `Node`_
 * Node - blocks
@@ -79,3 +79,4 @@ Hosting guide
 .. _`Events`: /en/developer_guide/events.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
 .. _`Configuration`: /en/hosting_guide/configuration.rst
+.. _`Site creation`: /en/user_guide/websites_creation.rst
