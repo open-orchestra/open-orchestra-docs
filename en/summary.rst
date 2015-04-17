@@ -71,6 +71,7 @@ Hosting guide
 * Monitoring
 * Backup
 * `Logs`_
+* `MongoDB Migration`_
 
 .. _`Node`: /en/user_guide/node.rst
 .. _`User`: /en/user_guide/user.rst
@@ -90,6 +91,7 @@ Hosting guide
 .. _`Content type`: /en/user_guide/content_type.rst
 .. _`SmartAdmin`: /en/developer_guide/smart_admin.rst
 .. _`Plateform logging`: /en/developer_guide/logs.rst
+.. _`MongoDB Migration`: /en/hosting_guide/migration.rst
 .. _`Custom error pages`: /en/developer_guide/error_pages.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
 .. _`Content - node`: /en/user_guide/content_display.rst
