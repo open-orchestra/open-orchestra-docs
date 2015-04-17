@@ -2,7 +2,7 @@ Introduction
 ============
 
 * What is Open Orchesra ?
-* Key concepts
+* `Key concepts`_
 * The big picture
 
 User guide
@@ -11,13 +11,13 @@ User guide
 * First steps
 * Site creation
 * Template creation
-* Node
+* `Node`_
 * Node - blocks
 * Node - versionning
+* `Content type`_
 * Content
 * Content - node
-* Content - type
-* Blocks
+* `Block list`_
 * Media
 * Media - image
 * Transverse node/blocks
@@ -37,17 +37,18 @@ Advanced
 Developer guide
 ===============
 
-* Install
+* `Install`_
 * Development
-* Block
+* `Create a block`_
 * Create a CRUD
-* Add a left panel entry
-* Device detection
-* ESI and Reverse proxy
-* Twig extensions
-* Media
+* `Add a left panel entry`_
+* `Device detection`_
+* `ESI and Reverse proxy`_
+* `Themes`_
+* `Twig extensions`_
+* `Media`_
 * SmartAdmin
-* Events
+* `Events`_
 * Cache
 * Changelog
 
@@ -55,10 +56,25 @@ Hosting guide
 =============
 
 * Architecture
-* Requirements
+* `Requirements`_
 * Configuration
 * Deployment
 * Maintenance
 * Monitoring
 * Backup
 * Logs
+
+.. _`Key concepts`: /en/key_concepts.rst
+.. _`Node`: /en/user_guide/node.rst
+.. _`Content type`: /en/user_guide/content_type.rst
+.. _`Block list`: /en/user_guide/block_list.rst
+.. _`Install`: /en/developer_guide/install.rst
+.. _`Create a block`: /en/developer_guide/block_creation.rst
+.. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
+.. _`Device detection`: /en/developer_guide/multi_device.rst
+.. _`ESI and Reverse proxy`: /en/developer_guide/esi.rst
+.. _`Themes`: /en/developer_guide/themes.rst
+.. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
+.. _`Media`: /en/developer_guide/media_gaufrette.rst
+.. _`Events`: /en/developer_guide/events.rst
+.. _`Requirements`: /en/hosting_guide/requirements.rst
