@@ -7,11 +7,14 @@ Nodes
 -----
 
 Nodes are mainly pages that the visitors can see on the website, they are containers for zones and blocks.
-There are two types of nodes in Open Orchestra:
-* Nodes that represent pages of the website
-* The transverse node (which is unique) containing the transverse blocks (blocks that are common to multiple pages of a website, for instance the menu block).
+The nodes are multilingual, versioned and have a validation workflow.
 
-The nodes are multilingual, versionned and have a validation workflow.
+There are two types of nodes in Open Orchestra:
+
+* Nodes that represent pages of the website
+* The transverse node containing the transverse blocks (blocks that can be used in other pages, for instance the menu block).
+  This node is not versioned, and there can only be one transverse node in each language of the site.
+
 
 See also the documentation page about `node parameters`_.
 
@@ -44,7 +47,7 @@ Open Orchestra let the user start with a template when creating a node.
 See also `configuring a template`_.
 
 Zones
----------
+-----
 
 Zones are the way to organize the architecture of the page.
 They are embedded in the nodes and can contain other zones or blocks.
@@ -52,7 +55,7 @@ They are embedded in the nodes and can contain other zones or blocks.
 See also `configuring a zone`_.
 
 Blocks
----------
+------
 
 A block is the base brick representing any visible element on a page.
 Aggregating blocks found in the nodes will lead to the construction of the pages.
@@ -111,7 +114,7 @@ Roles allow to define authorization in the Back Office.
 See also how to create a `role`_.
 
 Groups
------------
+------
 
 Groups combine roles (this combination depends on the website) and are assigned to users.
 Groups can have several roles.
@@ -119,7 +122,7 @@ Groups can have several roles.
 See also how to create a `group`_.
 
 Bundles
------------
+-------
 
 Open Orchestra is built on Symfony so the code is split into different bundles.
 
@@ -137,15 +140,18 @@ Open Orchestra's bundles :
 In order to use another database system one should had a new bundle which classes will implement
 the interfaces defined in open-orchestra-model-interface.
 
-.. _rôle:
+
+
+.. _role:
 .. _site:
-.. _thème:
-.. _groupe:
-.. _utilisateur:
+.. _user:
+.. _theme:
+.. _group:
+.. _website:
 .. _multi-devices:
-.. _liste des blocs:
-.. _configuration d'une zone:
-.. _Présentation des contenus:
-.. _Les paramètres d'un noeud:
-.. _configuration d'un template:
-.. _Présentation des types de contenus:
+.. _list of blocks: /en/user_guide/block_list.rst
+.. _node parameters:
+.. _configuring a zone:
+.. _configuring a template:
+.. _Presentation of contents:
+.. _Presentation of the Content Types:
