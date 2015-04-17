@@ -57,7 +57,7 @@ Hosting guide
 
 * Architecture
 * `Requirements`_
-* Configuration
+* `Configuration`_
 * Deployment
 * Maintenance
 * Monitoring
@@ -78,3 +78,4 @@ Hosting guide
 .. _`Media`: /en/developer_guide/media_gaufrette.rst
 .. _`Events`: /en/developer_guide/events.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
+.. _`Configuration`: /en/hosting_guide/configuration.rst
