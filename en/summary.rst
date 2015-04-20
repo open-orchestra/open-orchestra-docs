@@ -22,16 +22,9 @@ User guide
 * Media - image
 * Transverse node/blocks
 * Tag
-
-Advanced
---------
-
 * User
 * Role
 * Workflow
-* API
-* Routing
-* Theme
 * Log
 
 Developer guide
@@ -51,6 +44,9 @@ Developer guide
 * `Events`_
 * Cache
 * Changelog
+* API
+* Routing
+* Theme
 
 Hosting guide
 =============
