@@ -47,6 +47,7 @@ Developer guide
 * API
 * Routing
 * Theme
+* Add new media type
 
 Hosting guide
 =============
