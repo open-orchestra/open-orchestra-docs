@@ -70,3 +70,13 @@ The usage is pretty straightforward :
         --backoffice-icon-dir="src/YourVendor/AcmeBundle/Path/To/Icon/Strategies"
         --backoffice-display-dir="src/YourVendor/AcmeBundle/Path/To/Back/Display/Strategies"
         --no-interaction
+
+Cache control
+-------------
+
+Open Orchestra leverages the power of ESI blocks to optimize page rendering and increase performance.
+In the FrontOffice application, each block is rendered in an ESI block using the render_esi() twig function.
+
+See also `ESI blocks`_.
+
+.. _ESI blocks: /en/developer_guide/esi.rst

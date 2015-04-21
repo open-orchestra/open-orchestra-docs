@@ -6,7 +6,17 @@ Prerequisite
 
 To enable the multi-device rendering, we assume that the server entry point (webserver or reverse-proxy)
  implements the Wurfl librairy and is able to add a request header with the device type.
-You will also have to set up the device detection, see related doc for an example.
+You will also have to set up the device detection.
+
+OpenOrchestra manages the multi-device with Varnish by adding in the request header a parameter x-ua-device.
+
+In the file `openorchestra.vcl `, Varnish tests User-Agent to send the corresponding tag x-ua-device:
+
+.. code-block:: varnish4
+
+    if (req.http.User-Agent ~ "(?i)android") {
+            set req.http.X-UA-Device = "android";
+    }
 
 The device name will be used in the configuration and in the template name. For instance, if you have defined two specific
 devices, phone and tablet, you will have to create the following templates :
