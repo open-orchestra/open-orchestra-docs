@@ -75,7 +75,7 @@ Cache control
 -------------
 
 Open Orchestra leverages the power of ESI blocks to optimize page rendering and increase performance.
-In the FrontOffice application, each block is rendered in an ESI block using the render_esi() twig function.
+In the Front Office application, each block is rendered in an ESI block using the render_esi() twig function.
 
 See also `ESI blocks`_.
 
