@@ -68,7 +68,9 @@ The visible list of blocks during the edition of a node is defined inside the si
 
 See also `node configuration`_ and `site configuration`_.
 
-Nodes can use default blocks and transverse blocks. The transverse ones are editable only in the transverse node.
+Nodes can use default blocks and transverse blocks.
+Those blocks have different colors.
+The transverse ones are editable only in the transverse node.
 
 See also `node and block transverse`_.
 
