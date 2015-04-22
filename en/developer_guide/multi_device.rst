@@ -96,8 +96,8 @@ the server entry point (webserver or reverse-proxy) must add a parameters ``x-ua
 For example if you have a configuration with different templates between phone and tablet,
 the parameter ``x-ua-device`` needs to be equal to phone or tablet to display the correct template.
 
-Open Orchestra tests the ``x-ua-device`` parameter gotten from the request header,
-in the FrontBundle trait which overrides the ``TwigEngine::render()`` method.
+Open Orchestra tests the ``x-ua-device`` parameter given by the request header,
+in the FrontBundle trait overriding the ``TwigEngine::render()`` method.
 If a template is found for this device name, so call ``TwigEngine::render()`` method for this template,
 else check if the parent device template exist.
 
