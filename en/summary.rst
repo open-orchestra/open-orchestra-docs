@@ -45,6 +45,7 @@ Developer guide
 * Cache
 * Changelog
 * API
+* API group context
 * Routing
 * Theme
 * Add new media type
