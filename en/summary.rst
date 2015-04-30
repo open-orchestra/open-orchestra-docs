@@ -45,6 +45,7 @@ Developer guide
 * Cache
 * Changelog
 * API
+* `API group context`_
 * Routing
 * Theme
 * Add new media type
@@ -77,3 +78,4 @@ Hosting guide
 .. _`Requirements`: /en/hosting_guide/requirements.rst
 .. _`Configuration`: /en/hosting_guide/configuration.rst
 .. _`Site creation`: /en/user_guide/websites_creation.rst
+.. _`API group context`: /en/developer_guide/api_group_context.rst
