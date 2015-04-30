@@ -83,6 +83,26 @@ and another for the article contents.
 
 See also `Presentation of the Content Types`_.
 
+Medias
+~~~~~~
+
+If you use the full Open Orchestra installation, you will be able to upload and managed different kind
+of medias.
+
+The medias can be used in ``Contents`` or in ``Blocks``.
+
+See also the `Media presentation`_.
+
+Keywords
+~~~~~~~~
+
+Keywords can be created in the Back Office, and then be used to tag contents and medias.
+
+See also how to work with `keywords'_.
+
+Sites
+-----
+
 Themes
 ------
 
