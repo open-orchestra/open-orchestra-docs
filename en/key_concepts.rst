@@ -3,10 +3,13 @@ Key concepts
 
 This document will explain the most important concepts to start with Open Orchestra.
 
-Nodes
+Pages
 -----
 
-Nodes are mainly pages that the visitors can see on the website, they are containers for zones and blocks.
+Nodes
+~~~~~
+
+In the Open Orchestra project, a page is identified as a node. They are containers for zones and blocks.
 The nodes are multilingual, versioned and have a validation workflow.
 
 There are two types of nodes in Open Orchestra:
@@ -18,44 +21,16 @@ There are two types of nodes in Open Orchestra:
 
 See also the documentation page about `node parameters`_.
 
-Content types
--------------
-
-Content types are a way to create new kinds of content that will be available to contribution.
-Creating a content type allows to define the fields available in the future contents.
-
-For instance, a 'news' content will have differents fields from an 'article' content,
-so there would be two distinct content types for these objects : one for the news contents and another for the article contents.
-
-See also `Presentation of the Content Types`_.
-
-Contents
---------
-
-With Open Orchestra, contents are used to display contributed information (articles, news, etc.).
-The contents are defined by a content type.
-Like nodes, contents are multilingual, versionned and have a validation workflow.
-
-See also `Presentation of contents`_.
-
-Templates
----------
-
-Templates are used to preconfigure pages by setting zones that are commonly used accross pages.
-Open Orchestra let the user start with a template when creating a node.
-
-See also `configuring a template`_.
-
 Zones
------
+~~~~~
 
 Zones are the way to organize the architecture of the page.
-They are embedded in the nodes and can contain other zones or blocks.
+They are embedded in the nodes and can contain other zones or blocks exclusively.
 
 See also `configuring a zone`_.
 
 Blocks
-------
+~~~~~~
 
 A block is the base brick representing any visible element on a page.
 Aggregating blocks found in the nodes will lead to the construction of the pages.
@@ -63,11 +38,50 @@ Aggregating blocks found in the nodes will lead to the construction of the pages
 See also the `list of blocks`_ available.
 
 Transverses blocks
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Transverses blocks are defined inside the transverse node, they can be shared by several nodes of a website.
 All blocks can be transverse, as long as they are added to the transverse node.
 Transverse blocks can only be conigured in the transverse node.
+
+Templates
+~~~~~~~~~
+
+Templates are used to preconfigure nodes by setting zones that are commonly used accross pages.
+Open Orchestra let the user start with a template when creating a node.
+
+See also `configuring a template`_.
+
+Summary
+~~~~~~~
+
+This scheme represents how those different part are related to one another.
+
+.. image:: ../../images/drag_block.png
+
+Contents
+--------
+
+Contents
+~~~~~~~~
+
+In Open Orchestra, contents are used to display contributed information (articles, news, etc.).
+The contents are defined by a content type.
+Like nodes, contents are multilingual, versionned and have a validation workflow.
+
+See also `Presentation of contents`_.
+
+Content types
+~~~~~~~~~~~~~
+
+Content types are a way to create new kinds of content that will be available to contribution.
+Creating a content type allows to define the fields available in the future contents.
+
+For instance, a 'news' content will have differents fields from an 'article' content,
+so there would be two distinct content types for these objects : one for the news contents
+and another for the article contents.
+
+See also `Presentation of the Content Types`_.
 
 Themes
 ------
