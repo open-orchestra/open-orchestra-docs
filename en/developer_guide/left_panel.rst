@@ -7,6 +7,8 @@ Context
 The left panel containing the navigation menu is fully configurable by adding specific services to the application.
 Open Orchestra natively provides different kind of strategies for this panel that are reusable for you own entries.
 
+.. image:: ../../images/left_panel.png
+
 Usage
 -----
 
