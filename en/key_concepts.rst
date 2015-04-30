@@ -129,6 +129,9 @@ See also `multi-devices`_.
 Users
 -----
 
+Users
+~~~~~
+
 Users represent people that can connect to the Open Orchestra Back Office and make contributions.
 They also are the Front Office users who can access to the private pages of a website.
 It's also possible to assign groups to users.
@@ -136,14 +139,14 @@ It's also possible to assign groups to users.
 See also how to configure a `user`_.
 
 Roles
------
+~~~~~
 
 Roles allow to define authorization in the Back Office.
 
 See also how to create a `role`_.
 
 Groups
-------
+~~~~~~
 
 Groups combine roles (this combination depends on the website) and are assigned to users.
 Groups can have several roles.
@@ -153,7 +156,7 @@ See also how to create a `group`_.
 Bundles
 -------
 
-Open Orchestra is built on Symfony so the code is split into different bundles.
+Open Orchestra is a set of different Symfony bundles directly accessible
 
 Open Orchestra's bundles :
 
@@ -162,7 +165,7 @@ Open Orchestra's bundles :
  * open-orchestra-front-bundle is the application logic for the Front Office.
  * open-orchestra-display-bundle contains all the block display strategies for the Front Office.
  * open-orchestra-model-interface is a full description of the model classes used by other bundles.
- * open-orchestra-model-bundle contains the database access logic (doctrinemongodb).
+ * open-orchestra-model-bundle contains implements the interfaces for a mongodb database.
  * open-orchestra-media-bundle contains the media functionnalities.
  * open-orchestra-user-bundle groups all user logic.
 
@@ -170,17 +173,18 @@ In order to use another database system one should had a new bundle which classe
 the interfaces defined in open-orchestra-model-interface.
 
 
-
-.. _role:
-.. _site:
-.. _user:
+.. _role: /en/user_guide/role.rst
+.. _site: /en/user_guide/website_creation.rst
+.. _user: /en/user_guide/user.rst
 .. _theme:
 .. _group:
-.. _website:
-.. _multi-devices:
+.. _website: /en/user_guide/website_creation.rst
+.. _keywords: /en/user_guide/keyword_management.rst
+.. _multi-devices: /en/user_guide/media.rst
 .. _list of blocks: /en/user_guide/block_list.rst
-.. _node parameters:
+.. _node parameters: /en/user_guide/node.rst
+.. _Media presentation: /en/user_guide/media.rst
 .. _configuring a zone:
 .. _configuring a template:
-.. _Presentation of contents:
-.. _Presentation of the Content Types:
+.. _Presentation of contents: /en/user_guide/content.rst
+.. _Presentation of the Content Types: /en/user_guide/content_type.rst
