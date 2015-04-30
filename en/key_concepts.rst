@@ -104,15 +104,15 @@ Sites
 -----
 
 Themes
-------
+~~~~~~
 
 A theme represents the visual identity of a website, the  CSS and JavaScript files
-that work together in order to render the websites in a certain way.
+that work together in order to render the websites the way you desire.
 
 See how to add a `theme`_.
 
 Websites
---------
+~~~~~~~~
 
 Open Orchestra is multisite and allows to create several websites from the same Back Office application.
 
@@ -125,11 +125,6 @@ Open Orchestra is multi-device and is able to display, on the Front Office,
 different templates depending on the device of the visitor.
 
 See also `multi-devices`_.
-
-Keywords
---------
-
-Keywords can be created in the Back Office, and then be used to tag contents and medias.
 
 Users
 -----
