@@ -32,7 +32,9 @@ For example :
 
 The website home page will be ``http://demo.openorchestra.dev/en``.
 
-Open Orchestra uses only the main aliases for the sitemap generation.
+See the `routing documentation`_ for further information.
+
+Open Orchestra uses only the main alias for the sitemap generation.
 
 .. image:: ../../images/aliases.png
 
@@ -99,3 +101,5 @@ robots.txt file example
 
 User-agent: * means that one or several instruction (s) which follow applies for all the agents.
 Allow: / means that the search engine can browse all the directories and the pages of the site.
+
+.. _routing documentation: /en/developer_guide/routing.rst
