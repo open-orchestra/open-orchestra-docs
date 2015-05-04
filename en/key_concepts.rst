@@ -10,7 +10,7 @@ Nodes
 ~~~~~
 
 In the Open Orchestra project, a page is identified as a node. They are containers for zones and blocks.
-The nodes are multilingual, versioned and have a validation workflow.
+The nodes have multiple behaviour such as multi-language, version and a validation workflow.
 
 There are two types of nodes in Open Orchestra:
 
@@ -42,20 +42,20 @@ Transverses blocks
 
 Transverses blocks are defined inside the transverse node, they can be shared by several nodes of a website.
 All blocks can be transverse, as long as they are added to the transverse node.
-Transverse blocks can only be conigured in the transverse node.
+Transverse blocks can only be configured in the transverse node.
 
 Templates
 ~~~~~~~~~
 
 Templates are used to preconfigure nodes by setting zones that are commonly used accross pages.
-Open Orchestra let the user start with a template when creating a node.
+Templates are patterns that can be used and reused to create nodes.
 
 See also `configuring a template`_.
 
 Summary
 ~~~~~~~
 
-This scheme represents how those different part are related to one another.
+This scheme represents how those different parts are related to one another.
 
 .. image:: ../../images/drag_block.png
 
@@ -86,7 +86,7 @@ See also `Presentation of the Content Types`_.
 Medias
 ~~~~~~
 
-If you use the full Open Orchestra installation, you will be able to upload and managed different kind
+If you use the full Open Orchestra installation, you will be able to upload and manage different kind
 of medias.
 
 The medias can be used in ``Contents`` or in ``Blocks``.
@@ -98,7 +98,7 @@ Keywords
 
 Keywords can be created in the Back Office, and then be used to tag contents and medias.
 
-See also how to work with `keywords'_.
+See also how to work with `keywords`_.
 
 Sites
 -----
@@ -174,11 +174,11 @@ the interfaces defined in open-orchestra-model-interface.
 
 
 .. _role: /en/user_guide/role.rst
-.. _site: /en/user_guide/website_creation.rst
+.. _site: /en/user_guide/websites_creation.rst
 .. _user: /en/user_guide/user.rst
 .. _theme:
 .. _group:
-.. _website: /en/user_guide/website_creation.rst
+.. _website: /en/user_guide/websites_creation.rst
 .. _keywords: /en/user_guide/keyword_management.rst
 .. _multi-devices: /en/user_guide/media.rst
 .. _list of blocks: /en/user_guide/block_list.rst
