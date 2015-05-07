@@ -1,7 +1,7 @@
 Global Pages and Blocks
 =======================
 
-In Open Orchestra, to limit the user work, we provide a way to contribute some part of
+To limit the user work, Open Orchestra provide a way to contribute some part of
 a website once it for all. This usage is grouped under the term of **Global page** and
 **Global blocks**.
 
