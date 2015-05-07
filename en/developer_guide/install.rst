@@ -76,7 +76,7 @@ Clone the provisioning repository :
 
 .. code-block:: bash
 
-    $ git@github.com:open-orchestra/open-orchestra-provision.git
+    $ git clone git@github.com:open-orchestra/open-orchestra-provision.git
 
 Install roles from ansible-galaxy
 ---------------------------------
