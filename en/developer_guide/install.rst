@@ -72,6 +72,12 @@ Install open-orchestra with composer:
     $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s dev
     $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s dev
 
+Clone the provisioning repository :
+
+.. code-block:: bash
+
+    $ git clone git@github.com:open-orchestra/open-orchestra-provision.git
+
 Install roles from ansible-galaxy
 ---------------------------------
 
