@@ -21,16 +21,27 @@ These strategies are identified by the usage of specific tags when declaring the
 The different strategies
 ------------------------
 
-Display strategies
-~~~~~~~~~~~~~~~~~~
+Front Office display strategies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Services used as block display strategies, whether for the Front Office or the Back Office, must be
-taggued as ``open_orchestra_display.display_block.strategy``:
+Services used as Front Office block display strategies, must be taggued as ``open_orchestra_display.display_block.strategy``:
 
 .. code-block:: yaml
 
     tags:
         - { name: open_orchestra_display.display_block.strategy }
+
+Those services also need to implement ``OpenOrchestra\DisplayBundle\DisplayBlock\DisplayBlockInterface``
+
+Back Office display strategies
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Services used as Back Office block display strategies, must be taggued as ``open_orchestra_backoffice.display_block.strategy``:
+
+.. code-block:: yaml
+
+    tags:
+        - { name: open_orchestra_backoffice.display_block.strategy }
 
 Those services also need to implement ``OpenOrchestra\DisplayBundle\DisplayBlock\DisplayBlockInterface``
 
