@@ -6,12 +6,15 @@ The block system
 
 In Open Orchestra, pages are made of blocks representing data to display.
 
-In order for them to be easily manageable, each block comes with a set of strategies defined as services:
+In order for them to be easily manageable, each block comes with a set of display strategies defined
+as services:
 
-- A display strategy for the frontoffice
-- A display strategy for the backoffice
-- An icon and title display strategy, visible in the backoffice
-- A strategy for displaying the form fields when editing the block in the backoffice
+- A display strategy for the Front Office
+- A display strategy for the Back Office. This strategy is used to render the block when editing a
+  node
+  including that type of block
+- An icon and title display strategy, visible in the Back Office, in the blocks panel of node pages 
+- A strategy for displaying the form to edit the block in the Back Office
 
 These strategies are identified by the usage of specific tags when declaring the service.
 
@@ -21,43 +24,44 @@ The different strategies
 Display strategies
 ~~~~~~~~~~~~~~~~~~
 
-For the display of a block (whether on the frontoffice or backoffice), the tag to use is ``open_orchestra_display.display_block.strategy``:
+Services used as block display strategies, whether for the Front Office or the Back Office, must be
+taggued as ``open_orchestra_display.display_block.strategy``:
 
 .. code-block:: yaml
 
     tags:
         - { name: open_orchestra_display.display_block.strategy }
 
-It also needs to implement ``OpenOrchestra\DisplayBundle\DisplayBlock\DisplayBlockInterface``
+Those services also need to implement ``OpenOrchestra\DisplayBundle\DisplayBlock\DisplayBlockInterface``
 
 Strategies for the icon
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-For the display of the block icon, the tag to use is ``open_orchestra_backoffice.display_icon.strategy``:
+Services used as block icon display strategies must be taggued as ``open_orchestra_backoffice.display_icon.strategy``:
 
 .. code-block:: yaml
 
     tags:
         - { name: open_orchestra_backoffice.display_icon.strategy }
 
-It also needs to implement ``OpenOrchestra\BackofficeBundle\DisplayIcon\DisplayInterface``
+Such services also need to implement ``OpenOrchestra\BackofficeBundle\DisplayIcon\DisplayInterface``
 
 Strategies for the form
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-For the display of the block form, the tag to use is ``open_orchestra_backoffice.generate_form.strategy``:
+Services used as block form display strategies must be taggued as ``open_orchestra_backoffice.generate_form.strategy``:
 
 .. code-block:: yaml
 
     tags:
         - { name: open_orchestra_backoffice.generate_form.strategy }
 
-It also needs to implement ``OpenOrchestra\Backoffice\GenerateForm\GenerateFormInterface``
+They also need to implement ``OpenOrchestra\Backoffice\GenerateForm\GenerateFormInterface``
 
 Generating blocks in command line
 ---------------------------------
 
-In order to easily create blocks, Open Orchestra has a Symfony command available named ``orchestra:generate:block``.
+In order to easily create blocks, Open Orchestra offers a Symfony console command named ``orchestra:generate:block``.
 
 The usage is pretty straightforward :
 
