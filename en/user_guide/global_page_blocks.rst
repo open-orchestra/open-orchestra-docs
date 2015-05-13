@@ -1,23 +1,37 @@
 Global Pages and Blocks
 =======================
 
-In Open Orchestra, one of the purposes is to simplify the creation of pages by using blocks including their own functionnality.
-They must be configured according to this functionnality (see `Block creation`_ and `Block list`_).
+On a webite, certain elements such as header and footer appear from pages to pages. On Open Orchestra
+it would be a pain to contribute again and again those elements in each node. To avoid this, Open
+Orchestra provide a way to contribute some part of a website once for all. This feature is delivered
+by the **Global pages** and the **Global blocks** functionnalities.
 
-Some blocks could have the same configuration parameters in many pages like header or footer block.
-Global pages are containers allowing to store these globally configured blocks.
-Such blocks are reusable in all pages.
+A "Global block" is a block contributed once and that can be include in any node. Those blocks are
+contributed in a special node type that can be seen as a "Global block" repository : a "Global page".
 
-They will appear with a blue background in the backoffice right panel whereas the other blocks appear in orange color.
+Global pages
+------------
 
-.. image:: ../../images/panel_global_page_blocks.png
-
-The global pages could be accessed through the left menu of the backoffice.
+Global pages can be accessed through the left menu of the Back Office. They have several languages,
+don't have a `workflow`_ and have only one version.
 
 .. image:: ../../images/menu_global_page_blocks.png
 
 Contribution of global pages works the same way as other pages (see `Node`_).
 
-.. _`Block creation`: ../developer_guide/block_creation.rst
-.. _`Block list`: ./block_list.rst
-.. _`Node`: ./node.rst
+Global blocks
+-------------
+
+When contributing a node, available blocks are shown in the right panel. Global blocks that have been
+contributed in global pages appear with a blue background, while standard blocks appear in orange.
+
+.. image:: ../../images/panel_global_page_blocks.png
+
+Contribution of global blocks works the same way as other blocks (see `managing block in node`_),
+except that they can be edited only on the node they where created in, ie their global page.
+
+.. _`managing block in node`: /en/user_guide/node.rst#managing-blocks-in-nodes
+.. _`Block creation`: /en/developer_guide/block_creation.rst
+.. _`Block list`: /en/user_guide/block_list.rst
+.. _`Node`: /en/user_guide/node.rst
+.. _workflow: /en/user_guide/workflow.rst
