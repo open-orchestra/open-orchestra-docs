@@ -6,6 +6,7 @@ different html versions of the same document according to the device displaying 
 an iphone version could show less blocks than a comptuter version.
 
 The main steps of the process are the following:
+
 - Request tagguing: The server catch the request and tag it with the device type
 - Request processing: Open Orchestra processes the request
 - Template selection: When requested to render the page, the template engine select automatically
@@ -16,9 +17,10 @@ The main steps of the process are the following:
 Prerequisite
 ------------
 
-To enable the multi-device rendering, the server entry point (webserver or reverse-proxy) must implement
-the Wurfl library and be able to add a request header corresponding to the device type. Varnish for
-instance can do that task. The `device detection`_ must also be set up.
+To enable the multi-device rendering, the server entry point (webserver or reverse-proxy) must be able
+to detect the client device type and to add a request header corresponding to that device type. A good
+way to do that is to use a tool implementing the Wurfl library. Varnish for instance can do that task.
+The `device detection`_ must also be set up.
 
 
 Configuration
