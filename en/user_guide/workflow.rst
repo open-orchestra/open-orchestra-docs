@@ -11,7 +11,6 @@ must have a right mapping the corresponding transition.
 
 For instance, the article content type could have a workflow represented by the following status:
 
-::
     Draft => Pending => Published
 
 In that configuration, three diffent types of contributors could be involved in the validation of an
@@ -39,11 +38,13 @@ An administrator can define as many status as required to create his workflows.
 Status creation
 ~~~~~~~~~~~~~~~
 
+The status form asks for the following information:
+
 * **Name** (required): status name
 * **Published**: if this status is final
 * **Initial**: if this status is initial
 * **Label**: status label in all available languages
-* **Color** (required): color used on the node (or content) status
+* **Color** (required): color representing the status (used on the node or content edit page)
 
 .. image:: ../../images/status_form.png
 
@@ -58,17 +59,20 @@ related to the transitions. In fact in Open Orchestra, transitions are rights. S
 transition an administrator only have to create a new right. In Open Orchestra, rights are called
 Roles.
 
+The role form asks for the following information:
+
 * **Name**: role name
 * **Description**: role description in all available languages.
 
 .. image:: ../../images/role_form.png
 
-The selection of the two statuses in the role form will define a transition.
+The selection of two status in the role form will define a transition role, and implicitly this transition.
 
 .. image:: ../../images/role_transition.png
 
 This role creates a transition between Draft status and Pending status. So users with this role will
-be able to change the status of a node or content from Draft to Pending.
+be able to change the status of a node or content from Draft to Pending. They will do this via a small
+widget on the node edit page.
 
 .. image:: ../../images/status_transition.png
 
