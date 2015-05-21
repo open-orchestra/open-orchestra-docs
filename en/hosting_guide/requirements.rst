@@ -1,13 +1,13 @@
 Requirements
 ============
 
-Open Orchestra is developped on a specific environnement, making that environnement our reference.
-Open Orchestra is certified and supported on that reference environnement. This document provides
-you the different technologies required to reproduce that reference environnement.
+Open Orchestra is developped on a specific environement, making that environement our reference.
+Open Orchestra is certified and supported on that reference environement. This document provides
+you the different technologies required to reproduce that reference environement.
 
 Basic Requirements
 ------------------
-These requirements are mandatory to run Open Orchestra on a reference environnement.
+These requirements are mandatory to run Open Orchestra on a reference environement.
 
 +---------------------+---------------------+
 | Operating System    | Debian 7.6 (Wheezy) |
@@ -27,7 +27,7 @@ These requirements are mandatory to run Open Orchestra on a reference environnem
 
 Optional requirements
 ---------------------
-These requirements are optionals to run Open Orchestra. They are used on our reference environnement
+These requirements are optionals to run Open Orchestra. They are used on our reference environement
 for optionnal functionnalities.
 
 +---------------------+---------------------+
