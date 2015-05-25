@@ -49,6 +49,7 @@ Developer guide
 * Routing
 * Theme
 * Add new media type
+* `Add a special collection to a Content Attribute`_
 
 Hosting guide
 =============
@@ -79,3 +80,4 @@ Hosting guide
 .. _`Configuration`: /en/hosting_guide/configuration.rst
 .. _`Site creation`: /en/user_guide/websites_creation.rst
 .. _`API group context`: /en/developer_guide/api_group_context.rst
+.. _`Add a special collection to a Content Attribute`: /en/developer_guide/content_add_special_collection_field.rst
