@@ -14,7 +14,7 @@ This diagram shows the main steps of the process:
 2. The server catches the request and tag it with the client type
 3. The modified request is transmitted to Open Orchestra
 4. Open Orchestra processes the request and generates the final html. To render the page, the template
-   engine select automatically the correct template version according to the previously set header.
+   engine selects automatically the correct template version according to the previously set header.
 
 
 Prerequisite
