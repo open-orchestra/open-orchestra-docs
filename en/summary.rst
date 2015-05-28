@@ -35,6 +35,7 @@ Developer guide
 * `Create a block`_
 * Create a CRUD
 * `Add a left panel entry`_
+* `Use a specific backbone view`_
 * `Device detection`_
 * `ESI and Reverse proxy`_
 * `Themes`_
@@ -63,21 +64,22 @@ Hosting guide
 * Backup
 * Logs
 
-.. _`Key concepts`: /en/key_concepts.rst
 .. _`Node`: /en/user_guide/node.rst
-.. _`Content type`: /en/user_guide/content_type.rst
-.. _`Block list`: /en/user_guide/block_list.rst
-.. _`Install`: /en/developer_guide/install.rst
-.. _`Create a block`: /en/developer_guide/block_creation.rst
-.. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
-.. _`Device detection`: /en/developer_guide/multi_device.rst
-.. _`ESI and Reverse proxy`: /en/developer_guide/esi.rst
-.. _`Themes`: /en/developer_guide/themes.rst
-.. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
-.. _`Media`: /en/developer_guide/media_gaufrette.rst
+.. _`Key concepts`: /en/key_concepts.rst
 .. _`Events`: /en/developer_guide/events.rst
+.. _`Themes`: /en/developer_guide/themes.rst
+.. _`Install`: /en/developer_guide/install.rst
+.. _`Block list`: /en/user_guide/block_list.rst
+.. _`Content type`: /en/user_guide/content_type.rst
+.. _`Media`: /en/developer_guide/media_gaufrette.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
 .. _`Configuration`: /en/hosting_guide/configuration.rst
+.. _`ESI and Reverse proxy`: /en/developer_guide/esi.rst
 .. _`Site creation`: /en/user_guide/websites_creation.rst
+.. _`Create a block`: /en/developer_guide/block_creation.rst
+.. _`Device detection`: /en/developer_guide/multi_device.rst
+.. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
+.. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
 .. _`API group context`: /en/developer_guide/api_group_context.rst
+.. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst
 .. _`Add a special collection to a Content Attribute`: /en/developer_guide/content_add_special_collection_field.rst
