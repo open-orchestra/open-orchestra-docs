@@ -5,13 +5,16 @@ Open Orchestra is compatible with the adaptive way of rendering web pages. The i
 different html versions of the same document according to the device displaying it. For instance
 an iphone version could show less blocks than a comptuter version.
 
-The main steps of the process are the following:
+This diagram shows the main steps of the process:
 
-- Request tagguing: The server catch the request and tag it with the device type
-- Request processing: Open Orchestra processes the request
-- Template selection: When requested to render the page, the template engine select automatically
-  the correct template version
-- Response generation: The page is rendered and served to the client
+.. image:: ../../images/multi_devices.png
+
+1. The client makes a request to the server to get a page. Regardless of the type of client (computer,
+   mobile or tablet), the request is the same.
+2. The server catches the request and tag it with the client type
+3. The modified request is transmitted to Open Orchestra
+4. Open Orchestra processes the request and generates the final html. To render the page, the template
+   engine selects automatically the correct template version according to the previously set header.
 
 
 Prerequisite
