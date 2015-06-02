@@ -1,50 +1,72 @@
-Download OpenOrchestra
-======================
+Install OpenOrchestra on your computer
+======================================
 
 Open Orchestra is composed of two projects : *open-orchestra* which is the CMS Backoffice and *open-orchestra-front-demo* which
 is the Frontoffice part that will display the sites and pages created in the CMS.
 
-Requirements
-------------
+This tutorial has been tested on a debian 7.6.
 
-To install Open Orchestra you need to have installed the following software on your server:
+Install the environment
+-----------------------
 
-* Apache2 ``sudo aptitude install apache2``
-* PHP ``sudo aptitude install php5-dev php5-cli php-pear``
-* php-mongo  ``sudo pecl install mongo``
-* Activate php mongo extension copy ``extension=mongo.so`` on your php.ini
+Install the php server
+~~~~~~~~~~~~~~~~~~~~~~
 
-For developers, we provide a Vagrant-powered environment with provisionning so you get minimal setup actions to do.
-
-Install Vagrant
----------------
-The project is running on a Vagrant virtual environment built on VirtualBox to be production ready.
+Install php5 and the mongo extension :
 
 .. code-block:: bash
 
-    $ aptitude install virtualbox
-    $ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
-    $ dpkg -i vagrant_1.6.3_x86_64.deb
+    $ sudo aptitude install php5-cli php5-dev php-pear php5-curl php5-imagick
+    $ sudo pecl install mongo
 
-Install ansible
----------------
-
-All the project server configuration is going to be handled by ansible.
-To avoid version troubles, switch to release 1.8.2
+Activate the mongo extension in php :
 
 .. code-block:: bash
 
-    $ git clone git://github.com/ansible/ansible.git --recursive
-    $ cd ./ansible
-    $ git checkout -b release1.8.2 origin/release1.8.2
-    $ git submodule init
-    $ git submodule update --recursive
-    $ source ./hacking/env-setup
+    $ sudo echo "extension=mongo.so" > /etc/php5/mods-available/mongo.ini
+    $ sudo ln -s /etc/php5/mods-available/mongo.ini /etc/php5/cli/conf.d/30-mongo.ini
 
-Go on the project page for more inforation : http://www.ansible.com
+Install the database
+~~~~~~~~~~~~~~~~~~~~
+
+Install mongo in the 2.6 version at least :
+
+.. code-block:: bash
+
+    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+    $ echo 'deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
+    $ sudo aptitude update
+    $ sudo aptitude install mongodb-org
+
+Check the mongo version :
+
+.. code-block:: bash
+
+    $ mongo --version #MongoDB shell version: 2.6.*
+
+Install NPM
+~~~~~~~~~~~
+
+As a prerequisite, install those packages :
+
+.. code-block:: bash
+
+    $ sudo aptitude install wget curl make g++ gcc libcurl4-openssl-dev libsasl2-2 libsasl2-dev libcurl3
+
+Download and install npm :
+
+.. code-block:: bash
+
+    $ wget http://nodejs.org/dist/v0.10.24/node-v0.10.24.tar.gz ./node-v0.10.24.tar.gz
+    $ tar -xvzf node-v0.10.24.tar.gz
+    $ cd node-v0.10.24
+    $ sudo ./configure --prefix=/usr/local/ && sudo make && sudo make install
+
+Install the project
+-------------------
 
 Download Composer
------------------
+~~~~~~~~~~~~~~~~~
 
 Composer is the package manager used by modern PHP applications.
 
@@ -52,6 +74,7 @@ To install composer with curl:
 
 .. code-block:: bash
 
+    $ sudo aptitude install git
     $ curl -sS https://getcomposer.org/installer | php
 
 If you don't have curl installed, you can also download it with php:
@@ -63,7 +86,7 @@ If you don't have curl installed, you can also download it with php:
 see [Download Composer](https://getcomposer.org/download/)
 
 Install OpenOrchestra
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 Install open-orchestra with composer:
 
@@ -72,77 +95,16 @@ Install open-orchestra with composer:
     $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s dev
     $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s dev
 
-Clone the provisioning repository :
-
-.. code-block:: bash
-
-    $ git clone git@github.com:open-orchestra/open-orchestra-provision.git
-
-Install roles from ansible-galaxy
----------------------------------
-
-Install roles needed to launch the box
-as a prerequisite, update your python modules if required with those two
-
-.. code-block:: bash
-
-    $ aptitude install python-yaml
-    $ aptitude install python-jinja2
-
-If running under Mac OS X, you would install them through `pip`
-
-    easy_install pip
-    pip install pyyaml jinja2
-
-Then go into openorchestra directory
-
-.. code-block:: bash
-
-    $ ansible-galaxy install --role-file=provisioning/galaxy.yml
-
-Override the dns redirection
-----------------------------
-
-In the `/etc/hosts` file of your computer add the following lines :
-
-.. code-block:: text
-
-    192.168.33.10   admin.openorchestra.dev
-    192.168.33.10   front.openorchestra.dev
-    192.168.33.10   demo.openorchestra.dev
-    192.168.33.10   media.openorchestra.dev
-
-Launch the box
---------------
-
-When you launch the box, it will take some time to :
-
-* Import the base box
-* Launch it
-* Run all the provisionning scripts
-
-.. code-block:: bash
-
-    $ vagrant up
-
 Install the assets
 ------------------
 
 We are using npm to manage some server side javascript librairies and bower to manage the client side librairies
-
-Connect to the vagrant box using `vagrant ssh`, then go in the project directory inside the box
-
-.. code-block:: bash
-
-    $ cd /var/www/openorchestra
 
 Install the npm dependancies
 
 .. code-block:: bash
 
     $ npm install
-
-The npm should have also installed the bower component.
 
 Launch the grunt command to generate all assets
 
@@ -153,10 +115,21 @@ Launch the grunt command to generate all assets
 Load the fixtures
 -----------------
 
-In the symfony project directory `/var/www/openorchestra` you can load the fixtures provided :
+Open Orchestra comes with a set of fixtures for a quick demo tour
 
 .. code-block:: bash
 
     $ php app/console doctrine:mongo:fixture:load --env=prod
 
-Now you can log on `http://admin.openorchestra.dev/login` with username=admin and password=admin for the CMS and see the result on `http://demo.openorchestra.dev`.
+Launch the server
+~~~~~~~~~~~~~~~~~
+
+You can use the built in webserver to launch the backoffice of Open Orchestra :
+
+.. code-block:: bash
+
+    $ php app/console server:run
+
+Go on the homepage : ``http://127.0.0.1:8000``
+
+For the front office, you need to install apache and configure the server
