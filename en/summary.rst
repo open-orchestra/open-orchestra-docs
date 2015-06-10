@@ -31,6 +31,7 @@ Developer guide
 ===============
 
 * `Install`_
+* `Install with vagrant`_
 * Development
 * `Create a block`_
 * Create a CRUD
@@ -81,5 +82,6 @@ Hosting guide
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
 .. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
 .. _`API group context`: /en/developer_guide/api_group_context.rst
+.. _`Install with vagrant:`: /en/developer_guide/install_with_vagrant.rst
 .. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst
 .. _`Add a special collection to a Content Attribute`: /en/developer_guide/content_add_special_collection_field.rst
