@@ -29,8 +29,6 @@ These requirements are mandatory to run Open Orchestra on a reference environmen
 | Node.js              | 0.10.30                  |
 +----------------------+--------------------------+
 
-php5-json
-
 Optional requirements
 ---------------------
 These requirements are optionals to run Open Orchestra. They are used on our reference environment
