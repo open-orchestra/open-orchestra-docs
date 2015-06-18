@@ -4,13 +4,18 @@ Add panel to an administration view
 Context
 -------
 
-Sometimes you need to add your own forms to the existing ones in the Administration Back office to add some options to the administration items.
-To answer this need; Open Orchestra implements a system to easily add tabs with your own forms in the administration edit pages.
+In Open Orchestra, if you want to edit an element, you can only display the full form. In some cases
+you want to embillish the edition by splitting the full form in some smaller one.
+
+Open Orchestra already provides you a way to `use a custom Backbone view`_.
+This solution may be possible but will require a large customization of the form view.
+
+To prevent you from doing this work, Open Orchestra provides a way to add multiple tab in your edition form.
 
 Panel System
 ~~~~~~~~~~~~
 
-Each administration facade has a list of links used by ajax to load their forms.
+Each element facade contains a list of links that may be used to display more specific information about them.
 To display a new panel, add a link to the facade, prefixed by ``_self_panel``.
 
 .. code-block:: php
@@ -21,7 +26,8 @@ To display a new panel, add a link to the facade, prefixed by ``_self_panel``.
 The link name is a key to find the link later.
 Open Orchestra also uses this key to configure your panel:
 
-- Add a number after "_self_panel" prefixed by "_" to choose the position of your tab (begin with 1 because ``_self_form`` link will always be in position 0)
+- Add a number after "_self_panel" prefixed by "_" to choose the position of your tab (begin with 1 because
+ the ``_self_form`` link will always be in position 0)
 - Add the title of your panel after the position prefixed by "_" to choose the tab name
 
 Example
@@ -31,13 +37,15 @@ Here is an example of how the panel is used to add a workflow form to Users page
 
 .. image:: ../../images/user_panel_form.png
 
-To add this link, you can use an event subscriber on the UserFacadeEvents::POST_USER_TRANSFORMATION event :
+To add this link without modifying the ``UserTransformer``, we recommand to dispatch an event subscriber
+like ``UserFacadeEvents::POST_USER_TRANSFORMATION`` :
 
 .. code-block:: php
 
     class AddWorkFlowLinkSubscriber implements EventSubscriberInterface
     {
         protected $router;
+
         /**
          * @param UrlGeneratorInterface $router
          */
@@ -45,6 +53,7 @@ To add this link, you can use an event subscriber on the UserFacadeEvents::POST_
         {
             $this->router = $router;
         }
+
         /**
          * @param UserFacadeEvent $event
          */
@@ -56,6 +65,7 @@ To add this link, you can use an event subscriber on the UserFacadeEvents::POST_
                     $workflowParams,
                     UrlGeneratorInterface::ABSOLUTE_URL));
         }
+
         /**
          * @return array The event names to listen to
          */
@@ -67,7 +77,7 @@ To add this link, you can use an event subscriber on the UserFacadeEvents::POST_
         }
     }
 
-and register the event subscriber as a service in a configuration file :
+Register the event subscriber as a service in a configuration file :
 
 .. code-block:: yml
 
@@ -81,3 +91,4 @@ and register the event subscriber as a service in a configuration file :
             tags:
                 - { name: kernel.event_subscriber }
 
+.. _`use a custom Backbone view`: /en/developer_guide/specific_backbone_view.rst
