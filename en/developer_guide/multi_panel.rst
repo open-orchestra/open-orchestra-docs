@@ -5,40 +5,50 @@ Context
 -------
 
 In Open Orchestra, if you want to edit an element, you can only display the full form. In some cases
-you want to embillish the edition by splitting the full form in some smaller one.
+you want to embellish the edition by splitting the full form into some smaller one.
 
 Open Orchestra already provides you a way to `use a custom Backbone view`_.
 This solution may be possible but will require a large customization of the form view.
 
-To prevent you from doing this work, Open Orchestra provides a way to add multiple tab in your edition form.
+To prevent you from doing this work, Open Orchestra provides a way to add multiple tabs in your edition form like in the user edit page.
+
+.. image:: ../../images/user_panel_form.png
 
 Panel System
 ~~~~~~~~~~~~
 
-Each element facade contains a list of links that may be used to display more specific information about them.
-To display a new panel, add a link to the facade, prefixed by ``_self_panel``.
+Each element facade contains a list of meta links that may be used to display specifics meta-information
+or forms to add, modify or delete them.
+The most commons links are :
+
+- ``_self_add`` url to the add form action
+- ``_self_form`` url to the edit form action
+- ``_self_delete`` url to the delete form action
+- ``_self_meta`` url to meta-information
+
+All of these links are used by Open Orchestra Javascript code to send ajax calls and display different administration forms.
+Edit page of administration items uses ``_self_form`` link to display the edit page.
+
+To add a new panel with your own form to this one, add a link to the facade, prefixed by ``_self_panel``.
 
 .. code-block:: php
 
-    $linkName = "_self_panel_" + $position + "_" + $panelTitle;
-    $facade->addLink($linkName, $route);
+    $facade->addLink("_self_panel_" + $linkName, $route);
 
-The link name is a key to find the link later.
-Open Orchestra also uses this key to configure your panel:
+Then add panel's title to the form template in the Controller of the panel
 
-- Add a number after "_self_panel" prefixed by "_" to choose the position of your tab (begin with 1 because
- the ``_self_form`` link will always be in position 0)
-- Add the title of your panel after the position prefixed by "_" to choose the tab name
+.. code-block:: php
+
+         return $this->renderAdminForm($form, array('title' => $title));
 
 Example
 ~~~~~~~
 
 Here is an example of how the panel is used to add a workflow form to Users page.
 
-.. image:: ../../images/user_panel_form.png
-
-To add this link without modifying the ``UserTransformer``, we recommand to dispatch an event subscriber
-like ``UserFacadeEvents::POST_USER_TRANSFORMATION`` :
+To add this link without modifying the ``UserTransformer`` which creates the facade, we recommend to listen
+``UserFacadeEvents::POST_USER_TRANSFORMATION`` with an event subscriber to modify the facade by your own after
+the ``UserTransformer`` work:
 
 .. code-block:: php
 
@@ -46,29 +56,20 @@ like ``UserFacadeEvents::POST_USER_TRANSFORMATION`` :
     {
         protected $router;
 
-        /**
-         * @param UrlGeneratorInterface $router
-         */
         public function __construct(UrlGeneratorInterface $router)
         {
             $this->router = $router;
         }
 
-        /**
-         * @param UserFacadeEvent $event
-         */
         public function postUserTransformation(UserFacadeEvent $event)
         {
             $facade = $event->getUserFacade();
-            $facade->addLink('_self_panel_2_workflow_right',
+            $facade->addLink('_self_panel_workflow_right',
                 $this->router->generate($workflowRouteName,
                     $workflowParams,
                     UrlGeneratorInterface::ABSOLUTE_URL));
         }
 
-        /**
-         * @return array The event names to listen to
-         */
         public static function getSubscribedEvents()
         {
             return array(
@@ -77,7 +78,7 @@ like ``UserFacadeEvents::POST_USER_TRANSFORMATION`` :
         }
     }
 
-Register the event subscriber as a service in a configuration file :
+Register the event subscriber as a service in a configuration file:
 
 .. code-block:: yml
 
@@ -90,5 +91,23 @@ Register the event subscriber as a service in a configuration file :
                 - @router
             tags:
                 - { name: kernel.event_subscriber }
+
+Then add title to the ``formAction`` function in the ``WorkflowRightController``
+
+.. code-block:: php
+
+     /**
+      * @Config\Route("/form/{userId}", name="open_orchestra_backoffice_workflow_right_form")
+      * @Config\Method({"GET", "POST"})
+      */
+     public function formAction(Request $request, $userId)
+     {
+        // Generate the form
+
+        $title = 'open_orchestra_user_admin.form.title';
+        $title = $this->get('translator')->trans($title);
+
+        return $this->renderAdminForm($form, array('title' => $title));
+     }
 
 .. _`use a custom Backbone view`: /en/developer_guide/specific_backbone_view.rst
