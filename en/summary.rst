@@ -36,6 +36,7 @@ Developer guide
 * `Create a block`_
 * Create a CRUD
 * `Add a left panel entry`_
+* `Use the ajax pagination for the entities list`_
 * `Use a specific backbone view`_
 * `Device detection`_
 * `ESI and Reverse proxy`_
@@ -85,3 +86,4 @@ Hosting guide
 .. _`Install with vagrant:`: /en/developer_guide/install_with_vagrant.rst
 .. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst
 .. _`Add a special collection to a Content Attribute`: /en/developer_guide/content_add_special_collection_field.rst
+.. _`Use the ajax pagination for the entities list`: /en/developer_guide/entity_list_ajax_pagination.rst
