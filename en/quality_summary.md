@@ -4,10 +4,10 @@ open-orchestra-base-api-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-base-api-bundle.svg?branch=master)](https://travis-ci.org/open-orchestra/open-orchestra-base-api-bundle) |
-| Scrutinizer (Quality score) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-api-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-api-bundle/?branch=master) |
-| Scrutinizer (Coverage) | [![Code Coverage](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-api-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-api-bundle/?branch=master) |
 | Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/9b7b5fff-3aa5-4240-80e3-95496f960b0e/big.png)](https://insight.sensiolabs.com/projects/9b7b5fff-3aa5-4240-80e3-95496f960b0e) |
 | VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/5548c7355d4f9a44c6001055/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5548c7355d4f9a44c6001055) |
+| CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle) |
+| CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle/coverage) |
 
 open-orchestra-base-bundle
 ==========================
@@ -15,10 +15,10 @@ open-orchestra-base-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-base-bundle.svg?branch=master)](https://travis-ci.org/open-orchestra/open-orchestra-base-bundle) |
-| Scrutinizer (Quality score) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-bundle/?branch=master) |
-| Scrutinizer (Coverage) | [![Code Coverage](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-base-bundle/?branch=master) |
 | Sensio Insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c308bc7c-7651-4ec6-9dd1-4fa1879bf4ef/big.png)](https://insight.sensiolabs.com/projects/c308bc7c-7651-4ec6-9dd1-4fa1879bf4ef) |
 | VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/551e87a4971f781c48000192/badge.svg?style=flat)](https://www.versioneye.com/user/projects/551e87a4971f781c48000192) |
+| CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle) |
+| CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle/coverage) |
 
 open-orchestra-cms-bundle
 =========================
@@ -26,8 +26,8 @@ open-orchestra-cms-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-cms-bundle.svg?branch=master)](https://travis-ci.org/open-orchestra/open-orchestra-cms-bundle) |
-| Scrutinizer (Quality score) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-cms-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-cms-bundle/?branch=master) |
-| Scrutinizer (Coverage) | [![Code Coverage](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-cms-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-cms-bundle/?branch=master) |
+| CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-cms-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-cms-bundle) |
+| CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-cms-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-cms-bundle/coverage) |
 | Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/67012b2b-c9c4-41bc-a13d-9981f2244bf7/big.png)](https://insight.sensiolabs.com/projects/67012b2b-c9c4-41bc-a13d-9981f2244bf7) |
 | VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/551e8782971f7843390000f6/badge.svg?style=flat)](https://www.versioneye.com/user/projects/551e8782971f7843390000f6)|
 
@@ -70,13 +70,13 @@ open-orchestra-model-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-model-bundle.svg)](https://travis-ci.org/open-orchestra/open-orchestra-model-bundle) |
-| Scrutinizer (Quality score) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-model-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-model-bundle/?branch=master) |
-| Scrutinizer (Coverage) | [![Code Coverage](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-model-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-model-bundle/?branch=master) |
+| CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-model-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-model-bundle) |
+| CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-model-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-model-bundle/coverage) |
 | Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/e6c86919-8c4a-4b5a-9619-7b671e4a4ae1/big.png)](https://insight.sensiolabs.com/projects/e6c86919-8c4a-4b5a-9619-7b671e4a4ae1) |
 | VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/551e8799971f781c4800017c/badge.svg?style=flat)](https://www.versioneye.com/user/projects/551e8799971f781c4800017c) |
 
-open-orchestra-model-bundle
-===========================
+open-orchestra-model-interface
+==============================
 
 | Service       | Badge         |
 | ------------- |:-------------:|
