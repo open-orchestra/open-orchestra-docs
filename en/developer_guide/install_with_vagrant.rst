@@ -69,8 +69,9 @@ Install open-orchestra with composer:
 
 .. code-block:: bash
 
-    $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s dev
-    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s dev
+    $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/back/folder -s dev
+    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/front/folder -s dev
+    $ ./composer.phar create-project open-orchestra/open-orchestra-provision path/to/your/provisionning/folder -s dev
 
 Clone the provisioning repository :
 
@@ -94,11 +95,11 @@ If running under Mac OS X, you would install them through ``pip``
     easy_install pip
     pip install pyyaml jinja2
 
-Then go into openorchestra directory
+Then go into openorchestra-provisioning directory
 
 .. code-block:: bash
 
-    $ ansible-galaxy install --role-file=provisioning/galaxy.yml
+    $ ansible-galaxy install --role-file=galaxy.yml
 
 Override the dns redirection
 ----------------------------
