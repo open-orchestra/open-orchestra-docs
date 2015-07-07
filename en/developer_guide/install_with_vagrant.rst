@@ -71,9 +71,8 @@ Install open-orchestra with composer:
 
     $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/back/folder -s dev
     $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/front/folder -s dev
-    $ ./composer.phar create-project open-orchestra/open-orchestra-provision path/to/your/provisionning/folder -s dev
 
-Clone the provisioning repository :
+Clone the provisioning repository in another folder :
 
 .. code-block:: bash
 
