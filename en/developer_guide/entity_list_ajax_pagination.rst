@@ -13,8 +13,39 @@ the plugin makes an ajax request to the api with a number of parameters.
 Usage
 -----
 
-The different variables used to filter (pagination, search, ordering) the data
-are described in this `documentation`_.
+The different variables used to filter (pagination, search, ordering) send by the plugin are:
+
++-----------------------+--------------------------------------------------+
+| **Parameter name**    | **Description**                                  |
++-----------------------+--------------------------------------------------+
+| order[name]           | Column's name to which ordering                  |
+|                       | should be applied                                |
++-----------------------+--------------------------------------------------+
+| order[dir]            | Ordering direction (asc or desc)                 |
++-----------------------+--------------------------------------------------+
+| search[columns][name] | Search value to apply to a specific column       |
+|                       | Name is the ``name`` of column                   |
++-----------------------+--------------------------------------------------+
+| search[global]        | Global search value                              |
++-----------------------+--------------------------------------------------+
+| length                | Number of records that the table                 |
+|                       | can display in the current draw                  |
++-----------------------+--------------------------------------------------+
+| start                 | Paging first record indicator                    |
++-----------------------+--------------------------------------------------+
+
+The ``search`` parameter is not present in the request if there is no value in all search input field.
+
+Example of parameters sent:
+
+.. code-block::
+
+    order[name]:version
+    order[dir]:asc
+    start:0
+    length:50
+    search[columns][version]:2
+    search[global]:car
 
 In order to make the pagination operational, the api should return a facade filled with 4 parameters:
  * recordsTotal: Total number of entities
