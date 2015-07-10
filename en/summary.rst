@@ -61,7 +61,7 @@ Hosting guide
 * Architecture
 * `Requirements`_
 * `Configuration`_
-* Deployment
+* `Deployment`_
 * Maintenance
 * Monitoring
 * Backup
@@ -71,6 +71,7 @@ Hosting guide
 .. _`Key concepts`: /en/key_concepts.rst
 .. _`Events`: /en/developer_guide/events.rst
 .. _`Themes`: /en/developer_guide/themes.rst
+.. _`Deployment`: /en/hosting_guite/deploy.rst
 .. _`Install`: /en/developer_guide/install.rst
 .. _`Block list`: /en/user_guide/block_list.rst
 .. _`Content type`: /en/user_guide/content_type.rst
