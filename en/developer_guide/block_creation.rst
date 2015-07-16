@@ -34,7 +34,7 @@ Services used as Front Office block display strategies, must be taggued as ``ope
 Those services also need to implement ``OpenOrchestra\DisplayBundle\DisplayBlock\DisplayBlockInterface``
 
 Back Office display strategies
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Services used as Back Office block display strategies, must be taggued as ``open_orchestra_backoffice.display_block.strategy``:
 
