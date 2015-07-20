@@ -34,6 +34,7 @@ Developer guide
 * `Install`_
 * `Install with vagrant`_
 * Development
+* `Bundle configurations`_
 * `Create a block`_
 * `Block parameter`_
 * Create a CRUD
@@ -126,6 +127,7 @@ Hosting guide
 .. _`API group context`: /en/developer_guide/api_group_context.rst
 .. _`Global pages and blocks`: /en/user_guide/global_page_blocks.rst
 .. _`Create a backbone route`: /en/developer_guide/backbone_routing.rst
+.. _`Bundle configuration`: /en/developer_guide/bundle_configuration.rst
 .. _`Install with vagrant`: /en/developer_guide/install_with_vagrant.rst
 .. _`Add a navigation panel entry`: /en/developer_guide/navigation_panel.rst
 .. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst

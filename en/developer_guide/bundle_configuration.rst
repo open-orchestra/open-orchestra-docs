@@ -1,0 +1,334 @@
+Bundle configuration
+====================
+
+Context
+-------
+
+As an open source product, Open Orchestra could not entitle you to just one configuration. This file
+will describe each configuration parameter for all bundles
+
+Bundles
+-------
+
+BaseBundle
+~~~~~~~~~~
+
+This bundle will configure the base option for the whole application :
+
+* Language for the administration
+* Key to encrypt the preview token
+* Alias for the object manager
+
+.. code-block:: yaml
+
+    open_orchestra_base:
+        object_manager:       doctrine.odm.mongodb.document_manager
+        administration_languages:
+
+            # Defaults:
+            - en
+            - fr
+        encryption_key:       ThisKeyIsNotSecret
+
+BaseApiMongoModelBundle
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This bundle will gives you an implementation for the base api document and repository :
+
+
+* The factory used to create the repositories
+* The ``ApiClient`` document and repository
+* The ``AccessToken`` document and repository
+
+.. code-block:: yaml
+
+    open_orchestra_base_api_model:
+        document:
+            api_client:
+                class:                OpenOrchestra\BaseApiMongoModelBundle\Document\ApiClient
+                repository:           OpenOrchestra\BaseApiMongoModelBundle\Repository\ApiClientRepository
+            access_token:
+                class:                OpenOrchestra\BaseApiMongoModelBundle\Document\AccessToken
+                repository:           OpenOrchestra\BaseApiMongoModelBundle\Repository\AccessTokenRepository
+
+
+BaseApiBundle
+~~~~~~~~~~~~~
+
+This bundle will be used as a base for all the applications api, you will need to configure :
+
+* The controller to handle all the exceptions
+* The expiration time for the created tokens
+
+.. code-block:: yaml
+
+    open_orchestra_base_api:
+        http_exception_controller:  'OpenOrchestra\BaseApiBundle\Controller\ExceptionController::showAction'
+        token_expiration_time:  +1month
+
+UserBundle
+~~~~~~~~~~
+
+This bundle will manage the user's authentification. To display the forms in the best possible way, you need
+to configure :
+
+* The base layout
+* The form template file
+
+.. code-block:: yaml
+
+    open_orchestra_user:
+        base_layout:          'OpenOrchestraUserBundle::baseLayout.html.twig'
+        form_template:        'OpenOrchestraUserBundle::form.html.twig'
+
+ModelBundle
+~~~~~~~~~~~
+
+This bundle provides an implementation af all the interfaces from the ``model-interface`` component for mongoDB.
+You can configure :
+
+* Some immutable properties for the contents
+* Interfaces for the different fixtures groups
+* All documents and repositories class
+
+.. code-block:: yaml
+
+    open_orchestra_model:
+
+        # Immutable properties of the content class
+        content_immutable_properties:  []
+        fixtures_interface:
+            all:
+
+                # Default:
+                - Doctrine\Common\DataFixtures\FixtureInterface
+            production:
+
+                # Default:
+                - OpenOrchestra\ModelInterface\DataFixtures\OrchestraProductionFixturesInterface
+            functional:
+
+                # Default:
+                - OpenOrchestra\ModelInterface\DataFixtures\OrchestraFunctionalFixturesInterface
+        document:
+            content:
+                class:                OpenOrchestra\ModelBundle\Document\Content
+                repository:           OpenOrchestra\ModelBundle\Repository\ContentRepository
+            content_attribute:
+                class:                OpenOrchestra\ModelBundle\Document\ContentAttribute
+            content_type:
+                class:                OpenOrchestra\ModelBundle\Document\ContentType
+                repository:           OpenOrchestra\ModelBundle\Repository\ContentTypeRepository
+            node:
+                class:                OpenOrchestra\ModelBundle\Document\Node
+                repository:           OpenOrchestra\ModelBundle\Repository\NodeRepository
+            area:
+                class:                OpenOrchestra\ModelBundle\Document\Area
+            block:
+                class:                OpenOrchestra\ModelBundle\Document\Block
+            site:
+                class:                OpenOrchestra\ModelBundle\Document\Site
+                repository:           OpenOrchestra\ModelBundle\Repository\SiteRepository
+            route_document:
+                class:                OpenOrchestra\ModelBundle\Document\RouteDocument
+                repository:           OpenOrchestra\ModelBundle\Repository\RouteDocumentRepository
+            site_alias:
+                class:                OpenOrchestra\ModelBundle\Document\SiteAlias
+            template:
+                class:                OpenOrchestra\ModelBundle\Document\Template
+                repository:           OpenOrchestra\ModelBundle\Repository\TemplateRepository
+            field_option:
+                class:                OpenOrchestra\ModelBundle\Document\FieldOption
+            field_type:
+                class:                OpenOrchestra\ModelBundle\Document\FieldType
+            status:
+                class:                OpenOrchestra\ModelBundle\Document\Status
+                repository:           OpenOrchestra\ModelBundle\Repository\StatusRepository
+            embed_status:
+                class:                OpenOrchestra\ModelBundle\Document\EmbedStatus
+            theme:
+                class:                OpenOrchestra\ModelBundle\Document\Theme
+                repository:           OpenOrchestra\ModelBundle\Repository\ThemeRepository
+            role:
+                class:                OpenOrchestra\ModelBundle\Document\Role
+                repository:           OpenOrchestra\ModelBundle\Repository\RoleRepository
+            redirection:
+                class:                OpenOrchestra\ModelBundle\Document\Redirection
+                repository:           OpenOrchestra\ModelBundle\Repository\RedirectionRepository
+            keyword:
+                class:                OpenOrchestra\ModelBundle\Document\Keyword
+                repository:           OpenOrchestra\ModelBundle\Repository\KeywordRepository
+            embed_keyword:
+                class:                OpenOrchestra\ModelBundle\Document\EmbedKeyword
+            translated_value:
+                class:                OpenOrchestra\ModelBundle\Document\TranslatedValue
+            trash_item:
+                class:                OpenOrchestra\ModelBundle\Document\TrashItem
+                repository:           OpenOrchestra\ModelBundle\Repository\TrashItemRepository
+
+MediaBundle
+~~~~~~~~~~~
+
+This bundle gives you a way to display medias in blocks, contents, ... . You can configure :
+
+* The media domain
+* The upload temporary directory
+* The filesystem used for the upload
+* The compression quality
+* All the thumbnails formats available
+
+.. code-block:: yaml
+
+    open_orchestra_media:
+        media_domain:         ''
+        tmp_dir:              /tmp
+        filesystem:           media_storage
+        compression_quality:  75
+        thumbnail:
+            max_height:
+                max_height:           100
+            max_width:
+                max_width:            100
+            rectangle:
+                max_width:            100
+                max_height:           70
+
+MediaModelBundle
+~~~~~~~~~~~~~~~~
+
+This bundle provides an implementation for all the interfaces defined in the MediaBundle. You can configure :
+
+* The ``Media`` and ``MediaFolder`` document and repository
+
+.. code-block:: yaml
+
+    open_orchestra_media_model:
+        document:
+            media:
+                class:                OpenOrchestra\MediaModelBundle\Document\Media
+                repository:           OpenOrchestra\MediaModelBundle\Repository\MediaRepository
+            media_folder:
+                class:                OpenOrchestra\MediaModelBundle\Document\MediaFolder
+                repository:           OpenOrchestra\MediaModelBundle\Repository\FolderRepository
+
+WorkflowFunctionModelBundle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This bundle provides an implementation for all the interfaces defined in the WorkflowBundle. You can configure :
+
+* All documents and repositories class
+
+.. code-block:: yaml
+
+    open_orchestra_workflow_function_model:
+        document:
+            workflow_function:
+                class:                OpenOrchestra\WorkflowFunctionModelBundle\Document\WorkflowFunction
+                repository:           OpenOrchestra\WorkflowFunctionModelBundle\Repository\WorkflowFunctionRepository
+            workflow_right:
+                class:                OpenOrchestra\WorkflowFunctionModelBundle\Document\WorkflowRight
+                repository:           OpenOrchestra\WorkflowFunctionModelBundle\Repository\WorkflowRightRepository
+            authorization:
+                class:                OpenOrchestra\WorkflowFunctionModelBundle\Document\Authorization
+            reference:
+                class:                OpenOrchestra\WorkflowFunctionModelBundle\Document\Reference
+
+BackofficeBundle
+~~~~~~~~~~~~~~~~
+
+This bundle will create the Backoffice of the Open Orchestra project. You can configure :
+
+* The language from the front installation
+* The blocks that you created
+* The fixed attributes from the block (shared through all blocks)
+* The field type and options for the content (specific to your project)
+* The color available for the backoffice
+
+.. code-block:: yaml
+
+    open_orchestra_backoffice:
+
+        # Add the language available for the front with the key
+        front_languages:
+
+            # Prototype
+            key:                  ~
+
+        # Add the block activated for the project
+        blocks:               []
+
+        # Add the global block attributes
+        fixed_attributes:     []
+
+        # Array of content attributes (for content types)
+        field_types:
+
+            # Prototype
+            field_name:
+                label:                ~ # Required
+                type:                 ~ # Required
+                default_value:
+                    type:                 ~
+                    options:
+                        label:                ~
+                        required:             true
+                options:
+
+                    # Prototype
+                    option_name:
+                        default_value:        ~ # Required
+
+        # Array of content attributes options
+        options:
+
+            # Prototype
+            option_name:
+                type:                 ~ # Required
+                label:                ~ # Required
+                required:             true
+
+        # List of the color available, in the status for instance
+        available_color:
+
+            # Prototype
+            key:                  ~
+
+FrontBundle
+~~~~~~~~~~~
+
+This bundle creates the base part for the Front Office installation. You can configure :
+
+* The devices name
+* The device type field name
+* The routing type
+
+.. code-block:: yaml
+
+    open_orchestra_front:
+        devices:
+
+            # Prototype
+            name:
+                parent:               null
+        device_type_field:    x-ua-device
+        routing_type:         ~ # One of "file"; "database"
+
+ThemeBundle
+~~~~~~~~~~~
+
+This bundle will add the different assets (js and css files) to the different files. You can configure :
+
+* The different stylesheet groups
+
+.. code-block:: yaml
+
+    open_orchestra_theme:
+        themes:
+
+            # Prototype
+            id:
+                name:                 ~ # Required
+                stylesheets:          []
+                javascripts:          []
+
+.. _`field type`: /en/developer_guide/field_type.rst

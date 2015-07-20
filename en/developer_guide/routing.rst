@@ -104,7 +104,7 @@ a matching route.
 To configure this router, you  have to specify the different loader you are using (nodes and redirection) in
 the ``routing.yml`` file :
 
-.. code-block:: yaml
+.. code-block:: yaml
 
     open_orchestra_database:
         resource: '.'
@@ -116,7 +116,7 @@ the ``routing.yml`` file :
 
 You also have to modify the project configuration, in the ``config.yml`` file :
 
-.. code-block:: yaml
+.. code-block:: yaml
 
     open_orchestra_front:
         routing_type: file
