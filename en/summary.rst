@@ -64,6 +64,7 @@ Hosting guide
 * `Requirements`_
 * `Configuration`_
 * `Deployment`_
+* `Provisionning`_
 * Maintenance
 * Monitoring
 * Backup
@@ -96,6 +97,7 @@ Hosting guide
 .. _`Create a block`: /en/developer_guide/block_creation.rst
 .. _`Device detection`: /en/developer_guide/multi_device.rst
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
+.. _`Provisionning`: /en/hosting_guite/server_provisionning.rst
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
 .. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
