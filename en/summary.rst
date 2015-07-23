@@ -52,7 +52,6 @@ Developer guide
 * `API`_
 * `API group context`_
 * `Routing`_
-* `Theme`_
 * Add new media type
 * `Add a special listener to a Content field`_
 * `Plateform logging`_
@@ -68,21 +67,21 @@ Hosting guide
 * Maintenance
 * Monitoring
 * Backup
-* Logs
+* `Logs`_
 
 .. _`Node`: /en/user_guide/node.rst
 .. _`User`: /en/user_guide/user.rst
 .. _`Role`: /en/user_guide/role.rst
 .. _`Media`: /en/user_guide/media.rst
+.. _`Logs`: /en/hosting_guide/logs.rst
 .. _`Api`: /en/developer_guide/api.rst
 .. _`Key concepts`: /en/key_concepts.rst
 .. _`Content`: /en/user_guide/content.rst
-.. _`Theme`: /en/developer_guide/themes.rst
 .. _`Workflow`: /en/user_guide/workflow.rst
 .. _`Events`: /en/developer_guide/events.rst
 .. _`Themes`: /en/developer_guide/themes.rst
 .. _`Routing`: /en/developer_guide/routing.rst
-.. _`Deployment`: /en/hosting_guite/deploy.rst
+.. _`Deployment`: /en/hosting_guide/deploy.rst
 .. _`Install`: /en/developer_guide/install.rst
 .. _`Block list`: /en/user_guide/block_list.rst
 .. _`Content type`: /en/user_guide/content_type.rst
@@ -97,7 +96,7 @@ Hosting guide
 .. _`Create a block`: /en/developer_guide/block_creation.rst
 .. _`Device detection`: /en/developer_guide/multi_device.rst
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
-.. _`Provisionning`: /en/hosting_guite/server_provisionning.rst
+.. _`Provisionning`: /en/hosting_guide/server_provisionning.rst
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
 .. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
