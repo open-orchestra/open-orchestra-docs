@@ -73,6 +73,7 @@ Hosting guide
 .. _`User`: /en/user_guide/user.rst
 .. _`Role`: /en/user_guide/role.rst
 .. _`Media`: /en/user_guide/media.rst
+.. _`Logs`: /en/hosting_guide/logs.rst
 .. _`Api`: /en/developer_guide/api.rst
 .. _`Key concepts`: /en/key_concepts.rst
 .. _`Content`: /en/user_guide/content.rst
@@ -96,7 +97,6 @@ Hosting guide
 .. _`Device detection`: /en/developer_guide/multi_device.rst
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
 .. _`Provisionning`: /en/hosting_guide/server_provisionning.rst
-.. _`Logs`: /en/hosting_guide/logs.rst
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
 .. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
