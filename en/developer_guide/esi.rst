@@ -83,7 +83,7 @@ The generic tags are added for all kind of blocks, they depend on :
 * the website
 
 Additionnaly, each rendering strategy for blocks can define a list of specific tags
-by implementing the method ``DisplayBlockInterface::getTags()``.
+by implementing the method ``DisplayBlockInterface::getCacheTags()``.
 
 It's possible to define new cache tags for some data to be flushed at optimal times,
 depending on the specifics of the application. These tags can then be flushed by calling
