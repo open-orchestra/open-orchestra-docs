@@ -35,6 +35,7 @@ Developer guide
 * `Install with vagrant`_
 * Development
 * `Create a block`_
+* `Block parameter`_
 * Create a CRUD
 * `Add a navigation panel entry`_
 * `Add a field type`_
@@ -106,6 +107,7 @@ Hosting guide
 .. _`Custom error pages`: /en/developer_guide/error_pages.rst
 .. _`Provisioning`: /en/hosting_guide/server_provisioning.rst
 .. _`API transformer`: /en/developer_guide/api_transformer.rst
+.. _`Block parameter`: /en/developer_guide/block_parameter.rst
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
