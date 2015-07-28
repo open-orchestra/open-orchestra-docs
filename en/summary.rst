@@ -56,6 +56,7 @@ Developer guide
 * Add new media type
 * `Add a special listener to a Content field`_
 * `Plateform logging`_
+* `Custom error pages`_
 
 Hosting guide
 =============
@@ -88,6 +89,7 @@ Hosting guide
 .. _`Content type`: /en/user_guide/content_type.rst
 .. _`SmartAdmin`: /en/developer_guide/smart_admin.rst
 .. _`Plateform logging`: /en/developer_guide/logs.rst
+.. _`Custom error pages`: /en/developer_guide/error_pages.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
 .. _`Content - node`: /en/user_guide/content_display.rst
 .. _`Configuration`: /en/hosting_guide/configuration.rst

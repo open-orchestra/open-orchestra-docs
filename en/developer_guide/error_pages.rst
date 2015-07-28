@@ -71,5 +71,13 @@ to validate the maintenance rewrite and to remove it to put your site on back.
 
 Error 404 - Page not found
 --------------------------
+The 404 error page requires less efforts than the 503 version to be used. Once a 404 node is contributed
+and published, it immediately replaces the standard 404 error message from Symfony.
 
-Doc to come
+Be aware that if the node is published in only one language, it will only be available for the site aliases
+using that language. That way, a site in several languages can present an Open Orchestra 404 page for one
+language and a Symfony 404 page for others.
+
+Note: like 503 pages, 404 pages are also dumped by the console command orchestra:errorpages:generate. They
+can so be used with virtual hosts configuration on some cases if needed.
+
