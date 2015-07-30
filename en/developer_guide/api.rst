@@ -117,4 +117,70 @@ two firewalls sharing the same context must be defined:
             path:   /logout
             target: /admin
 
+New authentication strategy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the case when the strategies already available in Open Orchestra do not
+fits your needs, you can add your own authentication strategy.
+
+Lets say you want to create the foo authentication strategy which will take
+the ``foo`` parameter in the request and create a token with foo as access
+token code.
+
+The class should implement ``OpenOrchestra\BaseApi\OAuth2\Strategy\StrategyInterface``.
+
+In this interface, there are three method:
+
+ * ``supportRequestToken``, to check if this strategy should be used to create a token
+ * ``requestToken``, to create and save the token
+ * ``getName``, to name the strategy
+
+Let's say that the ``objectManager`` and the ``serializer`` are injected to the
+``FooStrategy``.
+
+.. code-block:: php
+
+    class FooStrategy implements StrategyInterface
+    {
+        public function supportRequestToken(Request $request)
+        {
+            return $request->get('foo');
+        }
+
+        public function requestToken(Request $request)
+        {
+            $fooParameter = $request->get('foo');
+
+            $accessToken = AccessToken::create();
+            $accessToken->setCode($fooParameter);
+
+            $this->objectManager->persist($accessToken);
+            $this->objectManager->flush($accessToken);
+
+            $tokenFacade = new AccessTokenFacade();
+            $tokenFacade->accessToken = $accessToken->getCode();
+
+            return Response::create(
+                $this
+                    ->serializer
+                    ->serialize(
+                        $tokenFacade,
+                        'json'
+                    ),
+                    200,
+                    array('Content-Type' => 'application/json')
+                )
+                ->prepare($request);
+        }
+
+To use this strategy, send a request to : ``/oauth/access_token?foo=bar``.
+The response should return a json object looking like:
+
+.. code-block:: json
+
+    { 'access_token': 'bar' }
+
+You can then use the ``bar`` access token to call the api:
+``/api/url?access_token=bar``
+
 .. _`OAuth2`: http://oauth.net/2/
