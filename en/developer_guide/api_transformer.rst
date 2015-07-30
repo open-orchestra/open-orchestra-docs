@@ -129,5 +129,70 @@ In the controller, you should access your transformer via
         }
     }
 
+Entity modification
+~~~~~~~~~~~~~~~~~~~
+
+Once your entity has been serialized as a Facade to expose the data,
+you might need to modify it.
+
+To help you do it, the ``TransformerInterface`` provides you a ``reverseTransform``
+method. This method take as argument the facade send in the request and
+the entity to modify.
+
+First, add a method to the ``FooController``:
+
+.. code-block:: php
+
+    // Set a route on the 'POST' method and a paramConverter
+    public function editAction(Request $request, Foo $foo)
+    {
+        // Deserialize the content of the request in the FooFacade
+        $facade = $this
+            ->get('jms_serializer')
+            ->deserialize(
+                $request->getContent(),
+                'FooBundle\Facade\FooFacade',
+                $request->get('_format', 'json')
+            );
+
+        // Perform the reverse transform operation
+        $this
+            ->get('open_orchestra_api.transformer_manager')
+            ->get('foo')
+            ->reverseTransform($facade, $foo);
+
+        // Check if the entity is valid
+        if ($this->isValid($foo)) {
+            //Save the entity
+
+            return new Response('', 200);
+        }
+
+        // If the entity is not valid, return the violations
+        return new Response(
+            $this
+                ->get('jms_serializer')
+                ->serialize(
+                    $this->getViolations(),
+                    $request->get('_format', 'json')
+                ),
+            400
+        );
+    }
+
+Then complete the ``reverseTransform`` method from the ``FooTransformer``, I will
+keep the same parameter.
+
+.. code-block:: php
+
+    public function reverseTansform(FacadeInterface $fooFacade, $fooEntity = null)
+    {
+        if (isset($fooFacade->baz)) {
+            $fooEntity->bar = $facade->baz;
+        }
+
+        return $fooEntity;
+    }
+
 .. _`group context page`: /en/developer_guide/api_group_context.rst
 .. _`Facade design pattern`: https://en.wikipedia.org/wiki/Facade_pattern
