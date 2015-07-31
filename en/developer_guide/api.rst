@@ -178,7 +178,7 @@ The response should return a json object looking like:
 
 .. code-block:: json
 
-    { 'access_token': 'bar' }
+    { "access_token": "bar" }
 
 You can then use the ``bar`` access token to call the api:
 ``/api/url?access_token=bar``
