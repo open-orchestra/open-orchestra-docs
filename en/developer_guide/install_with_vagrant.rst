@@ -108,7 +108,6 @@ In the ``/etc/hosts`` file of your computer add the following lines :
 .. code-block:: text
 
     192.168.33.10   admin.openorchestra.dev
-    192.168.33.10   front.openorchestra.dev
     192.168.33.10   demo.openorchestra.dev
 
 Launch the box
