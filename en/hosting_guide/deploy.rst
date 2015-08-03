@@ -37,6 +37,10 @@ the integration server
         Hostname 10.0.1.246
         User open_orchestra_front_inte
         ForwardAgent yes
+    Host open_orchestra_media_inte
+        Hostname 10.0.1.246
+        User open_orchestra_media_inte
+        ForwardAgent yes
     Host open_orchestra_backoffice_inte
         Hostname 10.0.1.246
         User open_orchestra_backoffice_inte
