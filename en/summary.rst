@@ -72,6 +72,7 @@ Hosting guide
 * Backup
 * `Logs`_
 * `MongoDB Migration`_
+* `Creating a new site`
 
 .. _`Node`: /en/user_guide/node.rst
 .. _`User`: /en/user_guide/user.rst
@@ -91,9 +92,8 @@ Hosting guide
 .. _`Content type`: /en/user_guide/content_type.rst
 .. _`SmartAdmin`: /en/developer_guide/smart_admin.rst
 .. _`Plateform logging`: /en/developer_guide/logs.rst
-.. _`MongoDB Migration`: /en/hosting_guide/migration.rst
-.. _`Custom error pages`: /en/developer_guide/error_pages.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
+.. _`MongoDB Migration`: /en/hosting_guide/migration.rst
 .. _`Content - node`: /en/user_guide/content_display.rst
 .. _`Configuration`: /en/hosting_guide/configuration.rst
 .. _`ESI and Reverse proxy`: /en/developer_guide/esi.rst
@@ -102,11 +102,13 @@ Hosting guide
 .. _`Media upload`: /en/developer_guide/media_gaufrette.rst
 .. _`Create a block`: /en/developer_guide/block_creation.rst
 .. _`Device detection`: /en/developer_guide/multi_device.rst
+.. _`Custom error pages`: /en/developer_guide/error_pages.rst
 .. _`API transformer`: /en/developer_guide/api_transformer.rst
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
 .. _`Provisionning`: /en/hosting_guide/server_provisionning.rst
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
+.. _`Creating a new site` : /en/hosting_guide/site_creation.rst
 .. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
 .. _`Multiple panel edition`: /en/developer_guide/multi_panel.rst
 .. _`API group context`: /en/developer_guide/api_group_context.rst
