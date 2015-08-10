@@ -1,5 +1,5 @@
 Blocks natively available
-========================
+=========================
 
 Open Orchestra comes with a set of blocks that can be used as-is in a website and cover a wide range of use cases.
 
@@ -42,7 +42,7 @@ The gallery block will display a set of images from the media library.
 
 Video
 ~~~~~
-This block can display a video hosted on YouTube, Dailymotion or Vime services.
+This block can display a video hosted on YouTube, Dailymotion or Vine services.
 
 Media list by keyword
 ~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +52,7 @@ Navigation blocks
 -----------------
 
 Language list
-~~~~~~~~~~~~
+~~~~~~~~~~~~~
 This block provides a select box that lets the user change the current language in which the website is displayed.
 It will automatically display all languages available.
 
@@ -68,7 +68,7 @@ It's therefore possible to create a menu for only a subset of pages, different f
 
 Footer
 ~~~~~~
-Similarily to the Menu block, it will list all pages that have been set to appear in the footer.
+Similarly to the Menu block, it will list all pages that have been set to appear in the footer.
 
 Miscellaneous blocks
 --------------------

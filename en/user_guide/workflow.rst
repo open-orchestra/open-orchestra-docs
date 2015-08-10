@@ -2,7 +2,7 @@ Workflow
 ========
 
 In Open Orchestra, key contributions such as nodes and contents are subject to a publication workflow.
-It allows several levels of validation by different people from creation to publication. Workflows
+It allows several levels of validation by different people from creation to publication. Workflow
 are fully customizable.
 
 A workflow is composed of steps, each corresponding to a status. Each status is linked to one (or
@@ -13,7 +13,7 @@ For instance, the article content type could have a workflow represented by the 
 
     Draft => Pending => Published
 
-In that configuration, three diffent types of contributors could be involved in the validation of an
+In that configuration, three different types of contributors could be involved in the validation of an
 article. A contributor create the content and make it in the Draft status. A second one is responsible
 for a first step of validation and, if ok, put it in the Pending status. A last contributor is required
 to publish the content on the Front Office.
@@ -28,12 +28,12 @@ Each version of a node or a content has a status representing its state (for ins
 published).
 There are 3 types of status : 
 
-* An **initial** status is the begining state of a workflow (automatically assigned to a node or a
+* An **initial** status is the beginning state of a workflow (automatically assigned to a node or a
   content just after its creation).
 * A **final** status makes a content visible on the Front Office.
 * All status that are not initial or final are **standard**
 
-An administrator can define as many status as required to create his workflows.
+An administrator can define as many status as required to create his workflow.
 
 Status creation
 ~~~~~~~~~~~~~~~

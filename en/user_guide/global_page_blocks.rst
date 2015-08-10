@@ -4,7 +4,7 @@ Global Pages and Blocks
 On a webite, certain elements such as header and footer appear from pages to pages. On Open Orchestra
 it would be a pain to contribute again and again those elements in each node. To avoid this, Open
 Orchestra provide a way to contribute some part of a website once for all. This feature is delivered
-by the **Global pages** and the **Global blocks** functionnalities.
+by the **Global pages** and the **Global blocks** functionalities.
 
 A "Global block" is a block contributed once and that can be include in any node. Those blocks are
 contributed in a special node type that can be seen as a "Global block" repository : a "Global page".

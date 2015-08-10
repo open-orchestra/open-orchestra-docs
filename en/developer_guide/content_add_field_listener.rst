@@ -6,7 +6,7 @@ Context
 
 When working with the Content and ContentType, you might have the need to add a specific listener.
 
-In some case, the field can store a collection which needs to be initialized by a listener to set all the datas.
+In some case, the field can store a collection which needs to be initialized by a listener to set all the data.
 
 The main issues is that all the contentAttribute are stored as a raw field in mongoDB. By doing this, the data you will
 save will be typed but the data you get back will only be an array.
@@ -64,7 +64,7 @@ First create the specific form type :
     }
 
 
-Then inject the default value unitializer :
+Then inject the default value initializer :
 
 .. code-block:: php
 
@@ -110,7 +110,7 @@ When you create the contentAttribute, there are no data stored, so the ``$data``
 
 This is the same workflow as the other translated values.
 
-As you can see, there is no event listener binded on Submit events. The raw field type automatically
+As you can see, there is no event listener bound on Submit events. The raw field type automatically
 accepts ``array`` and ``ArrayCollection``.
 
 When you want to display the data stored, you need to transform it from an ``array`` to a

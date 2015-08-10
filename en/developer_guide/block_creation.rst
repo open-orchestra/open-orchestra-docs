@@ -60,7 +60,7 @@ Such services also need to implement ``OpenOrchestra\BackofficeBundle\DisplayIco
 Strategies for the form
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Services used as block form display strategies must be taggued as ``open_orchestra_backoffice.generate_form.strategy``:
+Services used as block form display strategies must be tagged as ``open_orchestra_backoffice.generate_form.strategy``:
 
 .. code-block:: yaml
 

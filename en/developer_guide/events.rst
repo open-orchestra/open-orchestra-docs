@@ -132,7 +132,7 @@ Status
 These events are defined in the class ``OpenOrchestra\ModelInterface\StatusEvents`` and inherit ``OpenOrchestra\ModelInterface\Event\StatusEvent``.
 
 * StatusEvent
-    * Création d'un status creation : STATUS_CREATE
+    * Status creation : STATUS_CREATE
     * Status removal : STATUS_DELETE
     * Status update: STATUS_UPDATE
 
@@ -167,7 +167,7 @@ and inherit ``OpenOrchestra\UserBundle\Event\GroupEvent`` and ``OpenOrchestra\Us
     * User removal : USER_DELETE
     * User update : USER_UPDATE
 
-Exemple of event dispatching
+Example of event dispatching
 ----------------------------
 
 You can easily dispatch your own events or Open Orchestra events as you would normally do with Symfony.

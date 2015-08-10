@@ -32,13 +32,13 @@ These requirements are mandatory to run Open Orchestra on a reference environmen
 Optional requirements
 ---------------------
 These requirements are optionals to run Open Orchestra. They are used on our reference environment
-for optionnal functionnalities.
+for optional functionalities.
 
 +----------------------+--------------------------+
 | Reverse proxy        | Varnish 3.0.7            |
 +----------------------+--------------------------+
 
-For a development server, we recommand you to add some packages:
+For a development server, we recommend you to add some packages:
 
 +----------------------+--------------------------+
 | Blackfire            |                          |

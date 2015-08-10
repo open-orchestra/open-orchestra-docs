@@ -24,7 +24,7 @@ Here are the settings added to config.yml ;
         name: "Open Orchestra MongoDB Migrations"
         namespace: "OpenOrchestra\ModelBundle\Migrations\MongoDB"
 
-- collection_name: this value indicates what will be the name of the collection used to store the migration informations
+- collection_name: this value indicates what will be the name of the collection used to store the migration information
 - database_name: each time the name of the database is needed, this alias is used
 - dir_name: as the use of this bundles will result in generation of files, the target is specified
 - script_dir_name: same as dir_name, but this indicates where js script are located

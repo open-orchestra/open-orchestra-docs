@@ -88,7 +88,7 @@ node by node.
 Meta keyword
 ~~~~~~~~~~~~
 
-This is a list of keywords asociated to the page and can be used by search engines for ranking.
+This is a list of keywords associated to the page and can be used by search engines for ranking.
 
 Meta description
 ~~~~~~~~~~~~~~~~
@@ -106,8 +106,8 @@ Meta follow
 This attribute indicates to search engines if they should follow hypertext links encountered in
 the page to index linked documents.
 
-Informations contained in the robots.txt file (required)
---------------------------------------------------------
+Information contained in the robots.txt file (required)
+-------------------------------------------------------
 
 This field contains the data of the robots.txt file.
 
