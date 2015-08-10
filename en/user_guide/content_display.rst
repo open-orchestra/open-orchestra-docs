@@ -2,7 +2,7 @@ Contents display
 ================
 
 Once contributed, there is only one way to display a content: using content blocks in nodes. Open
-Orchestra comes with 3 block types able to render a content, but a developper can create his own block
+Orchestra comes with 3 block types able to render a content, but a developer can create his own block
 to match his needs. The three standard Open Orchestra content blocks are:
 
 * Content list block
@@ -21,7 +21,7 @@ Contribution
 Besides the common settings for all blocks, the content list block requires two specific types of
 settings:
 
-* Criteria: These are a combination of two basic criterias. The contributor must choose a content
+* Criteria: These are a combination of two basic criteria. The contributor must choose a content
   type and/or keyword(s) to trigger the contents.
 
 * Rendering: The contributor has two ways to render this block. He can use the standard template of
@@ -53,7 +53,7 @@ Anderson.
 
 Contribution
 ````````````
-On this block, like on the content list block, the contibutor can use the standard template of the
+On this block, like on the content list block, the contributor can use the standard template of the
 block or create a specific one for that block/node using the rich text.
 
 **To get this block working, the node url pattern has to be set in a specific way. As the content

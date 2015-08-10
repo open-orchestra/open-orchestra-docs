@@ -80,7 +80,7 @@ Once Apache reloaded, your new website should be accessible.
 access (eg app_dev.php, app_prod.php, etc ...).
 
 (Optional) Configure the 404 & 503 pages
------------------------------------------
+----------------------------------------
 At this stage, your site is visible. But it's the minimum and you can add several optional features.
 For instance, you can customize the 404 and 503 pages to map them to your site design. The
 `documentation on error pages`_ shows how to do that.

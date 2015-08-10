@@ -9,7 +9,7 @@ documentation for more information.
 Listing
 -------
 Contents listing is accessed in the Editorial section, by clicking on the "Contents" link. A submenu
-lists all Content Types availables.
+lists all Content Types available.
 
 .. image:: ../../images/content_list_submenu.png
 
@@ -32,7 +32,7 @@ the initial status of the workflow.
 Edition
 -------
 From the content list, clicking on an "Edit" button makes an edit form appear. The edit form is mainly
-the same as the creation form, completed with current values, but has three more functionnalities.
+the same as the creation form, completed with current values, but has three more functionalities.
 
 .. image:: ../../images/content_edit.png
 
@@ -41,7 +41,7 @@ documentation for more information)
 
 * **Translations**: the language tabs allow you to create/edit the content in alternative languages
 
-* **Versionning**: The version selector allows you to edit a previous version of the content in the
+* **Versioning**: The version selector allows you to edit a previous version of the content in the
 selected language. The "New version" button will duplicate the last version of the content in the
 selected language to create a new version.
 

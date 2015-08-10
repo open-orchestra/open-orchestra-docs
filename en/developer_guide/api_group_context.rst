@@ -9,7 +9,7 @@ linked to one entity and one facade. This way, each time you will transform an e
 a facade, it will be done using the same parameters. In some case, you do not want to display
 all the data from a facade in a certain context.
 
-For instance, when you list all the nodes, the area and blocks might not be usefull.
+For instance, when you list all the nodes, the area and blocks might not be useful.
 
 The ``JMSSerializerBundle`` allows you to hide some properties on the serialization by using
 some serialization group. The main issue with this method is that you will still have to

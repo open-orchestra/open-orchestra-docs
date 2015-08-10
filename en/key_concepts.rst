@@ -24,7 +24,7 @@ Content types
 Content types are a way to create new kinds of content that will be available to contribution.
 Creating a content type allows to define the fields available in the future contents.
 
-For instance, a 'news' content will have differents fields from an 'article' content,
+For instance, a 'news' content will have different fields from an 'article' content,
 so there would be two distinct content types for these objects : one for the news contents and another for the article contents.
 
 See also `Presentation of the Content Types`_.
@@ -34,14 +34,14 @@ Contents
 
 With Open Orchestra, contents are used to display contributed information (articles, news, etc.).
 The contents are defined by a content type.
-Like nodes, contents are multilingual, versionned and have a validation workflow.
+Like nodes, contents are multilingual, versioned and have a validation workflow.
 
 See also `Presentation of contents`_.
 
 Templates
 ---------
 
-Templates are used to preconfigure pages by setting zones that are commonly used accross pages.
+Templates are used to preconfigure pages by setting zones that are commonly used across pages.
 Open Orchestra let the user start with a template when creating a node.
 
 See also `configuring a template`_.
@@ -67,7 +67,7 @@ Transverses blocks
 
 Transverses blocks are defined inside the transverse node, they can be shared by several nodes of a website.
 All blocks can be transverse, as long as they are added to the transverse node.
-Transverse blocks can only be conigured in the transverse node.
+Transverse blocks can only be configured in the transverse node.
 
 Themes
 ------
@@ -134,7 +134,7 @@ Open Orchestra's bundles :
  * open-orchestra-display-bundle contains all the block display strategies for the Front Office.
  * open-orchestra-model-interface is a full description of the model classes used by other bundles.
  * open-orchestra-model-bundle contains the database access logic (doctrinemongodb).
- * open-orchestra-media-bundle contains the media functionnalities.
+ * open-orchestra-media-bundle contains the media functionalities.
  * open-orchestra-user-bundle groups all user logic.
 
 In order to use another database system one should had a new bundle which classes will implement

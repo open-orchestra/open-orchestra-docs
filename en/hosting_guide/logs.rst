@@ -16,7 +16,7 @@ For instance, if you want to store the logs in mongo, you will have to define a 
 The level entry indicates the information type to record in the logs.
 Each level is a number which value is standardized in the PSR-3 recommendation.
 For instance 200 is the value for the "info" level.
-The different levels are defined in the `Monolog documentaion`_
+The different levels are defined in the `Monolog documentation`_
 
 .. code-block:: yaml
 
@@ -80,6 +80,6 @@ they are replaced on display.
 The different subscribers are in ``OpenOrchestra\LogBundle\EventSubscriber``.
 
 .. _`Monolog`: https://github.com/Seldaek/monolog
-.. _`Monolog documentaion`: https://github.com/Seldaek/monolog/blob/master/README.mdown#log-levels
+.. _`Monolog documentation`: https://github.com/Seldaek/monolog/blob/master/README.mdown#log-levels
 .. _`processor documentation`: http://symfony.com/fr/doc/current/cookbook/logging/monolog.html
 .. _`channels documentation`: http://symfony.com/doc/current/cookbook/logging/channels_handlers.html

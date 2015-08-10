@@ -1,7 +1,7 @@
 Introduction
 ============
 
-* What is Open Orchesra ?
+* What is Open Orchestra ?
 * `Key concepts`_
 * The big picture
 
@@ -14,7 +14,7 @@ User guide
 * `Node`_
 * `Node configuration`_
 * Node - blocks
-* Node - versionning
+* Node - versioning
 * `Content type`_
 * `Content`_
 * `Content - node`_
@@ -56,7 +56,7 @@ Developer guide
 * `Routing`_
 * Add new media type
 * `Add a special listener to a Content field`_
-* `Plateform logging`_
+* `Platform logging`_
 * `Custom error pages`_
 
 Hosting guide
@@ -66,7 +66,7 @@ Hosting guide
 * `Requirements`_
 * `Configuration`_
 * `Deployment`_
-* `Provisionning`_
+* `Provisioning`_
 * Maintenance
 * Monitoring
 * Backup
@@ -91,7 +91,7 @@ Hosting guide
 .. _`Block list`: /en/user_guide/block_list.rst
 .. _`Content type`: /en/user_guide/content_type.rst
 .. _`SmartAdmin`: /en/developer_guide/smart_admin.rst
-.. _`Plateform logging`: /en/developer_guide/logs.rst
+.. _`Platform logging`: /en/developer_guide/logs.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
 .. _`MongoDB Migration`: /en/hosting_guide/migration.rst
 .. _`Content - node`: /en/user_guide/content_display.rst
@@ -105,7 +105,7 @@ Hosting guide
 .. _`Custom error pages`: /en/developer_guide/error_pages.rst
 .. _`API transformer`: /en/developer_guide/api_transformer.rst
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
-.. _`Provisionning`: /en/hosting_guide/server_provisionning.rst
+.. _`Provisioning`: /en/hosting_guide/server_provisioning.rst
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
 .. _`Creating a new site` : /en/hosting_guide/site_creation.rst

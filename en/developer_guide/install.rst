@@ -98,9 +98,9 @@ Install open-orchestra with composer:
 Install the assets
 ------------------
 
-We are using npm to manage some server side javascript librairies and bower to manage the client side librairies
+We are using npm to manage some server side javascript libraries and bower to manage the client side libraries
 
-Install the npm dependancies
+Install the npm dependencies
 
 .. code-block:: bash
 

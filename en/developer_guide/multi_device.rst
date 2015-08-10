@@ -3,7 +3,7 @@ Multi-device
 
 Open Orchestra is compatible with the adaptive way of rendering web pages. The idea is to serve
 different html versions of the same document according to the device displaying it. For instance
-an iphone version could show less blocks than a comptuter version.
+an iphone version could show less blocks than a computer version.
 
 This diagram shows the main steps of the process:
 
@@ -62,7 +62,7 @@ Device detection
 ----------------
 
 As seen on he prerequisite, the server entry point (webserver or reverse-proxy) must implement the
-`Wurfl library`_. This libray tests the User-Agent and normalizes device names. With that information,
+`Wurfl library`_. This library tests the User-Agent and normalizes device names. With that information,
 the server can patch the request headers by adding a parameter ``x-ua-device``.
 
 With the previous configuration sample, the generated header ``x-ua-device`` needs to be equal to
@@ -82,7 +82,7 @@ Out of the box, Open Orchestra enhances the twig engine. If you need to use anot
 you have to implement this logic on this engine.
 
 
-Twig exemple
+Twig example
 ------------
 
 Here is how Open Orchestra enhances TwigEngine.
@@ -130,7 +130,7 @@ The newly extended template engine can now be declared in the conf:
 Required templates
 ------------------
 Once the template engine is able to get the correct template alternative according to the request
-header, the matching templates have to be created. In our exemple, each template have to be declined 
+header, the matching templates have to be created. In our example, each template have to be declined
 as follow :
 
 * default template version : myTemplate.html.twig

@@ -1,19 +1,19 @@
-Server provisionning
-====================
+Server provisioning
+===================
 
 Context
 -------
 
 At some point in your project, you will have to deploy your Open Orchestra application
-accross multiple servers and environments.
+across multiple servers and environments.
 
 Whenever you do it, by following this documentation you will be able to use the same
-provisionning for all your environments (staging, production, ...).
+provisioning for all your environments (staging, production, ...).
 
 Host configuration
 ------------------
 
-In your project, we recommend you to create a ``provisionning/hosts`` folder.
+In your project, we recommend you to create a ``provisioning/hosts`` folder.
 Inside, you will put a host file for each environment to provision, for instance ``prod``
 for the production environment.
 
@@ -29,7 +29,7 @@ In this case, the prod group will only contain one server, but you can add more 
 Environment configuration
 -------------------------
 
-In the ``provisionning/hosts`` folder, you need to create a ``group_vars`` folder which
+In the ``provisioning/hosts`` folder, you need to create a ``group_vars`` folder which
 will contain all the specific information for each environment. (The files should be
 named as in the hosts folder)
 
@@ -40,7 +40,7 @@ Server configuration
  * ``hosts_localhost`` : The ``/etc/hosts`` configuration
  * ``hosts_site`` : Additional ``hosts`` configuration linked to the deployed sites
  * ``sudoers`` : Users used to deploy, they should be able to restart ``Apache2`` and ``Varnish``
- * ``selenium_current_directory`` : The folder where the provisionning will download ``selenium``
+ * ``selenium_current_directory`` : The folder where the provisioning will download ``selenium``
 
 Apache configuration
 ~~~~~~~~~~~~~~~~~~~~

@@ -27,7 +27,7 @@ In the root directory of your project, run the command
 SSH configuration
 -----------------
 
-Make sure that your ssh configuration is ready and your personnal public key is installed on
+Make sure that your ssh configuration is ready and your personal public key is installed on
 the integration server
 
 .. code-block:: bash

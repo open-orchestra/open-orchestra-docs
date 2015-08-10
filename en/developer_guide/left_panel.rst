@@ -39,7 +39,7 @@ The menu link should have the following attributes :
 Specifics
 ---------
 
-It is possible to modifiy the order of the items in the panel by changing the return value of the ``LeftpanelInterface::getWeight()`` method.
+It is possible to modify the order of the items in the panel by changing the return value of the ``LeftpanelInterface::getWeight()`` method.
 The heaviest elements are displayed below the other ones.
 
 The ``LeftpanelInterface::getParent()`` method allows an item to have a parent item in order to define a hierarchy of elements.

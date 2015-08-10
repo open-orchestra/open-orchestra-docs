@@ -63,7 +63,7 @@ ability by setting a time-to-live (TTL) to define the lifetime of a block,
 Open Orchestra uses Varnish's ability to flush ESI blocks on the fly on certain conditions.
 
 Whenever an ESI block is cached in Varnish, the HTTP headers of the response will
-be saved along with the content. This mecanism allows to set an X-Cache-Tags header
+be saved along with the content. This mechanism allows to set an X-Cache-Tags header
 with its value being a set of tags that indicate in which conditions it would be flushed.
 Therefore, when an action leads to one of the tags being marked as outdated,
 a request is sent to varnish so it will ban all cached data linked to this tag.
@@ -82,7 +82,7 @@ The generic tags are added for all kind of blocks, they depend on :
 * the language
 * the website
 
-Additionnaly, each rendering strategy for blocks can define a list of specific tags
+Additionally, each rendering strategy for blocks can define a list of specific tags
 by implementing the method ``DisplayBlockInterface::getCacheTags()``.
 
 It's possible to define new cache tags for some data to be flushed at optimal times,

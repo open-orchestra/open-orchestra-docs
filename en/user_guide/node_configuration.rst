@@ -63,7 +63,7 @@ It is used in the sitemap generation.
 The theme (required)
 --------------------
 
-The theme to use on the page is choosen here.
+The theme to use on the page is chosen here.
 
 Show in menus
 -------------
@@ -82,12 +82,12 @@ Meta
 The meta attributes provide information about the nature and content of a web page,
 they are added in the page HTML header with the use of meta tags.
 These attributes are also provided in the website configuration, which value is used
-if they are not overriden by the page configuration.
+if they are not overridden by the page configuration.
 
 Meta keywords
 ~~~~~~~~~~~~~
 
-This is a list of keywords asociated to the page and can be used by search engines for ranking.
+This is a list of keywords associated to the page and can be used by search engines for ranking.
 
 Meta description
 ~~~~~~~~~~~~~~~~

@@ -7,14 +7,14 @@ is the Frontoffice part that will display the sites and pages created in the CMS
 Requirements
 ------------
 
-To install Open Orchestra you need to have installed the following softwares on your server:
+To install Open Orchestra you need to have installed the following software on your server:
 
 * Apache2 ``sudo aptitude install apache2``
 * PHP ``sudo aptitude install php5-dev php5-cli php-pear``
 * php-mongo  ``sudo pecl install mongo``
 * Activate php mongo extension copy ``extension=mongo.so`` on your php.ini
 
-For developers, we provide a Vagrant-powered environment with provisionning so you get minimal setup actions to do.
+For developers, we provide a Vagrant-powered environment with provisioning so you get minimal setup actions to do.
 
 Install Vagrant
 ---------------
@@ -41,7 +41,7 @@ To avoid version troubles, switch to release 1.8.2
     $ git submodule update --recursive
     $ source ./hacking/env-setup
 
-Go on the project page for more inforation : http://www.ansible.com
+Go on the project page for more information : http://www.ansible.com
 
 Download Composer
 -----------------
@@ -117,7 +117,7 @@ In the ``open-orchestra`` directory, when you launch the box, it will take some 
 
 * Import the base box
 * Launch it
-* Run all the provisionning scripts
+* Run all the provisioning scripts
 
 .. code-block:: bash
 
@@ -126,7 +126,7 @@ In the ``open-orchestra`` directory, when you launch the box, it will take some 
 Install the assets
 ------------------
 
-We are using npm to manage some server side javascript librairies and bower to manage the client side librairies
+We are using npm to manage some server side javascript libraries and bower to manage the client side libraries
 
 Connect to the vagrant box using ``vagrant ssh``, then go in the project directory inside the box
 
@@ -134,7 +134,7 @@ Connect to the vagrant box using ``vagrant ssh``, then go in the project directo
 
     $ cd /var/www/openorchestra
 
-Install the npm dependancies
+Install the npm dependencies
 
 .. code-block:: bash
 
