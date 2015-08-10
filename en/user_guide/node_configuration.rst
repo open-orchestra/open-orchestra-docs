@@ -36,12 +36,12 @@ Some node url might contains variable to works. To add them, you should put the
 variable name between braces.
 
 For instance, a page with content id required:
+
 +----------------+---------------------+-------------------------------+
 | pattern        | parent page pattern | final URL                     |
 +================+=====================+===============================+
 | {contentId}    | no parent page      | example.com/en/any-content-id |
 +----------------+---------------------+-------------------------------+
-
 
 Scheme (required)
 -----------------
