@@ -98,7 +98,7 @@ Hosting guide
 .. _`Configuration`: /en/hosting_guide/configuration.rst
 .. _`ESI and Reverse proxy`: /en/developer_guide/esi.rst
 .. _`Site creation`: /en/user_guide/websites_creation.rst
-.. _`Add a field type`: /en/developer_guide/fieldType.rst
+.. _`Add a field type`: /en/developer_guide/field_type.rst
 .. _`Media upload`: /en/developer_guide/media_gaufrette.rst
 .. _`Create a block`: /en/developer_guide/block_creation.rst
 .. _`Device detection`: /en/developer_guide/multi_device.rst
