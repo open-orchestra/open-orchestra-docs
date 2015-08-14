@@ -28,7 +28,7 @@ The trusted parameter allows you to prevent a connexion from a particular applic
 Token
 -----
 
-Open Orchestra implements two ways to get a token. Both of those strategies are described in the OAuth2 protocol.
+Open Orchestra implements three ways to get a token. All of those strategies are described in the OAuth2 protocol.
 
 Client credentials
 ~~~~~~~~~~~~~~~~~~
@@ -71,6 +71,32 @@ with the HTTP header:
 
 Where ``ENCODED_PAIR`` is the string **key:secret** encoded in base64
 (obviously key and secret depend on the client).
+
+Refresh token
+~~~~~~~~~~~~~
+
+This strategy provides a way to refresh an expired token linked to a client and maybe to an user.
+
+To obtain it, send the request:
+
+.. code-block::
+
+    /oauth/access_token?grant_type=refresh_token&refresh_token=REFRESH_TOKEN
+
+Where REFRESH_TOKEN is the refresh token linked to the token used.
+
+With the HTTP header:
+
+.. code-block::
+
+    Authorization: Basic ENCODED_PAIR
+
+Where ``ENCODED_PAIR`` is the string **key:secret** encoded in base64
+(obviously key and secret depend on the client).
+
+This call will block all other token linked to the user and the client.
+
+This method can also be called only once.
 
 API usage
 ---------
@@ -160,17 +186,7 @@ Let's say that the ``objectManager`` and the ``serializer`` are injected to the
             $tokenFacade = new AccessTokenFacade();
             $tokenFacade->accessToken = $accessToken->getCode();
 
-            return Response::create(
-                $this
-                    ->serializer
-                    ->serialize(
-                        $tokenFacade,
-                        'json'
-                    ),
-                    200,
-                    array('Content-Type' => 'application/json')
-                )
-                ->prepare($request);
+            return $tokenFacade;
         }
 
 To use this strategy, send a request to : ``/oauth/access_token?foo=bar``.
