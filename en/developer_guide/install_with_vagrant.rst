@@ -71,6 +71,7 @@ Install open-orchestra with composer:
 
     $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/back/folder -s dev
     $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/front/folder -s dev
+    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/media/folder -s dev
 
 Clone the provisioning repository in another folder :
 
@@ -109,6 +110,7 @@ In the ``/etc/hosts`` file of your computer add the following lines :
 
     192.168.33.10   admin.openorchestra.dev
     192.168.33.10   demo.openorchestra.dev
+    192.168.33.10   media.openorchestra.dev
 
 Launch the box
 --------------
@@ -159,5 +161,7 @@ In the symfony project directory ``/var/www/openorchestra`` you can load the fix
 
 Now you can log on http://admin.openorchestra.dev/login with username=admin and password=admin for the CMS
 and see the result on http://demo.openorchestra.dev.
+
+All the images will be visible on the http://media.openorchestra.dev url.
 
 .. _`Download Composer`: https://getcomposer.org/download/
