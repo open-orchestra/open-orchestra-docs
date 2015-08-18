@@ -40,6 +40,7 @@ Developer guide
 * `Add a field type`_
 * `Use the ajax pagination for the entities list`_
 * `Use a specific backbone view`_
+* `Create a backbone route`_
 * `Multiple panel edition`_
 * `Device detection`_
 * `ESI and Reverse proxy`_
@@ -72,7 +73,7 @@ Hosting guide
 * Backup
 * `Logs`_
 * `MongoDB Migration`_
-* `Creating a new site`
+* `Creating a new site`_
 
 .. _`Node`: /en/user_guide/node.rst
 .. _`User`: /en/user_guide/user.rst
@@ -90,8 +91,8 @@ Hosting guide
 .. _`Install`: /en/developer_guide/install.rst
 .. _`Block list`: /en/user_guide/block_list.rst
 .. _`Content type`: /en/user_guide/content_type.rst
-.. _`SmartAdmin`: /en/developer_guide/smart_admin.rst
 .. _`Platform logging`: /en/developer_guide/logs.rst
+.. _`SmartAdmin`: /en/developer_guide/smart_admin.rst
 .. _`Requirements`: /en/hosting_guide/requirements.rst
 .. _`MongoDB Migration`: /en/hosting_guide/migration.rst
 .. _`Content - node`: /en/user_guide/content_display.rst
@@ -103,16 +104,17 @@ Hosting guide
 .. _`Create a block`: /en/developer_guide/block_creation.rst
 .. _`Device detection`: /en/developer_guide/multi_device.rst
 .. _`Custom error pages`: /en/developer_guide/error_pages.rst
+.. _`Provisioning`: /en/hosting_guide/server_provisioning.rst
 .. _`API transformer`: /en/developer_guide/api_transformer.rst
 .. _`Twig extensions`: /en/developer_guide/twig_extensions.rst
-.. _`Provisioning`: /en/hosting_guide/server_provisioning.rst
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
-.. _`Creating a new site` : /en/hosting_guide/site_creation.rst
+.. _`Creating a new site`: /en/hosting_guide/site_creation.rst
 .. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
 .. _`Multiple panel edition`: /en/developer_guide/multi_panel.rst
 .. _`API group context`: /en/developer_guide/api_group_context.rst
 .. _`Global pages and blocks`: /en/user_guide/global_page_blocks.rst
+.. _`Create a backbone route`: /en/developer_guide/backbone_routing.rst
 .. _`Install with vagrant`: /en/developer_guide/install_with_vagrant.rst
 .. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst
 .. _`Add a special listener to a Content field`: /en/developer_guide/content_add_field_listener.rst
