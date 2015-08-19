@@ -8,12 +8,12 @@ Natively, images, PDF and videos are supported by Open Orchestra.
 Folder
 ------
 
-All files are organised inside folders. It's possible to browse the folder tree to see files by clicking on the left panel.
+All files are organised inside folders. It's possible to browse the folder tree to see files by clicking on the navigation panel.
 
 Create
 ~~~~~~
 
-Creating a folder is done by clicking on the "new folder" button in the left panel.
+Creating a folder is done by clicking on the "new folder" button in the navigation panel.
 
 The creation form needs:
 
@@ -23,7 +23,7 @@ The creation form needs:
 Remove
 ~~~~~~
 
-To remove a folder, select the folder and click on the trash button on the right panel.
+To remove a folder, select the folder and click on the trash button on the block panel.
 It is not possible to delete a folder containing some medias
 
 Manage files

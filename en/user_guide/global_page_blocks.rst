@@ -12,7 +12,7 @@ contributed in a special node type that can be seen as a "Global block" reposito
 Global pages
 ------------
 
-Global pages can be accessed through the left menu of the Back Office. They have several languages,
+Global pages can be accessed through the main menu of the Back Office. They have several languages,
 don't have a `workflow`_ and have only one version.
 
 .. image:: ../../images/menu_global_page_blocks.png
@@ -22,7 +22,7 @@ Contribution of global pages works the same way as other pages (see `Node`_).
 Global blocks
 -------------
 
-When contributing a node, available blocks are shown in the right panel. Global blocks that have been
+When contributing a node, available blocks are shown in the block panel. Global blocks that have been
 contributed in global pages appear with a blue background, while standard blocks appear in orange.
 
 .. image:: ../../images/panel_global_page_blocks.png

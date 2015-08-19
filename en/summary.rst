@@ -36,7 +36,7 @@ Developer guide
 * Development
 * `Create a block`_
 * Create a CRUD
-* `Add a left panel entry`_
+* `Add a navigation panel entry`_
 * `Add a field type`_
 * `Use the ajax pagination for the entities list`_
 * `Use a specific backbone view`_
@@ -110,12 +110,12 @@ Hosting guide
 .. _`Keyword management`: /en/user_guide/keyword_management.rst
 .. _`Node configuration`: /en/user_guide/node_configuration.rst
 .. _`Creating a new site`: /en/hosting_guide/site_creation.rst
-.. _`Add a left panel entry`: /en/developer_guide/left_panel.rst
 .. _`Multiple panel edition`: /en/developer_guide/multi_panel.rst
 .. _`API group context`: /en/developer_guide/api_group_context.rst
 .. _`Global pages and blocks`: /en/user_guide/global_page_blocks.rst
 .. _`Create a backbone route`: /en/developer_guide/backbone_routing.rst
 .. _`Install with vagrant`: /en/developer_guide/install_with_vagrant.rst
+.. _`Add a navigation panel entry`: /en/developer_guide/navigation_panel.rst
 .. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst
 .. _`Add a special listener to a Content field`: /en/developer_guide/content_add_field_listener.rst
 .. _`Use the ajax pagination for the entities list`: /en/developer_guide/entity_list_ajax_pagination.rst

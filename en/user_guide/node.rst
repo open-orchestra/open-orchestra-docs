@@ -76,7 +76,7 @@ See also `node and block transverse`_.
 
 On the right appears the list of blocks, which is visible only if the node is alterable (not in the final status).
 
-.. image:: ../../images/right_panel.png
+.. image:: ../../images/block_panel.png
 
 See also `block list`_.
 
@@ -84,7 +84,7 @@ Drag and Drop
 ~~~~~~~~~~~~~
 
 Open Orchestra allows to add or to move blocks in a node using drag and drop.
-To add a new block in a node open the right panel to display the list of blocks and drag a block in node's area.
+To add a new block in a node open the block panel to display the list of blocks and drag a block in node's area.
 At the top of the list of blocks there are the new blocks and below transverse blocks.
 
 .. image:: ../../images/drag_block.png
