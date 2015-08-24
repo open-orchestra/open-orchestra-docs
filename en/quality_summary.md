@@ -4,10 +4,10 @@ open-orchestra-base-api-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-base-api-bundle.svg?branch=master)](https://travis-ci.org/open-orchestra/open-orchestra-base-api-bundle) |
-| Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/9b7b5fff-3aa5-4240-80e3-95496f960b0e/big.png)](https://insight.sensiolabs.com/projects/9b7b5fff-3aa5-4240-80e3-95496f960b0e) |
-| VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/5548c7355d4f9a44c6001055/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5548c7355d4f9a44c6001055) |
 | CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle) |
 | CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-bundle/coverage) |
+| Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/9b7b5fff-3aa5-4240-80e3-95496f960b0e/big.png)](https://insight.sensiolabs.com/projects/9b7b5fff-3aa5-4240-80e3-95496f960b0e) |
+| VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/5548c7355d4f9a44c6001055/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5548c7355d4f9a44c6001055) |
 
 open-orchestra-base-bundle
 ==========================
@@ -15,10 +15,10 @@ open-orchestra-base-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-base-bundle.svg?branch=master)](https://travis-ci.org/open-orchestra/open-orchestra-base-bundle) |
-| Sensio Insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c308bc7c-7651-4ec6-9dd1-4fa1879bf4ef/big.png)](https://insight.sensiolabs.com/projects/c308bc7c-7651-4ec6-9dd1-4fa1879bf4ef) |
-| VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/551e87a4971f781c48000192/badge.svg?style=flat)](https://www.versioneye.com/user/projects/551e87a4971f781c48000192) |
 | CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle) |
 | CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-bundle/coverage) |
+| Sensio Insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/c308bc7c-7651-4ec6-9dd1-4fa1879bf4ef/big.png)](https://insight.sensiolabs.com/projects/c308bc7c-7651-4ec6-9dd1-4fa1879bf4ef) |
+| VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/551e87a4971f781c48000192/badge.svg?style=flat)](https://www.versioneye.com/user/projects/551e87a4971f781c48000192) |
 
 open-orchestra-cms-bundle
 =========================
@@ -92,8 +92,8 @@ open-orchestra-theme-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-theme-bundle.svg)](https://travis-ci.org/open-orchestra/open-orchestra-theme-bundle) |
-| Scrutinizer (Quality score) | [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-theme-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-theme-bundle/?branch=master) |
-| Scrutinizer (Coverage) | [![Code Coverage](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-theme-bundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/open-orchestra/open-orchestra-theme-bundle/?branch=master) |
+| CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-theme-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-theme-bundle) |
+| CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-theme-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-theme-bundle/coverage) |
 | Sensio Insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/be515c66-53dc-4027-b551-80a7c07e5a49/big.png)](https://insight.sensiolabs.com/projects/be515c66-53dc-4027-b551-80a7c07e5a49) |
 | VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/551e87a3971f7847ca000284/badge.svg?style=flat)](https://www.versioneye.com/user/projects/551e87a3971f7847ca000284) |
 
@@ -147,7 +147,7 @@ open-orchestra-base-api-mongo-model-bundle
 | Service       | Badge         |
 | ------------- |:-------------:|
 | Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-base-api-mongo-model-bundle.svg?branch=master)](https://travis-ci.org/open-orchestra/open-orchestra-base-api-mongo-model-bundle) |
-| Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5e0f1671-b193-47fe-bdde-620b53548794/big.png)](https://insight.sensiolabs.com/projects/5e0f1671-b193-47fe-bdde-620b53548794)  |
-| VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/55bf74ea653762001700286f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55bf74ea653762001700286f) |
 | CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-mongo-model-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-mongo-model-bundle) |
 | CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-mongo-model-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-base-api-mongo-model-bundle/coverage) |
+| Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5e0f1671-b193-47fe-bdde-620b53548794/big.png)](https://insight.sensiolabs.com/projects/5e0f1671-b193-47fe-bdde-620b53548794)  |
+| VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/55bf74ea653762001700286f/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55bf74ea653762001700286f) |
