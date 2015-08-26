@@ -100,5 +100,5 @@ line. See `Sitemap.xml documentation`_ for more information about this.
 .. _node page: /en/user_guide/node.rst
 .. _node configuration page: /en/user_guide/node_configuration.rst
 .. _documentation on error pages: /en/developer_guide/error_pages.rst
-.. _Robots.txt documentation: 
-
+.. _`Robots.txt documentation`: /en/developer_guide/robots.rst
+.. _`Sitemap.xml documentation`: /en/developer_guide/sitemap.rst
