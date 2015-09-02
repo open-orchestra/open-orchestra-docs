@@ -4,14 +4,16 @@ Using other database type
 Context
 -------
 
-Open orchestra uses by default a MongoDb database. If you want to use another type of database like SQL,
-you need to do some work for now.
+Open orchestra uses by default a MongoDB database. If you want to use another type of database like
+SQL, you will need to tune some settings and to replace some files.
 
-Change object manager in configuration
---------------------------------------
+Configuration: object manager
+-----------------------------
 
-By default, open orchestra uses Doctrine ODM to manage objects. Developers can define another document manager implementing
-``Doctrine\Common\Persistence\ObjectManager`` with a change in configuration
+By default, Open Orchestra uses Doctrine ODM to map database documents to objects. Developers can
+define another document manager, the only condition is to implement
+``Doctrine\Common\Persistence\ObjectManager``. If the new object manager fits the condition, change
+the configuration:
 
 .. code-block:: yaml
 
@@ -21,19 +23,21 @@ By default, open orchestra uses Doctrine ODM to manage objects. Developers can d
 Override mongo documents and repositories
 -----------------------------------------
 
-Some bundles have dependencies to mongo. To replace them, there is several solutions depending of the type of dependencies.
+Some bundles have dependencies to mongoDB. The way to replace them depends on the type of
+dependencies.
 
-Some packages need to be completely replaced
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Complete replacement of the package
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``open-orchestra-model-bundle`` and ``open-orchestra-base-api-mongo-model-bundle`` have mongo
 dependencies and need to be replaced by your packages.
 
-Some bundles in the package need to be replaced
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Bundle replacement
+~~~~~~~~~~~~~~~~~~
 
-Some bundles are called with a specific model bundle dependant to mongo in their dependencies. To use
-another database, these bundles must not be activated in the ``appKernel`` and replaced by yours.
+Some bundles included in Open Orchestra packages are model bundle developped for mongoDB. To use
+another database, these bundles must not be activated in the ``appKernel`` and must be replaced by
+yours. These are:
 
 ``open-orchestra-workflow-function-bundle`` :
 - ``WorkflowFunctionAdminBundle``
