@@ -10,10 +10,9 @@ SQL, you will need to tune some settings and to replace some files.
 Configuration: object manager
 -----------------------------
 
-By default, Open Orchestra uses Doctrine ODM to map database documents to objects. Developers can
-define another document manager, the only condition is to implement
-``Doctrine\Common\Persistence\ObjectManager``. If the new object manager fits the condition, change
-the configuration:
+By default, Open Orchestra uses Doctrine ODM to map database documents to objects. If you want to
+use another document manager, the new manager must implement ``Doctrine\Common\Persistence\ObjectManager``.
+You also have to declare it in the configuration:
 
 .. code-block:: yaml
 
@@ -23,14 +22,14 @@ the configuration:
 Override mongo documents and repositories
 -----------------------------------------
 
-Some bundles have dependencies to mongoDB. The way to replace them depends on the type of
-dependencies.
+Some bundles have dependencies to mongoDB. The way to replace them depends on the type of dependencies.
 
 Complete replacement of the package
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``open-orchestra-model-bundle`` and ``open-orchestra-base-api-mongo-model-bundle`` have mongo
-dependencies and need to be replaced by your packages.
+The ``open-orchestra-model-bundle`` and ``open-orchestra-base-api-mongo-model-bundle`` are mongoDB
+implementations of Open Orchestra entities. To use another database, you have to replace these
+packages by new ones adapted to your database.
 
 Bundle replacement
 ~~~~~~~~~~~~~~~~~~
