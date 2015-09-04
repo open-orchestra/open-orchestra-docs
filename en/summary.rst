@@ -61,6 +61,8 @@ Developer guide
 * `Add a special listener to a Content field`_
 * `Platform logging`_
 * `Custom error pages`_
+* `Robots.txt`_
+* `Sitemap.xml`_
 
 Hosting guide
 =============
@@ -92,6 +94,8 @@ Hosting guide
 .. _`Deployment`: /en/hosting_guide/deploy.rst
 .. _`Install`: /en/developer_guide/install.rst
 .. _`Block list`: /en/user_guide/block_list.rst
+.. _`Robots.txt`: /en/developer_guide/robots.rst
+.. _`Sitemap.xml`: /en/developer_guide/sitemap.rst
 .. _`Content type`: /en/user_guide/content_type.rst
 .. _`Platform logging`: /en/developer_guide/logs.rst
 .. _`SmartAdmin`: /en/developer_guide/smart_admin.rst
