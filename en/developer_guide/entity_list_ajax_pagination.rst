@@ -154,7 +154,7 @@ The ``descriptionEntity`` property linked to the ``Redirection`` will be:
 * ``key`` : name of the property in your facade used by the dataTable
 
 This mapping can be specified in a number of different formats including YAML, XML or
-directly inside your entities class via the annotations
+directly inside your entities class via annotations
 
 For instance, the ``Redirection`` entity will look like:
 
@@ -238,7 +238,6 @@ Xml:
             <field field="url" key="redirection, url" />
             <field field="locale" key="locale" />
             <field field="permanent" key="permanent" type="boolean"/>
-            <field field="permanent" key="fake_property2, fake_property_multi"/>
         </class>
     </search-mapping>
 
@@ -258,8 +257,8 @@ In mapping :
 * ``type`` will take ``string`` as a default parameter if it is not specified.
 * With the mapping in annotation ``name`` will take the name of the property if it is not set.
 
-By default the mapping in xml or yaml should be in folder ``Ressources/config/search`` of your bundle.
-To specify an other folder for the mapping files you must change the configuration :
+By default the xml and yaml mapping files should be located in the folder ``Ressources/config/search`` of your bundle.
+To specify another folder, you must change the configuration :
 
 .. code-block:: yaml
 
