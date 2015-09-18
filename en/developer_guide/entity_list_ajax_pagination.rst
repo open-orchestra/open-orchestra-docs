@@ -24,12 +24,10 @@ The different variables used to filter (pagination, search, ordering) send by th
 | order[dir]            | Ordering direction (asc or desc)                 |
 +-----------------------+--------------------------------------------------+
 | search[columns][name] | Search value to apply to a specific column       |
-|                       | Name is the ``name`` of column                   |
 +-----------------------+--------------------------------------------------+
 | search[global]        | Global search value                              |
 +-----------------------+--------------------------------------------------+
-| length                | Number of records that the table                 |
-|                       | can display in the current draw                  |
+| length                | Number of records displayed in the current draw  |
 +-----------------------+--------------------------------------------------+
 | start                 | Paging first record indicator                    |
 +-----------------------+--------------------------------------------------+
@@ -142,24 +140,28 @@ The ``descriptionEntity`` property linked to the ``Redirection`` will be:
 .. code-block:: php
 
     $descriptionEntity = array(
-        'site_name' => new Search('name' => 'siteName', 'type' => 'string', 'key' => 'site_name'),
-        'route_pattern' => new Search('name' => 'routePattern', 'type' => 'string', 'key' => 'route_pattern'),
-        'redirection' => new Search('name' => 'url', 'type' => 'string', 'key' => 'redirection'),
-        'permanent' => new Search('name' => 'permanent', 'type' => 'boolean', 'key' => 'permanent'),
+        'site_name' => array('field' => 'siteName', 'type' => 'string', 'key' => 'site_name'),
+        'route_pattern' => array('field' => 'routePattern', 'type' => 'string', 'key' => 'route_pattern'),
+        'redirection' => array('field' => 'url', 'type' => 'string', 'key' => 'redirection'),
+        'url' => array('field' => 'url', 'type' => 'string', 'key' => 'url'),
+        'permanent' => array('field' => 'permanent', 'type' => 'boolean', 'key' => 'permanent'),
     )
 
-The ``Search`` object describes an entity's property with three parameters:
-
-* ``name`` : name of the entity's property
+* ``field`` : name of the entity's property
 * ``type`` : type of the entity's property
 * ``key`` : name of the property in your facade used by the dataTable
 
-Open Orchestra provides the ``Search`` annotation to help you describe the mapping directly
-in your entities.
+This mapping can be specified in a number of different formats including YAML, XML or
+directly inside your entities class via annotations
 
 For instance, the ``Redirection`` entity will look like:
 
+Annotation:
+
 .. code-block:: php
+
+    // src/AppBundle/Document/Redirection.php
+    namespace AppBundle\Document;
 
     use OpenOrchestra\Mapping\Annotations as ORCHESTRA;
 
@@ -187,7 +189,7 @@ For instance, the ``Redirection`` entity will look like:
 
        /**
          * @ODM\Field(type="string")
-         * @ORCHESTRA\Search(key="redirection")
+         * @ORCHESTRA\Search(key={"redirection", "url"})
          */
         protected $url;
 
@@ -200,15 +202,71 @@ For instance, the ``Redirection`` entity will look like:
         // ...
     }
 
-``type`` will take ``string`` as a default parameter.
-``name`` will take the name of the property if not set.
+Yaml:
 
-The ``open_orchestra_api.annotation_search_reader`` will build the ``descriptionEntity``.
+.. code-block:: yaml
+
+    # src/AppBundle/Resources/config/search/Redirection.yml
+
+    AppBundle\Document\AppBundle\Document:
+        properties:
+            locale:
+                key: locale
+            siteName:
+                key: site_name
+            routePattern:
+                key: route_pattern
+            url:
+                key: [redirection, url]
+            permanent:
+                key: permanent
+                type: boolean
+
+Xml:
+
+.. code-block:: xml
+
+    <!-- src/AppBundle/Resources/config/search/Redirection.xml -->
+
+    <search-mapping>
+        <class name="AppBundle\Document\AppBundle\Document">
+            <field field="locale" key="locale" />
+            <field field="siteName" key="site_name" />
+            <field field="routePattern" key="route_pattern" />
+            <field field="url" key="redirection, url" />
+            <field field="locale" key="locale" />
+            <field field="permanent" key="permanent" type="boolean"/>
+        </class>
+    </search-mapping>
+
+The ``open_orchestra_api.annotation_search_reader`` will extract the ``descriptionEntity``.
 
 .. code-block:: php
 
     $mapping = $this->get('open_orchestra_api.annotation_search_reader')
         ->extractMapping('OpenOrchestra\ModelBundle\Document\Redirection');
+
+-------
+ Notes
+-------
+
+In mapping :
+
+* ``type`` will take ``string`` as a default parameter if it is not specified.
+* With the mapping in annotation ``name`` will take the name of the property if it is not set.
+
+By default the xml and yaml mapping files should be located in the folder ``Ressources/config/search`` of your bundle.
+To specify another folder, you must change the configuration :
+
+.. code-block:: yaml
+
+       open_orchestra_mongo:
+            search_metadata:
+                directories:
+                    AppBundle:
+                        namespace_prefix: "My\\AppBundle"
+                        path: @AppBundle/Ressources/config/mymapping
+
 
 .. _`DataTables`: https://www.datatables.net/
 .. _`documentation`: https://www.datatables.net/manual/server-side#Sent-parameters
