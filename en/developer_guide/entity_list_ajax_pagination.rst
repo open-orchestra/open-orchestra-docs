@@ -24,12 +24,10 @@ The different variables used to filter (pagination, search, ordering) send by th
 | order[dir]            | Ordering direction (asc or desc)                 |
 +-----------------------+--------------------------------------------------+
 | search[columns][name] | Search value to apply to a specific column       |
-|                       | Name is the ``name`` of column                   |
 +-----------------------+--------------------------------------------------+
 | search[global]        | Global search value                              |
 +-----------------------+--------------------------------------------------+
-| length                | Number of records that the table                 |
-|                       | can display in the current draw                  |
+| length                | Number of records displayed in the current draw  |
 +-----------------------+--------------------------------------------------+
 | start                 | Paging first record indicator                    |
 +-----------------------+--------------------------------------------------+
