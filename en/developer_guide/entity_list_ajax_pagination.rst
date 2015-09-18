@@ -253,7 +253,7 @@ The ``open_orchestra_api.annotation_search_reader`` will extract the ``descripti
 In mapping :
 
 * ``type`` will take ``string`` as a default parameter if it is not specified.
-* With the mapping in annotation ``name`` will take the name of the property if it is not set.
+* With the mapping in annotation ``field`` will take the name of the property if it is not set.
 
 By default the xml and yaml mapping files should be located in the folder ``Ressources/config/search`` of your bundle.
 To specify another folder, you must change the configuration :
