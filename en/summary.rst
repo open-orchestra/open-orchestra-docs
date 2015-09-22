@@ -63,6 +63,7 @@ Developer guide
 * `Custom error pages`_
 * `Robots.txt`_
 * `Sitemap.xml`_
+* `Add a custom BBCode`_
 
 Hosting guide
 =============
@@ -104,6 +105,7 @@ Hosting guide
 .. _`Content - node`: /en/user_guide/content_display.rst
 .. _`Configuration`: /en/hosting_guide/configuration.rst
 .. _`ESI and Reverse proxy`: /en/developer_guide/esi.rst
+.. _`Add a custom BBCode`: /en/developer_guide/bbcode.rst
 .. _`Site creation`: /en/user_guide/websites_creation.rst
 .. _`Manage assets`: /en/developer_guide/manage_assets.rst
 .. _`Add a field type`: /en/developer_guide/field_type.rst
