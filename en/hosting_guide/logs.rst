@@ -1,7 +1,7 @@
 Logs
 ====
 
-Our backoffice logging is based on `Monolog`_.
+Our Back Office logging is based on `Monolog`_.
 Open Orchestra provides an interface to display all the user actions on the website.
 
 .. image:: ../../images/log_preview.png

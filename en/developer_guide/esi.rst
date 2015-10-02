@@ -7,7 +7,7 @@ that will be rendered in separate requests by the web server.
 This behavior allows the application to apply HTTP cache to some parts of the page
 and refresh only the outdated parts when needed.
 
-In the FrontOffice application, each block is rendered in an ESI block using the render_esi() twig function.
+In the Front Office application, each block is rendered in an ESI block using the render_esi() twig function.
 The blocks will therefore be cached by an HTTP cache unless
 the method ``DisplayBlockInterface::isPublic()`` returns false.
 

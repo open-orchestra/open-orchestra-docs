@@ -16,7 +16,7 @@ Creation of ``sitemap.xml`` files with Open Orchestra is achieved in 3 steps:
 
 Files contribution
 ------------------
-Contributing the content of a ``sitemap.xml`` file is done in the Backoffice, and two locations
+Contributing the content of a ``sitemap.xml`` file is done in the Back Office, and two locations
 are involved: one for the default values, and one for the specific values.
 
 The first place to go is website edition. In the website edition form, you can set up the default

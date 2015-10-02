@@ -10,7 +10,7 @@ are configured by the `content type`_.
 In order to have minimum constraints on contents, Open Orchestra allows you to store any type
 of ``value`` in the ``ContentAttribute``.
 
-Sometimes, there is no easy way to render the value to the backoffice user.
+Sometimes, there is no easy way to render the value to the Back Office user.
 A custom ``ContentAttribute`` could be stored as an array, which cannot be displayed directly in the dataTables plugin.
 In that way the ``ContentAttribute`` class provides a specific attribute ``stringValue`` which is the
 representation of the ``value`` in an HTML string.
