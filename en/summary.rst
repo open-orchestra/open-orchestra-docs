@@ -43,6 +43,7 @@ Developer guide
 * `Use a specific backbone view`_
 * `Create a backbone route`_
 * `Manage assets`_
+* `Deploy assets`_
 * `Multiple panel edition`_
 * `Device detection`_
 * `ESI and Reverse proxy`_
@@ -108,6 +109,7 @@ Hosting guide
 .. _`Add a custom BBCode`: /en/developer_guide/bbcode.rst
 .. _`Site creation`: /en/user_guide/websites_creation.rst
 .. _`Manage assets`: /en/developer_guide/manage_assets.rst
+.. _`Deploy assets`: /en/developer_guide/deploy_assets.rst
 .. _`Add a field type`: /en/developer_guide/field_type.rst
 .. _`Media upload`: /en/developer_guide/media_gaufrette.rst
 .. _`Create a block`: /en/developer_guide/block_creation.rst
