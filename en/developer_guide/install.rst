@@ -1,8 +1,8 @@
 Install OpenOrchestra on your computer
 ======================================
 
-Open Orchestra is composed of two projects : *open-orchestra* which is the CMS Backoffice and *open-orchestra-front-demo* which
-is the Frontoffice part that will display the sites and pages created in the CMS.
+Open Orchestra is composed of two projects : *open-orchestra* which is the CMS Back Office and *open-orchestra-front-demo* which
+is the Front Office part that will display the sites and pages created in the CMS.
 
 This tutorial has been tested on a debian 7.6.
 

@@ -57,7 +57,7 @@ The ``Apache2`` vhost configuration will require some parameters :
  * ``errorLog`` : The filename with the error logs of your vhost
  * ``accessLog`` : The filename with the access logs of your vhost
  * ``siteId`` : The site id of the front website you are deploying (only needed on front installation)
- The value can be found in the edit form in the Backoffice
+ The value can be found in the edit form in the Back Office
 
 Example :
 
@@ -84,7 +84,7 @@ The ``backend_conf`` will require some parameters :
  * ``name`` : The redirection name
  * ``port`` : The redirection port
  * ``host`` : The redirection host
- * ``admin`` : Set to true if the backend is an Backoffice installation
+ * ``admin`` : Set to true if the backend is an Back Office installation
 
 Crontab configuration
 ~~~~~~~~~~~~~~~~~~~~~

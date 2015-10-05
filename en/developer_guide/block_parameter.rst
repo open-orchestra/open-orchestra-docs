@@ -35,8 +35,8 @@ This solution requires to work in two specifics areas :
 - in the Back Office, where you add the block
 - in the Front Office, where you will require some parameters linked to the block.
 
-Backoffice work
-~~~~~~~~~~~~~~~
+Back Office work
+~~~~~~~~~~~~~~~~
 
 When a block is added in an area of a node, a block reference is created to link the block and the area.
 That block reference contains the parameter types required to display the block in Front Office.
@@ -54,7 +54,7 @@ This service should be declared with the tag ``open_orchestra_backoffice.block_p
     tags:
         - { name: open_orchestra_backoffice.block_parameter.strategy }
 
-Frontoffice work
+Front Office work
 ~~~~~~~~~~~~~~~~
 
 In the Front Office, the sub-request to display a block (in the main request) is created while you don't

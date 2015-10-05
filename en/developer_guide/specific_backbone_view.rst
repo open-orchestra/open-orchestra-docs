@@ -4,12 +4,12 @@ Backbone specific view
 Context
 -------
 
-In the Open Orchestra Backoffice, to display an edition form, there are two parts :
+In the Open Orchestra Back Office, to display an edition form, there are two parts :
 
 * The Twig template given by the server
 * The Backbone view which handle all the javascript events
 
-In some cases, during the integration of the Open Orchestra Backoffice, the generic view used for the
+In some cases, during the integration of the Open Orchestra Back Office, the generic view used for the
 edition page will not suit your needs. There are some new behaviour to add to the form, such as a
 specific event when you edit a field.
 
