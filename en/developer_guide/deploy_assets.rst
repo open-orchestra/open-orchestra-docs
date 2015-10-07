@@ -7,6 +7,7 @@ Context
 As specified in Symfony Reference Documents :
 
 The assets version
+
     is used to bust the cache on assets by globally adding a query parameter to all rendered asset paths (e.g. /images/logo.png?v2).
 	This applies only to assets rendered via the Twig asset function (or PHP equivalent) as well as assets rendered with Assetic."
 
