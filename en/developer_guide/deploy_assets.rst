@@ -1,4 +1,4 @@
-deploy asset
+Deploy asset
 ============
 
 Context
@@ -6,8 +6,9 @@ Context
 
 As specified in Symfony Reference Documents :
 
-The assets version "is used to bust the cache on assets by globally adding a query parameter to all rendered asset paths (e.g. /images/logo.png?v2).
-This applies only to assets rendered via the Twig asset function (or PHP equivalent) as well as assets rendered with Assetic."
+The assets version
+    is used to bust the cache on assets by globally adding a query parameter to all rendered asset paths (e.g. /images/logo.png?v2).
+	This applies only to assets rendered via the Twig asset function (or PHP equivalent) as well as assets rendered with Assetic."
 
 This assets version could be founded in app/config/config.yml.
 
@@ -20,7 +21,8 @@ This assets version could be founded in app/config/config.yml.
 This assets version is used by Open Orchestra Back Office.
 In order to minimize downloads, the different templates used in the rendering of Back Office are stocked in browser's local storage.
 These templates have two indexes in local storage : assets version and Back Office language.
-So, If a template is needed during navigation, the browser checks if it is present in local storage regarding to current asset version and language of the Back Office.
-In such case, the browser loads the template from local storage instead of loading from server.
+While rendering, the Back Office requires some underscore template.
+When asked, the browser will first check in the local storage, with the current asset version and current Back Office language as key.
+If the the template is found, there will be no request to the server to load it.
 
-For this reason, in case of template updates, it is needed to change assets version in app/config/config.yml otherwise the changes will not appear.
+For this reason, in case of template updates, This process will require a modification of the asset version parameter in the app/config/config.yml file to allow the changes to appear.
