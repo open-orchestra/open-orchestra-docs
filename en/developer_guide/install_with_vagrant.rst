@@ -35,6 +35,16 @@ To avoid version troubles, switch to release 1.8.2
 
 Go on the project page for more information : http://www.ansible.com
 
+Install nfs server
+------------------
+
+To improve the vagrant box performance, we share the folders with the ``nfs`` protocol. You need to
+install a nfs server instance on your computer.
+
+.. code-block:: bash
+
+    $ aptitude install nfs-kernel-server
+
 Download Composer
 -----------------
 
