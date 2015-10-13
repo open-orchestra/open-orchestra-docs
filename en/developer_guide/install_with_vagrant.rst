@@ -1,18 +1,10 @@
 Install OpenOrchestra with vagrant
 ==================================
 
-Open Orchestra is composed of two projects : *open-orchestra* which is the CMS Back Office and *open-orchestra-front-demo* which
-is the Front Office part that will display the sites and pages created in the CMS.
-
-Requirements
-------------
-
-To install Open Orchestra you need to have installed the following software on your server:
-
-* Apache2 ``sudo aptitude install apache2``
-* PHP ``sudo aptitude install php5-dev php5-cli php-pear``
-* php-mongo  ``sudo pecl install mongo``
-* Activate php mongo extension copy ``extension=mongo.so`` on your php.ini
+Open Orchestra is composed of three projects : *open-orchestra* which is the CMS Back Office
+and *open-orchestra-front-demo* which is the Front Office part that will display the sites
+and pages created in the CMS Back Office and *open-orchestra-media-demo* which will display
+the images loaded in the CMS Back Office.
 
 For developers, we provide a Vagrant-powered environment with provisioning so you get minimal setup actions to do.
 
@@ -43,6 +35,16 @@ To avoid version troubles, switch to release 1.8.2
 
 Go on the project page for more information : http://www.ansible.com
 
+Install nfs server
+------------------
+
+To improve the vagrant box performance, we share the folders with the ``nfs`` protocol. You need to
+install a nfs server instance on your computer.
+
+.. code-block:: bash
+
+    $ aptitude install nfs-kernel-server
+
 Download Composer
 -----------------
 
@@ -65,13 +67,13 @@ see `Download Composer`_
 Install OpenOrchestra
 ---------------------
 
-Install open-orchestra with composer:
+Install the different open-orchestra part using ``composer``:
 
 .. code-block:: bash
 
-    $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/back/folder -s dev
-    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/front/folder -s dev
-    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/media/folder -s dev
+    $ ./composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs
+    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs
+    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs
 
 Clone the provisioning repository in another folder :
 
@@ -92,10 +94,12 @@ as a prerequisite, update your python modules if required with those two
 
 If running under Mac OS X, you would install them through ``pip``
 
+.. code-block:: bash
+
     easy_install pip
     pip install pyyaml jinja2
 
-Then go into openorchestra-provisioning directory
+Then go into ``open-orchestra-provisioning`` directory
 
 .. code-block:: bash
 
