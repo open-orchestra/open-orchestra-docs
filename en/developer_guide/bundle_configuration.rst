@@ -236,13 +236,13 @@ This bundle provides an implementation for all the interfaces defined in the Wor
 BackofficeBundle
 ~~~~~~~~~~~~~~~~
 
-This bundle will create the Backoffice of the Open Orchestra project. You can configure :
+This bundle will create the Back Office of the Open Orchestra project. You can configure :
 
 * The language from the front installation
 * The blocks that you created
 * The fixed attributes from the block (shared through all blocks)
 * The field type and options for the content (specific to your project)
-* The color available for the backoffice
+* The color available for the Back Office
 
 .. code-block:: yaml
 
