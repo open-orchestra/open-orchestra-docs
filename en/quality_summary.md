@@ -173,3 +173,14 @@ open-orchestra-mongo-libs
 | CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-mongo-libs/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-mongo-libs/coverage) |
 | Sensio insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/56907999-ad7b-4207-a0ee-857cdb3b821c/big.png)](https://insight.sensiolabs.com/projects/56907999-ad7b-4207-a0ee-857cdb3b821c) |
 | VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/561f9b9f36d0ab001900069d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/561f9b9f36d0ab001900069d) |
+
+open-orchestra-bbcode-bundle
+=============================
+
+| Service       | Badge         |
+| ------------- |:-------------:|
+| Travis | [![Build Status](https://travis-ci.org/open-orchestra/open-orchestra-bbcode-bundle.svg)](https://travis-ci.org/open-orchestra/open-orchestra-bbcode-bundle) |
+| CodeClimate (quality) | [![Code Climate](https://codeclimate.com/github/open-orchestra/open-orchestra-bbcode-bundle/badges/gpa.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-bbcode-bundle) |
+| CodeClimate (coverage) | [![Test Coverage](https://codeclimate.com/github/open-orchestra/open-orchestra-bbcode-bundle/badges/coverage.svg)](https://codeclimate.com/github/open-orchestra/open-orchestra-bbcode-bundle/coverage) |
+| Sensio Insight | [![SensioLabsInsight](https://insight.sensiolabs.com/projects/5947602b-5bca-42b1-8daf-cd96fda7bf76/big.png)](https://insight.sensiolabs.com/projects/5947602b-5bca-42b1-8daf-cd96fda7bf76) |
+| VersionEye | [![Dependency Status](https://www.versioneye.com/user/projects/5620af1036d0ab0019000831/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5620af1036d0ab0019000831) |
