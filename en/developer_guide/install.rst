@@ -1,8 +1,10 @@
 Install OpenOrchestra on your computer
 ======================================
 
-Open Orchestra is composed of two projects : *open-orchestra* which is the CMS Back Office and *open-orchestra-front-demo* which
-is the Front Office part that will display the sites and pages created in the CMS.
+Open Orchestra is composed of three projects : *open-orchestra* which is the CMS Back Office
+and *open-orchestra-front-demo* which is the Front Office part that will display the sites
+and pages created in the CMS Back Office and *open-orchestra-media-demo* which will display
+the images loaded in the CMS Back Office.
 
 This tutorial has been tested on a debian 7.6.
 
@@ -16,7 +18,7 @@ Install php5 and the mongo extension :
 
 .. code-block:: bash
 
-    $ sudo aptitude install php5-cli php5-dev php-pear php5-curl php5-imagick
+    $ sudo aptitude install php5-cli php5-dev php-pear php5-curl php5-imagick php5-ffmpeg
     $ sudo pecl install mongo
 
 Activate the mongo extension in php :
@@ -94,7 +96,7 @@ Install open-orchestra with composer:
 
     $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s dev
     $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s dev
-
+    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/folder -s dev
 Install the assets
 ------------------
 
