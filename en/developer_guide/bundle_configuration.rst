@@ -248,14 +248,29 @@ This bundle will create the Back Office of the Open Orchestra project. You can c
 
     open_orchestra_backoffice:
 
-        # Add the language available for the front with the key
+        # Add the available languages in the Front Office, default (en, fr, de)
         front_languages:
 
             # Prototype
             key:                  ~
 
-        # Add the block activated for the project
-        blocks:               []
+        # Set the available block types for this application
+        blocks:
+
+            # Defaults:
+            - footer
+            - language_list
+            - menu
+            - sub_menu
+            - content_list
+            - content
+            - configurable_content
+            - tiny_mce_wysiwyg
+            - video
+            - gmap
+            - add_this
+            - audience_analysis
+            - contact
 
         # Add the global block attributes
         fixed_attributes:     []
@@ -292,6 +307,15 @@ This bundle will create the Back Office of the Open Orchestra project. You can c
 
             # Prototype
             key:                  ~
+
+        # List of widgets presented on the dashboard
+        dashboard_widgets:
+
+            # Defaults:
+            - last_nodes
+            - draft_nodes
+            - last_contents
+            - draft_contents
 
 FrontBundle
 ~~~~~~~~~~~
