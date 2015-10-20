@@ -34,7 +34,8 @@ Developer guide
 * `Install`_
 * `Install with vagrant`_
 * Development
-* `Bundle configurations`_
+* `Dependancy diagram`_
+* `Bundle configuration`_
 * `Create a block`_
 * `Block parameter`_
 * Create a CRUD
@@ -126,6 +127,7 @@ Hosting guide
 .. _`Multiple panel edition`: /en/developer_guide/multi_panel.rst
 .. _`API group context`: /en/developer_guide/api_group_context.rst
 .. _`Global pages and blocks`: /en/user_guide/global_page_blocks.rst
+.. _`Dependancy diagram`: /en/developer_guide/dependancy_diagram.rst
 .. _`Create a backbone route`: /en/developer_guide/backbone_routing.rst
 .. _`Bundle configuration`: /en/developer_guide/bundle_configuration.rst
 .. _`Install with vagrant`: /en/developer_guide/install_with_vagrant.rst
