@@ -69,9 +69,9 @@ Install open-orchestra with composer:
 
 .. code-block:: bash
 
-    $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/back/folder -s dev
-    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/front/folder -s dev
-    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/media/folder -s dev
+    $ ./composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs --no-scripts
+    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs --no-scripts
+    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs --no-scripts
 
 Clone the provisioning repository in another folder :
 
@@ -130,7 +130,17 @@ Install the assets
 
 We are using npm to manage some server side javascript libraries and bower to manage the client side libraries
 
-Connect to the vagrant box using ``vagrant ssh``, then go in the project directory inside the box
+Connect to the vagrant box using ``vagrant ssh``
+
+Finalise the ``composer`` installation in each project
+
+.. code-block:: bash
+
+    $ cd /var/www/openorchestra && composer run-script post-install-cmd
+    $ cd /var/www/front-openorchestra && composer run-script post-install-cmd
+    $ cd /var/www/media-openorchestra && composer run-script post-install-cmd
+
+Then go in the Back Office project directory inside the box
 
 .. code-block:: bash
 
