@@ -206,9 +206,9 @@ Yaml:
 
 .. code-block:: yaml
 
-    # src/AppBundle/Resources/config/search/Redirection.yml
+    # src/AppBundle/Resources/config/search/Document.Redirection.yml
 
-    AppBundle\Document\AppBundle\Document:
+    AppBundle\Document\Redirection:
         properties:
             locale:
                 key: locale
@@ -229,7 +229,7 @@ Xml:
     <!-- src/AppBundle/Resources/config/search/Redirection.xml -->
 
     <search-mapping>
-        <class name="AppBundle\Document\AppBundle\Document">
+        <class name="AppBundle\Document\Redirection">
             <field field="locale" key="locale" />
             <field field="siteName" key="site_name" />
             <field field="routePattern" key="route_pattern" />
