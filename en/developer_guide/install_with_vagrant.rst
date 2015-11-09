@@ -22,18 +22,10 @@ Install ansible
 ---------------
 
 All the project server configuration is going to be handled by ansible.
-To avoid version troubles, switch to release 1.8.2
 
-.. code-block:: bash
+Our configuration was made for the 1.9.4 version of ansible.
 
-    $ git clone git://github.com/ansible/ansible.git --recursive
-    $ cd ./ansible
-    $ git checkout -b release1.8.2 origin/release1.8.2
-    $ git submodule init
-    $ git submodule update --recursive
-    $ source ./hacking/env-setup
-
-Go on the project page for more information : http://www.ansible.com
+For more information about ansible installation, you can see `Ansible installation documentation`_.
 
 Install nfs server
 ------------------
@@ -179,3 +171,4 @@ and see the result on http://demo.openorchestra.dev.
 All the images will be visible on the http://media.openorchestra.dev url.
 
 .. _`Download Composer`: https://getcomposer.org/download/
+.. _`Ansible installation documentation`: http://docs.ansible.com/ansible/intro_installation.html
