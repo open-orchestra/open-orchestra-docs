@@ -25,8 +25,7 @@ All the project server configuration is going to be handled by ansible.
 
 Our configuration was made for the 1.9.4 version of ansible.
 
-For more information about ansible installation, you can go on ansible documentation
-page : http://docs.ansible.com/ansible/intro_installation.html 
+For more information about ansible installation, you can see `Ansible installation documentation`_.
 
 Install nfs server
 ------------------
@@ -172,3 +171,4 @@ and see the result on http://demo.openorchestra.dev.
 All the images will be visible on the http://media.openorchestra.dev url.
 
 .. _`Download Composer`: https://getcomposer.org/download/
+.. _`Ansible installation documentation`: http://docs.ansible.com/ansible/intro_installation.html
