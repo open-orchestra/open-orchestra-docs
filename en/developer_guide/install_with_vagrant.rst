@@ -76,22 +76,7 @@ Clone the provisioning repository in another folder :
 Install roles from ansible-galaxy
 ---------------------------------
 
-Install roles needed to launch the box
-as a prerequisite, update your python modules if required with those two
-
-.. code-block:: bash
-
-    $ aptitude install python-yaml
-    $ aptitude install python-jinja2
-
-If running under Mac OS X, you would install them through ``pip``
-
-.. code-block:: bash
-
-    easy_install pip
-    pip install pyyaml jinja2
-
-Then go into ``open-orchestra-provisioning`` directory
+Go into ``open-orchestra-provisioning`` directory and install roles needed to launch the box:
 
 .. code-block:: bash
 
