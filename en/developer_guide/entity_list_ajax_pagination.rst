@@ -1,5 +1,6 @@
 Entity list with ajax pagination
 ================================
+
 Context
 -------
 
@@ -8,7 +9,6 @@ To improve performance, the pagination uses ajax calls.
 
 For each display of the information on the page (i.e. paging, ordering, searching),
 the plugin makes an ajax request to the api with a number of parameters.
-
 
 Usage
 -----
@@ -246,9 +246,8 @@ The ``open_orchestra_api.annotation_search_reader`` will extract the ``descripti
     $mapping = $this->get('open_orchestra_api.annotation_search_reader')
         ->extractMapping('OpenOrchestra\ModelBundle\Document\Redirection');
 
--------
  Notes
--------
+------
 
 In mapping :
 

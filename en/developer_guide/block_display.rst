@@ -14,7 +14,7 @@ In a case in which the same block is displayed several times, corresponding CSS 
 will only be loaded once.
 
 Block loader file
--------------------
+-----------------
 
 For each block there is a ``blockLoader.js`` file using the ``requireJS`` library.
 In a ``blockLoader.js`` file are defined the module used to load CSS: ``openOrchestraCss``,
