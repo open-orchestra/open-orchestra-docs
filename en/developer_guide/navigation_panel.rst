@@ -35,12 +35,21 @@ Display of the menu
 The display of the menu item is managed by the method ``NavigationPanelInterface::show()`` which should
 return an HTML string.
 
-The menu link should have the following attributes :
+The menu link must have the following attributes :
 
 * href : an anchor defining the route for Backbone.js, it will be displayed in the browser's address bar
 * id : merge of the "nav-" string and the name of the strategy as returned by
   ``NavigationPanelInterface::getName()``, for instance "nav-user"
-* data-url : API url to be called to retrieve the data to be displayed when clicking the menu
+
+It can also have data-* attributes that can help you to define custom properties to be used in a Backbone route,
+for example :
+* data-url : API url to be called to retrieve the data to be displayed
+
+Define Backbone route
+~~~~~~~~~~~~~~~~~~~~~
+
+When clicking on the menu element, the Backbone route matching with href attribute value will be executed.
+To learn more about the way to define a new Backbone route, see `Backbone routing in Open Orchestra`_.
 
 Specifics
 ---------
@@ -136,3 +145,4 @@ application, we use the ``role`` domain. This way, you will have to add the tran
 
 .. _`group`: /en/user_guide/user.rst
 .. _`compiler pass`: http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html
+.. _`Backbone routing in Open Orchestra`: /en/developer_guide/backbone_routing.rst
