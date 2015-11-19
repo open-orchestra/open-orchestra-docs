@@ -16,9 +16,6 @@ In a configuration file, you could add a route to the router:
 .. code-block:: javascript
 
     (function(router) {
-        // Declare the route pattern and the name for the generation
-        router.addRoutePattern('showFoo', 'foo/:fooId');
-
         // Factorise some code in the router (if needed)
         router.fooDisplay = function(fooId) {
             if (selectorExist($('#nav-foo-' + fooId))) {
@@ -35,8 +32,7 @@ In a configuration file, you could add a route to the router:
         });
     })(window.appRouter);
 
-When you declare a new route in Backbone, you should first give the route pattern for the route generation.
-Then you should declare the method used for the matching.
+To declare a new route in Backbone, you have to declare the method run when the route is triggered.
 
 Finally, you should inject the router to the anonymous function.
 
