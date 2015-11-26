@@ -43,7 +43,11 @@ The menu link must have the following attributes :
 
 It can also have data-* attributes that can help you to define custom properties to be used in a Backbone route,
 for example :
+
 * data-url : API url to be called to retrieve the data to be displayed
+* data-translated-header : the comma-separated list of column labels in dataTable view (see `Entity list`_)
+* data-visible-elements : the comma-separated list of columns, visible by default and identified by id, in dataTable view (see `Entity list`_)
+* data-displayed-elements : the comma-separated list of all columns identified by id in dataTable view (see `Entity list`_)
 
 Define Backbone route
 ~~~~~~~~~~~~~~~~~~~~~
@@ -146,3 +150,4 @@ application, we use the ``role`` domain. This way, you will have to add the tran
 .. _`group`: /en/user_guide/user.rst
 .. _`compiler pass`: http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html
 .. _`Backbone routing in Open Orchestra`: /en/developer_guide/backbone_routing.rst
+.. _`Entity list`: /en/developer_guide/entity_list_ajax_pagination.rst
