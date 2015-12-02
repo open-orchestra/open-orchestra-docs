@@ -26,27 +26,27 @@ The header of the two extended classes could be :
  
  .. code-block:: php
 <?php
-namespace MyBundle\Document;
-
-use OpenOrchestra\ModelBundle\Document\Content as BaseContent;
-use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
-/**
- * Extended Class Content
- * @ODM\Document(
- *   collection="content",
- *   repositoryClass="MyBundle\Repository\ContentRepository"
- * )
- */
-class Content extends BaseContent
-{
+    namespace MyBundle\Document;
+    
+    use OpenOrchestra\ModelBundle\Document\Content as BaseContent;
+    use Doctrine\ODM\MongoDB\Mapping\Annotations as ODM;
+    /**
+     * Extended Class Content
+     * @ODM\Document(
+     *   collection="content",
+     *   repositoryClass="MyBundle\Repository\ContentRepository"
+     * )
+     */
+    class Content extends BaseContent
+    {
 
  .. code-block:: php
-<?php
-namespace MyBundle\Repository;
-
-use OpenOrchestra\ModelBundle\Repository\ContentRepository as BaseContentRepository;
-/**
- * Class ContentRepository
- */
-class ContentRepository extends BaseContentRepository
-{
+    <?php
+    namespace MyBundle\Repository;
+    
+    use OpenOrchestra\ModelBundle\Repository\ContentRepository as BaseContentRepository;
+    /**
+     * Class ContentRepository
+     */
+    class ContentRepository extends BaseContentRepository
+    {
