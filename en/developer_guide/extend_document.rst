@@ -25,7 +25,7 @@ To reference these classes, the following lines will be added to config.yml.
 The header of the two extended classes could be :
  
  .. code-block:: php
-<?php
+    <?php
     namespace MyBundle\Document;
     
     use OpenOrchestra\ModelBundle\Document\Content as BaseContent;
