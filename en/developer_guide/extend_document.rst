@@ -24,6 +24,9 @@ To reference these classes, the following lines will be added to config.yml.
  
 The header of the two extended classes could be :
  
+Extended Content
+~~~~~~~~~~~~~~~~
+
  .. code-block:: php
 
     <?php
@@ -40,6 +43,9 @@ The header of the two extended classes could be :
      */
     class Content extends BaseContent
     {
+
+Extended Content Repository
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
  .. code-block:: php
 
