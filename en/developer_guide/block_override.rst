@@ -99,7 +99,7 @@ It's thus possible for you to override these parameters and thus overload the cl
     parameters:
         open_orchestra_backoffice.display.content_list.class: Foo\ExampleBundle\Blocks\Strategies\ContentListStrategy
 
-This method won't give you the opportunity to change the class constructor and all the dependancy
+This method will not give you the opportunity to change the class constructor and all the dependency
 injected to the block.
 
 .. _override the full block:
@@ -127,7 +127,7 @@ Finally, the getName method must return the same name as the overloaded block.
         return "block_name";
     }
 
-This method will give you the opportunity to totaly redifine the block, from the dependency needed
+This method will give you the opportunity to totally redefine the block, from the dependency needed
 to the working logic and the template used.
 
 .. _`block parameter`: ../developer_guide/block_parameter.html
