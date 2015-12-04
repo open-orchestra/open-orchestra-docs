@@ -48,6 +48,7 @@ for example :
 * data-translated-header : the comma-separated list of column labels in dataTable view (see `Entity list`_)
 * data-visible-elements : the comma-separated list of columns, visible by default and identified by id, in dataTable view (see `Entity list`_)
 * data-displayed-elements : the comma-separated list of all columns identified by id in dataTable view (see `Entity list`_)
+* data-input-header: the comma-separated list of search field of columns (see `Entity list`_)
 
 Define Backbone route
 ~~~~~~~~~~~~~~~~~~~~~
