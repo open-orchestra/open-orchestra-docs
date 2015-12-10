@@ -66,6 +66,58 @@ This bundle will be used as a base for all the applications api, you will need t
         http_exception_controller:  'OpenOrchestra\BaseApiBundle\Controller\ExceptionController::showAction'
         token_expiration_time:  +1month
 
+ApiBundle
+~~~~~~~~~
+
+This bundle will be used in the applications api. You can configure :
+
+* The ``Facade`` used by each ``Transformer``
+
+.. code-block:: yaml
+
+    open_orchestra_api:
+        facades:
+            api_client:               OpenOrchestra\ApiBundle\Facade\ApiClientFacade
+            api_client_collection:    OpenOrchestra\ApiBundle\Facade\ApiClientCollectionFacade
+            area:                     OpenOrchestra\ApiBundle\Facade\AreaFacade
+            block:                    OpenOrchestra\ApiBundle\Facade\BlockFacade
+            block_collection:         OpenOrchestra\ApiBundle\Facade\BlockCollectionFacade
+            content:                  OpenOrchestra\ApiBundle\Facade\ContentFacade
+            content_attribute:        OpenOrchestra\ApiBundle\Facade\ContentAttributeFacade
+            content_collection:       OpenOrchestra\ApiBundle\Facade\ContentCollectionFacade
+            content_type:             OpenOrchestra\ApiBundle\Facade\ContentTypeFacade
+            content_type_collection:  OpenOrchestra\ApiBundle\Facade\ContentTypeCollectionFacade
+            datatable_translation:    OpenOrchestra\ApiBundle\Facade\DatatableTranslationFacade
+            field_type:               OpenOrchestra\ApiBundle\Facade\FieldTypeFacade
+            group:                    OpenOrchestra\ApiBundle\Facade\GroupFacade
+            group_collection:         OpenOrchestra\ApiBundle\Facade\GroupCollectionFacade
+            keyword:                  OpenOrchestra\ApiBundle\Facade\KeywordFacade
+            keyword_collection:       OpenOrchestra\ApiBundle\Facade\KeywordCollectionFacade
+            link:                     OpenOrchestra\ApiBundle\Facade\LinkFacade
+            node:                     OpenOrchestra\ApiBundle\Facade\NodeFacade
+            node_collection:          OpenOrchestra\ApiBundle\Facade\NodeCollectionFacade
+            node_group_role:          OpenOrchestra\ApiBundle\Facade\NodeGroupRoleFacade
+            node_tree:                OpenOrchestra\ApiBundle\Facade\NodeTreeFacade
+            redirection:              OpenOrchestra\ApiBundle\Facade\RedirectionFacade
+            redirection_collection:   OpenOrchestra\ApiBundle\Facade\RedirectionCollectionFacade
+            role:                     OpenOrchestra\ApiBundle\Facade\RoleFacade
+            role_collection:          OpenOrchestra\ApiBundle\Facade\RoleCollectionFacade
+            role_string:              OpenOrchestra\ApiBundle\Facade\RoleFacade
+            role_string_collection:   OpenOrchestra\ApiBundle\Facade\RoleCollectionFacade
+            site:                     OpenOrchestra\ApiBundle\Facade\SiteFacade
+            site_collection:          OpenOrchestra\ApiBundle\Facade\SiteCollectionFacade
+            status:                   OpenOrchestra\ApiBundle\Facade\StatusFacade
+            status_collection:        OpenOrchestra\ApiBundle\Facade\StatusCollectionFacade
+            template:                 OpenOrchestra\ApiBundle\Facade\TemplateFacade
+            theme:                    OpenOrchestra\ApiBundle\Facade\ThemeFacade
+            theme_collection:         OpenOrchestra\ApiBundle\Facade\ThemeCollectionFacade
+            trash_item:               OpenOrchestra\ApiBundle\Facade\TrashItemFacade
+            trash_item_collection:    OpenOrchestra\ApiBundle\Facade\TrashItemCollectionFacade
+            translation:              OpenOrchestra\ApiBundle\Facade\TranslationFacade
+            ui_model:                 OpenOrchestra\ApiBundle\Facade\UiModelFacade
+            widget:                   OpenOrchestra\ApiBundle\Facade\WidgetFacade
+            widget_collection:        OpenOrchestra\ApiBundle\Facade\WidgetCollectionFacade
+
 UserBundle
 ~~~~~~~~~~
 
@@ -80,6 +132,21 @@ to configure :
     open_orchestra_user:
         base_layout:          'OpenOrchestraUserBundle::baseLayout.html.twig'
         form_template:        'OpenOrchestraUserBundle::form.html.twig'
+
+UserAdminBundle
+~~~~~~~~~~~~~~~
+
+This bundle will create the user back-office part of the Open Orchestra project.
+You can configure :
+
+* The ``Facade`` used by each ``Transformer``
+
+.. code-block:: yaml
+
+    open_orchestra_user_admin:
+        facades:
+            user:                 OpenOrchestra\UserAdminBundle\Facade\UserFacade
+            user_collection:      OpenOrchestra\UserAdminBundle\Facade\UserCollectionFacade
 
 ModelBundle
 ~~~~~~~~~~~
@@ -172,26 +239,11 @@ MediaBundle
 This bundle gives you a way to display medias in blocks, contents, ... . You can configure :
 
 * The media domain
-* The upload temporary directory
-* The filesystem used for the upload
-* The compression quality
-* All the thumbnails formats available
 
 .. code-block:: yaml
 
     open_orchestra_media:
         media_domain:         ''
-        tmp_dir:              /tmp
-        filesystem:           media_storage
-        compression_quality:  75
-        thumbnail:
-            max_height:
-                max_height:           100
-            max_width:
-                max_width:            100
-            rectangle:
-                max_width:            100
-                max_height:           70
 
 MediaModelBundle
 ~~~~~~~~~~~~~~~~
@@ -210,6 +262,46 @@ This bundle provides an implementation for all the interfaces defined in the Med
             media_folder:
                 class:                OpenOrchestra\MediaModelBundle\Document\MediaFolder
                 repository:           OpenOrchestra\MediaModelBundle\Repository\FolderRepository
+
+MediaAdminBundle
+~~~~~~~~~~~~~~~~
+
+This bundle gives you a way to display medias in blocks, contents, ... . You can configure :
+
+* The upload temporary directory
+* The filesystem used for the upload
+* The compression quality
+* All the thumbnails formats available
+* The ``Facade`` used by each ``Transformer``
+
+.. code-block:: yaml
+
+    open_orchestra_media_admin:
+        tmp_dir:              /tmp
+        thumbnail:
+            max_width:            117
+            max_height:           117
+            compression_quality:  75
+        alternatives:
+            image:
+                formats:
+                    fixed_height:
+                        max_height:           100
+                        compression_quality:  75
+                    fixed_width:
+                        max_width:            100
+                        compression_quality:  75
+                    rectangle:
+                        max_width:            100
+                        max_height:           70
+                        compression_quality:  75
+            default:
+                thumbnail:            orchestra-media-thumbnail-default.png
+            audio:
+                thumbnail:            orchestra-media-thumbnail-audio.png
+        facades:
+            media:                OpenOrchestra\MediaAdminBundle\Facade\MediaFacade
+            media_collection:     OpenOrchestra\MediaAdminBundle\Facade\MediaCollectionFacade
 
 WorkflowFunctionModelBundle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -232,6 +324,21 @@ This bundle provides an implementation for all the interfaces defined in the Wor
                 class:                OpenOrchestra\WorkflowFunctionModelBundle\Document\Authorization
             reference:
                 class:                OpenOrchestra\WorkflowFunctionModelBundle\Document\Reference
+
+WorkflowFunctionAdminBundle
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This bundle will create the workflow functions back-office part of the Open Orchestra project.
+You can configure :
+
+* The ``Facade`` used by each ``Transformer``
+
+.. code-block:: yaml
+
+    open_orchestra_workflow_function_admin:
+        facades:
+            workflow_function:             OpenOrchestra\WorkflowFunctionAdminBundle\Facade\WorkflowFunctionFacade
+            workflow_function_collection:  OpenOrchestra\WorkflowFunctionAdminBundle\Facade\WorkflowFunctionCollectionFacade
 
 BackofficeBundle
 ~~~~~~~~~~~~~~~~
@@ -316,6 +423,21 @@ This bundle will create the Back Office of the Open Orchestra project. You can c
             - draft_nodes
             - last_contents
             - draft_contents
+
+LogBundle
+~~~~~~~~~
+
+This bundle will create the log back-office part of the Open Orchestra project.
+You can configure :
+
+* The ``Facade`` used by each ``Transformer``
+
+.. code-block:: yaml
+
+    open_orchestra_log:
+        facades:
+            log:                  OpenOrchestra\LogBundle\Facade\LogFacade
+            log_collection:       OpenOrchestra\LogBundle\Facade\LogCollectionFacade
 
 FrontBundle
 ~~~~~~~~~~~
