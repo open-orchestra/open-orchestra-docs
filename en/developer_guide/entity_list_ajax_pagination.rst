@@ -246,10 +246,10 @@ The ``open_orchestra_api.annotation_search_reader`` will extract the ``descripti
     $mapping = $this->get('open_orchestra_api.annotation_search_reader')
         ->extractMapping('OpenOrchestra\ModelBundle\Document\Redirection');
 
- Notes
-------
+Notes
+-----
 
-In mapping :
+In the mapping :
 
 * ``type`` will take ``string`` as a default parameter if it is not specified.
 * With the mapping in annotation ``field`` will take the name of the property if it is not set.
@@ -266,6 +266,55 @@ To specify another folder, you must change the configuration :
                         namespace_prefix: "My\\AppBundle"
                         path: @AppBundle/Ressources/config/mymapping
 
+Custom search field of columns
+------------------------------
+
+By default, Open Orchestra provides differents search fields for columns (text, date, number and boolean).
+You can specify the fields types in the data attribute ``input-header`` of the navigation panel link
+(futher information in document of `navigation panel`_).
+
+To create a custom search field, you should create a backbone view and add it in the ``tableFieldViewconfigurator``.
+
+For instance with the text field:
+
+.. code-block:: javascript
+
+    TextFieldSearchView = AbstractSearchFieldView.extend(
+
+      events:
+        'keyup input.search-column': 'searchColumn'
+
+      initialize: (options) ->
+        @options = @reduceOption(options, [
+          'column'
+          'domContainer'
+          'table'
+        ])
+        @loadTemplates [
+          'OpenOrchestraBackofficeBundle:BackOffice:Underscore/table/tableHeader/searchField/tableTextField'
+        ]
+        return
+
+      render: ->
+        @setElement @renderTemplate('OpenOrchestraBackofficeBundle:BackOffice:Underscore/table/tableHeader/searchField/tableTextField',
+            column : @options.column
+        )
+        @insertFieldInHeader()
+    )
+
+    ((tableFieldViewconfigurator) ->
+      tableFieldViewconfigurator.text = TextFieldSearchView
+      return
+    ) window.tableFieldViewconfigurator = window.tableFieldViewconfigurator or {}
+
+  You can extend ``AbstractSearchFieldView`` to facilitate research and insertion of the field in the header.
+
+  The key in ``window.tableFieldViewconfigurator`` defines the name used in data-attribute (``input-header``).
+
+  With this custom view, it is possible to create a completly dynamic field, not only static ones.
+  By sending an ajax request in the view, 
+  the server can interact with the rendering of the search field for instance.
 
 .. _`DataTables`: https://www.datatables.net/
 .. _`documentation`: https://www.datatables.net/manual/server-side#Sent-parameters
+.. _`navigation panel`: /en/developer_guide/ǹavigation_panel.rst
