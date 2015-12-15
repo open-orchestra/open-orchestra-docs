@@ -273,47 +273,67 @@ By default, Open Orchestra provides differents search fields for columns (text, 
 You can specify the fields types in the data attribute ``input-header`` of the navigation panel link
 (futher information in document of `navigation panel`_).
 
-To create a custom search field, you should create a backbone view and add it in the ``tableFieldViewconfigurator``.
+To create a custom search field, you should create a backbone view and add it in the ``OpenOrchestra.DataTable.ViewFieldConfigurator``.
 
 For instance with the text field:
 
 .. code-block:: javascript
 
-    TextFieldSearchView = AbstractSearchFieldView.extend(
+  (($, OpenOrchestra) ->
+
+    ###*
+     * @class TextFieldSearchView
+    ###
+    class TextFieldSearchView extends AbstractSearchFieldView
 
       events:
         'keyup input.search-column': 'searchColumn'
 
+      ###*
+       * required options
+       * {
+       *   column: {integer} column index
+       *   api: {object} DataTable api
+       *   domContainer: {object} jquery element
+       * }
+       * @param {Object} options
+      ###
       initialize: (options) ->
         @options = @reduceOption(options, [
-          'column'
+          'columnIndex'
           'domContainer'
-          'table'
+          'api'
         ])
         @loadTemplates [
-          'OpenOrchestraBackofficeBundle:BackOffice:Underscore/table/tableHeader/searchField/tableTextField'
+          'OpenOrchestraBackofficeBundle:BackOffice:Underscore/datatable/header/textField'
         ]
-        return
 
+      ###*
+       * @return {this}
+      ###
       render: ->
-        @setElement @renderTemplate('OpenOrchestraBackofficeBundle:BackOffice:Underscore/table/tableHeader/searchField/tableTextField',
-            column : @options.column
+        @setElement @renderTemplate('OpenOrchestraBackofficeBundle:BackOffice:Underscore/datatable/header/textField',
+            column: @options.columnIndex
+            value: @options.api.column(@options.columnIndex).search()
         )
         @insertFieldInHeader()
-    )
 
-    ((tableFieldViewconfigurator) ->
-      tableFieldViewconfigurator.text = TextFieldSearchView
-      return
-    ) window.tableFieldViewconfigurator = window.tableFieldViewconfigurator or {}
+        return @
 
-  You can extend ``AbstractSearchFieldView`` to facilitate research and insertion of the field in the header.
+    OpenOrchestra.DataTable = {} if not OpenOrchestra.DataTable?
+    OpenOrchestra.DataTable.ViewFieldConfigurator = {} if not OpenOrchestra.DataTable.ViewFieldConfigurator?
+    OpenOrchestra.DataTable.ViewFieldConfigurator.text = TextFieldSearchView
 
-  The key in ``window.tableFieldViewconfigurator`` defines the name used in data-attribute (``input-header``).
+  ) jQuery,
+    window.OpenOrchestra = window.OpenOrchestra or {}
 
-  With this custom view, it is possible to create a completly dynamic field, not only static ones.
-  By sending an ajax request in the view, 
-  the server can interact with the rendering of the search field for instance.
+You can extend ``AbstractSearchFieldView`` to facilitate research and insertion of the field in the header.
+
+The key in ``OpenOrchestra.DataTable.ViewFieldConfigurator`` defines the name used in data-attribute (``input-header``).
+
+With this custom view, it is possible to create a completly dynamic field, not only static ones.
+By sending an ajax request in the view, 
+the server can interact with the rendering of the search field for instance.
 
 .. _`DataTables`: https://www.datatables.net/
 .. _`documentation`: https://www.datatables.net/manual/server-side#Sent-parameters
