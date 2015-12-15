@@ -18,7 +18,7 @@ Install php5 and the mongo extension :
 
 .. code-block:: bash
 
-    $ sudo aptitude install php5-cli php5-dev php-pear php5-curl php5-imagick php5-ffmpeg
+    $ sudo aptitude install php5-cli php5-dev php-pear php5-curl php5-imagick libav-tools
     $ sudo pecl install mongo
 
 Activate the mongo extension in php :
