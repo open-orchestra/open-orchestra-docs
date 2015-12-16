@@ -71,7 +71,7 @@ ApiBundle
 
 This bundle will be used in the applications api. You can configure :
 
-* The ``Facade`` used by each ``Transformer``
+* The ``Facade`` returned by the ``API``
 
 .. code-block:: yaml
 
@@ -139,7 +139,7 @@ UserAdminBundle
 This bundle will create the user back-office part of the Open Orchestra project.
 You can configure :
 
-* The ``Facade`` used by each ``Transformer``
+* The ``Facade`` returned by the ``API``
 
 .. code-block:: yaml
 
@@ -271,7 +271,7 @@ This bundle gives you a way to display medias in blocks, contents, ... . You can
 * The upload temporary directory
 * Width, height and compression quality for each available image formats
 * The default thumbnail for each media type
-* The ``Facade`` used by each ``Transformer``
+* The ``Facade`` returned by the ``API``
 
 .. code-block:: yaml
 
@@ -330,7 +330,7 @@ WorkflowFunctionAdminBundle
 This bundle will create the workflow functions back-office part of the Open Orchestra project.
 You can configure :
 
-* The ``Facade`` used by each ``Transformer``
+* The ``Facade`` returned by the ``API``
 
 .. code-block:: yaml
 
@@ -429,7 +429,7 @@ LogBundle
 This bundle will create the log back-office part of the Open Orchestra project.
 You can configure :
 
-* The ``Facade`` used by each ``Transformer``
+* The ``Facade`` returned by the ``API``
 
 .. code-block:: yaml
 
