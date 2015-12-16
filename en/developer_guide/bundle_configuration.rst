@@ -269,9 +269,8 @@ MediaAdminBundle
 This bundle gives you a way to display medias in blocks, contents, ... . You can configure :
 
 * The upload temporary directory
-* The filesystem used for the upload
-* The compression quality
-* All the thumbnails formats available
+* Width, height and compression quality for each available image formats
+* The default thumbnail for each media type
 * The ``Facade`` used by each ``Transformer``
 
 .. code-block:: yaml
