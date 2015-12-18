@@ -1,39 +1,52 @@
-Medias
-======
-
-Medias in Open Orchestra are physically managed by the Gaufrette component and
-the `KnpGaufretteBundle`_ which binds Gaufrette to Symfony. Gaufrette is an abstraction
-layer for accessing files wherever the physical copy is located (locally on the disk,
-on an FTP server, in the cloud...).
+Media
+=====
 
 Media storage
 -------------
 
-By default, Open Orchestra stores the media on disk of the webserver of the application.
-If it is needed to change the location of the files, the configuration should be updated
-to change the adapter that Gaufrette must use for the file storage.
+Media files in Open Orchestra are physically managed by the Gaufrette component and the `KnpGaufretteBundle`_
+which binds Gaufrette to Symfony. Gaufrette is an abstraction layer for accessing files wherever the physical copy
+is located (locally on the disk, on an FTP server, in the cloud...).
 
-All adapters that can be natively used are described in the `configuration documentation`_,
-along with the details of the configuration to set up.
+By default, Open Orchestra stores the media locally on the webserver of the application. But if it is required to
+change the location of the files, the configuration can be updated to change the adapter used by Gaufrette for the
+file storage.
 
-If another Gaufrette filesystem is used instead of the default one, it should be
-notified to Open Orchestra through the ``open_orchestra_media.filesystem`` configuration parameter,
-which expects the identifier of the new filesystem to use.
+All adapters that can be natively used are described in the `configuration documentation`_, along with the details
+of the configuration to set up.
 
-Upload and resizing of images
------------------------------
+If another Gaufrette filesystem is used instead of the default one, it should be notified to Open Orchestra through
+the ``open_orchestra_media.filesystem`` configuration parameter, which expects the identifier of the new filesystem
+to use.
 
-An uploaded media from the media library can be displayed in different formats (called thumbnails)
-depending on the needs of the application. A format is simply a configuration entry
-defining parameters in one of the three following ways:
+Upload strategies
+-----------------
+When a new file is uploaded, a media document is created and the file is moved to the storage vie Gaufrette. But
+some required process are also made whith files, and some other optional can be too. For instance, to be rendered
+in the Back Office gallery, a preview thumbnail must be generated. If the media is an image, several alternatives
+in different sizes must also be generated. In the file is a sound, maybe some new variants could be generated with
+different bitrate. Those operations are completed by the alternatives strategies. A strategy exists for each
+supported mime-type.
 
-* A ``max_height`` key that defines the maximum height of the thumbnail, the width
-  is calculated from the image ratio
-* A ``max_width`` key that defines the maximum width of the thumbnail, the height
-  is calculated from the image ratio
-* Two keys ``height`` and ``width`` which will define the rectangle area in which the image should fit
+When a new media is created due to a file upload, the ``MediaEvents::MEDIA_ADD`` event is fired. The
+``OpenOrchestra\MediaAdmin\EventSubscriber\MediaCreatedSubscriber`` catch this event to track the media created.
+Later after the response matching the media creation has been sent to the client, this subscriber also catch the
+``KernelEvents::TERMINATE`` event. It then ask the ``OpenOrchestra\MediaAdmin\FileAlternatives\FileAlternativesManager``
+to generate a thumbnail and the alternatives. So, the manager search a strategy able to deal with the uploaded file.
 
-Here is an example of configuration defining three custom thumbnail formats:
+You can alter the alternatives generation by extending the existing strategies or by creating new ones.
+
+The image alternatives
+----------------------
+
+A media image can be displayed in different formats depending on the needs of the application. So when an image is
+uploaded to the media library, several alternatives are generated according to the configured formats. A format is
+simply a configuration entry combining one or the two following parameters:
+
+* max_height: defines the maximum height of the image to generate, the width is calculated to keep a correct ratio
+* max_width: defines the maximum width of the image to generate, the height is calculated to keep a correct ratio
+
+Here is an example of configuration defining three custom alternative formats:
 
 .. code-block:: yaml
 
@@ -44,24 +57,18 @@ Here is an example of configuration defining three custom thumbnail formats:
             my_custom_max_height:
                 max_height: 100
             my_custom_rectangle:
-                height: 200
-                width: 300
-
-The resizing of the image will be done automatically during the original file upload.
+                max_height: 200
+                max_width: 300
 
 Front display
 -------------
 
-Each media file is identified by a unique hash key from which Gaufrette can retrieve
-the physical file in the configured storage. To generate the HTML tag for a
-Front Office display, Open Orchestra provides a Twig function ``display_media``
-that will generate the media link from the identifier.
+Each media file is identified by a unique hash key used by Gaufrette to retrieve the physical file in the
+configured storage. To generate the HTML tag rendering a media, Open Orchestra provides the Twig function
+``display_media``.
 
-Because of the wide variety of storage options for media files, it's possible
-that a file cannot be read directly from a web browser because of access restrictions.
-This is why the generated link actually calls the ``MediaController`` from the ``MediaBundle``,
-which will retrieve the binary data with Gaufrette and send it back to the browser.
-
+Instead of a direct access to the file, we recommand you to use the ``MediaController`` from the ``MediaFileBundle``.
+The ``show`` action will retrieve the binary data with Gaufrette and send it back to the browser.
 
 .. _`KnpGaufretteBundle`: https://github.com/KnpLabs/KnpGaufretteBundle
 .. _`configuration documentation`: https://github.com/KnpLabs/KnpGaufretteBundle#configuration
