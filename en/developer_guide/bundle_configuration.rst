@@ -151,7 +151,7 @@ You can configure :
 ModelBundle
 ~~~~~~~~~~~
 
-This bundle provides an implementation af all the interfaces from the ``model-interface`` component for mongoDB.
+This bundle provides an implementation of all the interfaces from the ``model-interface`` component for mongoDB.
 You can configure :
 
 * Some immutable properties for the contents
@@ -347,6 +347,7 @@ This bundle will create the Back Office of the Open Orchestra project. You can c
 * The language from the front installation
 * The blocks that you created
 * The fixed attributes from the block (shared through all blocks)
+* The front roles, that can be added to the front pages
 * The field type and options for the content (specific to your project)
 * The color available for the Back Office
 
@@ -380,6 +381,9 @@ This bundle will create the Back Office of the Open Orchestra project. You can c
 
         # Add the global block attributes
         fixed_attributes:     []
+
+        # Role than can be given to the user on the Front websites
+        front_roles:          []
 
         # Array of content attributes (for content types)
         field_types:
