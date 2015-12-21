@@ -15,7 +15,7 @@ Create a folder
 ---------------
 
 To create a folder, browse the folders tree where you want to create the folder and click on the "new folder"
-button. The creation form then appears and require you to fill the following fields:
+button. The creation form then appears and requires you to fill the following fields:
 
 * Name: the name of the folder
 * Websites: the folder you are creating will be available only for the sites you select in this multiselect
@@ -30,7 +30,7 @@ gallery will contain a trash icon. Click on this icon to delete the folder.
 Manage files
 ------------
 
-To add a file, select the folder you want to store it. Then on the bottom of the gallery, click the "add button".
+To add a file, select the folder where you want to store it. Then on the bottom of the gallery, click the "add button".
 You can upload files in 3 different ways. The hole area is droppable, which means you can drag'n'drop files from your
 computer to upload them. You can also use the "Select a folder from your computer" to upload all files contained in
 that folder or only upload a file using the "Select a file from your computer" button. All files matching the types
