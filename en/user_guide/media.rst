@@ -2,7 +2,7 @@ The Media Library
 =================
 
 With the media bundles (MediaAdminBundle, MediaBundle and MediaFileBundle), Open Orchestra gets a consistant media
-library. This library allows you to upload media, manage them and reuse them on multiple locations of your site,
+library. This library allows you to upload medias, manage them and reuse them on multiple locations of your site,
 such as in blocks or contents.
 Natively, images, PDF, sounds and videos are supported but it can be easily extended by a PHP developer to some
 other formats.
@@ -31,7 +31,7 @@ Manage files
 ------------
 
 To add a file, select the folder you want to store it. Then on the bottom of the gallery, click the "add button".
-You can upload files in 3 different ways. The hole area is droppable, wich mean you can drag'n'drop files from your
+You can upload files in 3 different ways. The hole area is droppable, which means you can drag'n'drop files from your
 computer to upload them. You can also use the "Select a folder from your computer" to upload all files contained in
 that folder or only upload a file using the "Select a file from your computer" button. All files matching the types
 allowed in configuration, will be uploaded.
@@ -61,7 +61,7 @@ Image alternatives
 
 When you upload an image, several alternatives in different sizes are automatically generated to improve the
 rendering in the front office. According to the context the image could be displayed as a thumbnail or as a big
-poster. Out of the box, Open Orchestra generat three differents alternatives:
+poster. Out of the box, Open Orchestra generat three different alternatives:
 
 * Fixed height: Adapt height and keep proportion
 * Fixed width: Adapt width and keep proportion
@@ -69,7 +69,7 @@ poster. Out of the box, Open Orchestra generat three differents alternatives:
 
 These ones can be personalized on a custom installation.
 
-But you may want to alter an automatically generated alternative with an image more specific. You have two ways
+But you may want to alter an automatically generated alternative with a more specific image. You have two ways
 of doing that: crop manually the original image or upload a totally different alternative.
 
 First thing to do this is to select the alternative you want to update. Then choose between:

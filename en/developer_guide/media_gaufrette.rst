@@ -21,17 +21,17 @@ to use.
 
 Upload strategies
 -----------------
-When a new file is uploaded, a media document is created and the file is moved to the storage vie Gaufrette. But
-some required process are also made whith files, and some other optional can be too. For instance, to be rendered
+When a new file is uploaded, a media document is created and the file is moved to the storage via Gaufrette. But
+some required process are also made with files, and some other optional can be too. For instance, to be rendered
 in the Back Office gallery, a preview thumbnail must be generated. If the media is an image, several alternatives
-in different sizes must also be generated. In the file is a sound, maybe some new variants could be generated with
-different bitrate. Those operations are completed by the alternatives strategies. A strategy exists for each
+in different sizes must also be generated. If the file is a sound, maybe some new variants could be generated with
+different bitrates. Those operations are completed by the alternative strategies. A strategy exists for each
 supported mime-type.
 
 When a new media is created due to a file upload, the ``MediaEvents::MEDIA_ADD`` event is fired. The
-``OpenOrchestra\MediaAdmin\EventSubscriber\MediaCreatedSubscriber`` catch this event to track the media created.
+``OpenOrchestra\MediaAdmin\EventSubscriber\MediaCreatedSubscriber`` catch this event to track the created media.
 Later after the response matching the media creation has been sent to the client, this subscriber also catch the
-``KernelEvents::TERMINATE`` event. It then ask the ``OpenOrchestra\MediaAdmin\FileAlternatives\FileAlternativesManager``
+``KernelEvents::TERMINATE`` event. It then asks the ``OpenOrchestra\MediaAdmin\FileAlternatives\FileAlternativesManager``
 to generate a thumbnail and the alternatives. So, the manager search a strategy able to deal with the uploaded file.
 
 You can alter the alternatives generation by extending the existing strategies or by creating new ones.
