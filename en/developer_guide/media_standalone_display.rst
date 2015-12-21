@@ -31,7 +31,7 @@ A simple solution would be to install only the ``open-orchestra-media-file-bundl
 Basic installation
 ~~~~~~~~~~~~~~~~~~
 
-The ``open-orchestra-media-file-bundle`` can run on it's own if you require it in the ``composer.json`` file :
+The ``open-orchestra-media-file-bundle`` can run on its own if you require it in the ``composer.json`` file:
 
 .. code-block:: json
 
