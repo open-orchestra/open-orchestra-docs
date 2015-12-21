@@ -1,67 +1,81 @@
-Media Management
-================
+The Media Library
+=================
 
-Open Orchestra allows you to manage medias uploaded by the users in the media library panel.
-They can be easily used in other part of the website such as blocks or contents.
-Natively, images, PDF and videos are supported by Open Orchestra.
+With the media bundles (MediaAdminBundle, MediaBundle and MediaFileBundle), Open Orchestra gets a consistant media
+library. This library allows you to upload medias, manage them and reuse them on multiple locations of your site,
+such as in blocks or contents.
+Natively, images, PDF, sounds and videos are supported but it can be easily extended by a PHP developer to some
+other formats.
 
-Folder
-------
+All files uploaded by users are organised inside folders. When the media library is activated, the navigation panel
+contains an entry to the media library presenting the media folders tree. You can see the content of a folder by
+clicking on it.
 
-All files are organised inside folders. It's possible to browse the folder tree to see files by clicking on the navigation panel.
+Create a folder
+---------------
 
-Create
-~~~~~~
+To create a folder, browse the folders tree where you want to create the folder and click on the "new folder"
+button. The creation form then appears and requires you to fill the following fields:
 
-Creating a folder is done by clicking on the "new folder" button in the navigation panel.
+* Name: the name of the folder
+* Websites: the folder you are creating will be available only for the sites you select in this multiselect
 
-The creation form needs:
+Remove a folder
+---------------
 
-* name: name of the folder
-* Websites: which websites are using the folder
-
-Remove
-~~~~~~
-
-To remove a folder, select the folder and click on the trash button on the block panel.
-It is not possible to delete a folder containing some medias
+To remove a folder, first select the folder. The gallery displaying the content of the folder then appears. You can
+remove that folder only if it is empty. If this is the case, the toolbar located on the top right hand side of the
+gallery will contain a trash icon. Click on this icon to delete the folder.
 
 Manage files
 ------------
 
-The add button in the folder's content allows you to upload files.
+To add a file, select the folder where you want to store it. Then on the bottom of the gallery, click the "add button".
+You can upload files in 3 different ways. The hole area is droppable, which means you can drag'n'drop files from your
+computer to upload them. You can also use the "Select a folder from your computer" to upload all files contained in
+that folder or only upload a file using the "Select a file from your computer" button. All files matching the types
+allowed in configuration, will be uploaded.
 
-A trash icon appears on media preview hovering to delete the media.
-The media can't be deleted if it is used in an element (block, content) which is in the final state.
+Returning on the gallery, you should see your media.
 
-Clicking on the media preview will a open a page with tow panels (for an image) : format version management (for images) and meta information
+Putting your cursor over the preview makes a panel appear. This panel allows you to delete the media. Note that the
+media can not be deleted if it is used in a published element (block or content).
 
-Image Crop
-~~~~~~~~~~
+Clicking on the media preview opens a page to administrate the meta information of the media. If the media is an
+image, you can also alter some generated version.
 
-When you upload an image, you can choose from some predetermined formats to improve rendering in front office :
+Meta informations
+~~~~~~~~~~~~~~~~~
 
-* original: keep original format
-* fixed height: adapt height and keep proportion
-* fixed width: adapt width and keep proportion
-* rectangle: reduce to fit in the rectangle format
+You can administrate the following meta informations:
 
-These ones can be personalized on custom installation.
+* Title: the title of the media in different languages
+* Alt: the description of the media in different languages. It is used by the visitors browsers, especially for
+  blinded monitor.
+* Media's copyright: the copyright on the media
+* Comment: A comment on the media
+* Keyword: By tagging media, you can for instance regroup them with a common tag in a block
 
-Once a format selected, the preview is updated and some choices are added:
+Image alternatives
+~~~~~~~~~~~~~~~~~~
 
-* manual crop: to adjust your selection manually
-* upload an alternative image: if user want to resize image himself, replace the selected thumbnail format by another image
+When you upload an image, several alternatives in different sizes are automatically generated to improve the
+rendering in the front office. According to the context the image could be displayed as a thumbnail or as a big
+poster. Out of the box, Open Orchestra generat three different alternatives:
+
+* Fixed height: Adapt height and keep proportion
+* Fixed width: Adapt width and keep proportion
+* Rectangle: Reduce to fit in the rectangle format, keeping the proportion
+
+These ones can be personalized on a custom installation.
+
+But you may want to alter an automatically generated alternative with a more specific image. You have two ways
+of doing that: crop manually the original image or upload a totally different alternative.
+
+First thing to do this is to select the alternative you want to update. Then choose between:
+
+* Manual crop: This will display the original image. You can select the part you want to keep. By saving your
+  selection, Open Orchestra will resize it to fit the alternative format.
+* Upload an alternative image: Simply upload a new image and it will replace the automatically generated version.
 
 .. image:: ../../images/crop.png
-
-Meta
-~~~~
-
-Media meta information form have different fields :
-
-* title: title of the media in different languages, appears on mouse hovering
-* alt: description of the media in different languages, appears if media can't be loaded or for blinded monitor.
-* media's copyright: the copyright on the media
-* comment: comment on the media
-* keyword: use to find media by tag in some blocks

@@ -1,5 +1,5 @@
-Medias display
-==============
+Media display
+=============
 
 Context
 -------
@@ -25,19 +25,19 @@ kernel each time you will request an image.
 Open Orchestra Solution
 -----------------------
 
-A simple solution would be to install only the ``open-orchestra-media-bundle`` as a single
+A simple solution would be to install only the ``open-orchestra-media-file-bundle`` as a single
 ``Symfony`` application.
 
 Basic installation
 ~~~~~~~~~~~~~~~~~~
 
-The ``open-orchestra-media-bundle`` can run on it's own if you require it in the ``composer.json`` file :
+The ``open-orchestra-media-file-bundle`` can run on its own if you require it in the ``composer.json`` file:
 
 .. code-block:: json
 
     "require": {
         "incenteev/composer-parameter-handler": "~2.0",
-        "open-orchestra/open-orchestra-media-bundle": "*"
+        "open-orchestra/open-orchestra-media-file-bundle": "*"
     },
 
 Then enable all the required bundles in your ``AppKernel.php`` file:
@@ -52,43 +52,7 @@ Then enable all the required bundles in your ``AppKernel.php`` file:
     new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
 
     new OpenOrchestra\BaseBundle\OpenOrchestraBaseBundle(),
-    new OpenOrchestra\MediaBundle\OpenOrchestraMediaBundle(),
-
-Installation with the database
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-In the case that you will require to request the database to extract more
-information about the ``media`` object for instance, you will activate the ``MediaModelBundle``
-and require the ``open-orchestra-model-bundle``.
-
-The bundle to activate in the ``AppKernel`` file :
-
-.. code-block:: php
-
-
-    new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
-    new OpenOrchestra\ModelBundle\OpenOrchestraModelBundle(),
-    new Solution\MongoAggregationBundle\SolutionMongoAggregationBundle(),
-    new OpenOrchestra\MediaModelBundle\OpenOrchestraMediaModelBundle(),
-    new OpenOrchestra\MongoBundle\OpenOrchestraMongoBundle(),
-
-You will need to configure thoses bundle in the ``config.yml`` file :
-
-.. code-block:: yaml
-
-    doctrine_mongodb:
-        connections:
-            default:
-                server: "%open_orchestra_cms.mongodb.server%"
-                options: {}
-        default_database: "%open_orchestra_cms.mongodb.database%"
-        resolve_target_documents:
-                OpenOrchestra\ModelInterface\Model\TranslatedValueInterface: OpenOrchestra\ModelBundle\Document\TranslatedValue
-        document_managers:
-            default:
-                auto_mapping: true
-
-You have now the opportunity to query the database to get any of the media stored inside.
+    new OpenOrchestra\MediaBundle\OpenOrchestraMediaFileBundle(),
 
 Ease your installation
 ~~~~~~~~~~~~~~~~~~~~~~
