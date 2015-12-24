@@ -86,6 +86,16 @@ The usage is pretty straightforward :
         --backoffice-display-dir="src/YourVendor/AcmeBundle/Path/To/Back/Display/Strategies"
         --no-interaction
 
+Add the block in the configuration
+----------------------------------
+
+After creating the different strategies. It must make available block in the Back Office by adding it to the configuration. 
+
+.. code-block:: yaml
+
+    open_orchestra.blocks:
+            - block_name
+
 Cache control
 -------------
 
