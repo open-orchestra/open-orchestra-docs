@@ -97,16 +97,9 @@ Install open-orchestra with composer:
     $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s dev
     $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s dev
     $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/folder -s dev
+
 Install the assets
 ------------------
-
-We are using npm to manage some server side javascript libraries and bower to manage the client side libraries
-
-Install the npm dependencies
-
-.. code-block:: bash
-
-    $ npm install
 
 Launch the grunt command to generate all assets
 

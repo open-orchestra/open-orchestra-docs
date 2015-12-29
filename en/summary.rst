@@ -68,6 +68,7 @@ Developer guide
 * `Robots.txt`_
 * `Sitemap.xml`_
 * `Add a custom BBCode`_
+* `Manage Bower and Npm Dependencies`_
 
 Hosting guide
 =============
@@ -133,6 +134,7 @@ Hosting guide
 .. _`Bundle configuration`: /en/developer_guide/bundle_configuration.rst
 .. _`Install with vagrant`: /en/developer_guide/install_with_vagrant.rst
 .. _`Add a navigation panel entry`: /en/developer_guide/navigation_panel.rst
+.. _`Manage Bower and Npm Dependencies`: /en/developer_guide/assets_bower_npm.rst
 .. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst
 .. _`Add a special listener to a Content field`: /en/developer_guide/content_add_field_listener.rst
 .. _`Use the ajax pagination for the entities list`: /en/developer_guide/entity_list_ajax_pagination.rst

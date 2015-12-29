@@ -179,14 +179,6 @@ Then go in the Back Office project directory inside the box:
 
     $ cd /var/www/openorchestra
 
-Install the npm dependencies:
-
-.. code-block:: bash
-
-    $ npm install
-
-The npm should have also installed the bower component.
-
 Launch the grunt command to generate all assets:
 
 .. code-block:: bash
