@@ -62,6 +62,7 @@ Developer guide
 * `Routing`_
 * Add new media type
 * `Add a special listener to a Content field`_
+* `Prevent document suppression when it can be embedded`_
 * `Platform logging`_
 * `Custom error pages`_
 * `Robots.txt`_
@@ -135,3 +136,4 @@ Hosting guide
 .. _`Use a specific backbone view`: /en/developer_guide/specific_backbone_view.rst
 .. _`Add a special listener to a Content field`: /en/developer_guide/content_add_field_listener.rst
 .. _`Use the ajax pagination for the entities list`: /en/developer_guide/entity_list_ajax_pagination.rst
+.. _`Prevent document suppression when it can be embedded`: /en/developer_guide/prevent_document_suppression_when_embedded.rst
