@@ -89,11 +89,13 @@ The usage is pretty straightforward :
 Add the block in the configuration
 ----------------------------------
 
-After creating the different strategies. It must make available block in the Back Office by adding it to the configuration. 
+After creating the different strategies, you still have to register your new block in Open Orchestra. To do this,
+add it to your application configuration:
 
 .. code-block:: yaml
 
-    open_orchestra.blocks:
+    open_orchestra_backoffice:
+        blocks:
             - block_name
 
 Cache control

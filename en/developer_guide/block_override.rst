@@ -53,7 +53,7 @@ additional datas.
 ``Open-orchestra/open-orchestra-cms-bundle/BackofficeBundle/Ressources/views/Block/
 ContentList/show.html.twig``
 
-You simply create your template in next folder :
+You simply create your template in next folder:
 
 .. code-block::
 
