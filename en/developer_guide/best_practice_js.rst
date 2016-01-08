@@ -10,9 +10,7 @@ Basic :
  (*different tools to validate as jshint*)
 
 - Comment js (example http://usejsdoc.org/)
-- Namespace : on Open Orchestra a big part of js and the global scope, a integrator may end up inadvertently
-  override a function, example of using of namespace presented by @juchi in this PR
-  (open-orchestra/open-orchestra-cms-bundle: `PR #1295`)
+- Namespace : on Open Orchestra a big part of js and the global scope, a integrator may end up inadvertently override a function, example of using of namespace presented by @juchi in this PR (open-orchestra/open-orchestra-cms-bundle: `PR #1295`)
 - Cutting modules (AMD, ES6 Modules) of the code but also at the file architecture.
 - Tests
 - files Naming; no special convention exist
@@ -38,7 +36,7 @@ In the first time :
 In the second time :
 --------------------
 
-- Passer ECMAScript 6 ou type script (voir le message de cédric ci-dessous)
+- Switch to ECMAScript 6 or TypeScript
 - Review the uses of Backbone Js, not using models and collections that are still the central point of backbone
   that could "plug" on the API.
 - Cut functionality in AMD module or another depending on the previous point
