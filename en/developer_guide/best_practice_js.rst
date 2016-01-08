@@ -10,7 +10,8 @@ Basic :
  (*different tools to validate as jshint*)
 
 - Comment js (example http://usejsdoc.org/)
-- Namespace : on Open Orchestra a big part of js and the global scope, a integrator may end up inadvertently override a function, example of using of namespace presented by @juchi in this PR (open-orchestra/open-orchestra-cms-bundle: `PR #1295`)
+- Namespace : on Open Orchestra a big part of js and the global scope, a integrator may end up inadvertently
+  override a function
 - Cutting modules (AMD, ES6 Modules) of the code but also at the file architecture.
 - Tests
 - files Naming; no special convention exist
