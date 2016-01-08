@@ -17,5 +17,5 @@ Basic :
 - Tests
 - files Naming; no special convention exist
 
-*Many links on best practices, books, pattern, framework, test and article on this site :
-http://jstherightway.org/#reading *
+*Many links on best practices, books, pattern, framework, test and article on this site :*
+http://jstherightway.org/#reading
