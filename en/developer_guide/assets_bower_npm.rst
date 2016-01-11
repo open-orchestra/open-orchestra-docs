@@ -47,7 +47,7 @@ Bower.json and Package.json files
 ---------------------------------
 
 ``composer-extra-assets`` generates ``bower.json`` and ``package.json`` files.
-it's not recommended to add your Bower and Npm dependencies in these files because she will be overwritten
+It's not recommended to add your Bower and Npm dependencies in these files because it will be overwritten
 when the next ``composer update|install``.
 
 .. _`composer-extra-assets`: https://github.com/koala-framework/composer-extra-assets
