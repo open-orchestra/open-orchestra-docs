@@ -43,4 +43,11 @@ directory of Composer's root and not in the directory of your bundle.
         "expose-npm-packages": true
     }
 
+Bower.json and Package.json files
+---------------------------------
+
+``composer-extra-assets`` generates ``bower.json`` and ``package.json`` files.
+it's not recommended to add your Bower and Npm dependencies in these files because she will be overwritten
+when the next ``composer update|install``.
+
 .. _`composer-extra-assets`: https://github.com/koala-framework/composer-extra-assets
