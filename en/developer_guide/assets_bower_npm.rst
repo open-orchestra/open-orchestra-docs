@@ -28,7 +28,7 @@ application or your bundle.
     }
 
 If you add Npm dependencies in your bundle, you can add the ``expose-npm-packages``
-attribute to the composer, with this option , the Npm package are available in the node_modules 
+attribute to the composer. With this option, the Npm package are available in the node_modules
 directory of Composer's root and not in the directory of your bundle.
 
 .. code-block:: javascript
@@ -48,6 +48,6 @@ Bower.json and Package.json files
 
 ``composer-extra-assets`` generates ``bower.json`` and ``package.json`` files.
 It's not recommended to add your Bower and Npm dependencies in these files because it will be overwritten
-when the next ``composer update|install``.
+when the next ``composer update|install`` will be launched.
 
 .. _`composer-extra-assets`: https://github.com/koala-framework/composer-extra-assets
