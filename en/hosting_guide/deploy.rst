@@ -2,7 +2,15 @@ Orchestra deployment on integration environment
 ===============================================
 
 This tutorial is going to describe step by step how you can deploy the Open Orchestra
-project on the integration environment:
+project on the integration environment.
+
+To be able to deploy with `capistrano`_, your target environment should have the
+requirements :
+
+- `git`_ installed
+- `composer`_ installed and executable as the ``composer`` command
+- The user used to deploy and the one used to execute the php should be able to write
+  in the cache and log directory at all time.
 
 Install Gem and Bundler
 -----------------------
@@ -78,5 +86,7 @@ Then you can run the deploy command in the project directory
 
 Once this is done, your server has been updated.
 
+.. _`git`: https://git-scm.com/
 .. _`bundler`: http://bundler.io/
+.. _`composer`: https://getcomposer.org/
 .. _`capistrano`: http://capistranorb.com/
