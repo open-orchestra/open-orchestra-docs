@@ -23,6 +23,7 @@ These requirements are mandatory to run Open Orchestra on a reference environmen
 |                      | OPcache > 7.0.6          |
 |                      | Mbstring                 |
 |                      | Curl                     |
+|                      | Intl                     |
 +----------------------+--------------------------+
 | npm                  | 1.4.28                   |
 +----------------------+--------------------------+
