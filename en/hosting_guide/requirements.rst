@@ -10,23 +10,23 @@ Basic Requirements
 These requirements are mandatory to run Open Orchestra on a reference environment.
 
 +----------------------+--------------------------+
-| Operating System     | Debian 7.6 (Wheezy)      |
+| Operating System     | Debian 8.2 (Jessie)      |
 +----------------------+--------------------------+
-| Web server           | Apache/2.2.22            |
+| Web server           | Apache/2.4.10            |
 +----------------------+--------------------------+
-| Database             | Mongodb 2.6.9            |
+| Database             | Mongodb 2.6.11           |
 +----------------------+--------------------------+
-| PHP (mod_php + cli)  | PHP 5.4.39               |
+| PHP (mod_php + cli)  | PHP 5.5                  |
 +----------------------+--------------------------+
 | PHP Extensions       | Mongo > 1.2.12, <1.7-dev |
 |                      | Imagick                  |
-|                      | APC > 3.1.13             |
+|                      | OPcache > 7.0.6          |
 |                      | Mbstring                 |
 |                      | Curl                     |
 +----------------------+--------------------------+
 | npm                  | 1.4.28                   |
 +----------------------+--------------------------+
-| Node.js              | 0.10.30                  |
+| Node.js              | 0.10.36                  |
 +----------------------+--------------------------+
 
 Optional requirements

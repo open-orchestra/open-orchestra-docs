@@ -6,7 +6,7 @@ and *open-orchestra-front-demo* which is the Front Office part that will display
 and pages created in the CMS Back Office and *open-orchestra-media-demo* which will display
 the images loaded in the CMS Back Office.
 
-This tutorial has been tested on a debian 7.6.
+This tutorial has been tested on a debian 8.2.
 
 Install the environment
 -----------------------
