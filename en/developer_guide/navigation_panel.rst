@@ -59,7 +59,7 @@ Here is an example of yml configuration:
           activateColvis : true
           searchField : text
 
-The parameter ``open_orchestra_backoffice.navigation_panel.trashcan.parameters`` is injected to panel strategy whith a translator (Symfony\Component\Translation\TranslatorInterface).
+The parameter ``open_orchestra_backoffice.navigation_panel.trashcan.parameters`` is injected to panel strategy whith a translator which implements ``Symfony\Component\Translation\TranslatorInterface``.
 The translator try to translate each associated value in current context, in this case ``open_orchestra_backoffice.table.trashcan.name``.
 Here is the configuration:
 
