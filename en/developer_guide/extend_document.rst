@@ -4,8 +4,8 @@ Extend document and repository
 Use case
 ----------
 
-OpenOrchestra put to the users and developpers a set of entities, for example the content entity, functionnal kernel of a CMS.
-For specific use, It could be necessary to extend the model of an entity and its repository, i.e. the class which allows to load the instances of this entity.
+Open Orchestra presents a list of model object to the integrators.
+To customize those objects, it could be necessary to extend the implemented documents and repositories.
  
 
 How to
