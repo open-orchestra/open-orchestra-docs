@@ -41,14 +41,53 @@ The menu link must have the following attributes :
 * id : merge of the "nav-" string and the name of the strategy as returned by
   ``NavigationPanelInterface::getName()``, for instance "nav-user"
 
-It can also have data-* attributes that can help you to define custom properties to be used in a Backbone route,
-for example :
+Menu and data table
+~~~~~~~~~~~~~~~~~~~
 
-* data-url : API url to be called to retrieve the data to be displayed
-* data-translated-header : the comma-separated list of column labels in dataTable view (see `Entity list`_)
-* data-visible-elements : the comma-separated list of columns, visible by default and identified by id, in dataTable view (see `Entity list`_)
-* data-displayed-elements : the comma-separated list of all columns identified by id in dataTable view (see `Entity list`_)
-* data-input-header: the comma-separated list of search field of columns (see `Entity list`_)
+Many panel entries allow to consult records formated in a data table.
+This data table could be configured : name of the column, visible or not by default, type of search field...
+As this view is based on `DataTables library`_, all possible options in column definition are allowed.
+Here is an example of yml configuration:
+
+.. code-block:: yaml
+
+    open_orchestra_backoffice.navigation_panel.trashcan.parameters :
+        -
+          name : name
+          title : open_orchestra_backoffice.table.trashcan.name
+          visible : true
+          activateColvis : true
+          searchField : text
+
+The parameter ``open_orchestra_backoffice.navigation_panel.trashcan.parameters`` is injected to panel strategy whith a translator (Symfony\Component\Translation\TranslatorInterface).
+The translator try to translate each associated value in current context, in this case ``open_orchestra_backoffice.table.trashcan.name``.
+Here is the configuration:
+
+.. code-block:: yaml
+
+    open_orchestra_backoffice.navigation_panel.trashcan:
+        class: %open_orchestra_backoffice.navigation_panel.administration.class%
+        arguments:
+            - trashcan
+            - ROLE_ACCESS_DELETED
+            - 250
+            - %open_orchestra_backoffice.navigation_panel.menu.editorial%
+            - %open_orchestra_backoffice.navigation_panel.trashcan.parameters%
+            - @translator
+        calls:
+            - [ setTemplate, [OpenOrchestraBackofficeBundle:BackOffice:Include/NavigationPanel/Menu/Editorial/trashcan.html.twig] ]
+        tags:
+            - { name: open_orchestra_backoffice.navigation_panel.strategy }
+
+Each strategy will define a ``getDatatableParameter`` method to recover the datatable parameters.
+In a classical context (i.e. all parameters are defined statically in yml), the parameters are indexed with the name of the strategy.
+A basic implementation exists in the abstract class ``OpenOrchestra\Backoffice\NavigationPanel\Strategies\AbstractNavigationPanelStrategy``.
+Finally, the method ``datatableParameterAction`` of the controller ``OpenOrchestra\ApiBundle\Controller\DataTableController`` retrieves all the parameters of all strategies.
+The backoffice call this controller each time the  navigation panel is builded and store the response in a global js object ``dataTableConfigurator``.
+A panel entry which use this process must specify the index of its parameters in ``dataTableConfigurator`` by setting ``data-datatable-parameter-name`` to the index value.
+
+It is possible to extend this process in case of dynamic parameters.
+Such implementation could be find in ``OpenOrchestra\Backoffice\NavigationPanel\Strategies\ContentTypeController``
 
 Define Backbone route
 ~~~~~~~~~~~~~~~~~~~~~
@@ -152,3 +191,4 @@ application, we use the ``role`` domain. This way, you will have to add the tran
 .. _`compiler pass`: http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html
 .. _`Backbone routing in Open Orchestra`: /en/developer_guide/backbone_routing.rst
 .. _`Entity list`: /en/developer_guide/entity_list_ajax_pagination.rst
+.. _`DataTables library`: https://www.datatables.net/
