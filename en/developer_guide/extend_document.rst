@@ -58,3 +58,11 @@ Extended Content Repository
      */
     class ContentRepository extends BaseContentRepository
     {
+    
+As OpenOrchestra use interface for dependency injection, it is necessary to update the configuration with the new extended class.
+
+.. code-block:: yaml
+
+    resolve_target_documents:
+        OpenOrchestra\ModelInterface\Model\ContentInterface: MyBundle\Document\Content
+
