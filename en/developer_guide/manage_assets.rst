@@ -4,187 +4,179 @@ Manage assets with Grunt
 Context
 -------
 
-To automate all the assets management process, the Open Orchestra Back Office uses the task manager
-`Grunt`_.
+To automate all the assets management process, the Open Orchestra Back Office uses the task manager `Grunt`_.
+This tool allows the creation and execution of assets related tasks in the nodeJs format. For instance Open
+Orchestra uses it to compile coffee scripts or to create some symlinks.
 
-*Grunt* is looking for its configuration inside the ``Gruntfile.js`` file in the root directory of
-the project. This file mainly parses configuration files to recreate a Grunt configuration object.
-
-In order to simplify the management of external bundles assets, each bundle describes its own
-Grunt task and/or task options. As a result, adding a new bundle will simply require little change
-in the ``Gruntfile.js`` of your project to load the new configuration parts.
-
-In this documentation, you will see:
-
-- how to `configure your project to use Grunt`_ 
-- how to `add an external bundle using Grunt`_ tasks / options
-- how to `add your specific tasks / options to your bundles`_ 
-
-.. _configure your project to use Grunt:
-
-Configuring your project to use Grunt
--------------------------------------
-
-When you install your Open Orchestra Back Office, you have to create a ``Gruntfile.js`` to manage
-the assets included in the bundles you choose. This file loads and parses configuration files to
-produce the Grunt configuration.
-
-You are totally free to code this the way you prefer, and here is a functionnal sample providing
-standard functionnalities:
+When running the command
 
 .. code-block:: javascript
 
-    module.exports = function(grunt) {
-        require('load-grunt-tasks')(grunt);
-        grunt.loadTasks('./grunt_tasks');
-        grunt.loadTasks('./vendor/open-orchestra/open-orchestra-cms-bundle/OpenOrchestra/GruntTasks');
+   ./node_modules/.bin/grunt
 
-        var merge = require('merge');
-        var config = {
-            pkg: grunt.file.readJSON('package.json'),
-            env: process.env
-        };
-        config = merge.recursive(true, config, loadDirConfig('./grunt_tasks/options/'));
-        config = merge.recursive(true, config, loadDirConfig('./vendor/open-orchestra/open-orchestra-cms-bundle/OpenOrchestra/GruntTasks/Options/'));
+*Grunt* build its configuration via the ``Gruntfile.js`` file located in the root directory of the application.
 
-        grunt.initConfig(config);
-    };
+In order to be as extensible as possible, Open Orchestra offers to each bundle the possibility to extend this
+*Grunt* configuration by describing its own task and/or task targets. As a result, managing the assets of a
+newly added bundle simply requires a little change in the *Grunt* configuration.
 
-    function loadDirConfig(path) {
-        var glob = require('glob');
-        var merge = require('merge');
-        var dirConfig = {};
+In this documentation, you will see:
 
-        glob.sync('*', {cwd: path}).forEach(function(filename) {
-            var fileConfig = loadFileConfig(path, filename);
-            dirConfig = merge.recursive(true, dirConfig, fileConfig);
-        });
+- how to `configure your application to use Grunt`_ 
+- how to `add an external bundle using Grunt`_ tasks / targets
+- how to `add your specific tasks / targets to your bundles`_ 
 
-        return dirConfig;
-    }
+.. _configure your application to use Grunt:
 
-    function loadFileConfig(path, filename) {
-        var keys =  filename.replace(/\.js$/,'').split('.');
+Configuring your application to use *Grunt*
+-------------------------------------------
 
-        var buildFileConfig = function(keys, filepath) {
-            if (keys.length == 0) {
-                return require(filepath);
-            } else {
-                var subArray = {};
-                var index = keys[0];
-                keys.shift();
-                subArray[index] = buildFileConfig(keys, filepath);
-                return subArray;
-            }
-        }
+When you install the Open Orchestra Back Office, you have to create a ``Gruntfile.js`` to manage the assets
+included in the bundles you are using. This file loads and parses configuration files to produce the Grunt
+configuration.
 
-        return buildFileConfig(keys, path + filename);
-    }
+As this file belongs to your application, you are totally free to code it the way you want. But to avoid waste
+of time, you can use the GruntConfigBuilder AMD module developped for Open Orchestra to load *Grunt* splitted
+configuration. The file is packaged with the [open-orchestra-cms-bundle](https://github.com/open-orchestra/open-orchestra-cms-bundle)
+and located in the GruntTasks folder. The [Open Orchestra Back Office demo project](https://github.com/open-orchestra/open-orchestra)
+show how to use it.
+The gruntfile.js of this demo is as simple as:
 
-When launching Grunt (via the shell command ``./node_modules/.bin/grunt``), this script will be run. It
-will search for Grunt tasks in directories ``./grunt_tasks`` and ``./vendor/open-orchestra/open-orchestra-cms-bundle/OpenOrchestra/GruntTasks``.
-It will then search for tasks options in ``./grunt_tasks/options/`` and ``./vendor/open-orchestra/open-orchestra-cms-bundle/OpenOrchestra/GruntTasks/Options/``.
-As you run Grunt without any parameter it will then launch the Default task.
+.. code-block:: javascript
+
+   module.exports = function(grunt) {
+      var appConfig = require('./grunt/app_config.js');
+      var GruntConfigBuilder = require(appConfig.GruntConfigBuilder);
+
+      GruntConfigBuilder.init(grunt, appConfig);
+   };
+
+Attached to this minimalist file is a configuration file located at ``application_root_folder/grunt/app_config.js``.
+This AMD module describes three things:
+
+.. code-block:: javascript
+
+   module.exports = {
+      GruntConfigBuilder:
+         /* Path to the GruntConfigBuilder AMD module */
+      tasksDir:
+         /* Array of paths where to search for Grunt task definitions */
+      targetsDir:
+         /* Array of paths where to search for Grunt task targets */
+   };
+
+The GruntConfigBuilder attribute refers to the AMD module described earlier and located in the
+``open-orchestra-cms-bundle``.
+
+The tasksDir attribute is an array listing all folders including *Grunt* task definitions. This is typically
+here where you register your bundles providing new *Grunt* tasks.
+
+The targetsDir attribute is an array listing all folders including *Grunt* task targets. This is typically
+here where you register your bundles providing new *Grunt* tasks.
+
+For this little mechanism to work properly, tasks and target have to be normalized with a little few rules:
+
+* First of all, they must be written as AMD modules that the GruntConfigBuilder will load
+* Secondly, tasks and targets have to be separated: one folder for tasks, another one for targets
+* The name of a file describing a target must be formatted as following: TASK_NAME.TARGET_NAME.js
+  For instance ``clean.symlinks.js`` is reffering to the target symlink of the clean task.
+
+If each bundle respects theses rules, everything will load right.
+
+When running *Grunt* (via the shell command ``./node_modules/.bin/grunt task_name``), the Gruntfile.js script
+is launched. The ``app_config.js`` is loaded and passed to the GruntConfigBuilder which search all configured
+folders to find tasks and target. It then build a *Grunt* config object, and the task_name provided in the
+command line is run (or the default task if none is provided).
 
 .. _add an external bundle using Grunt:
 
 Adding an external bundle using Grunt
 -------------------------------------
 
-If you take a closer look at the ``open-orchestra-cms-bundle``, you will see it does not contain
-the media administration part. To manage the media, you have to add the ``open-orchestra-media-admin-bundle``.
+This section explains how to exploit in your application a bundle providing its own *Grunt* tasks and/or task
+tagets.
 
-This bundle comes with its own javascript and css files that need to be added to the website assets
-files. Assuming you have installed the bundle using composer, you still have to configure Grunt to
-use the bundle assets.
+If you take a closer look at the (open-orchestra-cms-bundle)(https://github.com/open-orchestra/open-orchestra-cms-bundle),
+you will see it does not contain the media administration part. To manage the media, you have to add the
+(open-orchestra-media-admin-bundle)[https://github.com/open-orchestra/open-orchestra-media-admin-bundle].
+So this bundle can be taken as an example to illustrate this section. 
 
-For that purpose, you need to update 3 parts of the Grunt configuration:
+The ``open-orchestra-media-admin-bundle`` comes with its own javascript and css files needing to be added
+to the application assets files. Assuming you have installed the bundle using composer, you still have to
+configure *Grunt* to use the bundle targets.
 
-- load the new tasks
-- load the new task options
-- tell somewhere when these tasks must be run
-
-To load the task, you have to use ``grunt.loadTasks`` on the correct directory. In our case you have
-to update the ``Gruntfile.js`` file with this:
-
-.. code-block:: javascript
-
-    // line 5
-    grunt.loadTasks('./vendor/open-orchestra/open-orchestra-media-admin-bundle/OpenOrchestra/GruntTasks');
-
-To load task options, you have two possibilities, depending on what you want to do:
-
-- to load a single file, use the ``loadFileConfig`` function
-- to load all files in a directory, use the ``loadDirConfig`` function
-
-In both cases, you have to merge the resulting object to the main configuration object.
-
-For the ``open-orchestra-media-admin-bundle``, we want to load all files from a single directory,
-so it looks like:
+For that purpose, you only need to update the ``app_config.js``. As the bundle only contains task targets
+located in the ``GruntTasks/Targets`` folder, you only have to add this path in the targetsDir attribute of
+the ``app_config.js``. Something like:
 
 .. code-block:: javascript
 
-    // line 13
-    config = merge.recursive(true, config, loadDirConfig('./vendor/open-orchestra/open-orchestra-media-admin-bundle/OpenOrchestra/GruntTasks/Options/'));
+    targetsDir: [
+       './grunt/targets',
+       './vendor/open-orchestra/open-orchestra-cms-bundle/GruntTasks/Targets',
+       './vendor/open-orchestra/open-orchestra-media-admin-bundle/GruntTasks/Targets'
+    ]
 
-``Grunt`` will now be aware of the different tasks present in the ``MediaAdminBundle``.
+If the bundle was introducing new *Grunt* tasks, the tasksDir attribute should have been updated the same way.
 
-Some tasks, such as the symlinks generation, will be automatically launched. Other tasks will
-require some configuration modifications. For instance it is the case of js and css concatenation.
-All the Back Office javascript files are concatened in a single file, and the same applies to css
-files. This operation is made in two parts (two similar passes for both js and css).
+*Grunt* is now aware of the different targets present in the ``open-orchestra-media-admin-bundle``, but you
+still have to associate them to a main task for them to be played.
 
-In the first part, files are grouped by functionnalities. For instance media related javascript
-files are put in a file named ``media.js``.
-The second part groups all generated files in a unique one. This final file is directly used by the
-Back Office.
+The ``open-orchestra-media-admin-bundle`` introduces, three targets: one to create new symlinks, one to
+concatenate some media related js and the last to concatenate media related css files.
 
-The ``open-orchestra-media-admin-bundle`` requires two concatenations: one for the javascript
-described in the ``concat.mediajs.js`` file and one for the css described in the ``concat.mediacss.js``
-file. Now you have to tell Grunt when to lauch these tasks and how to add the two 'functionnality'
-files to the final files.
-
-Add the media javascript task by modifying the main javascript task (``grunt_task/javascript_task.js``):
+You should add the ``concat:media_js`` target to the main javascript task by modifying the main javascript
+task (``application_root_folder/grunt/tasks/javascript_task.js``):
 
 .. code-block:: javascript
 
-    module.exports = function(grunt) {
-        grunt.registerTask('javascript',
-            [
-                'coffee:discovering',
-                'coffee',
-                'concat:smartadminjs',
-                'concat:libjs',
-                'concat:orchestrajs',
-                'concat:mediajs',
-                'concat:js'
-            ]
-        );
-    };
+   module.exports = function(grunt) {
+      grunt.registerTask(
+         'javascript',
+         'Main project task to generate javascripts',
+         [
+            'coffee:discovering',
+            'coffee:compile',
+            'concat:smartadmin_js',
+            'concat:lib_js',
+            'concat:orchestra_js',
+            'concat:media_js',
+            'concat:all_js'
+         ]
+      );
+   };
 
-When the 'javascript' task will be run, the ``concat:mediajs`` task will now be called.
+When the ``javascript`` task will be run, the ``concat:media_js`` task will now be called, and a ``media.js``
+file will be produced.
 
-Do the same for the stylesheets by modifying the main css task (``grunt_task/css_task.js``):
+You can do the same for the stylesheets by modifying the main css task
+(``application_root_folder/grunt/tasks/css_task.js``):
 
 .. code-block:: javascript
 
-    module.exports = function(grunt) {
-        grunt.registerTask('css',
-            [
-                'less:discovering',
-                'less',
-                'concat:smartadmincss',
-                'concat:libcss',
-                'concat:orchestracss',
-                'concat:mediacss',
-                'concat:css',
-                'cssmin'
-            ]
-        );
-    };
+   module.exports = function(grunt) {
+      grunt.registerTask(
+         'css',
+         'Main project task to generate stylesheets',
+         [
+            'less:discovering',
+            'less',
+            'concat:lib_css',
+            'concat:smartadmin_patches_css',
+            'concat:orchestra_css',
+            'concat:media_css',
+            'concat:pre_smartadmin_css',
+            'concat:post_smartadmin_css',
+            'cssmin'
+         ]
+      );
+   };
 
-To include the result of the first concatenation part to the final javascript file, alter the
-``grunt_tasks/options/concat.js.js`` file:
+When the ``css`` task will be run, the ``concat:media_css`` task will now be called, and a ``media.css`` file
+will be produced.
+
+To include the ``media.js`` file to the final and unique javascript file used by the Open Orchestra Back Office,
+alter the ``application_root_folder/grunt/targets/concat.all_js.js`` file:
 
 .. code-block:: javascript
 
@@ -198,35 +190,37 @@ To include the result of the first concatenation part to the final javascript fi
         dest: 'web/js/all.js'
     };
 
-Finally the ``all.js`` file will include the smartadmin functionnality, followed by the lib
-functionnality, and so on...
+That way, when the ``concat:all_js`` target will be called, the ``all.js`` file will include the
+``open-orchestra-media-admin-bundle`` javascripts.
 
-Do similar modification on the stylesheets by modifying the ``grunt_tasks/options/concat.css.js`` file:
+A similar modification on the stylesheets is to be done by modifying the
+``application_root_folder/grunt/targets/concat.post_smartadmin_css.js`` file:
 
 .. code-block:: javascript
 
     module.exports = {
-        src: [
-            'web/built/smartadmin.css',
-            'web/built/lib.css',
-            'web/built/orchestra.css',
-            'web/built/media.css'
-        ],
-        dest: 'web/css/all.css'
+       src: [
+          'web/built/smartadminpatches.css',
+          'web/built/orchestra.css',
+          'web/built/media.css'
+       ],
+       dest: 'web/css/postsmartadmin.css'
     };
 
-Now run the Grunt command (``./node_modules/.bin/grunt``) to regenerate the ``all.js`` and ``all.css``
-files. If you check these files, you should see the ``open-orchestra-media-admin-bundle`` assets.
+As for the javascript, the ``postsmartadmin.css`` file will now include the media stylesheets.
+
+Now you can run the Grunt command (``./node_modules/.bin/grunt``) to regenerate the ``all.js`` and
+``postsmartadmin.css`` files. If you check these files, you should see the ``open-orchestra-media-admin-bundle``
+assets.
 
 
-.. _add your specific tasks / options to your bundles:
+.. _add your specific tasks / targets to your bundles:
 
-Adding your specific tasks / options to your bundles
-----------------------------------------------------
+Adding your specific tasks/targets to your bundles
+--------------------------------------------------
 
-At last, you may need to know how to create your specific tasks for your own bundle. As the process
-is the same for the javascript and stylesheet files, we will only talk about javascript files. To
-illustrate the explanation.
+At last, you may need to know how to create your specific tasks for your own bundle. As the process is the
+same for the javascript and stylesheet files, we will only talk about javascript files.
 
 Let's assume you have created the ``FooBundle`` and want to manage its assets with Grunt.
 
@@ -235,11 +229,11 @@ files by functionnality and the second pass glues the functionnalities together.
 pass is described in the application (it depends on the used bundles), the first pass is described
 by the bundle itself. This is done by adding an entry in the main concat task.
 
-First create a directory to put all your tasks (``GruntTasks/Options`` for instance). Then you can
-create a Grunt task file describing the files to append and naming the file to output the
-concatenation. The Grunt task file name must follow a specific template: taskname.subtask1.subtask2.[...].subtaskn.js.
+First create a directory to put all your tasks targets (``GruntTasks/Targets`` for instance). Then you can
+create a *Grunt* task targets file describing the files to append and naming the file to output the
+concatenation. The *Grunt* task target file name must follow a specific pattern: TASK_NAME.TARGET_NAME.js.
 The task loader wil use that name to recreate the main configuration. In our case, we want to create
-a sub-entry named foojs to the concat task, so name your file ``concat.foojs.js``. This file can be as
+a target named foojs to the concat task, so name your file ``concat.foojs.js``. This file can be as
 simple as:
 
 .. code-block:: javascript
