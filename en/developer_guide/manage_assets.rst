@@ -5,10 +5,10 @@ Context
 -------
 
 To automate all the assets management process, the Open Orchestra Back Office uses the task manager `Grunt`_.
-This tool allows the creation and execution of assets related tasks in the nodeJs format. For instance Open
-Orchestra uses it to compile coffee scripts or to create some symlinks.
+This tool allows the creation and execution of assets related tasks written in javascript. For instance Open
+Orchestra uses it to compile *CoffeeScript* files or to create some symlinks.
 
-When running the command
+When running grunt via the command
 
 .. code-block:: javascript
 
@@ -35,7 +35,7 @@ When you install the Open Orchestra Back Office, you have to create a ``Gruntfil
 included in the bundles you are using. This file loads and parses configuration files to produce the Grunt
 configuration.
 
-As this file belongs to your application, you are totally free to code it the way you want. But to avoid waste
+The ``Grunfile.js`` file belongs to your application, so it's up to you to write it. But to avoid you a waste
 of time, you can use the GruntConfigBuilder AMD module developped for Open Orchestra to load *Grunt* splitted
 configuration. The file is packaged with the [open-orchestra-cms-bundle](https://github.com/open-orchestra/open-orchestra-cms-bundle)
 and located in the GruntTasks folder. The [Open Orchestra Back Office demo project](https://github.com/open-orchestra/open-orchestra)
@@ -74,7 +74,7 @@ here where you register your bundles providing new *Grunt* tasks.
 The targetsDir attribute is an array listing all folders including *Grunt* task targets. This is typically
 here where you register your bundles providing new *Grunt* tasks.
 
-For this little mechanism to work properly, tasks and target have to be normalized with a little few rules:
+For this mechanism to work properly, tasks and target have to be normalized with a few rules:
 
 * First of all, they must be written as AMD modules that the GruntConfigBuilder will load
 * Secondly, tasks and targets have to be separated: one folder for tasks, another one for targets
