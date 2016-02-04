@@ -14,7 +14,7 @@ Virtual Host
 
 Back Office Virtual Host:
 
-.. code-block::
+.. code-block:: apacheconf
 
     <VirtualHost *:80>
         ServerAdmin webmaster@localhost
@@ -25,7 +25,7 @@ Back Office Virtual Host:
             Options FollowSymLinks
             AllowOverride None
         </Directory>
-        <Directory /path/to/your/open_orchestra/bo_installation/folder/web
+        <Directory /path/to/your/open_orchestra/bo_installation/folder/web>
             Options -Indexes +FollowSymLinks -MultiViews
             AllowOverride All
             Order allow,deny
@@ -48,10 +48,10 @@ Back Office Virtual Host:
 
 Front Office Virtual Host:
 
-.. code-block::
+.. code-block:: apacheconf
 
     <VirtualHost *:80>
-        ServerAdmin webmaster@localhost
+        ServerAdmin webmaster\@localhost
         ServerName front.openorchestra.dev
 
         DocumentRoot /path/to/your/open_orchestra/front_installation/folder/web
@@ -86,7 +86,7 @@ With Open Orchestra, you can use ``Varnish``. It is particularly useful for `ESI
 
 This vcl is a basic configuration example to use the esi render.
 
-.. code-block::
+.. code-block:: none
 
     acl purgers {
       "127.0.0.1";
@@ -238,7 +238,7 @@ Site maps
 
 Generate sitemap files for every sites, more information available in the `sitemap`_ documentation
 
-.. code-block::
+.. code-block:: bash
 
     0 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:sitemaps:generate 2>> /tmp/cron.error.message
 
@@ -248,7 +248,7 @@ Robots.txt
 Generate the robots.txt files for every sites,
 further information about `robots`_
 
-.. code-block::
+.. code-block:: bash
 
     0 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:robots:generate 2>> /tmp/cron.error.message
 
@@ -259,7 +259,7 @@ Generate the special error pages files for every sites (eg 404 & 503 status),
 for more information about the 404 and 503 special pages see the documentation `customizing error pages`_
 
 
-.. code-block::
+.. code-block:: bash
 
     0 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:errorpages:generate 2>> /tmp/cron.error.message
 
@@ -268,7 +268,7 @@ Error cron
 
 This cron sends an email if any of above cron didn't correctly.
 
-.. code-block::
+.. code-block:: bash
 
     59 0-23 * * * if [ -s '/tmp/cron.error.message' ]; then  cat /tmp/cron.error.message | mailx -s "cron error" contact@open-orchestra.com; fi; rm /tmp/cron.error.message;
 

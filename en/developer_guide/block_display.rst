@@ -73,7 +73,7 @@ Blocs maintainability
 
 To keep consistency between all blocks, you should use a file tree like the following:
 
-.. code-block::
+.. code-block:: none
 
     |_ MyBundle
         |_ Resources

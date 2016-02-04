@@ -52,7 +52,7 @@ to get that page reachable. To do this you have to configure your webserver. The
 configuration depends on you server type, for instance on Apache this is done via the Virtual Host
 mechanism. Here is a simple example in a such context:
 
-::
+.. code-block: apache
 
     <VirtualHost *:80>
         ServerAdmin webmaster@mysite.com
@@ -76,7 +76,7 @@ the Open Orchestra root directory.
 
 Once Apache reloaded, your new website should be accessible.
 
-* Note: According to your environment, be sure to call the right front controller when testing the
+*Note:* According to your environment, be sure to call the right front controller when testing the
 access (eg app_dev.php, app_prod.php, etc ...).
 
 (Optional) Configure the 404 & 503 pages

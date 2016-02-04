@@ -23,7 +23,7 @@ Override the template of a block
 
 Overloading the template of a block is achieved by creating a template in the following folder structure :
 
-.. code-block::
+.. code-block:: none
 
     |_ app
         |_ Resources
@@ -39,7 +39,7 @@ Example :
 You need to override the template of the Content List Block block from the Back Office to display
 additional datas.
 
-.. code-block::
+.. code-block:: none
 
     |_ Open-orchestra
         |_ open-orchestra-cms-bundle
@@ -55,7 +55,7 @@ ContentList/show.html.twig``
 
 You simply create your template in next folder:
 
-.. code-block::
+.. code-block:: none
 
     |_ app
         |_ Resources
@@ -114,7 +114,7 @@ Don't forget the tag in your declaration.
 
     services:
         itkg.display.content_list:
-            class: %itkg.display.content_list.class%
+            class: "%itkg.display.content_list.class%"
             tags:
                 - { name: open_orchestra_backoffice.display_block.strategy }
 

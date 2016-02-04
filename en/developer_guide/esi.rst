@@ -36,7 +36,7 @@ and parse the response to check for ESI usage.
 
 This is done inside the varnish configuration file.
 
-.. code-block:: varnish4
+.. code-block:: none
 
     sub vcl_recv {
         set req.http.Surrogate-Capability = "varnish=ESI/1.0";

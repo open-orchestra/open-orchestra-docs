@@ -20,14 +20,14 @@ The different levels are defined in the `Monolog documentation`_
 
 .. code-block:: yaml
 
+    mongo:
+        type: mongo
+        level: 200
         mongo:
-            type: mongo
-            level: 200
-            mongo:
-                host: "localhost"
-                database: "%open_orchestra_cms.mongodb.database%"
-                collection: log
-            channels: [openorchestra]
+            host: "localhost"
+            database: "%open_orchestra_cms.mongodb.database%"
+            collection: log
+        channels: [openorchestra]
 
 
 The ``channels`` key defines the channels where the log are published.
@@ -57,8 +57,8 @@ For instance:
 .. code-block:: yaml
 
     open_orchestra_log.subscriber.node:
-        class: %open_orchestra_log.subscriber.node.class%
-        arguments: [@logger]
+        class: "%open_orchestra_log.subscriber.node.class%"
+        arguments: [\@logger]
         tags:
             - { name: kernel.event_subscriber }
             - { name: monolog.logger, channel: openorchestra }

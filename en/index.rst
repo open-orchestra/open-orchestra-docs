@@ -7,7 +7,7 @@ Welcome to Open Orchestra's documentation!
 
 The main documentation is organized into a couple sections:
 
-* :ref:`introduction`
+* :ref:`intro`
 * :ref:`user-guide`
 * :ref:`developer-guide`
 * :ref:`hosting-guide`
@@ -20,7 +20,7 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-.. _introduction:
+.. _intro:
 
 .. toctree::
    :maxdepth: 2

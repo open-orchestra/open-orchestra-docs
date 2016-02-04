@@ -67,7 +67,7 @@ To contribute on the project you have to install two versions: the master versio
 stable one. The master branch is the branch which should be used to add new features to the project.
 Here is the directory tree with your two projects that we recommand:
 
-.. code-block::
+.. code-block:: none
 
     |_ install-directory
           |_ open-orchestra-master

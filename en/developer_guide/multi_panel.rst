@@ -80,15 +80,15 @@ the ``UserTransformer`` work:
 
 Register the event subscriber as a service in a configuration file:
 
-.. code-block:: yml
+.. code-block:: yaml
 
     parameters:
         open_orchestra_workflow_function_admin.subscriber.add_workflow_link.class: OpenOrchestra\WorkflowFunctionAdminBundle\EventSubscriber\AddWorkFlowLinkSubscriber
     services:
         open_orchestra_workflow_function_admin.subscriber.add_workflow_link:
-            class: %open_orchestra_workflow_function_admin.subscriber.add_workflow_link.class%
+            class: "%open_orchestra_workflow_function_admin.subscriber.add_workflow_link.class%"
             arguments:
-                - @router
+                - \@router
             tags:
                 - { name: kernel.event_subscriber }
 
