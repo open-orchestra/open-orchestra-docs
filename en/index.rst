@@ -9,12 +9,7 @@ Welcome to Open Orchestra's documentation!
 Contents:
 
 .. toctree::
-   :glob:
    :maxdepth: 2
-
-   user_guide/*
-   hosting_guide/*
-
 
 
 Indices and tables
