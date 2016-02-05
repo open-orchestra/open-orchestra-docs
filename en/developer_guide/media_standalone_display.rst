@@ -36,11 +36,13 @@ In order to install all the Symfony packages, we recommend you to use the
 
 .. code-block:: json
 
-    "require": {
-        "incenteev/composer-parameter-handler": "~2.0",
-        "open-orchestra/open-orchestra-base-bundle": "*",
-        "open-orchestra/open-orchestra-media-bundle": "*"
-    },
+    {
+        "require": {
+            "incenteev/composer-parameter-handler": "~2.0",
+            "open-orchestra/open-orchestra-base-bundle": "*",
+            "open-orchestra/open-orchestra-media-bundle": "*"
+        },
+    }
 
 Then enable all the required bundles in your ``AppKernel.php`` file:
 

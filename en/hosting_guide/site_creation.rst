@@ -77,7 +77,7 @@ the Open Orchestra root directory.
 Once Apache reloaded, your new website should be accessible.
 
 * Note: According to your environment, be sure to call the right front controller when testing the
-access (eg app_dev.php, app_prod.php, etc ...).
+  access (eg app_dev.php, app_prod.php, etc ...).
 
 (Optional) Configure the 404 & 503 pages
 ----------------------------------------

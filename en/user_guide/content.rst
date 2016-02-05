@@ -37,13 +37,13 @@ the same as the creation form, completed with current values, but has three more
 .. image:: ../../images/content_edit.png
 
 * **Status**: The status button allows you to change the workflow status of the content (See the `workflow`_
-documentation for more information)
+  documentation for more information)
 
 * **Translations**: the language tabs allow you to create/edit the content in alternative languages
 
 * **Versioning**: The version selector allows you to edit a previous version of the content in the
-selected language. The "New version" button will duplicate the last version of the content in the
-selected language to create a new version.
+  selected language. The "New version" button will duplicate the last version of the content in the
+  selected language to create a new version.
 
 **Saving the modifications does not create a new version or change the status. Those operations have
 to be done individually.**

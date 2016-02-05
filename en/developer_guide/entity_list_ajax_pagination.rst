@@ -36,7 +36,7 @@ The ``search`` parameter is not present in the request if there is no value in a
 
 Example of parameters sent:
 
-.. code-block::
+.. code-block:: none
 
     order[name]:version
     order[dir]:asc
@@ -265,7 +265,7 @@ To specify another folder, you must change the configuration :
                 directories:
                     AppBundle:
                         namespace_prefix: "My\\AppBundle"
-                        path: @AppBundle/Ressources/config/mymapping
+                        path: \@AppBundle/Ressources/config/mymapping
 
 
 .. _`DataTables`: https://www.datatables.net/

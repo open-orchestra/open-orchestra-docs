@@ -55,7 +55,7 @@ This service should be declared with the tag ``open_orchestra_backoffice.block_p
         - { name: open_orchestra_backoffice.block_parameter.strategy }
 
 Front Office work
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
 In the Front Office, the sub-request to display a block (in the main request) is created while you don't
 have any idea of the block type. The ``blockParameter`` will help you to complete the sub-request parameters.

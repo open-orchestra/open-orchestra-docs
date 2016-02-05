@@ -57,8 +57,8 @@ For instance:
 .. code-block:: yaml
 
     open_orchestra_log.subscriber.node:
-        class: %open_orchestra_log.subscriber.node.class%
-        arguments: [@logger]
+        class: \%open_orchestra_log.subscriber.node.class\%
+        arguments: [\@logger]
         tags:
             - { name: kernel.event_subscriber }
             - { name: monolog.logger, channel: openorchestra }

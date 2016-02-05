@@ -8,11 +8,11 @@ require to be dumped in files and to be correctly served to the client.
 
 Creation of ``robots.txt`` files with Open Orchestra is achieved in 3 steps:
 
-- `files contribution`_
-- `files generation`_
-- `files routing`_
+- `files-contribution`_
+- `files-generation`_
+- `files-routing`_
 
-.. _files contribution:
+.. _files-contribution:
 
 Files contribution
 ------------------
@@ -22,7 +22,7 @@ matching textarea: the content of the ``robots.txt`` file will be exactly what i
 
 .. image:: ../../images/contributing_robots.png
 
-.. _files generation:
+.. _files-generation:
 
 Files generation
 ----------------
@@ -51,7 +51,7 @@ be dumped here:
 
 A good practice is to use that command in a cron, to refresh periodically the content of the files.
 
-.. _files routing:
+.. _files-routing:
 
 Files routing
 -------------
@@ -62,6 +62,8 @@ configuration to tweak depends on you server type, for instance on Apache this i
 Host mechanism.
 
 Here is a configuration example for ``Apache``, in the case of a site with id 'my-site':
+
+.. code-block:: apacheconf
 
     <IfModule mod_rewrite.c>
         RewriteEngine On

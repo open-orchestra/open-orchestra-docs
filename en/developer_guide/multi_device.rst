@@ -113,17 +113,17 @@ The newly extended template engine can now be declared in the conf:
     #FrontBundle\Resources\config\twig.yml
 
     parameters:
-     open_orchestra_front.twig.orchestra_twig_engine.class: OpenOrchestra\FrontBundle\Twig\OrchestraTwigEngine
+     open_orchestra_front.twig.orchestra_twig_engine.class: OpenOrchestra\\FrontBundle\\Twig\\OrchestraTwigEngine
 
     services:
         open_orchestra_front.twig.orchestra_twig_engine:
-            class: %open_orchestra_front.twig.orchestra_twig_engine.class%
+            class: \%open_orchestra_front.twig.orchestra_twig_engine.class\%
             arguments:
-                - @twig
-                - @templating.name_parser
-                - @templating.locator
-                - @request_stack
-                - %open_orchestra_front.devices%
+                - \@twig
+                - \@templating.name_parser
+                - \@templating.locator
+                - \@request_stack
+                - \%open_orchestra_front.devices\%
             alias: templating
 
 

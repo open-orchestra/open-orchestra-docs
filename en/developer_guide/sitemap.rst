@@ -72,6 +72,8 @@ your server type, for instance on Apache this is done via the Virtual Host mecha
 
 Here is a configuration example for ``Apache``, in the case of the first alias of a site with id 'my-site':
 
+.. code-block:: apacheconf
+
     <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteRule ^/sitemap.xml /my-site/alias-0/sitemap.xml [L]

@@ -22,7 +22,7 @@ Here are the settings added to config.yml ;
         dir_name: "%kernel.root_dir%/../vendor/open-orchestra/open-orchestra-model-bundle/OpenOrchestra/ModelBundle/Migrations/MongoDB"
         script_dir_name: "%kernel.root_dir%/../vendor/open-orchestra/open-orchestra-model-bundle/OpenOrchestra/ModelBundle/Migrations/MongoDB/scripts"
         name: "Open Orchestra MongoDB Migrations"
-        namespace: "OpenOrchestra\ModelBundle\Migrations\MongoDB"
+        namespace: "OpenOrchestra\\ModelBundle\\Migrations\\MongoDB"
 
 - collection_name: this value indicates what will be the name of the collection used to store the migration information
 - database_name: each time the name of the database is needed, this alias is used

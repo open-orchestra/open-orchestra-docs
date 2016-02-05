@@ -37,13 +37,13 @@ This strategy provides a token linked only to an API client.
 
 To obtain it, send the request:
 
-.. code-block::
+.. code-block:: none
 
     /oauth/access_token?grant_type=client_credentials
 
 with the HTTP header:
 
-.. code-block::
+.. code-block:: none
 
     Authorization: Basic ENCODED_PAIR
 
@@ -57,7 +57,7 @@ This strategy provides a token linked to an API client and a user.
 
 To obtain it, send the request:
 
-.. code-block::
+.. code-block:: none
 
     /oauth/access_token?grant_type=password&username=USERNAME&password=PASSWORD
 
@@ -65,7 +65,7 @@ Where USERNAME is user's name and PASSWORD is user's password.
 
 with the HTTP header:
 
-.. code-block::
+.. code-block:: none
 
     Authorization: Basic ENCODED_PAIR
 
@@ -79,7 +79,7 @@ This strategy provides a way to refresh an expired token linked to a client and 
 
 To obtain it, send the request:
 
-.. code-block::
+.. code-block:: none
 
     /oauth/access_token?grant_type=refresh_token&refresh_token=REFRESH_TOKEN
 
@@ -87,7 +87,7 @@ Where REFRESH_TOKEN is the refresh token linked to the token used.
 
 With the HTTP header:
 
-.. code-block::
+.. code-block:: none
 
     Authorization: Basic ENCODED_PAIR
 

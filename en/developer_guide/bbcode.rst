@@ -39,11 +39,11 @@ Open Orchestra provides a simple ways of adding your own custom BBCode tags, dep
 nature. Two kind of tags exists:
 
 - Simple tags are just text replacements. For instance a ``[b]Some Text[/b]`` should be replaced by
-``<b>Some Text</b>``
+  ``<b>Some Text</b>``
 
 - Complex tags require more than a simple regexp conversion. For instance the tag
-``[media=format]MediaId[/media]`` requires to fetch the media in the database, to detect its type
-and then to to return the corresponding html tag.
+  ``[media=format]MediaId[/media]`` requires to fetch the media in the database, to detect its type
+  and then to to return the corresponding html tag.
 
 To add a new BBCode tag to the parser, you need to create its definition. There are two ways of
 adding a definition. To create a simple tag you can quickly set a configuration. But if you prefer,
@@ -64,10 +64,10 @@ declaration of the bold tag:
 - The key ``bold`` is the name of the definition used internally by the parser.
 
 - The ``html`` key is the html pattern of the code. The string ``{param}`` will be replaced by the
-content of the BBcode tag.
+  content of the BBcode tag.
 
 - The ``tag`` key is the label used in the BBCode tag. In this example, with the ``tag`` key set to
-``b``, the BBCode tag is ``[b]{param}[/b]``.
+  ``b``, the BBCode tag is ``[b]{param}[/b]``.
 
 Simple tags can also include some options. For instance the tag ``[h]`` which matches a ``<h*>``
 html tag requires an option to indicate the level of the header. For instance ``[h=1]Some text[/h]``

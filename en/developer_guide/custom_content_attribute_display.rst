@@ -41,8 +41,8 @@ Open Orchestra uses the ``OpenOrchestra\Backoffice\ValueTransformer\ValueTransfo
 as an easy way to access every transformation strategies.
 All ``ValueTransformer`` strategies are registered in the ``ValueTransformerManager``.
 The ``transform`` method of the manager:
- - searches the first transformation strategy supporting the current ``fieldType`` and ``value`` of the ``ContentAttribute``
- - uses this strategy's ``transform`` method to return the ``stringValue``
+- searches the first transformation strategy supporting the current ``fieldType`` and ``value`` of the ``ContentAttribute``
+- uses this strategy's ``transform`` method to return the ``stringValue``
 
 Examples
 --------
