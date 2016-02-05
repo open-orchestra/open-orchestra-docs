@@ -19,8 +19,8 @@ To reference these classes, the following lines will be added to config.yml.
     open_orchestra_model:
         document:
             content:
-                class: "MyBundle\Document\Content"
-                repository: "MyBundle\Repository\ContentRepository"
+                class: "MyBundle\\Document\\Content"
+                repository: "MyBundle\\Repository\\ContentRepository"
  
 The header of the two extended classes could be :
  

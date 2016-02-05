@@ -63,6 +63,8 @@ Host mechanism.
 
 Here is a configuration example for ``Apache``, in the case of a site with id 'my-site':
 
+.. code-block: apache
+
     <IfModule mod_rewrite.c>
         RewriteEngine On
         RewriteRule ^/robots.txt /my-site/robots.txt [L]

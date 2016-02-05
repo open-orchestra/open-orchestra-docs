@@ -35,10 +35,12 @@ The ``open-orchestra-media-file-bundle`` can run on its own if you require it in
 
 .. code-block:: json
 
-    "require": {
-        "incenteev/composer-parameter-handler": "~2.0",
-        "open-orchestra/open-orchestra-media-file-bundle": "*"
-    },
+    {
+        "require": {
+            "incenteev/composer-parameter-handler": "~2.0",
+            "open-orchestra/open-orchestra-media-file-bundle": "*"
+        },
+    }
 
 Then enable all the required bundles in your ``AppKernel.php`` file:
 

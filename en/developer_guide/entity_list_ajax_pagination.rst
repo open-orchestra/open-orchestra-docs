@@ -36,7 +36,7 @@ The ``search`` parameter is not present in the request if there is no value in a
 
 Example of parameters sent:
 
-.. code-block::
+.. code-block:: none
 
     order[name]:version
     order[dir]:asc
@@ -259,12 +259,12 @@ To specify another folder, you must change the configuration :
 
 .. code-block:: yaml
 
-       open_orchestra_mongo:
-            search_metadata:
-                directories:
-                    AppBundle:
-                        namespace_prefix: "My\\AppBundle"
-                        path: @AppBundle/Ressources/config/mymapping
+    open_orchestra_mongo:
+        search_metadata:
+            directories:
+                AppBundle:
+                    namespace_prefix: "My\\AppBundle"
+                    path: \@AppBundle/Ressources/config/mymapping
 
 Custom search field of columns
 ------------------------------
@@ -277,7 +277,7 @@ To create a custom search field, you should create a backbone view and add it in
 
 For instance with the text field:
 
-.. code-block:: javascript
+.. code-block:: coffeescript
 
   (($, OpenOrchestra) ->
 

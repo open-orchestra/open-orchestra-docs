@@ -10,7 +10,7 @@ Current diagram
 We will provide the list of all the bundles and the relations between them in a format usable
 on the `yuml.me`_ website.
 
-.. code-block::
+.. code-block:: none
 
     [back{bg:orange}]->[cms]
     [back]->[workflow-function]

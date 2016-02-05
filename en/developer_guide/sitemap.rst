@@ -8,11 +8,11 @@ these information require to be dumped in files and to be correctly served to th
 
 Creation of ``sitemap.xml`` files with Open Orchestra is achieved in 3 steps:
 
-- `files contribution`_
-- `files generation`_
-- `files routing`_
+- `files-contribution`_
+- `files-generation`_
+- `files-routing`_
 
-.. _files contribution:
+.. _files-contribution:
 
 Files contribution
 ------------------
@@ -29,7 +29,7 @@ can set the priority and the changefreq only for this page. The settings given h
 website default values. For more info about node configuration you can read the `node configuration
 documentation`_.
 
-.. _files generation:
+.. _files-generation:
 
 Files generation
 ----------------
@@ -61,7 +61,7 @@ website edit form.
 
 A good practice is to use that command in a cron, to refresh periodically the content of the files.
 
-.. _files routing:
+.. _files-routing:
 
 Files routing
 -------------
@@ -71,6 +71,8 @@ matching file: this can be done by a rewrite rule . The type of configuration to
 your server type, for instance on Apache this is done via the Virtual Host mechanism.
 
 Here is a configuration example for ``Apache``, in the case of the first alias of a site with id 'my-site':
+
+.. code-block: apache
 
     <IfModule mod_rewrite.c>
         RewriteEngine On

@@ -53,6 +53,8 @@ To use the 503 static page, the apache Virtual Host of the site must be configur
 ErrorDocument directive. Here comes a version of the configuration allowing you to avoid the Virtual
 Host file edition each time you want to put on/off your site.
 
+.. code-block: apache
+
     <IfModule mod_rewrite.c>
         RewriteEngine On
 
