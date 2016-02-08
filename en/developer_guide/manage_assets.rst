@@ -10,7 +10,7 @@ Orchestra uses it to compile *CoffeeScript* files or to create some symlinks.
 
 When running grunt via the command
 
-.. code-block:: javascript
+.. code-block:: bash
 
    ./node_modules/.bin/grunt
 
@@ -37,9 +37,8 @@ configuration.
 
 The ``Grunfile.js`` file belongs to your application, so it's up to you to write it. But to avoid you a waste
 of time, you can use the GruntConfigBuilder AMD module developped for Open Orchestra to load *Grunt* splitted
-configuration. The file is packaged with the [open-orchestra-cms-bundle](https://github.com/open-orchestra/open-orchestra-cms-bundle)
-and located in the GruntTasks folder. The [Open Orchestra Back Office demo project](https://github.com/open-orchestra/open-orchestra)
-show how to use it.
+configuration. The file is packaged with the `open-orchestra-cms-bundle`_ and located in the GruntTasks folder.
+The `Open Orchestra Back Office demo project`_ show how to use it.
 The gruntfile.js of this demo is as simple as:
 
 .. code-block:: javascript
@@ -76,7 +75,8 @@ here where you register your bundles providing new *Grunt* tasks.
 
 For this mechanism to work properly, tasks and target have to be normalized with a few rules:
 
-* First of all, they must be written as AMD modules that the GruntConfigBuilder will load
+* First of all, they must be written as AMD modules that the GruntConfigBuilder will load. You can learn more
+about this on the `require.js site`_ for instance.
 * Secondly, tasks and targets have to be separated: one folder for tasks, another one for targets
 * The name of a file describing a target must be formatted as following: TASK_NAME.TARGET_NAME.js
   For instance ``clean.symlinks.js`` is reffering to the target symlink of the clean task.
@@ -263,3 +263,7 @@ When using your foo bundle in an Open Orchestra application, you can inject your
 described in the previous section.
 
 .. _`Grunt`: http://gruntjs.com/
+.. _`open-orchestra-cms-bundle` : https://github.com/open-orchestra/open-orchestra-cms-bundle
+.. _`Open Orchestra Back Office demo project` : https://github.com/open-orchestra/open-orchestra
+.. _`require.js site` : http://requirejs.org/docs/whyamd.html
+
