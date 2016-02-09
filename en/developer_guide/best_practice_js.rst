@@ -10,22 +10,34 @@ Conventions :
 General Naming:
 ---------------
 
-To the variable use camelCase.
-To the function use camelCase.
-To the object use camelCase.
-To the constant use UPPERCASE_AND_UNDERSCORE.
-To the constructor, prototype, etc use PascalCase.
+camelCase should be used for :
 
-To the file name, it's only recommended the use of lowercase
+- variable
+- function
+- object
+
+UPPERCASE_AND_UNDERSCORE should be used for :
+
+- constant
+
+PascalCase should be used for :
+
+- constructor
+- prototype
+- etc
+
+lowercase should be used for :
+
+- file name
 
 .. code-block:: js
 
-    functionNamesLikeThis;
-    variableNamesLikeThis;
-    ConstructorNamesLikeThis;
-    EnumNamesLikeThis;
-    methodNamesLikeThis;
-    SYMBOLIC_CONSTANTS_LIKE_THIS;
+    functionNames;
+    variableNames;
+    ConstructorNames;
+    EnumNames;
+    methodNames;
+    SYMBOLIC_CONSTANTS;
 
 indentation:
 ------------
@@ -36,7 +48,7 @@ Operators must have a space before and after them.
 
     var x = y % 2;
 
-A space must be added after each enumeration
+A space must be added after each enumeration separator
 
 .. code-block:: js
 
@@ -88,16 +100,16 @@ it. Although promising it is not enough to be used implented.
 Constant declarations:
 ----------------------
 
-Use `NAMES_LIKE_THIS` for constant values.
-Use `@const` to indicate, on comment, a constant (non-overwritable) pointer (a variable or property).
-Never use the " `const`_ " keyword as it's not supported in Internet Explorer before version 11 or not full supported.
+Use `NAMES_LIKE_THIS` for constant values. Use `@const` to indicate, on comment, a constant
+(non-overwritable) pointer (a variable or property). Never use the " `const`_ " keyword as
+it's not supported in Internet Explorer before version 11 or not full supported.
 
 
 Semilicons:
 -----------
 
-Semicolons should be included at the end of function expressions, but not at the end of function declarations.
-The distinction is best illustrated with an example:
+Semicolons should be included at the end of function expressions, but not at the end of
+function declarations. The distinction is best illustrated with an example:
 
 .. code-block:: js
 
@@ -115,8 +127,8 @@ Standards Feature:
 
 Always preferred over non-standards features
 
-For maximum portability and compatibility, always prefer standards features over non-standards features
-(e.g., string.charAt(3) over string[3], ...).
+For maximum portability and compatibility, always prefer standards features over non-standards
+features (e.g., string.charAt(3) over string[3], ...).
 
 Wrapper objects and primitive types:
 ------------------------------------
@@ -202,16 +214,17 @@ Do not do this:
       function foo() {}
     }
 
-While most script engines support Function Declarations within blocks it is not part of ECMAScript
-(see ECMA-262, clause 13 and 14). Worse implementations are inconsistent with each other and with future
-EcmaScript proposals. ECMAScript only allows for Function Declarations in the root statement list of a script or
-function. Instead use a variable initialized with a Function Expression to define a function within a block:
+While most script engines support Function Declarations within blocks it is not part of
+ECMAScript (see ECMA-262, clause 13 and 14). Worse implementations are inconsistent with
+each other and with future EcmaScript proposals. ECMAScript only allows for Function
+Declarations in the root statement list of a script or function. Instead use a variable
+initialized with a Function Expression to define a function within a block:
 
 Namespace:
 ----------
 
-The first step to good JavaScript object management is having a namespace, or a JavaScript object that contains our
-code and data, that you know will not conflict with other extensions.
+The first step to good JavaScript object management is having a namespace, or a JavaScript
+object that contains our code and data, that you know will not conflict with other extensions.
 
 .. code-block:: js
 
@@ -236,18 +249,18 @@ Exception and custom exception:
 
 You basically can't avoid exceptions if you're doing something non-trivial. go for it.
 
-Without custom exceptions, returning error information from a function that also returns a value can be tricky,
-not to mention inelegant. Bad solutions include passing in a reference type to hold error information or always
-returning Objects with a potential error member. These basically amount to a primitive exception handling hack.
-Feel free to use custom exceptions when appropriate.
+Without custom exceptions, returning error information from a function that also returns
+a value can be tricky, not to mention inelegant. Bad solutions include passing in a
+reference type to hold error information or always returning Objects with a potential error
+member. These basically amount to a primitive exception handling hack. Feel free to use
+custom exceptions when appropriate.
 
 Multi level prototype:
 ----------------------
 
-Not preferred by Google.
-These hierarchies are much harder to get right than they first appear!
-For that reason, it is best to use `goog.inherits()` from the Closure Library or a similar library function.
-
+Not preferred by Google. These hierarchies are much harder to get right than they first appear!
+For that reason, it is best to use `goog.inherits()` from the Closure Library or a similar
+library function.
 
 Source and other documents:
 ---------------------------
@@ -258,16 +271,14 @@ Source and other documents:
  (*different tools to validate as jshint*)
 
 - Comment js (example http://usejsdoc.org/)
-- Namespace : on Open Orchestra a big part of js and the global scope, a integrator may end up inadvertently
-  override a function
+- Namespace : on Open Orchestra a big part of js and the global scope, a integrator may
+  end up inadvertently override a function
 - Cutting modules (AMD, ES6 Modules) of the code but also at the file architecture.
 - Tests
 - files Naming; no special convention exist
 
 *Many links on best practices, books, pattern, framework, test and article on this site :*
 http://jstherightway.org/#reading
-
-
 
 .. _Distinction between string primitives and String objects: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String?redirectlocale=en-US&redirectslug=JavaScript/Reference/Global_Objects/String#Distinction_between_string_primitives_and_String_objects
 .. _Google Style Guide: https://google.github.io/styleguide/javascriptguide.xml?showone=Comments#Comments
