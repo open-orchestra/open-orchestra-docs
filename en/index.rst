@@ -57,6 +57,7 @@ Indices and tables
    developer_guide/install
    developer_guide/install_with_vagrant
    developer_guide/install_with_vagrant_for_contributors
+   developer_guide/best_practice_js.rst
    developer_guide/dependancy_diagram
    developer_guide/bundle_configuration
    developer_guide/custom_fixtures_load
