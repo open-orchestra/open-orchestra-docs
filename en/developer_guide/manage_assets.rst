@@ -76,7 +76,7 @@ here where you register your bundles providing new *Grunt* tasks.
 For this mechanism to work properly, tasks and target have to be normalized with a few rules:
 
 * First of all, they must be written as AMD modules that the GruntConfigBuilder will load. You can learn more
-about this on the `require.js site`_ for instance.
+  about this on the `require.js site`_ for instance.
 * Secondly, tasks and targets have to be separated: one folder for tasks, another one for targets
 * The name of a file describing a target must be formatted as following: TASK_NAME.TARGET_NAME.js
   For instance ``clean.symlinks.js`` is reffering to the target symlink of the clean task.
