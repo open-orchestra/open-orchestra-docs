@@ -77,6 +77,7 @@ The main documentation is organized into several sections:
    developer_guide/block_parameter
    developer_guide/block_display
    developer_guide/block_override
+   developer_guide/form_type_override
    developer_guide/navigation_panel
    developer_guide/field_type
    developer_guide/entity_list_ajax_pagination
