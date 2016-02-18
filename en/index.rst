@@ -76,7 +76,7 @@ Indices and tables
    developer_guide/esi
    developer_guide/themes
    developer_guide/twig_extensions
-   developer_guide/media_gaufrette
+   developer_guide/media_upload
    developer_guide/media_standalone_display
    developer_guide/smart_admin
    developer_guide/events
