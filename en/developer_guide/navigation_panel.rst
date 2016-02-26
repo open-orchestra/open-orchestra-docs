@@ -64,6 +64,7 @@ Here is an example of yml configuration:
 The parameter ``open_orchestra_backoffice.navigation_panel.trashcan.parameters`` is injected to panel strategy whith a translator.
 The Symfony translator will try to translate each value.
 In this case ``open_orchestra_backoffice.table.trashcan.name`` will be translated.
+
 Here is the configuration:
 
 .. code-block:: yaml
