@@ -77,14 +77,14 @@ Here is the service configuration:
 .. code-block:: yaml
 
     open_orchestra_backoffice.navigation_panel.trashcan:
-        class: %open_orchestra_backoffice.navigation_panel.administration.class%
+        class: "%open_orchestra_backoffice.navigation_panel.administration.class%"
         arguments:
             - trashcan
             - ROLE_ACCESS_DELETED
             - 250
-            - %open_orchestra_backoffice.navigation_panel.menu.editorial%
-            - %open_orchestra_backoffice.navigation_panel.trashcan.parameters%
-            - @translator
+            - "%open_orchestra_backoffice.navigation_panel.menu.editorial%"
+            - "%open_orchestra_backoffice.navigation_panel.trashcan.parameters%"
+            - "@translator"
         calls:
             - [ setTemplate, [OpenOrchestraBackofficeBundle:BackOffice:Include/NavigationPanel/Menu/Editorial/trashcan.html.twig] ]
         tags:
