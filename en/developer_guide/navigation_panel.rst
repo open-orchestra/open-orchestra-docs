@@ -41,14 +41,72 @@ The menu link must have the following attributes :
 * id : merge of the "nav-" string and the name of the strategy as returned by
   ``NavigationPanelInterface::getName()``, for instance "nav-user"
 
-It can also have data-* attributes that can help you to define custom properties to be used in a Backbone route,
-for example :
+Menu and data table
+~~~~~~~~~~~~~~~~~~~
 
-* data-url : API url to be called to retrieve the data to be displayed
-* data-translated-header : the comma-separated list of column labels in dataTable view (see `Entity list`_)
-* data-visible-elements : the comma-separated list of columns, visible by default and identified by id, in dataTable view (see `Entity list`_)
-* data-displayed-elements : the comma-separated list of all columns identified by id in dataTable view (see `Entity list`_)
-* data-input-header: the comma-separated list of search field of columns (see `Entity list`_)
+Many panel entries allow to consult records formated in a data table view based on `DataTables library`_..
+This library allows multiple configurations to custom these tables: name of the column, visible or not by default, search fields...
+OpenOrchestra uses its own process to manage these configurations.
+
+First of all, a yaml file describes the settings of each column for a given data table.
+All options coming from the `DataTables library`_.. are allowed in the definition of the columns.
+Here is an example of yml data table configuration:
+
+.. code-block:: yaml
+
+    open_orchestra_backoffice.navigation_panel.trashcan.parameters :
+        -
+          name : name
+          title : open_orchestra_backoffice.table.trashcan.name
+          visible : true
+          activateColvis : true
+          searchField : text
+        -
+          name : deleted_at
+          updated_by : name
+          title : open_orchestra_backoffice.table.trashcan.deleted_at
+          visible : true
+          activateColvis : true
+          searchField : date
+
+Then, this configuration parameter, ``open_orchestra_backoffice.navigation_panel.trashcan.parameters``, is injected to the panel strategy.
+Here is the service configuration:
+
+.. code-block:: yaml
+
+    open_orchestra_backoffice.navigation_panel.trashcan:
+        class: "%open_orchestra_backoffice.navigation_panel.administration.class%"
+        arguments:
+            - trashcan
+            - ROLE_ACCESS_DELETED
+            - 250
+            - "%open_orchestra_backoffice.navigation_panel.menu.editorial%"
+            - "%open_orchestra_backoffice.navigation_panel.trashcan.parameters%"
+            - "@translator"
+        calls:
+            - [ setTemplate, [OpenOrchestraBackofficeBundle:BackOffice:Include/NavigationPanel/Menu/Editorial/trashcan.html.twig] ]
+        tags:
+            - { name: open_orchestra_backoffice.navigation_panel.strategy }
+
+As a remark, the Symfony translator is also injected. It will try to translate  each value from the column settings. 
+In this case ``open_orchestra_backoffice.table.trashcan.name`` will be translated.
+
+Finally a client side call to the method ``datatableParameterAction``
+of the controller ``OpenOrchestra\ApiBundle\Controller\DataTableController`` allows to retrieve all these settings.
+which are stored in a global js object ``dataTableConfigurator``.
+
+Each panel strategy called by the controller returns its settings in an associative array.
+The keys of each panel strategy array have two purposes :
+
+* allow merging in controller without conflict,
+* serve as a search key on client side.
+
+Indeed, by setting ``data-datatable-parameter-name``, each entry in panel indicates where to find its configuration in ``dataTableConfigurator``. 
+In the common case, the name of the strategy is used.
+
+In the previous example, the ``open_orchestra_backoffice.navigation_panel.trashcan`` panel strategy serves the controller the settings
+by associating them to the name of the strategy: ``trashcan``.
+On client side, settings are founded in ``dataTableConfigurator`` at the key ``trashcan`` specified by ``data-datatable-parameter-name``.    
 
 Define Backbone route
 ~~~~~~~~~~~~~~~~~~~~~
@@ -152,3 +210,4 @@ application, we use the ``role`` domain. This way, you will have to add the tran
 .. _`compiler pass`: http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html
 .. _`Backbone routing in Open Orchestra`: /en/developer_guide/backbone_routing.rst
 .. _`Entity list`: /en/developer_guide/entity_list_ajax_pagination.rst
+.. _`DataTables library`: https://www.datatables.net/
