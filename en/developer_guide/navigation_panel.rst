@@ -50,7 +50,7 @@ OpenOrchestra uses its own process to manage these configurations.
 
 First of all, a yaml file describes the settings of each column for a given data table.
 All options coming from the `DataTables library`_.. are allowed in the definition of the columns.
-Here is an example of yml data table configuration:
+Here is an example of yml data table configuration (datatable_parameter.yml):
 
 .. code-block:: yaml
 
