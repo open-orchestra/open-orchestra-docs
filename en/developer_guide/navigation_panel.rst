@@ -96,7 +96,8 @@ of the controller ``OpenOrchestra\ApiBundle\Controller\DataTableController`` all
 which are stored in a global js object ``dataTableConfigurator``.
 
 Each panel strategy called by the controller returns its settings in an associative array.
-The keys of each panel strategy array have two purposes:
+The keys of each panel strategy array have two purposes :
+
 * allow merging in controller without conflict,
 * serve as a search key on client side.
 
