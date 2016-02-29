@@ -95,6 +95,15 @@ Finally a client side call to the method ``datatableParameterAction``
 of the controller ``OpenOrchestra\ApiBundle\Controller\DataTableController`` allows to retrieve all these settings.
 which are stored in a global js object ``dataTableConfigurator``.
 
+Each panel strategy called by the controller returns its settings in an associative array.
+The keys of each panel strategy array have two purposes: allow merging in controller without conflict, serve as a search key on client side.
+Indeed, by setting ``data-datatable-parameter-name``, each entry in panel indicates where to find its configuration in ``dataTableConfigurator``. 
+In the common case, the name of the strategy is used.
+
+In the previous example, the ``open_orchestra_backoffice.navigation_panel.trashcan`` panel strategy serves the controller the settings
+by associating them to the name of the strategy: ``trashcan``.
+On client side, settings are founded in ``dataTableConfigurator`` at the key ``trashcan`` specified by ``data-datatable-parameter-name``.    
+
 Define Backbone route
 ~~~~~~~~~~~~~~~~~~~~~
 
