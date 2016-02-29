@@ -69,7 +69,7 @@ Here is an example of yml data table configuration:
           activateColvis : true
           searchField : date
 
-Then, this configuration parameter, ``open_orchestra_backoffice.navigation_panel.trashcan.parameters``, is injected to panel strategy.
+Then, this configuration parameter, ``open_orchestra_backoffice.navigation_panel.trashcan.parameters``, is injected to the panel strategy.
 Here is the service configuration:
 
 .. code-block:: yaml
@@ -96,7 +96,10 @@ of the controller ``OpenOrchestra\ApiBundle\Controller\DataTableController`` all
 which are stored in a global js object ``dataTableConfigurator``.
 
 Each panel strategy called by the controller returns its settings in an associative array.
-The keys of each panel strategy array have two purposes: allow merging in controller without conflict, serve as a search key on client side.
+The keys of each panel strategy array have two purposes:
+* allow merging in controller without conflict,
+* serve as a search key on client side.
+
 Indeed, by setting ``data-datatable-parameter-name``, each entry in panel indicates where to find its configuration in ``dataTableConfigurator``. 
 In the common case, the name of the strategy is used.
 
