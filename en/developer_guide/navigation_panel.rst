@@ -44,11 +44,12 @@ The menu link must have the following attributes :
 Menu and data table
 ~~~~~~~~~~~~~~~~~~~
 
-Many panel entries allow to consult records formated in a data table.
-The columns of this data table can be configured: name of the column, visible or not by default, type of search field...
-The data table view is based on `DataTables library`_.
-So all options coming from this library are allowed in the definition of the columns.
+Many panel entries allow to consult records formated in a data table view based on `DataTables library`_..
+This library allows multiple configurations to custom these tables: name of the column, visible or not by default, search fields...
+OpenOrchestra uses its own process to manage these configurations.
 
+First of all, a yaml file describes the settings of each column for a given data table.
+All options coming from the `DataTables library`_.. are allowed in the definition of the columns.
 Here is an example of yml data table configuration:
 
 .. code-block:: yaml
@@ -68,10 +69,7 @@ Here is an example of yml data table configuration:
           activateColvis : true
           searchField : date
 
-The parameter ``open_orchestra_backoffice.navigation_panel.trashcan.parameters`` is injected to panel strategy whith a translator.
-The Symfony translator will try to translate each value.
-In this case ``open_orchestra_backoffice.table.trashcan.name`` will be translated.
-
+Then, this configuration parameter, ``open_orchestra_backoffice.navigation_panel.trashcan.parameters``, is injected to panel strategy.
 Here is the service configuration:
 
 .. code-block:: yaml
@@ -90,16 +88,12 @@ Here is the service configuration:
         tags:
             - { name: open_orchestra_backoffice.navigation_panel.strategy }
 
-Each strategy will define a ``getDatatableParameter`` method to recover the datatable parameters.
-In the common case, the parameters are indexed with the name of the strategy to allow merging without conflict.
-But this index could be specified by the developer.
-A basic implementation exists in the abstract class ``OpenOrchestra\Backoffice\NavigationPanel\Strategies\AbstractNavigationPanelStrategy``.
-Finally, the method ``datatableParameterAction`` of the controller ``OpenOrchestra\ApiBundle\Controller\DataTableController`` retrieves all the parameters of all strategies and merge it in its response.
-On the client side, the Back Office calls this controller each time the  navigation panel is builded and store the response in a global js object ``dataTableConfigurator``.
+As a remark, the Symfony translator is also injected. It will try to translate  each value from the column settings. 
+In this case ``open_orchestra_backoffice.table.trashcan.name`` will be translated.
 
-A panel entry using this process must specify the index in ``dataTableConfigurator`` to retrieve its parameters  by setting ``data-datatable-parameter-name``.
-It is possible to extend this process in case of dynamic parameters.
-Such extended implementation could be find in ``OpenOrchestra\Backoffice\NavigationPanel\Strategies\ContentTypeController``
+Finally a client side call to the method ``datatableParameterAction``
+of the controller ``OpenOrchestra\ApiBundle\Controller\DataTableController`` allows to retrieve all these settings.
+which are stored in a global js object ``dataTableConfigurator``.
 
 Define Backbone route
 ~~~~~~~~~~~~~~~~~~~~~
