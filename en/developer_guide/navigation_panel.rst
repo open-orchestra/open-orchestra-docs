@@ -49,7 +49,18 @@ This library allows multiple configurations to custom these tables: name of the 
 OpenOrchestra uses its own process to manage these configurations.
 
 First of all, a yaml file describes the settings of each column for a given data table.
-All options coming from the `DataTables library`_.. are allowed in the definition of the columns.
+
+Settings available:
+
+* **name**: *(string)* field name
+* **title**: *(string)* key of title translation
+* **visible**: *(boolean)* Enable or disable the display of column
+* **activateColvis**: *(boolean)* Enable or disable the toggle of column in colvis button
+* **searchable**: *(boolean)* Enable or disable the search of column
+* **searchField**: *(string)* type of search field, further information in `Entity list`_ documentation
+* **orderable**: *(boolean)* Enable or disable the order of column
+* **orderDirection**: *(string)* asc|desc Indicate the order direction if orderable option is enable
+
 Here is an example of yml data table configuration (datatable_parameter.yml):
 
 .. code-block:: yaml
