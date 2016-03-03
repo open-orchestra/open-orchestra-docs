@@ -66,13 +66,13 @@ Run the following command to test the installation and connection to the server
 Deploy
 ------
 
-Before deploying the project, make sure that the composer.lock file is up-to-date on the master branch.
+Before deploying the project, make sure that the ``composer.lock`` file is up-to-date on the master branch.
 
 .. code-block:: bash
 
     $ cap inte composer:update_vendor
 
-This task run `composer update vendor` on the server to update `composer.lock` and create a branch on GitHub.
+This task run ``composer update vendor`` on the server to update ``composer.lock`` and create a branch on GitHub.
 
 Once you are ready (passing tests for instance), you can merge in the branch you want to deploy
 
