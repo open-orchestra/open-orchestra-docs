@@ -23,7 +23,7 @@ Install ansible
 
 All the project server configuration is going to be handled by ansible.
 
-Our configuration was made for the 1.9.4 version of ansible.
+Our configuration was made for the 1.9.4 version of ansible. **It doesn't work with the version 2 of ansible**.
 
 For more information about ansible installation, you can see `Ansible installation documentation`_.
 
