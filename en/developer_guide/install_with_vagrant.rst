@@ -30,7 +30,7 @@ Install ansible
 ---------------
 
 All the project server configuration is going to be handled by ansible.
-To avoid version troubles, switch to release 1.8.2
+To avoid version troubles, switch to release 1.8.2.  **It doesn't work with the version 2 of ansible**.
 
 .. code-block:: bash
 
@@ -69,15 +69,15 @@ Install open-orchestra with composer:
 
 .. code-block:: bash
 
-    $ ./composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs --no-scripts
-    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs --no-scripts
-    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs --no-scripts
+    $ ./composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s stable --ignore-platform-reqs --no-scripts
+    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s stable --ignore-platform-reqs --no-scripts
+    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s stable --ignore-platform-reqs --no-scripts
 
 Clone the provisioning repository in another folder :
 
 .. code-block:: bash
 
-    $ git clone git@github.com:open-orchestra/open-orchestra-provision.git
+    $ git clone git@github.com:open-orchestra/open-orchestra-provision.git --branch=1.0
 
 Install roles from ansible-galaxy
 ---------------------------------

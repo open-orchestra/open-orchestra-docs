@@ -1,0 +1,14 @@
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - python-pip
+
+before_install:
+  - cd en
+  - pip install --user sphinx sphinx-autobuild recommonmark
+
+script:
+  - make html 2>&1 | grep "ERROR:\|WARNING:" | exit `wc -l`
+
