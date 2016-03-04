@@ -47,6 +47,7 @@ Indices and tables
    user_guide/user
    user_guide/role
    user_guide/workflow
+   user_guide/boolean_expression
 
 .. _developer-guide:
 
