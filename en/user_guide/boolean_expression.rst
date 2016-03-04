@@ -15,7 +15,7 @@ This expression fits the following syntax:
 * two operators are allowed, OR and AND,
 * operator is preceded and followed by a space,
 * expression can not beginning or ending with an operator,
-* two operators can not follow.
+* an operator cannot be immediately followed.
 
 The whole expression can be typed or buttons can be used to enter brackets and operators.
 
