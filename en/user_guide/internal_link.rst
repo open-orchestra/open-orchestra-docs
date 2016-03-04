@@ -9,6 +9,7 @@ This button opens a modal with a form to construct the internal link:
 .. image:: ../../images/form_internal_link.png
 
 The form contains :
+
 * Label: the label for the link displayed in Front Office
 * Pages: the target of the link
 * Content: as specified in the `contents display`_, content blocks need content id in the url.
