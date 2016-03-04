@@ -96,6 +96,7 @@ Indices and tables
    developer_guide/bbcode
    developer_guide/assets_bower_npm
    developer_guide/other_database_type
+   developer_guide/elasticsearch_indexation
 
 .. _hosting-guide:
 
