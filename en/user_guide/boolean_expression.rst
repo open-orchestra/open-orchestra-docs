@@ -1,7 +1,7 @@
 Boolean Expression
 ==================
 
-In somme context, Open Orchestra authorize to use boolean expression to filter with keywords.
+In some context, Open Orchestra authorize to use boolean expression to filter with keywords.
 In the content search block, for example, keywords are used to specify which contents must be showed.
 
 This expression fits the following syntax:
