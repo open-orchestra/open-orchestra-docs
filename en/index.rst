@@ -97,6 +97,7 @@ Indices and tables
    developer_guide/assets_bower_npm
    developer_guide/other_database_type
    developer_guide/elasticsearch_indexation
+   developer_guide/elasticsearch_add_new_indexed_document
 
 .. _hosting-guide:
 
