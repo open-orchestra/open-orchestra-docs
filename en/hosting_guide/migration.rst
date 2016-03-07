@@ -22,14 +22,14 @@ Here are the settings added to config.yml ;
         dir_name: "%kernel.root_dir%/../vendor/open-orchestra/open-orchestra-model-bundle/OpenOrchestra/ModelBundle/Migrations/MongoDB"
         script_dir_name: "%kernel.root_dir%/../vendor/open-orchestra/open-orchestra-model-bundle/OpenOrchestra/ModelBundle/Migrations/MongoDB/scripts"
         name: "Open Orchestra MongoDB Migrations"
-        namespace: "OpenOrchestra\\ModelBundle\\Migrations\\MongoDB"
+        namespace: "OpenOrchestra\ModelBundle\Migrations\MongoDB"
 
-- collection_name: this value indicates what will be the name of the collection used to store the migration information
-- database_name: each time the name of the database is needed, this alias is used
-- dir_name: as the use of this bundles will result in generation of files, the target is specified
-- script_dir_name: same as dir_name, but this indicates where js script are located
-- name: arbitrary value used in output
-- namespace: this value should be consistent with dir_name
+- ``collection_name``: this value indicates what will be the name of the collection used to store the migration information
+- ``database_name``: each time the name of the database is needed, this alias is used
+- ``dir_name``: as the use of this bundles will result in generation of files, the target is specified
+- ``script_dir_name``: same as dir_name, but this indicates where js script are located
+- ``name``: arbitrary value used in output
+- ``namespace``: this value should be consistent with dir_name
 
 MongoDb Migration generate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,6 +57,6 @@ The command
 
     app/console mongodb:migrations:migrate
 
-will execute the different steps of migration, in our case, the up function of Version20150722104732.
+will execute the different steps of migration.
 
 .. _mongodb migration: https://github.com/antimattr/mongodb-migrations-bundle
