@@ -110,11 +110,12 @@ Launch the grunt command to generate all assets
 Load the fixtures
 -----------------
 
-Open Orchestra comes with a set of fixtures for a quick demo tour
+Open Orchestra needs some fixtures to work (an admin user, a website, ...).
 
 .. code-block:: bash
 
-    $ php app/console doctrine:mongo:fixture:load --env=prod
+    $ php app/console orchestra:mongodb:fixtures:load --type=production --env=prod
+
 
 Launch the server
 ~~~~~~~~~~~~~~~~~

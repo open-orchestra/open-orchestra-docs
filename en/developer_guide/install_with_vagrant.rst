@@ -140,7 +140,7 @@ In the symfony project directory ``/var/www/openorchestra`` you can load the fix
 
 .. code-block:: bash
 
-    $ php app/console doctrine:mongo:fixture:load --env=prod
+    $ php app/console orchestra:mongodb:fixtures:load --type=production --env=prod
 
 Now you can log on http://admin.openorchestra.dev/login with username=admin and password=admin for the CMS
 and see the result on http://demo.openorchestra.dev.
