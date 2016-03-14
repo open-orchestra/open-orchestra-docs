@@ -110,7 +110,7 @@ Launch the grunt command to generate all assets
 Load the fixtures
 -----------------
 
-Open Orchestra needs some fixtures to work.
+Open Orchestra needs some fixtures to work (an admin user, a website, ...).
 
 .. code-block:: bash
 
