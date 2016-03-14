@@ -3,6 +3,17 @@ Twig extensions
 
 Some twig extensions have been developed specifically for Open Orchestra and are available for use.
 
+Media functions
+---------------
+
+If you are using the media bundles, you will probably have to manipulate media within your twig templates. You
+can use these twig extensions to help you:
+
+* ``display_media(mediaId, format)``: render a media (or an alternative) using the DisplayMediaManager
+* ``get_media_url(mediaId, format)``: get the url of a media (or an alternative)
+* ``get_media_title(mediaId)``: get the title of a media, in the current language
+* ``get_media_alt(mediaId)``: get the alt of a media, in the current language
+
 Theme functions
 ---------------
 
@@ -11,10 +22,8 @@ JavaScript and CSS files used in the configuration of the application for each t
 
 In order to render the HTML tags for these files, two functions are available in Twig :
 
-* openOrchestraCss()
-* openOrchestraJs()
-
-Each one takes in parameter the string identifier of the theme that should be used on the website.
+* ``openOrchestraCss(themeId)``: render a html stylesheet tag linking the css of the theme
+* ``openOrchestraJs(themeId)``: render a html javascript tag linking the javascript of the theme
 
 Tree generation
 ---------------
