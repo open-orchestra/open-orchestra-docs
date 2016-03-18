@@ -131,7 +131,7 @@ Launch the grunt command to generate all assets
 
 .. code-block:: bash
 
-    $ ./node_modules/.bin/grunt
+    $ ./bin/grunt
 
 Load the fixtures
 -----------------
