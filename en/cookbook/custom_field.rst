@@ -1,8 +1,8 @@
 HOW TO ADD A NEW CUSTOM FIELD TO THE CONTENT TYPE FIELDS LIST
 =============================================================
 
-When an administrator create a new content type, he can describe each attribute composing the content type via
-a list of available field types.
+When an administrator creates a new content type, he can describe each attribute composing the content type
+via a list of available field types.
 
 .. image:: ../../images/fieldType.png
 
@@ -25,7 +25,7 @@ available fields, this relation must be described in the configuration.
 Furthermore, an attribute should be tweaked by the administrator depending on the context where it is used.
 For instance, in the context of the title of a news, the administrator would make the text line field mandatory
 with a limit of 25 characters, but in the context of a short description of an item, the text line should be
-optional and without limit. This functionnality is also described in the configuration.
+optional and without limit. This functionality is also described in the configuration.
 
 .. image:: ../../images/text_line_field.png
 
@@ -45,7 +45,7 @@ a time zone:
                 label: open_orchestra.form.field_type.timezone # The label of the field in the list
                 type: timezone # The Symfony form type used when editing a content
 
-With this, a new entry is added to the list of available fields type.
+With this, a new entry is added to the list of available field types.
 
 .. image:: ../../images/timezone_selection.png
 
@@ -74,8 +74,8 @@ display mode), these options must be created. Actually, this corresponds to the 
 the Symfony form type used to contribute the attribute. As these options can be used by other form type, they
 are configured in a separate entry: ``open_orchestra_backoffice.options``
 
-As a field option allows an administrator to choose between several available modes, configuring an option is
-again a matter of mapping a Symfony form type to render it in the content type form.
+As a field option allows an administrator to choose between several available behaviors, configuring an option
+is again a matter of mapping a Symfony form type to render it in the content type form.
 
 This time the three options required for the time zone field (required, multiple and expanded) are already
 described in the basic configuration of Open Orchestra: 
@@ -101,7 +101,7 @@ According to this configuration, the three options are rendered to the administr
 to activate or not the feature for the content type being edited.
 
 Note: the configuration entry named "required" make the option mandatory when adding it to a content type. But
-in our example, it would lead to a non sense to have the checkboxes required.
+in our example, it would lead to a nonsense to have the checkboxes required.
 
 Open Orchestra provides several other options you can use, but if your field requires a not yet created option,
 you can describe it the same way.
@@ -181,7 +181,7 @@ You should now be able to see the new options:
 Editing a content using a Timezone field
 ----------------------------------------
 
-Finally when a contributor edit a content including a time zone he see it the way the adminsitrator configured
-it:
+Finally when a contributor edits a content including a time zone, he see the time zone exactly as the
+administrator configured it:
 
 .. image:: ../../images/timezone_content.png
