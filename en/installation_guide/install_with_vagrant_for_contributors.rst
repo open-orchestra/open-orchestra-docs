@@ -125,9 +125,9 @@ In the ``/etc/hosts`` file of your computer add the following lines:
     192.168.33.10   demo.openorchestra.dev
     192.168.33.10   media.openorchestra.dev
 
-    192.168.33.11   admin.openorchestra.dev_stable
-    192.168.33.11   demo.openorchestra.dev_stable
-    192.168.33.11   media.openorchestra.dev_stable
+    192.168.33.11   admin.openorchestra.stable
+    192.168.33.11   demo.openorchestra.stable
+    192.168.33.11   media.openorchestra.stable
 
 You should follow the same steps to install each versions :
 
@@ -208,10 +208,10 @@ All the images will be visible on the http://media.openorchestra.dev/app_dev.php
 Stable version
 ~~~~~~~~~~~~~~
 
-You can log on http://admin.openorchestra.dev_stable/app_dev.php/login with username=admin and
-password=admin for the CMS and see the result on http://demo.openorchestra.dev_stable/app_dev.php.
+You can log on http://admin.openorchestra.stable/app_dev.php/login with username=admin and
+password=admin for the CMS and see the result on http://demo.openorchestra.stable/app_dev.php.
 
-All the images will be visible on the http://media.openorchestra.dev_stable/app_dev.php url.
+All the images will be visible on the http://media.openorchestra.stable/app_dev.php url.
 
 .. _`Download Composer`: https://getcomposer.org/download/
 .. _`Ansible installation documentation`: http://docs.ansible.com/ansible/intro_installation.html

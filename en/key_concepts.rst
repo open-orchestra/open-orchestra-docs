@@ -142,16 +142,16 @@ the interfaces defined in open-orchestra-model-interface.
 
 
 
-.. _role:
-.. _site:
-.. _user:
-.. _theme:
+.. _role: /en/user_guide/role.rst
+.. _site: /en/user_guide/websites_creation.rst
+.. _user: /en/user_guide/user.rst
+.. _theme: /en/developer_guide/themes.rst
 .. _group:
-.. _website:
-.. _multi-devices:
+.. _website: /en/user_guide/websites_creation.rst
+.. _multi-devices: /en/developer_guide/multi_device.rst
 .. _list of blocks: /en/user_guide/block_list.rst
-.. _node parameters:
+.. _node parameters: /en/user_guide/node_configuration.rst
 .. _configuring a zone:
 .. _configuring a template:
-.. _Presentation of contents:
-.. _Presentation of the Content Types:
+.. _Presentation of contents: /en/user_guide/content.html
+.. _Presentation of the Content Types: /en/user_guide/content_type.html
