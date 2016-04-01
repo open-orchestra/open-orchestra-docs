@@ -186,7 +186,7 @@ To install the master open-orchestra parts using ``composer``:
 Parameters to define at the end of composer install
 ---------------------------------------------------
 
-.. code-block:: yml
+.. code-block:: yaml
 
     open_orchestra_cms.mongodb.host : mongo
     fos_http_cache.proxy_client.varnish.servers : 

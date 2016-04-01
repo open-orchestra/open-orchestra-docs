@@ -54,8 +54,8 @@ Indices and tables
 .. _installation-guide:
 
 .. toctree::
-      :maxdepth: 2
-      :caption: Installation guide
+   :maxdepth: 2
+   :caption: Installation guide
 
    installation_guide/install
    installation_guide/install_with_vagrant
