@@ -9,6 +9,7 @@ The main documentation is organized into a couple sections:
 
 * :ref:`intro`
 * :ref:`user-guide`
+* :ref:`installation-guide`
 * :ref:`developer-guide`
 * :ref:`hosting-guide`
 * :ref:`misc`
@@ -50,15 +51,23 @@ Indices and tables
    user_guide/boolean_expression
    user_guide/internal_link
 
+.. _installation-guide:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Installation guide
+
+   installation_guide/install
+   installation_guide/install_with_vagrant
+   installation_guide/install_with_vagrant_for_contributors
+   installation_guide/install_with_docker_for_contributors
+
 .. _developer-guide:
 
 .. toctree::
    :maxdepth: 2
    :caption: Developer guide
 
-   developer_guide/install
-   developer_guide/install_with_vagrant
-   developer_guide/install_with_vagrant_for_contributors
    developer_guide/dependancy_diagram
    developer_guide/bundle_configuration
    developer_guide/custom_fixtures_load
