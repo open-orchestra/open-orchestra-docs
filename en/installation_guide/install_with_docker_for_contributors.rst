@@ -171,7 +171,7 @@ To install the master open-orchestra parts using ``composer``:
 
   .. code-block:: bash
 
-    $ docker-compose -f docker-compose.yml -f docker-compose-master.yml up -d
+    $ docker-compose -f docker-compose.yml -f docker-compose-stable.yml up -d
 
 Parameters to define at the end of composer install
 ---------------------------------------------------
@@ -179,7 +179,7 @@ Parameters to define at the end of composer install
 .. code-block:: yaml
 
     open_orchestra_cms.mongodb.host : mongo
-    fos_http_cache.proxy_client.varnish.servers : 
+    fos_http_cache.proxy_client.varnish.servers : [varnish:6081]
     host_elastica : elastica
     
 Override the DNS redirections
