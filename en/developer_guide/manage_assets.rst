@@ -12,7 +12,7 @@ When running grunt via the command
 
 .. code-block:: bash
 
-   ./node_modules/.bin/grunt
+   ./bin/grunt
 
 *Grunt* build its configuration via the ``Gruntfile.js`` file located in the root directory of the application.
 
