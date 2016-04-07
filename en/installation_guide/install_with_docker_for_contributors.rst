@@ -26,8 +26,6 @@ Install Docker
 ---------------
 The project is running in a virtual environment to be production ready.
 
-.. code-block:: bash
-
 ### Linux ###
 
 .. code-block:: bash
@@ -141,14 +139,6 @@ You can run all the commands below with one script :
     or
     $ ./install.sh stable
     
-once the containers are built, run the following init command :
-
-  .. code-block:: bash
-
-    $ docker exec -it app_open_orchestra_master /load.sh
-    or
-    $ docker exec -it app_open_orchestra_stable /load.sh
-
 2. Manual way
 
 To install the master open-orchestra parts using ``composer``:
@@ -165,7 +155,7 @@ To install the master open-orchestra parts using ``composer``:
 
   .. code-block:: bash
 
-    $docker-compose -f docker-compose.yml -f docker-compose-master.yml up -d
+    $ docker-compose -f docker-compose.yml -f docker-compose-master.yml up -d
 
 - To install the stable open-orchestra parts using ``composer``:
 
@@ -223,6 +213,8 @@ To finish the insytallation, you must launch an init script inside the main cont
   .. code-block:: bash
 
     $ docker exec -it app_open_orchestra_master /load.sh
+    or
+    $ docker exec -it app_open_orchestra_stable /load.sh
 
 It will take some time to:
 
