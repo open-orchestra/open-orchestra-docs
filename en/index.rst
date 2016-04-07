@@ -68,6 +68,7 @@ Indices and tables
    :maxdepth: 2
    :caption: Developer guide
 
+   developer_guide/install
    developer_guide/dependancy_diagram
    developer_guide/bundle_configuration
    developer_guide/custom_fixtures_load
