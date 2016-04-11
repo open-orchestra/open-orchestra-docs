@@ -10,25 +10,22 @@ Open Orchestra is composed of three projects:
 
 For contributors, we provide a Vagrant-powered environment with provisioning so you get minimal
 setup actions to do.
-
 Install Vagrant
 ---------------
 The project is running on a Vagrant virtual environment built on VirtualBox to be production ready.
+For more information about Vagrant installation, you can see ` Vagrant installation documentation <https://www.vagrantup.com/docs/>`
 
-.. code-block:: bash
-
-    $ aptitude install virtualbox
-    $ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
-    $ dpkg -i vagrant_1.6.3_x86_64.deb
 
 Install ansible
 ---------------
 
 All the project server configuration is going to be handled by ansible.
 
-Our configuration was made for the 1.9.4 version of ansible.
+Our configuration was made for the 1.9.4 version of ansible. **It doesn't work with the version 2 of ansible**.
 
 For more information about ansible installation, you can see `Ansible installation documentation`_.
+
+If you need *tar.gz* archives, you can see this link : https://releases.ansible.com/ansible/
 
 
 Install nfs server
