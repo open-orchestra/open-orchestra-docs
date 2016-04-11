@@ -11,11 +11,11 @@ For developers, we provide a Vagrant-powered environment with provisioning so yo
 Install Vagrant
 ---------------
 The project is running on a Vagrant virtual environment built on VirtualBox to be production ready.
-Here is two differents ways to install it.
 
 .. code-block:: bash
 
     $ aptitude install virtualbox
+    $ wget https://dl.bintray.com/mitchellh/vagrant/vagrant_1.6.3_x86_64.deb
     $ dpkg -i vagrant_1.6.3_x86_64.deb
 
 Install ansible
