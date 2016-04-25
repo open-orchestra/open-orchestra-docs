@@ -25,41 +25,41 @@ Url to see changes:
 New features
 ------------
 
-- Test on mandatory main alias in site form [#1542](https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1542)
-- Remove permanently an entity in trash can [#1539](https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1539)
-- Enhance area form in template, node and area [#1537](https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1537)
-- When a content is deleted, it's removed from elastica index [#25](https://github.com/open-orchestra/open-orchestra-elastica-bundle/pull/25)
-- When a content is restored, it's added from elastica index [#25](https://github.com/open-orchestra/open-orchestra-elastica-bundle/pull/25)
-- A media root folder is created when a new website is created [#190](https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/190)
+- Test on mandatory main alias in site form `#1542`_
+- Remove permanently an entity in trash can `#1539`_
+- Enhance area form in template, node and area `#1537`_
+- When a content is deleted, it's removed from elastica index `#25`_
+- When a content is restored, it's added from elastica index `#25`_
+- A media root folder is created when a new website is created `#190`_
 
 Bug fixes
 ---------
 
-- Fix position of property `validationGroups` in method `isValid` of `BaseApiBundle/Controller/BaseController` [#76](https://github.com/open-orchestra/open-orchestra-base-api-bundle/pull/76)
-- Fix transform area from another site as the current site [#1544](https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1544)
-- Unused blocks are now definitely suppressed from DB when deleted from a node and used no more [#1540](https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1540)
-- Fix error type of property ``updateAt`` in content type schema [#24](https://github.com/open-orchestra/open-orchestra-elastica-bundle/pull/24)
-- A required oo_media_choice form type is now correctly handled [#195](https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/195)
-- Remove link constraint on media display block [#194](https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/194)
-- Method ``testUniquenessInContext`` is now based on ``nodeId`` and not ``name`` [#543](https://github.com/open-orchestra/open-orchestra-model-bundle/pull/543)
-- Demo fixtures are updated to present block usage references [#542](https://github.com/open-orchestra/open-orchestra-model-bundle/pull/542)
-- Path on node is updated only if node is not deleted [#541](https://github.com/open-orchestra/open-orchestra-model-bundle/pull/541)
+- Fix position of property `validationGroups` in method `isValid` of `BaseApiBundle/Controller/BaseController` `#76`_
+- Fix transform area from another site as the current site `#1544`_
+- Unused blocks are now definitely suppressed from DB when deleted from a node and used no more `#1540`_
+- Fix error type of property ``updateAt`` in content type schema `#24`_
+- A required oo_media_choice form type is now correctly handled `#195`_
+- Remove link constraint on media display block `#194`_
+- Method ``testUniquenessInContext`` is now based on ``nodeId`` and not ``name`` `#543`_
+- Demo fixtures are updated to present block usage references `#542`_
+- Path on node is updated only if node is not deleted `#541`_
 
 Other changes
 -------------
 
-- Get master request in method where it is used and not in a constructor [#150](https://github.com/open-orchestra/open-orchestra-front-bundle/pull/150)
+- Get master request in method where it is used and not in a constructor `#150`_
 
 Possible BC breaker
 -------------------
 
-- The `TrashItem` document has a new property `type` [#541](https://github.com/open-orchestra/open-orchestra-model-bundle/pull/541)
-- The `TrashItemInterface` has a new property `type` [#172](https://github.com/open-orchestra/open-orchestra-model-interface/pull/172)
-- The `TrashItemRepositoryInterface` has a new method `findByEntity($entityId)` [#172](https://github.com/open-orchestra/open-orchestra-model-interface/pull/172)
+- The `TrashItem` document has a new property `type` `#541`_
+- The `TrashItemInterface` has a new property `type` `#172`_
+- The `TrashItemRepositoryInterface` has a new method `findByEntity($entityId)` `#172`_
 
 Manual changes
 --------------
-- The `BlockContainerInterface` has a new method: `removeBlockWithKey` [#173](https://github.com/open-orchestra/open-orchestra-model-interface/pull/173)
+- The `BlockContainerInterface` has a new method: `removeBlockWithKey` `#173`_
 
 .. _`Cms bundle`: https://github.com/open-orchestra/open-orchestra-cms-bundle/compare/v1.1.0-beta...v1.1.0-RC
 .. _`Display bundle`: https://github.com/open-orchestra/open-orchestra-display-bundle/compare/v1.1.0-beta...v1.1.0-RC
@@ -79,3 +79,23 @@ Manual changes
 .. _`Orchestra Mongo libs`: https://github.com/open-orchestra/open-orchestra-mongo-libs/compare/v1.1.0-beta...v1.1.0-RC
 .. _`Media file bundle`: https://github.com/open-orchestra/open-orchestra-media-file-bundle/compare/v1.1.0-beta...v1.1.0-RC
 .. _`Elastica bundle`: https://github.com/open-orchestra/open-orchestra-elastica-bundle/compare/v1.1.0-beta...v1.1.0-RC
+.. _`#1542`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1542
+.. _`#1539`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1539
+.. _`#1537`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1537
+.. _`#25`: https://github.com/open-orchestra/open-orchestra-elastica-bundle/pull/25
+.. _`#25`: https://github.com/open-orchestra/open-orchestra-elastica-bundle/pull/25
+.. _`#190`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/190
+.. _`#76`: https://github.com/open-orchestra/open-orchestra-base-api-bundle/pull/76
+.. _`#1544`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1544
+.. _`#1540`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1540
+.. _`#24`: https://github.com/open-orchestra/open-orchestra-elastica-bundle/pull/24
+.. _`#195`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/195
+.. _`#194`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/194
+.. _`#543`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/543
+.. _`#542`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/542
+.. _`#541`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/541
+.. _`#150`: https://github.com/open-orchestra/open-orchestra-front-bundle/pull/150
+.. _`#541`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/541
+.. _`#172`: https://github.com/open-orchestra/open-orchestra-model-interface/pull/172
+.. _`#172`: https://github.com/open-orchestra/open-orchestra-model-interface/pull/172
+.. _`#173`: https://github.com/open-orchestra/open-orchestra-model-interface/pull/173
