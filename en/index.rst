@@ -3,10 +3,10 @@ Welcome to Open Orchestra's documentation!
 
 .. _Open Orchestra website: http://www.open-orchestra.com/
 .. _Open Orchestra GitHub: http://www.github.com/open-orchestra/
-.. _Change log: https://github.com/open-orchestra/open-orchestra/tree/master/app/Resources/doc/changeLog
 
-The main documentation is organized into a couple sections:
+The main documentation is organized into several sections:
 
+* :ref:`changelogs`
 * :ref:`intro`
 * :ref:`user-guide`
 * :ref:`installation-guide`
@@ -20,6 +20,53 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. _changlogs:
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Changelogs
+
+   changelog/CHANGELOG-0.0.4
+   changelog/CHANGELOG-0.0.5
+   changelog/CHANGELOG-0.0.6
+   changelog/CHANGELOG-0.0.7
+   changelog/CHANGELOG-0.1.0
+   changelog/CHANGELOG-0.1.1
+   changelog/CHANGELOG-0.1.2
+   changelog/CHANGELOG-0.1.3
+   changelog/CHANGELOG-0.1.4
+   changelog/CHANGELOG-0.2.0
+   changelog/CHANGELOG-0.2.1
+   changelog/CHANGELOG-0.2.2
+   changelog/CHANGELOG-0.2.3
+   changelog/CHANGELOG-0.2.4
+   changelog/CHANGELOG-0.2.5
+   changelog/CHANGELOG-0.2.6
+   changelog/CHANGELOG-0.2.7
+   changelog/CHANGELOG-0.2.8
+   changelog/CHANGELOG-0.2.9
+   changelog/CHANGELOG-0.2.10
+   changelog/CHANGELOG-0.2.11
+   changelog/CHANGELOG-0.2.12
+   changelog/CHANGELOG-0.3.0
+   changelog/CHANGELOG-0.3.1
+   changelog/CHANGELOG-0.3.2
+   changelog/CHANGELOG-0.3.3
+   changelog/CHANGELOG-0.3.4
+   changelog/CHANGELOG-1.0.0-RC-1
+   changelog/CHANGELOG-1.0.0-RC-2
+   changelog/CHANGELOG-1.0.0
+   changelog/CHANGELOG-1.0.1
+   changelog/CHANGELOG-1.0.2
+   changelog/CHANGELOG-1.0.3
+   changelog/CHANGELOG-1.0.4
+   changelog/CHANGELOG-1.1.0-alpha1
+   changelog/CHANGELOG-1.1.0-alpha2
+   changelog/CHANGELOG-1.1.0-alpha3
+   changelog/CHANGELOG-1.1.0-alpha4
+   changelog/CHANGELOG-1.1.0-beta
+   changelog/CHANGELOG-1.1.0-RC
 
 .. _intro:
 
