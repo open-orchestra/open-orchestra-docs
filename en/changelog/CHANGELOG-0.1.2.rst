@@ -62,4 +62,4 @@ Configuration modification
 .. _`Media bundle`: https://github.com/open-orchestra/open-orchestra-media-bundle/compare/v0.1.1...v0.1.2
 .. _`User bundle`: https://github.com/open-orchestra/open-orchestra-user-bundle/compare/v0.1.1...v0.1.2
 .. _`Theme bundle`: https://github.com/open-orchestra/open-orchestra-theme-bundle/compare/v0.1.1...v0.1.2
-.. _`Change the firewall configuration`:https://github.com/open-orchestra/open-orchestra/blob/master/app/Resources/doc/dev/draft/apiConnexion.md
+.. _`Change the firewall configuration`: https://github.com/open-orchestra/open-orchestra/blob/master/app/Resources/doc/dev/draft/apiConnexion.md

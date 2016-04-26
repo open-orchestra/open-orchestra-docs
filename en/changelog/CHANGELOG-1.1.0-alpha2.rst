@@ -14,7 +14,7 @@ Url to see changes:
 - `Media bundle`_
 - `User bundle`_
 - `Theme bundle`_
-- `Worflow function bundle`_
+- `Workflow function bundle`_
 
 Possible BC breaker
 -------------------

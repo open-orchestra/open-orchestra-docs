@@ -14,12 +14,12 @@ Url to see changes:
 - `Media bundle`_
 - `User bundle`_
 - `Theme bundle`_
-- `Worflow function bundle`_
+- `Workflow function bundle`_
 
 Possible BC breaker
 -------------------
 
-- ``open_orchestra_model.annotation_reader`` is renamed by ``open_orchestra.annotation_reader`
+- ``open_orchestra_model.annotation_reader`` is renamed by ``open_orchestra.annotation_reader``
 - ``open_orchestra_base.annotation_search_reader`` is moved to orchestra-libs and renamed by ``open_orchestra.annotation_search_reader``
 - Adding new bundle (OpenOrchestraMongoBundle)
 - The parameter ``descriptionEntity`` in ``FinderConfiguration`` is now composed of array (``Array("key" => "", "field" => "", "type" => "")``
@@ -74,6 +74,6 @@ Configuration changes
 .. _`Media bundle`: https://github.com/open-orchestra/open-orchestra-media-bundle/compare/v0.3.4...v1.0.0-RC1
 .. _`User bundle`: https://github.com/open-orchestra/open-orchestra-user-bundle/compare/v0.3.4...v1.0.0-RC1
 .. _`Theme bundle`: https://github.com/open-orchestra/open-orchestra-theme-bundle/compare/v0.3.4...v1.0.0-RC1
-.. _`Worflow function bundle`: https://github.com/open-orchestra/open-orchestra-worflow-function-bundle/compare/v0.3.4...v1.0.0-RC1
+.. _`Workflow function bundle`: https://github.com/open-orchestra/open-orchestra-worflow-function-bundle/compare/v0.3.4...v1.0.0-RC1
 .. _`documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/entity_list_ajax_pagination.rst
-.. _`futher information in documentation: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/entity_list_ajax_pagination.rst
+.. _`futher information in documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/entity_list_ajax_pagination.rst

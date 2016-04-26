@@ -15,7 +15,7 @@ Url to see changes:
 - `Media bundle`_
 - `User bundle`_
 - `Theme bundle`_
-- `Worflow function bundle`_
+- `Workflow function bundle`_
 - `Media admin bundle`_
 - `Orchestra libs`_
 - `Orchestra Mongo libs`_
@@ -73,7 +73,7 @@ Configuration changes
 - ``pace.js`` is removed and replace by a custom component ``OpenOrchestra.AjaxLoader.AjaxLoaderView``
 - To get the Back Office compatible again with Internet Explorer 9, some grunt tasks have been rewrote. Be
   sure to update your Open Orchestra tasks according to `these Pull Request`_
-- ``gridstack.js `` is removed
+- ``gridstack.js`` is removed
 - ``lodash.js`` is removed
 - Npm package ``grunt-js-test`` is added to composer.json of ``CmsBundle``
 

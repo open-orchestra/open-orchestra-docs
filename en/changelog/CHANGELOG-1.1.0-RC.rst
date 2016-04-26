@@ -15,7 +15,7 @@ Url to see changes:
 - `Media bundle`_
 - `User bundle`_
 - `Theme bundle`_
-- `Worflow function bundle`_
+- `Workflow function bundle`_
 - `Media admin bundle`_
 - `Orchestra libs`_
 - `Orchestra Mongo libs`_

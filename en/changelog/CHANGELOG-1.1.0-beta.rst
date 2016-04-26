@@ -15,7 +15,7 @@ Url to see changes:
 - `Media bundle`_
 - `User bundle`_
 - `Theme bundle`_
-- `Worflow function bundle`_
+- `Workflow function bundle`_
 - `Media admin bundle`_
 - `Orchestra libs`_
 - `Orchestra Mongo libs`_
@@ -109,25 +109,7 @@ New features
 - allow published node delete `#1384`_
 - auto-select type of search in datatable for content field type `#1382`_
 - activate content list block in front `#202`_
-- Node cache-control- `Cms bundle`_
-- `Display bundle`_
-- `BBCode bundle`_
-- `Model bundle`_
-- `Model interface`_
-- `Front bundle`_
-- `Base bundle`_
-- `Base api bundle`_
-- `Base api model bundle`_
-- `Media bundle`_
-- `User bundle`_
-- `Theme bundle`_
-- `Worflow function bundle`_
-- `Media admin bundle`_
-- `Orchestra libs`_
-- `Orchestra Mongo libs`_
-- `Media file bundle`_
-- `Elastica bundle`_
- policy differs with or without ESI support `#193`_
+- Node cache-control policy differs with or without ESI support `#193`_
 - allow end user to format boolean condition in keywords filter `#41`_
 - Media can be filtered on type when displayed from media folder `#179`_
 - Media library: applications can now describe their own specific alternatives image formats `#144`_
@@ -175,11 +157,11 @@ Other changes
 - Refacto const display strategies name `#1407`_
 - Replace strings ``elastica_search`` and ``elastica_list`` by class constant `#21`_
 - Get master request in method where it is used and not in a constructor `#150`_
-- Add the robots meta in the page header `#138`_
+- Add the robots meta in the page header `FrontBundle#138`_
 - Unskip a MediaStorageManager unit test `#8`_
 - Node order validator don't checks deleted nodes `#526`_
 - Add findByNodeAndSiteSortedByVersion() request in NodeRepository `#514`_
-- Suppression of install of nodeJS by the provisioning, it is now installed by ``composer-extra-assets``. use now ``./bin/grunt`` for grunt and not ``./node_modules/.bin/grunt `` `#34`_
+- Suppression of install of nodeJS by the provisioning, it is now installed by ``composer-extra-assets``. use now ``./bin/grunt`` for grunt and not ``./node_modules/.bin/grunt`` `#34`_
 
 .. _`Cms bundle`: https://github.com/open-orchestra/open-orchestra-cms-bundle/compare/v1.1.0-alpha4...v1.1.0-beta
 .. _`Display bundle`: https://github.com/open-orchestra/open-orchestra-display-bundle/compare/v1.1.0-alpha4...v1.1.0-beta
@@ -229,7 +211,7 @@ Other changes
 .. _`#1427`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1427
 .. _`#1422`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1422
 .. _`#1406`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1406
-.. _`#1404]`: (https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1404
+.. _`#1404`: (https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1404
 .. _`#1399`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1399
 .. _`#1398`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1398
 .. _`#1396`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1396
@@ -310,7 +292,7 @@ Other changes
 .. _`#1407`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1407
 .. _`#21`: https://github.com/open-orchestra/open-orchestra-elastica-bundle/pull/21
 .. _`#150`: https://github.com/open-orchestra/open-orchestra-front-bundle/pull/150
-.. _`#138`: https://github.com/open-orchestra/open-orchestra-front-bundle/pull/138
+.. _`FrontBundle#138`: https://github.com/open-orchestra/open-orchestra-front-bundle/pull/138
 .. _`#8`: https://github.com/open-orchestra/open-orchestra-media-file-bundle/pull/8
 .. _`#526`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/526
 .. _`#514`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/514
