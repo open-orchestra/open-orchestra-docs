@@ -15,7 +15,7 @@ Url to see changes:
 - `Media bundle`_
 - `User bundle`_
 - `Theme bundle`_
-- `Worflow function bundle`_
+- `Workflow function bundle`_
 - `Media admin bundle`_
 - `Orchestra libs`_
 - `Orchestra Mongo libs`_
@@ -91,7 +91,7 @@ Other changes
 - DataTable is updated to version 1.1.0.
   In your `bower.json` file replace lines :
 
-.. code-block:: json
+.. code-block:: javascript
 
    "datatables": "~1.10.2",
    "datatables-colvis": "~1.1.2",
@@ -99,7 +99,7 @@ Other changes
 
   by
 
-.. code-block:: json
+.. code-block:: javascript
 
    "datatables.net-buttons-bs": "1.1.0",
 
