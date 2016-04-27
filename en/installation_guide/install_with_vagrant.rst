@@ -61,15 +61,15 @@ Install the different open-orchestra part using ``composer``:
 
 .. code-block:: bash
 
-    $ ./composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs --no-scripts
-    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs --no-scripts
-    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs --no-scripts
+    $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s stable 1.1.x
+    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s stable 1.1.x
+    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/folder -s stable 1.1.x
 
 Clone the provisioning repository in another folder :
 
 .. code-block:: bash
 
-    $ git clone https://github.com/open-orchestra/open-orchestra-provision.git
+    $ git clone https://github.com/open-orchestra/open-orchestra-provision.git --branch=1.1
 
 Install roles from ansible-galaxy
 ---------------------------------
@@ -87,9 +87,9 @@ In the ``/etc/hosts`` file of your computer add the following lines :
 
 .. code-block:: text
 
-    192.168.33.10   admin.openorchestra.dev
-    192.168.33.10   demo.openorchestra.dev
-    192.168.33.10   media.openorchestra.dev
+    192.168.33.10   admin.openorchestra.1-1-dev
+    192.168.33.10   demo.openorchestra.1-1-dev
+    192.168.33.10   media.openorchestra.1-1-dev
 
 Launch the box
 --------------
@@ -140,10 +140,10 @@ In the symfony project directory ``/var/www/openorchestra`` you can load the fix
 
     $ php app/console orchestra:mongodb:fixtures:load --type=production --env=prod
 
-Now you can log on http://admin.openorchestra.dev/login with username=admin and password=admin for the CMS
-and see the result on http://demo.openorchestra.dev.
+Now you can log on http://admin.openorchestra.1-1-dev/login with username=admin and password=admin for the CMS
+and see the result on http://demo.openorchestra.1-1-dev.
 
-All the images will be visible on the http://media.openorchestra.dev url.
+All the images will be visible on the http://media.openorchestra.1-1-dev url.
 
 .. _`Download Composer`: https://getcomposer.org/download/
 .. _`Ansible installation documentation`: http://docs.ansible.com/ansible/intro_installation.html
