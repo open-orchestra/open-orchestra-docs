@@ -94,9 +94,9 @@ Install open-orchestra with composer:
 
 .. code-block:: bash
 
-    $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s 1.1.x
-    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s 1.1.x
-    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/folder -s 1.1.x
+    $ ./composer.phar create-project open-orchestra/open-orchestra path/to/your/folder -s stable 1.1.x
+    $ ./composer.phar create-project open-orchestra/open-orchestra-front-demo path/to/your/folder -s stable 1.1.x
+    $ ./composer.phar create-project open-orchestra/open-orchestra-media-demo path/to/your/folder -s stable 1.1.x
 
 Install the assets
 ------------------
