@@ -373,7 +373,7 @@ Bug fixes
 - Fix resize with picture ratio lower than 1 `#178`_
 - fix missed translation (open_orchestra_media_admin.block.display_media.title) `#162`_
 - A super admin user can view all sites when he creates a new form `#160`_
-- Fix media selection in tinyMce `#158`_
+- Fix media selection in tinyMce `media-admin#158`_
 - Media events are not properly dispatched `#156`_
 - Allow recursive merge on tinyMce Stfalcon parameters `#142`_
 - Status of contents containing a media field can now be changed `#138`_
@@ -381,7 +381,7 @@ Bug fixes
 - Fix access denied error on published node access `#524`_
 - Fix broken varnish 4 vcl `#29`_
 - As the pixel developer google chrome is not more accessible, I have suppressed the selenium role from our provisioning `#27`_
-- Fix back-to-list buttons on top in modal upload `#172`_
+- Fix back-to-list buttons on top in modal upload `media-admin#172`_
 
 New features
 ------------
@@ -407,7 +407,7 @@ New features
 - add break line in tooltip helper (\n) `#1400`_
 - allow published node delete `#1384`_
 - auto-select type of search in datatable for content field type `#1382`_
-- activate content list block in front `#202`_
+- activate content list block in front `display#202`_
 - Node cache-control policy differs with or without ESI support `#193`_
 - allow end user to format boolean condition in keywords filter `#41`_
 - Media can be filtered on type when displayed from media folder `#179`_
@@ -440,7 +440,7 @@ Possible BC breaker
 - Move Backoffice display icon folder `#1417`_
 - Move Backoffice initializer folder `#1417`_
 - change way to load dataparameter in refresh menu context `#1386`_
-- DisplayBundle/DisplayBlock/Strategies/AbstractStrategy:getCacheTags() is now abstract and must therefore be explicitally implemented on each display strategy `#200`_
+- DisplayBundle/DisplayBlock/Strategies/AbstractStrategy:getCacheTags() is now abstract and must therefore be explicitally implemented on each display strategy `display#200`_
 - Disable multi website in media folder `#185`_
 - Fixtures for production are cleaned `#530`_
 - In the front, the nodes should have the published flag to be displayed `#529`_
@@ -499,13 +499,13 @@ Other changes
 Possible BC breaker
 -------------------
 
-- The `TrashItem` document has a new property `type` `#541`_
-- The `TrashItemInterface` has a new property `type` `#172`_
-- The `TrashItemRepositoryInterface` has a new method `findByEntity($entityId)` `#172`_
+- The `TrashItem` document has a new property `type`
+- The `TrashItemInterface` has a new property `type`
+- The `TrashItemRepositoryInterface` has a new method `findByEntity($entityId)`
 
 Manual changes
 --------------
-- The `BlockContainerInterface` has a new method: `removeBlockWithKey` `#173`_
+- The `BlockContainerInterface` has a new method: `removeBlockWithKey`
 
 ------------
 
@@ -687,7 +687,7 @@ Deprecated
 .. _`#178`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/178
 .. _`#162`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/162
 .. _`#160`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/160
-.. _`#158`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/158
+.. _`media-admin#158`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/158
 .. _`#156`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/156
 .. _`#142`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/142
 .. _`#138`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/138
@@ -695,7 +695,7 @@ Deprecated
 .. _`#524`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/524
 .. _`#29`: https://github.com/open-orchestra/open-orchestra-provision/pull/29
 .. _`#27`: https://github.com/open-orchestra/open-orchestra-provision/pull/27
-.. _`#172`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/172
+.. _`media-admin#172`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/172
 .. _`#1531`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1531
 .. _`#1530`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1530
 .. _`#1522`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1522
@@ -716,7 +716,7 @@ Deprecated
 .. _`#1400`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1400
 .. _`#1384`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1384
 .. _`#1382`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1382
-.. _`#202`: https://github.com/open-orchestra/open-orchestra-display-bundle/pull/202
+.. _`display#202`: https://github.com/open-orchestra/open-orchestra-display-bundle/pull/202
 .. _`#193`: https://github.com/open-orchestra/open-orchestra-display-bundle/pull/193
 .. _`#41`: https://github.com/open-orchestra/open-orchestra-libs/pull/41
 .. _`#179`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/179
@@ -736,7 +736,7 @@ Deprecated
 .. _`#1421`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1421
 .. _`#1417`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1417
 .. _`#1386`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1386
-.. _`#200`: https://github.com/open-orchestra/open-orchestra-display-bundle/pull/200
+.. _`display#200`: https://github.com/open-orchestra/open-orchestra-display-bundle/pull/200
 .. _`#185`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/185
 .. _`#530`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/530
 .. _`#529`: https://github.com/open-orchestra/open-orchestra-model-bundle/pull/529

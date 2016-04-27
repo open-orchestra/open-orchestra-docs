@@ -9,7 +9,7 @@ Versions 1.x.x
    :caption: 1.1.x
 
    changelog/CHANGELOG-1.0-to-1.1
-   changelog/CHANGELOG-1.1.0
+   changelog/CHANGELOG-1.1.0-RC-to-1.1.0
    changelog/CHANGELOG-1.1.0-RC
    changelog/CHANGELOG-1.1.0-beta
    changelog/CHANGELOG-1.1.0-alpha4
