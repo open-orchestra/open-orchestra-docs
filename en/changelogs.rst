@@ -2,7 +2,7 @@
 =====
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 1.1.x
 
    changelog/CHANGELOG-1.1.0-RC
@@ -16,7 +16,7 @@
 =====
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 1.0.x
 
    changelog/CHANGELOG-1.0.4
@@ -31,7 +31,7 @@
 =====
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 0.3.x
 
    changelog/CHANGELOG-0.3.4
@@ -44,7 +44,7 @@
 =====
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 0.2.x
 
    changelog/CHANGELOG-0.2.12
@@ -65,7 +65,7 @@
 =====
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 0.1.x
 
    changelog/CHANGELOG-0.1.4
@@ -78,7 +78,7 @@
 =====
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: 0.0.x
 
    changelog/CHANGELOG-0.0.7
