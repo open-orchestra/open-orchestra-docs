@@ -66,7 +66,7 @@ Example :
     apache_conf:
         demo-orchestra.conf:
             port: 8000
-            serverName: demo.openorchestra.dev
+            serverName: demo.openorchestra.1-0.dev
             docRoot: /var/www/front-open-orchestra/web
             errorLog: demo-openorchestraError.log
             accessLog: demo-openorchestraAccess.log
