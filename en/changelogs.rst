@@ -1,5 +1,8 @@
+Versions 1.x.x
+==============
+
 1.1.x
-=====
+-----
 
 .. toctree::
    :maxdepth: 1
@@ -13,7 +16,7 @@
    changelog/CHANGELOG-1.1.0-alpha1
 
 1.0.x
-=====
+-----
 
 .. toctree::
    :maxdepth: 1
@@ -27,8 +30,11 @@
    changelog/CHANGELOG-1.0.0-RC-2
    changelog/CHANGELOG-1.0.0-RC-1
 
+Versions 0.x.x
+==============
+
 0.3.x
-=====
+-----
 
 .. toctree::
    :maxdepth: 1
@@ -41,7 +47,7 @@
    changelog/CHANGELOG-0.3.0
 
 0.2.x
-=====
+-----
 
 .. toctree::
    :maxdepth: 1
@@ -62,7 +68,7 @@
    changelog/CHANGELOG-0.2.0
 
 0.1.x
-=====
+-----
 
 .. toctree::
    :maxdepth: 1
@@ -75,7 +81,7 @@
    changelog/CHANGELOG-0.1.0
 
 0.0.x
-=====
+-----
 
 .. toctree::
    :maxdepth: 1
