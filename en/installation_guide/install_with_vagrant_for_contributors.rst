@@ -10,6 +10,7 @@ Open Orchestra is composed of three projects:
 
 For contributors, we provide a Vagrant-powered environment with provisioning so you get minimal
 setup actions to do.
+
 Install Vagrant
 ---------------
 The project is running on a Vagrant virtual environment built on VirtualBox to be production ready.
@@ -60,7 +61,8 @@ see `Download Composer`_
 Install OpenOrchestra
 ---------------------
 
-To contribute on the project you have to install tree versions: the 1.2 version, 1.1 version and 1.0 version. The master branch is the branch which should be used to add new features to the project.
+To contribute on the project you have to install tree versions: the 1.2 version, 1.1 version and 1.0 version.
+The 1.2 version is the branch which should be used to add new features to the project.
 Here is the directory tree with your tree projects that we recommand:
 
 .. code-block:: none
