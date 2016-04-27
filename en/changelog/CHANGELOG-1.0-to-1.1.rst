@@ -22,6 +22,8 @@ Url to see changes:
 - `Media file bundle`_
 - `Elastica bundle`_
 
+------------
+
 Changelog 1.0.0 to 1.1.0-alpha1
 -------------------------------
 
@@ -52,6 +54,8 @@ Deprecated method
 
 - Some method from the `NodeRepositoryInterface` and `ContentRepositoryInterface` `have been deprecated`_
 - The method `findByNodeType` has been deprecated
+
+------------
 
 Changelog 1.1.0-alpha1 to 1.1.0-alpha2
 --------------------------------------
@@ -158,6 +162,8 @@ Deprecated method
 - The class `OpenOrchestra\ModelInterface\Repository\PaginateRepositoryInterface` has been replaced by
   `OpenOrchestra\Pagination\Configuration\PaginationRepositoryInterface`
 
+------------
+
 Changelog 1.1.0-alpha2 to 1.1.0-alpha3
 --------------------------------------
 
@@ -256,6 +262,8 @@ Deprecated method
 - The `VersionableSaver` has been moved in the `Saver` folder
 - The role constant `ROLE_ACCESS_GENERAL_NODE` has been replaced by `ROLE_ACCESS_TREE_GENERAL_NODE`
 
+------------
+
 Changelog 1.1.0-alpha3 to 1.1.0-alpha4
 --------------------------------------
 
@@ -308,6 +316,7 @@ Configuration changes
 - ``lodash.js`` is removed
 - Npm package ``grunt-js-test`` is added to composer.json of ``CmsBundle``
 
+------------
 
 Changelog 1.1.0-alpha4 to 1.1.0-beta
 ------------------------------------
@@ -453,6 +462,8 @@ Other changes
 - Add findByNodeAndSiteSortedByVersion() request in NodeRepository `#514`_
 - Suppression of install of nodeJS by the provisioning, it is now installed by ``composer-extra-assets``. use now ``./bin/grunt`` for grunt and not ``./node_modules/.bin/grunt`` `#34`_
 
+------------
+
 Changelog 1.1.0-beta to 1.1.0-RC
 --------------------------------
 
@@ -495,6 +506,8 @@ Possible BC breaker
 Manual changes
 --------------
 - The `BlockContainerInterface` has a new method: `removeBlockWithKey` `#173`_
+
+------------
 
 Changelog 1.1.0-RC to 1.1.0
 ---------------------------
