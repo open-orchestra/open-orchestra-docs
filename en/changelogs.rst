@@ -79,7 +79,7 @@ Versions 0.x.x
    changelog/CHANGELOG-0.1.2
    changelog/CHANGELOG-0.1.1
    changelog/CHANGELOG-0.1.0
-   
+
 0.0.x
 -----
 
