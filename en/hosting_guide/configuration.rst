@@ -18,7 +18,7 @@ Back Office Virtual Host:
 
     <VirtualHost *:80>
         ServerAdmin webmaster@localhost
-        ServerName admin.openorchestra.dev
+        ServerName admin.openorchestra.1-1-dev
 
         DocumentRoot  /path/to/your/open_orchestra/bo_installation/folder/web
         <Directory />
@@ -52,7 +52,7 @@ Front Office Virtual Host:
 
     <VirtualHost *:80>
         ServerAdmin webmaster\@localhost
-        ServerName front.openorchestra.dev
+        ServerName front.openorchestra.1-1-dev
 
         DocumentRoot /path/to/your/open_orchestra/front_installation/folder/web
         <Directory />
@@ -158,7 +158,7 @@ This vcl is a basic configuration example to use the esi render.
             set req.http.X-UA-Device = "android";
         }
 
-        if(req.http.host ~ "(admin.openorchestra.dev)") {
+        if(req.http.host ~ "(admin.openorchestra.1-1-dev)") {
             return (pass);
         }
 
