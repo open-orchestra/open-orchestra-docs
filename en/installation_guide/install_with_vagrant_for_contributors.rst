@@ -106,9 +106,9 @@ Here is the directory tree with your tree projects that we recommand:
   
   .. code-block:: bash
 
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s stable --ignore-platform-reqs --no-scripts --keep-vcs 1.1.x
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s stable --ignore-platform-reqs --no-scripts --keep-vcs 1.1.x
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s stable --ignore-platform-reqs --no-scripts --keep-vcs 1.1.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.1.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.1.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.1.x
 
   Clone the 1.1 provisioning repository. Don’t forget to specify the last 1.1 version branch
   with the ``--branch`` option.
@@ -123,9 +123,9 @@ Here is the directory tree with your tree projects that we recommand:
 
   .. code-block:: bash
 
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s stable --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s stable --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s stable --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
 
   Clone the 1.0 provisioning repository. Don’t forget to specify the last 1.0 version branch
   with the ``--branch`` option.
