@@ -41,17 +41,21 @@ the integration server
 .. code-block:: bash
 
     # ~/.ssh/config
-    Host open_orchestra_front_inte
-        Hostname 10.0.1.246
-        User open_orchestra_front_inte
+    Host open_orchestra_bo_inte_1-2
+        Hostname 10.0.1.227
+        User open_orchestra_bo_inte_1-2
         ForwardAgent yes
-    Host open_orchestra_media_inte
-        Hostname 10.0.1.246
-        User open_orchestra_media_inte
+    Host open_orchestra_front_inte_1-2
+        Hostname 10.0.1.227
+        User open_orchestra_front_inte_1-2
         ForwardAgent yes
-    Host open_orchestra_backoffice_inte
-        Hostname 10.0.1.246
-        User open_orchestra_backoffice_inte
+    Host open_orchestra_front2_inte_1-2
+        Hostname 10.0.1.227
+        User open_orchestra_front2_inte_1-2
+        ForwardAgent yes
+    Host open_orchestra_media_inte_1-2
+        Hostname 10.0.1.227
+        User open_orchestra_media_inte_1-2
         ForwardAgent yes
 
 Test the command
@@ -70,7 +74,7 @@ Before deploying the project, make sure that the ``composer.lock`` file is up-to
 
 .. code-block:: bash
 
-    $ cap inte composer:update_vendor
+    $ cap 1.2 composer:update_vendor
 
 This task run ``composer update vendor`` on the server to update ``composer.lock`` and create a branch on GitHub.
 
@@ -80,7 +84,7 @@ Then you can run the deploy command in the project directory
 
 .. code-block:: bash
 
-    $ cap inte deploy
+    $ cap 1.2 deploy
 
 Once this is done, your server has been updated.
 
