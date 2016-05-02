@@ -41,17 +41,21 @@ the integration server
 .. code-block:: bash
 
     # ~/.ssh/config
-    Host open_orchestra_front_inte
-        Hostname 10.0.1.246
-        User open_orchestra_front_inte
+    Host open_orchestra_bo_inte_1-1
+        Hostname 10.0.1.228
+        User open_orchestra_bo_inte_1-1
         ForwardAgent yes
-    Host open_orchestra_media_inte
-        Hostname 10.0.1.246
-        User open_orchestra_media_inte
+    Host open_orchestra_front_inte_1-1
+        Hostname 10.0.1.228
+        User open_orchestra_front_inte_1-1
         ForwardAgent yes
-    Host open_orchestra_backoffice_inte
-        Hostname 10.0.1.246
-        User open_orchestra_backoffice_inte
+    Host open_orchestra_front2_inte_1-1
+        Hostname 10.0.1.228
+        User open_orchestra_front2_inte_1-1
+        ForwardAgent yes
+    Host open_orchestra_media_inte_1-1
+        Hostname 10.0.1.228
+        User open_orchestra_media_inte_1-1
         ForwardAgent yes
 
 Test the command
@@ -61,7 +65,7 @@ Run the following command to test the installation and connection to the server
 
 .. code-block:: bash
 
-    $ cap inte deploy:log_revision
+    $ cap 1.1 deploy:log_revision
 
 Deploy
 ------
@@ -80,7 +84,7 @@ Then you can run the deploy command in the project directory
 
 .. code-block:: bash
 
-    $ cap inte deploy
+    $ cap 1.1 deploy
 
 Once this is done, your server has been updated.
 
