@@ -17,7 +17,7 @@ computer running the application, you should add the ``indexation`` group to the
 .. code-block:: none
 
     [indexation]
-    admin.openorchestra.1-1-dev
+    admin.openorchestra.1-1.dev
 
 You should also add some configuration to the ``provisioning/hosts/group_vars/vagrant`` file:
 
