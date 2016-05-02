@@ -87,9 +87,9 @@ In the ``/etc/hosts`` file of your computer add the following lines :
 
 .. code-block:: text
 
-    192.168.33.10   admin.openorchestra.1-1-dev
-    192.168.33.10   demo.openorchestra.1-1-dev
-    192.168.33.10   media.openorchestra.1-1-dev
+    192.168.33.10   admin.openorchestra.1-1.dev
+    192.168.33.10   demo.openorchestra.1-1.dev
+    192.168.33.10   media.openorchestra.1-1.dev
 
 Launch the box
 --------------
@@ -140,10 +140,10 @@ In the symfony project directory ``/var/www/openorchestra`` you can load the fix
 
     $ php app/console orchestra:mongodb:fixtures:load --type=production --env=prod
 
-Now you can log on http://admin.openorchestra.1-1-dev/login with username=admin and password=admin for the CMS
-and see the result on http://demo.openorchestra.1-1-dev.
+Now you can log on http://admin.openorchestra.1-1.dev/login with username=admin and password=admin for the CMS
+and see the result on http://demo.openorchestra.1-1.dev.
 
-All the images will be visible on the http://media.openorchestra.1-1-dev url.
+All the images will be visible on the http://media.openorchestra.1-1.dev url.
 
 .. _`Download Composer`: https://getcomposer.org/download/
 .. _`Ansible installation documentation`: http://docs.ansible.com/ansible/intro_installation.html
