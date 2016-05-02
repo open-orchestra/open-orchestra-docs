@@ -119,9 +119,9 @@ In the ``/etc/hosts`` file of your computer add the following lines:
 
 .. code-block:: text
 
-    192.168.33.10   admin.openorchestra.1-1-dev
-    192.168.33.10   demo.openorchestra.1-1-dev
-    192.168.33.10   media.openorchestra.1-1-dev
+    192.168.33.10   admin.openorchestra.1-1.dev
+    192.168.33.10   demo.openorchestra.1-1.dev
+    192.168.33.10   media.openorchestra.1-1.dev
 
     192.168.33.11   admin.openorchestra.1-0-dev
     192.168.33.11   demo.openorchestra.1-0-dev
