@@ -102,5 +102,5 @@ properties.
         return $fooDocument->getBar();
     }
 
-.. _`content type`: /en/user_guide/content_type.rst
-.. _`content`: /en/user_guide/content.rst
+.. _`content type`: /en/latest/user_guide/content_type.rst
+.. _`content`: /en/latest/user_guide/content.rst
