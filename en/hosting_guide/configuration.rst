@@ -279,8 +279,8 @@ If you don't want set the different configurations (Virtual Host, Varnish, Cron)
 
 
 .. _ESI: en/developer_guide/esi.rst
-.. _requirements: /en/hosting_guide/requirements.rst
-.. _sitemap: /en/developer_guide/sitemap.rst
-.. _robots: /en/developer_guide/robots.rst
-.. _customizing error pages: /en/developer_guide/error_pages.rst
+.. _requirements: /en/latest/hosting_guide/requirements.rst
+.. _sitemap: /en/latest/developer_guide/sitemap.rst
+.. _robots: /en/latest/developer_guide/robots.rst
+.. _customizing error pages: /en/latest/developer_guide/error_pages.rst
 .. _provisioning: en/hosting_guide/server_provisioning.rst

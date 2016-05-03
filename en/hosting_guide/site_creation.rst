@@ -95,10 +95,10 @@ in the website form. See `Robots.txt documentation`_ for more information about 
 You may also want to generate the sitemap.xml of your site. To do this you can run a simple command
 line. See `Sitemap.xml documentation`_ for more information about this.
 
-.. _website creation page: /en/user_guide/website_creation.rst
-.. _user page: /en/user_guide/user.rst
-.. _node page: /en/user_guide/node.rst
-.. _node configuration page: /en/user_guide/node_configuration.rst
-.. _documentation on error pages: /en/developer_guide/error_pages.rst
-.. _`Robots.txt documentation`: /en/developer_guide/robots.rst
-.. _`Sitemap.xml documentation`: /en/developer_guide/sitemap.rst
+.. _website creation page: /en/latest/user_guide/website_creation.rst
+.. _user page: /en/latest/user_guide/user.rst
+.. _node page: /en/latest/user_guide/node.rst
+.. _node configuration page: /en/latest/user_guide/node_configuration.rst
+.. _documentation on error pages: /en/latest/developer_guide/error_pages.rst
+.. _`Robots.txt documentation`: /en/latest/developer_guide/robots.rst
+.. _`Sitemap.xml documentation`: /en/latest/developer_guide/sitemap.rst

@@ -217,8 +217,8 @@ Finally, you can add some translation on the role. To separate the role translat
 application, we use the ``role`` domain. This way, you will have to add the translation in the
 ``role.en.yml`` file (for the ``en`` locale).
 
-.. _`group`: /en/user_guide/user.rst
+.. _`group`: /en/latest/user_guide/user.rst
 .. _`compiler pass`: http://symfony.com/doc/current/cookbook/service_container/compiler_passes.html
-.. _`Backbone routing in Open Orchestra`: /en/developer_guide/backbone_routing.rst
-.. _`Entity list`: /en/developer_guide/entity_list_ajax_pagination.rst
+.. _`Backbone routing in Open Orchestra`: /en/latest/developer_guide/backbone_routing.rst
+.. _`Entity list`: /en/latest/developer_guide/entity_list_ajax_pagination.rst
 .. _`DataTables library`: https://www.datatables.net/

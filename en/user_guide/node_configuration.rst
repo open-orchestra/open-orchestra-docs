@@ -132,4 +132,4 @@ Template id
 
 The template id allows to define a template that should be use as a basis for the page.
 
-.. _`node`: /en/user_guide/node.rst
+.. _`node`: /en/latest/user_guide/node.rst

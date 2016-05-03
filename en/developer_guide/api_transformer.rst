@@ -194,5 +194,5 @@ keep the same parameter.
         return $fooEntity;
     }
 
-.. _`group context page`: /en/developer_guide/api_group_context.rst
+.. _`group context page`: /en/latest/developer_guide/api_group_context.rst
 .. _`Facade design pattern`: https://en.wikipedia.org/wiki/Facade_pattern

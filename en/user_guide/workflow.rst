@@ -92,4 +92,4 @@ The last column indicates whether that right concerns only the contributions of 
 
 .. image:: ../../images/workflow_right_form.png
 
-.. _group management: /en/user_guide/user.rst
+.. _group management: /en/latest/user_guide/user.rst

@@ -130,5 +130,5 @@ Finally, the getName method must return the same name as the overloaded block.
 This method will give you the opportunity to totaly redifine the block, from the dependency needed
 to the working logic and the template used.
 
-.. _`block parameter`: /en/developer_guide/block_parameter.rst
+.. _`block parameter`: /en/latest/developer_guide/block_parameter.rst
 .. _`symfony2 documentation`: http://symfony.com/doc/current/cookbook/controller/error_pages.html

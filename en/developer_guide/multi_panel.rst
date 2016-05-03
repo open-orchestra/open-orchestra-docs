@@ -110,4 +110,4 @@ Then add title to the ``formAction`` function in the ``WorkflowRightController``
         return $this->renderAdminForm($form, array('title' => $title));
      }
 
-.. _`use a custom Backbone view`: /en/developer_guide/specific_backbone_view.rst
+.. _`use a custom Backbone view`: /en/latest/developer_guide/specific_backbone_view.rst
