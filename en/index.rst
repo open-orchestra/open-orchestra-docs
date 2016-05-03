@@ -14,13 +14,6 @@ The main documentation is organized into several sections:
 * :ref:`hosting-guide`
 * :ref:`misc`
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
 .. _changlogs:
 
 .. toctree::
