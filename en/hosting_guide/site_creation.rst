@@ -95,7 +95,7 @@ in the website form. See `Robots.txt documentation`_ for more information about 
 You may also want to generate the sitemap.xml of your site. To do this you can run a simple command
 line. See `Sitemap.xml documentation`_ for more information about this.
 
-.. _website creation page: ../user_guide/website_creation.html
+.. _website creation page: ../user_guide/websites_creation.html
 .. _user page: ../user_guide/user.html
 .. _node page: ../user_guide/node.html
 .. _node configuration page: ../user_guide/node_configuration.html
