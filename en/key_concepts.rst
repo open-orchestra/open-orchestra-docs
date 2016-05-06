@@ -62,10 +62,10 @@ Aggregating blocks found in the nodes will lead to the construction of the pages
 
 See also the `list of blocks`_ available.
 
-Transverses blocks
+Transverse blocks
 ------------------
 
-Transverses blocks are defined inside the transverse node, they can be shared by several nodes of a website.
+Transverse blocks are defined inside the transverse node, they can be shared by several nodes of a website.
 All blocks can be transverse, as long as they are added to the transverse node.
 Transverse blocks can only be configured in the transverse node.
 
@@ -142,16 +142,16 @@ the interfaces defined in open-orchestra-model-interface.
 
 
 
-.. _role: /en/latest/user_guide/role.html
-.. _site: /en/latest/user_guide/websites_creation.html
-.. _user: /en/latest/user_guide/user.html
-.. _theme: /en/latest/developer_guide/themes.html
-.. _group:
-.. _website: /en/latest/user_guide/websites_creation.html
-.. _multi-devices: /en/latest/developer_guide/multi_device.html
-.. _list of blocks: /en/latest/user_guide/block_list.html
-.. _node parameters: /en/latest/user_guide/node_configuration.html
+.. _role: ./user_guide/role.html
+.. _site: ./user_guide/websites_creation.html
+.. _user: ./user_guide/user.html
+.. _theme: ./developer_guide/themes.html
+.. _group: ./user_guide/user.html#group-management
+.. _website: ./user_guide/websites_creation.html
+.. _multi-devices: ./developer_guide/multi_device.html
+.. _list of blocks: ./user_guide/block_list.html
+.. _node parameters: ./user_guide/node_configuration.html
 .. _configuring a zone:
 .. _configuring a template:
-.. _Presentation of contents: /en/latest/user_guide/content.html
-.. _Presentation of the Content Types: /en/latest/user_guide/content_type.html
+.. _Presentation of contents: ./user_guide/content.html
+.. _Presentation of the Content Types: ./user_guide/content_type.html
