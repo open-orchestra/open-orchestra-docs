@@ -30,8 +30,8 @@ contributed in global pages appear with a blue background, while standard blocks
 Contribution of global blocks works the same way as other blocks (see `managing block in node`_),
 except that they can be edited only on the node they where created in, ie their global page.
 
-.. _`managing block in node`: /en/latest/user_guide/node.rst#managing-blocks-in-nodes
-.. _`Block creation`: /en/latest/developer_guide/block_creation.rst
-.. _`Block list`: /en/latest/user_guide/block_list.rst
-.. _`Node`: /en/latest/user_guide/node.rst
-.. _workflow: /en/latest/user_guide/workflow.rst
+.. _`managing block in node`: /en/latest/user_guide/node.html#managing-blocks-in-nodes
+.. _`Block creation`: /en/latest/developer_guide/block_creation.html
+.. _`Block list`: /en/latest/user_guide/block_list.html
+.. _`Node`: /en/latest/user_guide/node.html
+.. _workflow: /en/latest/user_guide/workflow.html

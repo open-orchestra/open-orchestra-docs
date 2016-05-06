@@ -16,5 +16,5 @@ The form contains :
 * Site: The site target of the link as Open Orchestra is multi-site. The site aliases of the choosen site could be seen by clicking the refresh button and one could be specified.
 * Query string: optional parameters definition (param0=value0&param1=value1&param2=value2)
 
-.. _contents display documentation: ./content_display.rst
-.. _boolean expression: ./boolean_expression.rst
+.. _contents display documentation: ./content_display.html
+.. _boolean expression: ./boolean_expression.html

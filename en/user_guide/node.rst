@@ -104,8 +104,8 @@ The eye is visible only if the block is not a transverse block.
 
 
 .. _workflow:
-.. _node configuration: /en/latest/user_guide/node_configuration.rst
-.. _site configuration: /en/latest/user_guide/websites_creation.rst
+.. _node configuration: /en/latest/user_guide/node_configuration.html
+.. _site configuration: /en/latest/user_guide/websites_creation.html
 .. _node and block transverse:
-.. _block list: /en/latest/user_guide/block_list.rst
-.. _blocks: /en/latest/key_concepts.rst#blocks
+.. _block list: /en/latest/user_guide/block_list.html
+.. _blocks: /en/latest/key_concepts.html#blocks

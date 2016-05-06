@@ -337,4 +337,4 @@ the server can interact with the rendering of the search field for instance.
 
 .. _`DataTables`: https://www.datatables.net/
 .. _`documentation`: https://www.datatables.net/manual/server-side#Sent-parameters
-.. _`navigation panel`: /en/latest/developer_guide/ǹavigation_panel.rst
+.. _`navigation panel`: /en/latest/developer_guide/ǹavigation_panel.html

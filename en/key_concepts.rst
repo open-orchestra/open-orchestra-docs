@@ -62,10 +62,10 @@ Aggregating blocks found in the nodes will lead to the construction of the pages
 
 See also the `list of blocks`_ available.
 
-Transverses blocks
+Transverse blocks
 ------------------
 
-Transverses blocks are defined inside the transverse node, they can be shared by several nodes of a website.
+Transverse blocks are defined inside the transverse node, they can be shared by several nodes of a website.
 All blocks can be transverse, as long as they are added to the transverse node.
 Transverse blocks can only be configured in the transverse node.
 
