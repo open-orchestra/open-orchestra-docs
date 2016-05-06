@@ -642,10 +642,10 @@ Deprecated
 .. _`Elastica bundle`: https://github.com/open-orchestra/open-orchestra-elastica-bundle/compare/1.0...v1.1.0
 .. _`have been deprecated`: https://github.com/open-orchestra/open-orchestra-model-interface/pull/119
 .. _`PHP driver PHP-FFMpeg`: https://github.com/PHP-FFMpeg/PHP-FFMpeg
-.. _`documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/entity_list_ajax_pagination.rst
-.. _`information in documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/bundle_configuration.rst
-.. _`futher information in the documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/media_gaufrette.rst
-.. _`assets documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/assets_bower_npm.rst
+.. _`documentation`: ../../developer_guide/entity_list_ajax_pagination.html
+.. _`information in documentation`: ../../developer_guide/bundle_configuration.html
+.. _`futher information in the documentation`: ../../developer_guide/media_gaufrette.html
+.. _`assets documentation`: ../../developer_guide/assets_bower_npm.html
 .. _`these Pull Request`: https://github.com/open-orchestra/open-orchestra/pull/791/files
 .. _`#853`: https://github.com/open-orchestra/open-orchestra/pull/853
 .. _`#1397`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1397

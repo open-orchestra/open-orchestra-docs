@@ -211,7 +211,7 @@ Other changes
 .. _`#1427`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1427
 .. _`#1422`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1422
 .. _`#1406`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1406
-.. _`#1404`: (https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1404
+.. _`#1404`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1404
 .. _`#1399`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1399
 .. _`#1398`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1398
 .. _`#1396`: https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1396

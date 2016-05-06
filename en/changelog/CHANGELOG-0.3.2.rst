@@ -63,4 +63,4 @@ Configuration changes
 .. _`User bundle`: https://github.com/open-orchestra/open-orchestra-user-bundle/compare/v0.3.1...v0.3.2
 .. _`Theme bundle`: https://github.com/open-orchestra/open-orchestra-theme-bundle/compare/v0.3.1...v0.3.2
 .. _`Worflow function bundle`: https://github.com/open-orchestra/open-orchestra-worflow-function-bundle/compare/v0.3.1...v0.3.2
-.. _`futher informations in the documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/add_doc_server_search_list/en/developer_guide/entity_list_ajax_pagination.rst
+.. _`futher informations in the documentation`: ../../developer_guide/entity_list_ajax_pagination.html

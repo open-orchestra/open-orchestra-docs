@@ -137,6 +137,6 @@ Configuration changes
 .. _`Media admin bundle`: https://github.com/open-orchestra/open-orchestra-media-admin-bundle/compare/v1.1.0-alpha2...v1.1.0-alpha3
 .. _`Orchestra libs`: https://github.com/open-orchestra/open-orchestra-libs/compare/v1.1.0-alpha2...v1.1.0-alpha3
 .. _`Orchestra Mongo libs`: https://github.com/open-orchestra/open-orchestra-mongo-libs/compare/v1.1.0-alpha2...v1.1.0-alpha3
-.. _`documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/entity_list_ajax_pagination.rst
-.. _`information in documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/bundle_configuration.rst
-.. _`futher information in the documentation`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/media_gaufrette.rst
+.. _`documentation`: ../../developer_guide/entity_list_ajax_pagination.html
+.. _`information in documentation`: ../../developer_guide/bundle_configuration.html
+.. _`futher information in the documentation`: ../../developer_guide/media_gaufrette.html

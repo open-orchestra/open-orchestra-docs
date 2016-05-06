@@ -136,4 +136,4 @@ Configuration changes
 .. _`User bundle`: https://github.com/open-orchestra/open-orchestra-user-bundle/compare/v0.2.11...v0.2.12
 .. _`Theme bundle`: https://github.com/open-orchestra/open-orchestra-theme-bundle/compare/v0.2.11...v0.2.12
 .. _`Worflow function bundle`: https://github.com/open-orchestra/open-orchestra-worflow-function-bundle/compare/v0.2.11...v0.2.12
-.. _`dataTable are changed`: https://github.com/open-orchestra/open-orchestra-docs/blob/master/en/developer_guide/entity_list_ajax_pagination.rst
+.. _`dataTable are changed`: ../../developer_guide/entity_list_ajax_pagination.html
