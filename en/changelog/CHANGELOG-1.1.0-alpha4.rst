@@ -95,5 +95,5 @@ Configuration changes
 .. _`Orchestra Mongo libs`: https://github.com/open-orchestra/open-orchestra-mongo-libs/compare/v1.1.0-alpha3...v1.1.0-alpha4
 .. _`Media file bundle`: https://github.com/open-orchestra/open-orchestra-media-file-bundle/compare/v1.1.0-alpha3...v1.1.0-alpha4
 .. _`Elastica bundle`: https://github.com/open-orchestra/open-orchestra-elastica-bundle/compare/722ddfb89d696440aa62c7257c6ed0c9933e5b29...v1.1.0-alpha4
-.. _`documentation`:../developer_guide/assets_bower_npm.html
+.. _`documentation`: ../developer_guide/assets_bower_npm.html
 .. _`these Pull Request`: https://github.com/open-orchestra/open-orchestra/pull/791/files
