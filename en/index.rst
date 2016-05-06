@@ -123,7 +123,6 @@ The main documentation is organized into several sections:
    hosting_guide/server_provisioning
    hosting_guide/logs
    hosting_guide/migration
-   hosting_guide/site_creation
 
 .. _misc:
 
