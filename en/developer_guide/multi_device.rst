@@ -141,5 +141,5 @@ Note that if an alternative version is not created, the fallback mechanism will 
 alternative. So again, each alternative are optionals, but the default template is required to prevent
 the fallback mechanism to crash.
 
-.. _device detection: /en/latest/developer_guide/multi_device.rst#device-detection
+.. _device detection: ../developer_guide/multi_device.html#device-detection
 .. _Wurfl library: http://wurfl.sourceforge.net

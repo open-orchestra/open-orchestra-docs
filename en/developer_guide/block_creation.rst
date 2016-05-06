@@ -106,4 +106,4 @@ In the Front Office application, each block is rendered in an ESI block using th
 
 See also `ESI blocks`_.
 
-.. _ESI blocks: /en/latest/developer_guide/esi.rst
+.. _ESI blocks: ../developer_guide/esi.html

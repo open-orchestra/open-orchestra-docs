@@ -278,9 +278,9 @@ Ansible
 If you don't want set the different configurations (Virtual Host, Varnish, Cron) manually, you can use the `provisioning`_.
 
 
-.. _ESI: en/developer_guide/esi.rst
-.. _requirements: /en/latest/hosting_guide/requirements.rst
-.. _sitemap: /en/latest/developer_guide/sitemap.rst
-.. _robots: /en/latest/developer_guide/robots.rst
-.. _customizing error pages: /en/latest/developer_guide/error_pages.rst
-.. _provisioning: en/hosting_guide/server_provisioning.rst
+.. _ESI: ../developer_guide/esi.html
+.. _requirements: ../hosting_guide/requirements.html
+.. _sitemap: ../developer_guide/sitemap.html
+.. _robots: ../developer_guide/robots.html
+.. _customizing error pages: ../developer_guide/error_pages.html
+.. _provisioning: ../hosting_guide/server_provisioning.html

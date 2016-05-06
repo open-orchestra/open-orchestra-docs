@@ -85,4 +85,4 @@ Every further modification will modify the file content but not its name, so you
 the rewrite rule. Since then you can update the file periodically without having to restart the
 webserver.
 
-.. _`node configuration documentation`: /en/latest/user_guide/node_configuration.rst
+.. _`node configuration documentation`: ../user_guide/node_configuration.html

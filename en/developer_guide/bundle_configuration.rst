@@ -480,4 +480,4 @@ This bundle will add the different assets (js and css files) to the different fi
                 stylesheets:          []
                 javascripts:          []
 
-.. _`field type`: /en/latest/developer_guide/field_type.rst
+.. _`field type`: ../developer_guide/field_type.html

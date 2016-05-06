@@ -142,4 +142,4 @@ You are not using the Open Orchestra Back Office :
 * Use the database routing, but note that you need to update the ``route_document`` collection each time
   a node is updated
 
-.. _`Node Configuration`: /en/latest/user_guide/node_configuration.rst
+.. _`Node Configuration`: ../user_guide/node_configuration.html

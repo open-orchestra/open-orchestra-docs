@@ -120,4 +120,4 @@ robots.txt file example
 User-agent: * means that one or several instruction (s) which follow applies for all the agents.
 Allow: / means that the search engine can browse all the directories and the pages of the site.
 
-.. _routing documentation: /en/latest/developer_guide/routing.rst
+.. _routing documentation: ../developer_guide/routing.html

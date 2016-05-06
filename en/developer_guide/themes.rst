@@ -37,4 +37,4 @@ The path of a resource is determined from the configuration. For instance, for t
 ``AcmeBundle:foo:css/style.css``, the file will be located at
 ``[AcmeBundle folder]/Resources/public/themes/foo/css/style.css``.
 
-.. _`Twig extensions page`: /en/latest/developer_guide/twig-extensions.rst
+.. _`Twig extensions page`: ../developer_guide/twig-extensions.html
