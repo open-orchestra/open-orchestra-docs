@@ -103,4 +103,4 @@ the default value of your field ``custom_textarea`` created above.
 The ``textarea.default_value.options`` key are options proposed by Symfony for
 the textarea form type (max length, label, trim, disabled, etc).
 
-.. _`Content Types documentation`: /en/latest/user_guide/content_type.html
+.. _`Content Types documentation`: ../user_guide/content_type.html

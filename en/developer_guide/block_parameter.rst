@@ -124,4 +124,4 @@ The generate method will need the ``translator`` service in order to find the tr
 
 In the sub-request, the ``foo`` parameter will be added to the request parameters.
 
-.. _`ESI`: /en/latest/developer_guide/esi.html
+.. _`ESI`: ../developer_guide/esi.html

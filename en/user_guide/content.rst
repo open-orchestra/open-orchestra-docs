@@ -56,6 +56,6 @@ The contents are not directly accessible in Front Office. Like everything visibl
 are displayed through blocks. See the documentation on the `Contents display`_ for more information about it.
 
 
-.. _Content Types: ./content_types.html
+.. _Content Types: ./content_type.html
 .. _workflow:
 .. _Contents display: ./content_display.html
