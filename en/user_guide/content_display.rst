@@ -74,4 +74,4 @@ Contribution
 To get the block working, the contributor must first choose a content type then choose the content to
 display.
 
-.. _node configuration: /en/latest/user_guide/node_configuration.html
+.. _node configuration: ../user_guide/node_configuration.html

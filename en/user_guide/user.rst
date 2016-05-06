@@ -42,5 +42,5 @@ Using group is the recommended way to give users some rights.
 
 .. image:: ../../images/group_form.png
 
-.. _`workflow`: /en/latest/user_guide/workflow.html
-.. _`roles are already created in the fixture`: /en/latest/user_guide/role.html
+.. _`workflow`: ../user_guide/workflow.html
+.. _`roles are already created in the fixture`: ../user_guide/role.html
