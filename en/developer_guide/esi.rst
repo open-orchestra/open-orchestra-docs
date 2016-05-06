@@ -85,16 +85,15 @@ The generic tags are added for all kind of blocks, they depend on :
 Additionally, each rendering strategy for blocks can define a list of specific tags
 by implementing the method ``DisplayBlockInterface::getCacheTags()``.
 
-By default, Open Orchestra provides some tag that can used in your rendering strategies.
+By default, Open Orchestra provides some tag that can used in your rendering strategies :
+
+* ``node- + NODE_ID`` : Invalidate when node status is updated.
+* ``contentType- + CONTENT_TYPE`` : Invalidate when content type is updated or deleted.
+* ``contentId- + CONTENT_ID`` : Invalidate when content status is updated or content is deleted.
+* ``mediaId- + MEDIA_ID`` : Invalidate when media is updated or deleted.
+* ``menu- + SITE_ID`` : Invalidate when a node of this site is deleted, restored, his status changed or his path is updated.
 
 These tags are gathered in the ``OpenOrchestra\BaseBundle\Manager\TagManager`` class.
-
- * ``node- + NODE_ID`` : Invalidate when node status is updated.
- * ``contentType- + CONTENT_TYPE`` : Invalidate when content type is updated or deleted.
- * ``contentId- + CONTENT_ID`` : Invalidate when content status is updated or content is deleted.
- * ``mediaId- + MEDIA_ID`` : Invalidate when media is updated or deleted.
- * ``menu- + SITE_ID`` : Invalidate when a node of this site is deleted, restored, his status changed or his path is updated.
-
 
 If this tags isn't enough,
 It's possible to define new cache tags for some data to be flushed at optimal times,
