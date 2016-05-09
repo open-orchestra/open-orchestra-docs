@@ -87,11 +87,11 @@ by implementing the method ``DisplayBlockInterface::getCacheTags()``.
 
 By default, Open Orchestra provides some tags that can be used in the rendering strategies:
 
-* ``node- + NODE_ID`` : Invalidate when node status is updated.
-* ``contentType- + CONTENT_TYPE`` : Invalidate when content type is updated or deleted.
-* ``contentId- + CONTENT_ID`` : Invalidate when content status is updated or content is deleted.
-* ``mediaId- + MEDIA_ID`` : Invalidate when media is updated or deleted.
-* ``menu- + SITE_ID`` : Invalidate when a node of this site is deleted, restored, his status changed or his path updated.
+* ``node- + NODE_ID`` : Automatically invalidated when node status is updated.
+* ``contentType- + CONTENT_TYPE`` : Automatically invalidated when content type is updated or deleted.
+* ``contentId- + CONTENT_ID`` : Automatically invalidated when content status is updated or content is deleted.
+* ``mediaId- + MEDIA_ID`` : Automatically invalidated when media is updated or deleted.
+* ``menu- + SITE_ID`` : Automatically invalidated when a node of this site is deleted, restored, his status changed or his path updated.
 
 These tags are gathered in the ``OpenOrchestra\BaseBundle\Manager\TagManager`` class.
 
