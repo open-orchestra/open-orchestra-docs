@@ -203,18 +203,20 @@ Then go in the Back Office project directory inside the box:
 
     $ cd /var/www/openorchestra
 
-For the 1.0 installation, you need to manually install the npm dependencies with the following command (you
-must skip this step for earlier versions):
-
-.. code-block:: bash
-
-    $ npm install
-
-For all versions, launch the grunt command to generate all assets:
+If you are dealing with version 1.1 or superior, launch the grunt command to generate all assets:
 
 .. code-block:: bash
 
     $ ./bin/grunt
+
+If you are dealing with the 1.0 version, the process differs, you have to install manually the dependencies
+then when it's ok, run grunt from the node_modules folder:
+
+.. code-block:: bash
+
+    $ npm install
+    $ ./node_modules/.bin/grunt
+
 
 Load the fixtures
 -----------------
