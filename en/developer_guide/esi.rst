@@ -85,8 +85,17 @@ The generic tags are added for all kind of blocks, they depend on :
 Additionally, each rendering strategy for blocks can define a list of specific tags
 by implementing the method ``DisplayBlockInterface::getCacheTags()``.
 
-It's possible to define new cache tags for some data to be flushed at optimal times,
-depending on the specifics of the application. These tags can then be flushed by calling
+By default, Open Orchestra provides some tags that can be used in the rendering strategies:
+
+* ``node- + NODE_ID`` : Automatically invalidated when node status is updated.
+* ``contentType- + CONTENT_TYPE`` : Automatically invalidated when content type is updated or deleted.
+* ``contentId- + CONTENT_ID`` : Automatically invalidated when content status is updated or content is deleted.
+* ``mediaId- + MEDIA_ID`` : Automatically invalidated when media is updated or deleted.
+* ``menu- + SITE_ID`` : Automatically invalidated when a node of this site is deleted, restored, his status changed or his path updated.
+
+These tags are gathered in the ``OpenOrchestra\BaseBundle\Manager\TagManager`` class.
+
+If these tags are not enough, It's possible to define new cache tags which would be flushed by calling
 ``OpenOrchestra\DisplayBundle\Manager\CacheableManager::invalidateTags()`` when needed.
 
 .. _`Http cache documentation`: http://symfony.com/doc/current/book/http_cache.html#edge-side-includes
