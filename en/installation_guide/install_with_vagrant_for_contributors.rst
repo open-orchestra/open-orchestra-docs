@@ -203,7 +203,14 @@ Then go in the Back Office project directory inside the box:
 
     $ cd /var/www/openorchestra
 
-Launch the grunt command to generate all assets:
+For the 1.0 installation, you need to manually install the npm dependencies with the following command (you
+must skip this step for earlier versions):
+
+.. code-block:: bash
+
+    $ npm install
+
+For all versions, launch the grunt command to generate all assets:
 
 .. code-block:: bash
 
