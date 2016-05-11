@@ -36,14 +36,14 @@ Bug fixes
 - **[open-orchestra-cms-bundle]** Fix default field in content type form `#1616 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1616>`_ (*itkg-nanne*)
 - **[open-orchestra-cms-bundle]** use dependency injection for BlockToArrayTransformer in BlockType `#1615 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1615>`_ (*itkg-nanne*)
 - **[open-orchestra-cms-bundle]** replace opacity by display in area toolbar to deactivate involuntary click `#1614 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1614>`_ (*itkg-nanne*)
-- **[open-orchestra-media-admin-bundle]** Media reference are set also in draft status and pending status of content and node `#227 <https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/227>`_ (*alavieille*)
+- **[open-orchestra-media-admin-bundle]** Media references are set also in draft status and pending status of content and node `#227 <https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/227>`_ (*alavieille*)
 - **[open-orchestra-media-admin-bundle]** Remove browse button if user doesn't have the access to the media management. `#219 <https://github.com/open-orchestra/open-orchestra-media-admin-bundle/pull/219>`_ (*djamnazi*)
 - **[open-orchestra-user-bundle]** Fix dependency between UserBundle and BackOfficeBundle `#103 <https://github.com/open-orchestra/open-orchestra-user-bundle/pull/103>`_ (*alavieille*)
 
 New features
 ------------
 
-- **[open-orchestra-cms-bundle]** hide error 403 on redirection after post in user context `#1650 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1650>`_ (*itkg-nanne*)
+- **[open-orchestra-cms-bundle]** hide error 403 on redirection after post in muser context `#1650 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1650>`_ (*itkg-nanne*)
 - **[open-orchestra-cms-bundle]** Update css style of componement tab view replace class nav-tabs by nav-pills nav-justified `#1628 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1628>`_ (*alavieille*)
 - **[open-orchestra-cms-bundle]** Add a method to find role for node only. `#1626 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1626>`_ (*alavieille*)
 - **[open-orchestra-cms-bundle]** Show node language and version language in title of edit form `#1622 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1622>`_ (*alavieille*)
