@@ -10,6 +10,7 @@ The main documentation is organized into several sections:
 * :ref:`intro`
 * :ref:`user-guide`
 * :ref:`developer-guide`
+* :ref:`cookbook`
 * :ref:`hosting-guide`
 
 .. _changlogs:
@@ -44,6 +45,14 @@ The main documentation is organized into several sections:
    :caption: Developer guide
 
    summary_dev_guide
+
+.. _cookbook:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Cookbooks
+
+   summary_cookbooks
 
 .. _hosting-guide:
 

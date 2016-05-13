@@ -62,7 +62,6 @@ Contents
 .. toctree::
    :maxdepth: 1
 
-   developer_guide/field_type
    developer_guide/content_add_field_listener
    developer_guide/custom_content_attribute_display
 
