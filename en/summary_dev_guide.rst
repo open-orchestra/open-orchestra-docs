@@ -3,7 +3,6 @@ Installation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Installation
 
    developer_guide/dependancy_diagram
    installation_guide/install
@@ -21,7 +20,6 @@ Back Office
 
 .. toctree::
    :maxdepth: 1
-   :caption: Back Office
 
    developer_guide/smart_admin
    developer_guide/dashboard_widgets
@@ -38,7 +36,6 @@ Front Office
 
 .. toctree::
    :maxdepth: 1
-   :caption: Front Office 
 
    developer_guide/multi_device
    developer_guide/esi
@@ -53,7 +50,6 @@ Blocks
 
 .. toctree::
    :maxdepth: 1
-   :caption: Blocks
 
    developer_guide/block_creation
    developer_guide/block_parameter
@@ -65,7 +61,6 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents customisation
 
    developer_guide/field_type
    developer_guide/content_add_field_listener
@@ -76,7 +71,6 @@ Media
 
 .. toctree::
    :maxdepth: 1
-   :caption: Media customisation
 
    developer_guide/media_upload
    developer_guide/media_standalone_display
@@ -86,7 +80,6 @@ Api
 
 .. toctree::
    :maxdepth: 1
-   :caption: Api
 
    developer_guide/api
    developer_guide/api_transformer
@@ -97,7 +90,6 @@ Database
 
 .. toctree::
    :maxdepth: 1
-   :caption: Database
 
    developer_guide/other_database_type
    developer_guide/extend_document
@@ -108,16 +100,14 @@ Internal indexation
 
 .. toctree::
    :maxdepth: 1
-   :caption: Internal indexation
 
    developer_guide/elasticsearch_indexation
    developer_guide/elasticsearch_add_new_indexed_document
 
-Misc tools
-==========
+Tool Box
+========
 
 .. toctree::
    :maxdepth: 1
-   :caption: Misc tools
 
    developer_guide/twig_extensions
