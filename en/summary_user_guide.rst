@@ -3,7 +3,6 @@ Administration
 
 .. toctree::
    :maxdepth: 1
-   :caption: Administration
 
    user_guide/websites_creation
    user_guide/keyword_management
@@ -16,7 +15,6 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents
 
    user_guide/content_type
    user_guide/content
@@ -27,7 +25,6 @@ Nodes
 
 .. toctree::
    :maxdepth: 1
-   :caption: Nodes
 
    user_guide/node
    user_guide/node_configuration
@@ -39,7 +36,6 @@ Media
 
 .. toctree::
    :maxdepth: 1
-   :caption: Media
 
    user_guide/media
 
@@ -48,7 +44,6 @@ Other
 
 .. toctree::
    :maxdepth: 1
-   :caption: Other
 
    user_guide/boolean_expression
    user_guide/internal_link

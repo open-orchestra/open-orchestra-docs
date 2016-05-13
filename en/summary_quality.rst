@@ -1,5 +1,5 @@
-Quality
-=======
+Bundles Quality
+===============
 
 open-orchestra-base-api-bundle
 ------------------------------

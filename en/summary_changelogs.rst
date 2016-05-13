@@ -6,14 +6,12 @@ Versions 1.x.x
 
 .. toctree::
    :maxdepth: 1
-   :caption: 1.2.x
 
 1.1.x
 -----
 
 .. toctree::
    :maxdepth: 1
-   :caption: 1.1.x
 
    changelog/CHANGELOG-1.0-to-1.1
    changelog/CHANGELOG-1.1.0-RC-to-1.1.0
@@ -29,7 +27,6 @@ Versions 1.x.x
 
 .. toctree::
    :maxdepth: 1
-   :caption: 1.0.x
 
    changelog/CHANGELOG-1.0.4
    changelog/CHANGELOG-1.0.3
@@ -47,7 +44,6 @@ Versions 0.x.x
 
 .. toctree::
    :maxdepth: 1
-   :caption: 0.3.x
 
    changelog/CHANGELOG-0.3.4
    changelog/CHANGELOG-0.3.3
@@ -60,7 +56,6 @@ Versions 0.x.x
 
 .. toctree::
    :maxdepth: 1
-   :caption: 0.2.x
 
    changelog/CHANGELOG-0.2.12
    changelog/CHANGELOG-0.2.11
@@ -81,7 +76,6 @@ Versions 0.x.x
 
 .. toctree::
    :maxdepth: 1
-   :caption: 0.1.x
 
    changelog/CHANGELOG-0.1.4
    changelog/CHANGELOG-0.1.3
@@ -94,7 +88,6 @@ Versions 0.x.x
 
 .. toctree::
    :maxdepth: 1
-   :caption: 0.0.x
 
    changelog/CHANGELOG-0.0.7
    changelog/CHANGELOG-0.0.6
