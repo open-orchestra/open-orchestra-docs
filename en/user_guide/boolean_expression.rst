@@ -1,5 +1,5 @@
-Boolean Expression
-==================
+Filtering by keyword
+====================
 
 In some context, Open Orchestra authorize to use boolean expression to filter with keywords.
 In the content search block, for example, keywords are used to specify which contents must be showed.

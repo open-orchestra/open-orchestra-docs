@@ -1,6 +1,13 @@
 Versions 1.x.x
 ==============
 
+1.2.x
+-----
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 1.2.x
+
 1.1.x
 -----
 
