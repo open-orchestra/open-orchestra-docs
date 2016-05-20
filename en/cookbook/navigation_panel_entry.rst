@@ -31,11 +31,11 @@ First one, you will create the top menu, Reference Data.
 
 Of course, all yaml should be loaded, for example, in the Dependency Injection Extension of your bundle (`Symfony Dependency Injection Extension`_).
 
-Argument ``reference`` specifies a nickname for your entry. One of the purposes of this argument is to use this nickname to attach another menu entry at this entry.
+``reference`` specifies a nickname for your entry. One of the purposes of this argument is to use this nickname to attach another menu entry at this entry.
 
-Argument ``300`` specifies an order for your entry. A lower value will be displayed first.
+``300`` specifies an order for your entry. A lower value will be displayed first.
 
-The tag ``open_orchestra_backoffice.navigation_panel.strategy`` specifies that this service defines a menu entry.
+``open_orchestra_backoffice.navigation_panel.strategy`` specifies that this service defines a menu entry.
 
 Second Level Menu
 ~~~~~~~~~~~~~~~~~
@@ -80,7 +80,7 @@ And then create your twig
             href="#country/list"
             id="nav-country"
             data-url="{{ path('acme_api_country_list') }}"
-            data-add="{{ path('acme_api_country_new') }}"
+            data-add="{{ path('acme_country_new') }}"
             data-datatable-parameter-name="{{ datatableParameterName }}"
             title="{{ 'acme.country'|trans }}"
             >
@@ -90,7 +90,11 @@ And then create your twig
 
 Be carreful that the hash ``#country/list`` will be intercept by a backbone router with the pattern ``:entityType/list``.
 
-The router will search the link with the html id ``nav-:entityType``, in this case ``nav-country`` to create the view.
+The router will search following informations from the link with the html id ``nav-:entityType``, in this case ``nav-country`` to create the view :
+
+* ``data-url`` : the symfony route which displays the country collection informations in json format.
+* ``data-add`` : the symfony route which displays the form used to create a new country.
+* ``data-datatable-parameter-name`` : the index where to find data table parameter (see `Navigation panel`_).
 
 Now you can create the service corresponding to your strategy.
 
@@ -114,15 +118,15 @@ Now you can create the service corresponding to your strategy.
             tags:
                 - { name: open_orchestra_backoffice.navigation_panel.strategy }
 
-Argument ``country`` specifies a nickname for your entry.
+``country`` specifies a nickname for your entry.
 
-Argument ``350`` specifies an order for your entry.
+``350`` specifies an order for your entry.
 
-Argument ``reference`` specifies the parent menu by using his nickname.
+``reference`` specifies the parent menu by using his nickname.
 
-Argument ``ROLE_ACCESS_COUNTRY`` specifies the role that the Back Office user needs to see this entry.
+``ROLE_ACCESS_COUNTRY`` specifies the role that the Back Office user needs to see this entry.
 
-Argument ``%acme.navigation_panel.country.parameters%`` AND ``@translator`` are used to set the parameters of the data table (see `Navigation panel`_).
+``%acme.navigation_panel.country.parameters%`` AND ``@translator`` are used to set the parameters of the data table (see `Navigation panel`_).
 
 Here is an example for ``%acme.navigation_panel.country.parameters%``
 
@@ -143,7 +147,7 @@ Here is an example for ``%acme.navigation_panel.country.parameters%``
               activateColvis : true
               searchField : text
 
-The tag ``open_orchestra_backoffice.navigation_panel.strategy`` specifies that this service defines a menu entry.
+``open_orchestra_backoffice.navigation_panel.strategy`` specifies that this service defines a menu entry.
 
 .. _`Symfony Dependency Injection Extension`: http://symfony.com/doc/current/cookbook/bundles/extension.html
 .. _`Navigation panel`: en/developer_guide/navigation_panel.rst 
