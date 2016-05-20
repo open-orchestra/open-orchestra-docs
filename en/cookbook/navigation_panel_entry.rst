@@ -94,7 +94,7 @@ The router will search following informations from the link with the html id ``n
 
 * ``data-url`` : the symfony route which displays the country collection informations in json format.
 * ``data-add`` : the symfony route which displays the form used to create a new country.
-* ``data-datatable-parameter-name`` : the index where to find data table parameter (see `Navigation panel`_).
+* ``data-datatable-parameter-name`` : the index where to find data table parameters (see `Navigation panel`_).
 
 Now you can create the service corresponding to your strategy.
 
@@ -137,8 +137,8 @@ Here is an example for ``%acme.navigation_panel.country.parameters%``
     parameters:
         open_orchestra_backoffice.navigation_panel.content_type.parameters :
             -
-              name : country_id
-              title : acme.table.country.id
+              name : country_id             # name of the properties to display from the json 
+              title : acme.table.country.id # title of the data table column
               activateColvis : true
               searchField : text
             -
