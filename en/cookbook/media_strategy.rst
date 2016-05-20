@@ -236,3 +236,91 @@ As seen in the description, the service must be updated:
 Rendering
 ---------
 
+Each media type have a specific rendering. A video is presented in a <video> html tag when an image is rendered
+with a <img> tag. To render our zip media and or its tar.gz alternative, we need to code a strategy
+implementing `OpenOrchestra\Media\DisplayMedia\DisplayMediaInterface`.
+
+Here is what it looks like for our zip type:
+
+.. code-block:: PHP
+    <?php
+
+    namespace AcmeDemo\Media\DisplayMedia\Strategies;
+
+    use OpenOrchestra\Media\DisplayMedia\Strategies\AbstractStrategy;
+    use OpenOrchestra\Media\Model\MediaInterface;
+
+    /**
+     * Class ZipStrategy
+     */
+    class ZipStrategy extends AbstractStrategy
+    {
+        const MIME_TYPE = 'application/zip';
+
+        /**
+         * @param MediaInterface $media
+         *
+         * @return bool
+         */
+        public function support(MediaInterface $media)
+        {
+            return $media->getMimeType == self::MIME_TYPE_FRAGMENT_AUDIO;
+        }
+
+        /**
+         * @param MediaInterface $media
+         * @param string         $format
+         * @param string         $style
+         *
+         * @return String
+         */
+        public function displayMedia(MediaInterface $media, $format = '', $style = '')
+        {
+            return $this->render(
+                'AcmeDemoBundle:DisplayMedia/FullDisplay:zip.html.twig',
+                array(
+                    'media_url' => $this->getFileUrl($media->getFilesystemName()),
+                    'media_name' => $media->getName()
+                )
+            );
+        }
+
+        /**
+         * @param MediaInterface $media
+         *
+         * @param MediaInterface $media
+         * @param string         $format
+         * @param string         $style
+         *
+         * @return string
+         */
+        public function displayMediaForWysiwyg(MediaInterface $media, $format = '', $style = '')
+        {
+            return $this->render(
+                'AcmeDemoBundle:BBcode/WysiwygDisplay:zip.html.twig',
+                array('media_id' => $media->getId())
+            );
+        }
+
+        /**
+         * @param MediaInterface $media
+         * @param string         $format
+         *
+         * @return string
+         */
+        public function getMediaFormatUrl(MediaInterface $media, $format)
+        {
+            return $this->displayPreview($media);
+        }
+
+        /**
+         * @return string
+         */
+        public function getName()
+        {
+            return 'zip';
+        }
+    }
+
+
+
