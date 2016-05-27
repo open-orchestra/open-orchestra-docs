@@ -113,7 +113,7 @@ Now you can create the service corresponding to your strategy.
                 - 350
                 - reference
                 - ROLE_ACCESS_COUNTRY
-                - %acme.navigation_panel.country.parameters%
+                - "%acme.navigation_panel.country.parameters%"
                 - @translator
             tags:
                 - { name: open_orchestra_backoffice.navigation_panel.strategy }
