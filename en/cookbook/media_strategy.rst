@@ -4,9 +4,9 @@ HOW TO CREATE A NEW MEDIA TYPE
 When a user upload a file in the media libray, a media document is created to manage it. The media library
 assign automatically the file to a media type. Out of the box, Open Orchestra supports the following types:
 
- - Image (all files with mime-type 'image/*')
- - Audio (all files with mime-type 'audio/*')
- - Video (all files with mime-type 'video/*')
+ - Image (all files with mime-type 'image/\*')
+ - Audio (all files with mime-type 'audio/\*')
+ - Video (all files with mime-type 'video/\*')
  - Pdf (all files with mime-type 'application/pdf')
 
 All other types of file are mapped to a special fallback type: Default.
@@ -226,7 +226,7 @@ As seen in the description, the service must be updated:
             class: AcmeDemo\MediaAdmin\FileAlternatives\Strategy\ZipStrategy
             arguments:
                 - 'The_key_of_the_zip_icon_in_the_media_storage'
-                - @archiveManager
+                - '@archiveManager'
             tags:
                 - { name: open_orchestra_media_admin.file_alternatives.strategy }
 
