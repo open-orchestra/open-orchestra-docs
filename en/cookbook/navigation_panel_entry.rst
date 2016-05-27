@@ -100,12 +100,7 @@ Now you can create the service corresponding to your strategy.
 
 .. code-block:: yaml
 
-    # src/Acme/Bundle/BackBundle/Resources/config/navigation_panel.yml
-
     services:
-
-        # ...
-
         acme.navigation_panel.country:
             class: Acme\Bundle\BackBundle\NavigationPanel\Strategies\CountryPanelStrategy
             arguments:
@@ -114,7 +109,7 @@ Now you can create the service corresponding to your strategy.
                 - reference
                 - ROLE_ACCESS_COUNTRY
                 - "%acme.navigation_panel.country.parameters%"
-                - @translator
+                - "@translator"
             tags:
                 - { name: open_orchestra_backoffice.navigation_panel.strategy }
 
