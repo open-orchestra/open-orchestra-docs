@@ -236,7 +236,7 @@ As seen in the description, the service must be updated:
 Rendering
 ---------
 
-Each media type have a specific rendering. A video is presented in a <video> html tag when an image is rendered
+Each media type have a specific rendering. A video is presented in a <video> html tag while an image is rendered
 with a <img> tag. To render our zip media and or its tar.gz alternative, we need to code a strategy
 implementing `OpenOrchestra\Media\DisplayMedia\DisplayMediaInterface`.
 
@@ -256,6 +256,7 @@ Here is what it looks like for our zip type:
     class ZipStrategy extends AbstractStrategy
     {
         const MIME_TYPE = 'application/zip';
+        const ALTERNATIVE_KEY = 'TAR';
 
         /**
          * @param MediaInterface $media
@@ -276,10 +277,14 @@ Here is what it looks like for our zip type:
          */
         public function displayMedia(MediaInterface $media, $format = '', $style = '')
         {
+            if (self::ALTERNATIVE_KEY != $format) {
+                $format = MediaInterface::MEDIA_ORIGINAL;
+            }
+
             return $this->render(
                 'AcmeDemoBundle:DisplayMedia/FullDisplay:zip.html.twig',
                 array(
-                    'media_url' => $this->getFileUrl($media->getFilesystemName()),
+                    'media_url' => $this->getMediaFormatUrl($media, $format),
                     'media_name' => $media->getName()
                 )
             );
@@ -298,7 +303,7 @@ Here is what it looks like for our zip type:
         {
             return $this->render(
                 'AcmeDemoBundle:BBcode/WysiwygDisplay:zip.html.twig',
-                array('media_id' => $media->getId())
+                array('media_id' => $media->getId(), 'style' => $style)
             );
         }
 
@@ -310,7 +315,12 @@ Here is what it looks like for our zip type:
          */
         public function getMediaFormatUrl(MediaInterface $media, $format)
         {
-            return $this->displayPreview($media);
+            $key = $media->getFilesytemName();
+            if (self::ALTERNATIVE_KEY == $format) {
+                $key = $media->getAlternative($format);
+            }
+
+            return $this->getFileUrl($key);
         }
 
         /**
@@ -322,5 +332,37 @@ Here is what it looks like for our zip type:
         }
     }
 
+The important points are:
+
+ - Instead of only implementing the ``DisplayMediaInterface`` we are extending the
+   ``OpenOrchestra\Media\DisplayMedia\Strategies\AbstractStrategy`` which provides some basic implementation
+   of the interface.
+ - There is two rendering methods to implement:
+
+    - ``displayMedia`` is used to render the media on the Front Office. If $format is specified, the matching
+    alternative is rendered instead of the original file. In our case the rendering is made by a twig
+    displaying a code to download the zip or the tar, depending on the $format variable (see code below)
+    - ``displayMediaForWysiwyg`` is used by the wysiwyg editor to render the media in the contribution mode.
+    In our case we only want to display the thumbnail to show that the media inserted is a zip.
+
+ - Furthermore, there is two methods to implement to get acces to some specific urls:
+
+    - ``displayPreview`` return the thumbnail url
+    - ``getMediaFormatUrl`` give the url of the original file or one of the alternatives if $format is set
+
+Here is the twig used to display the zip on the Front Office:
+
+.. code-block:: twig
+    <a href="{{ media_url }} alt="{{ media_name }}" target="_blank">{{ media_name }}</a>
 
 
+And here is the twig used to render the zip in the wysiwyg editor:
+
+.. code-block:: twig
+    <img
+        class="tinymce-media"
+        data-mce-resize="false"
+        src="{% image '@AcmeDemoBundle/Resources/public/img/icon/tinymce-zip.png' %}{{ asset_url }}{% endimage %}"
+        data-id="{{ media_id }}"
+        style="{{ style }}"
+    />
