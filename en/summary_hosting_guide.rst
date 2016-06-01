@@ -14,7 +14,6 @@ Deployment
 .. toctree::
    :maxdepth: 1
 
-   hosting_guide/deploy
    hosting_guide/migration
 
 Monitoring
