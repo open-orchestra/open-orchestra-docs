@@ -16,7 +16,7 @@ These requirements are mandatory to run Open Orchestra on a reference environmen
 +----------------------+--------------------------+
 | Database             | Mongodb 2.6.11           |
 +----------------------+--------------------------+
-| PHP (mod_php + cli)  | PHP 5.5                  |
+| PHP (mod_php + cli)  | PHP 5.6                  |
 +----------------------+--------------------------+
 | PHP Extensions       | Mongo > 1.2.12, <1.7-dev |
 |                      | Imagick                  |
