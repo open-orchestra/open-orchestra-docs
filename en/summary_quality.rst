@@ -375,3 +375,21 @@ open-orchestra-bbcode-bundle
 |                        |    :target: https://www.versioneye.com/user/projects/5620af1036d0ab0019000831                             |
 +------------------------+-----------------------------------------------------------------------------------------------------------+
 
+open-orchestra-elastica-bundle
+------------------------------
+
++------------------------+-------------------------------------------------------------------------------------------------------------+
+| Service                | Badge                                                                                                       |
++========================+=============================================================================================================+
+| Travis                 | .. image:: https://travis-ci.org/open-orchestra/open-orchestra-elastica-bundle.svg                          |
+|                        |    :target: https://travis-ci.org/open-orchestra/open-orchestra-elastica-bundle                             |
++------------------------+-------------------------------------------------------------------------------------------------------------+
+| CodeClimate (quality)  | .. image:: https://codeclimate.com/github/open-orchestra/open-orchestra-elastica-bundle/badges/gpa.svg      |
+|                        |    :target: https://codeclimate.com/github/open-orchestra/open-orchestra-elastica-bundle                    |
++------------------------+-------------------------------------------------------------------------------------------------------------+
+| CodeClimate (coverage) | .. image:: https://codeclimate.com/github/open-orchestra/open-orchestra-elastica-bundle/badges/coverage.svg |
+|                        |    :target: https://codeclimate.com/github/open-orchestra/open-orchestra-elastica-bundle/coverage           |
++------------------------+-------------------------------------------------------------------------------------------------------------+
+| Sensio Insight         | .. image:: https://insight.sensiolabs.com/projects/71188417-f679-4f37-819e-22abc154eb25/big.png             |
+|                        |    :target: https://insight.sensiolabs.com/projects/71188417-f679-4f37-819e-22abc154eb25                    |
++------------------------+-------------------------------------------------------------------------------------------------------------+
