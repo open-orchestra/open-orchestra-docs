@@ -1,4 +1,4 @@
-CHANGELOG from 1.1.1 to 1.101
+CHANGELOG from 1.1.1 to 1.1.2
 =============================
 
 Url to see changes:
