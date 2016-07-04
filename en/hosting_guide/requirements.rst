@@ -10,7 +10,7 @@ Basic Requirements
 These requirements are mandatory to run Open Orchestra on a reference environment.
 
 +----------------------+--------------------------+
-| Operating System     | Debian 8.2 (Jessie)      |
+| Operating System     | Debian 8.4 (Jessie)      |
 +----------------------+--------------------------+
 | Web server           | Apache/2.4.10            |
 +----------------------+--------------------------+
