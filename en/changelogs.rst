@@ -8,6 +8,7 @@ Versions 1.x.x
    :maxdepth: 1
    :caption: 1.0.x
 
+   changelog/CHANGELOG-1.0.5
    changelog/CHANGELOG-1.0.4
    changelog/CHANGELOG-1.0.3
    changelog/CHANGELOG-1.0.2
