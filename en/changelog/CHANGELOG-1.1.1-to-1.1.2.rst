@@ -71,6 +71,7 @@ Possible BC breaker
 
 - **[open-orchestra-cms-bundle]** Constructor of class  ``Backoffice/EventSubscriber/BlockTypeSubscriber`` is changed `#1768 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1768>`_ (*alavieille*)
 - **[open-orchestra-cms-bundle]** Constructor of class ``Backoffice/Form/Type/BlockType`` is changed `#1768 <https://github.com/open-orchestra/open-orchestra-cms-bundle/pull/1768>`_ (*alavieille*)
+- ** The default parent type of the form strategies of block is ``oo-block``
 
 New features
 ------------
