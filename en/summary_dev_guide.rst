@@ -7,6 +7,7 @@ Installation
    developer_guide/dependancy_diagram
    installation_guide/install
    installation_guide/install_with_vagrant
+   installation_guide/install_in_symfony_project
    installation_guide/install_with_vagrant_for_contributors
    installation_guide/install_with_docker_for_contributors
    developer_guide/assets_bower_npm
