@@ -69,23 +69,6 @@ Services used as Front Office block display strategies, must be taggued as ``ope
 
 Those services also need to implement ``OpenOrchestra\DisplayBundle\DisplayBlock\DisplayBlockInterface``
 
-Generating blocks in command line
----------------------------------
-
-In order to easily create blocks, Open Orchestra offers a Symfony console command named ``orchestra:generate:block``.
-
-The usage is pretty straightforward :
-
-.. code-block:: bash
-
-    $ php app/console orchestra:generate:block
-        --block-name="TestBlock"
-        --form-generator-dir="src/YourVendor/AcmeBundle/Path/To/Form/Strategies"
-        --front-display-dir="src/YourVendor/AcmeBundle/Path/To/Front/Display/Strategies"
-        --backoffice-icon-dir="src/YourVendor/AcmeBundle/Path/To/Icon/Strategies"
-        --backoffice-display-dir="src/YourVendor/AcmeBundle/Path/To/Back/Display/Strategies"
-        --no-interaction
-
 Add the block in the configuration
 ----------------------------------
 
