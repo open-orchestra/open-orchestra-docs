@@ -22,10 +22,10 @@ Contribution of global pages works the same way as other pages (see `Node`_).
 Global blocks
 -------------
 
-When contributing a node, available blocks are shown in the block panel. Global blocks that have been
+When contributing a block in area, available blocks are shown in a modal. Global blocks that have been
 contributed in global pages appear with a blue background, while standard blocks appear in orange.
 
-.. image:: ../../images/panel_global_page_blocks.png
+.. image:: ../../images/block_panel.png
 
 Contribution of global blocks works the same way as other blocks (see `managing block in node`_),
 except that they can be edited only on the node they where created in, ie their global page.

@@ -74,7 +74,11 @@ The global ones are editable only in the global node.
 
 See also `node and block transverse`_.
 
-On the right appears the list of blocks, which is visible only if the node is alterable (not in the final status).
+The list of blocks appears when button `+ block` is clicked in the toolbar or inside an area. The button is visible only if the node is alterable (not in the final status).
+
+.. image:: ../../images/add_block_in_area.png
+
+To add a new block in the node's area, click on a block in the modal.
 
 .. image:: ../../images/block_panel.png
 
@@ -83,13 +87,9 @@ See also `block list`_.
 Drag and Drop
 ~~~~~~~~~~~~~
 
-Open Orchestra allows to add or to move blocks in a node using drag and drop.
-To add a new block in a node open the block panel to display the list of blocks and drag a block in node's area.
-At the top of the list of blocks there are the new blocks and below transverse blocks.
+Open Orchestra allows to move blocks in a node using drag and drop.
 
-.. image:: ../../images/drag_block.png
-
-If the mouse hovers a block, a toolbar will be displayed.
+When the mouse hovers a block, a toolbar will be displayed.
 When the node is alterable the toolbar contains a cursor, the block title, a pen and a trash can.
 To move a block in a node select the cursor and make it slide towards another area.
 To delete a block click on the trash can and to edit the block configuration click on the pen.
@@ -101,6 +101,7 @@ When the node is not alterable the toolbar contains only the block title and an 
 The eye is visible only if the block is not a transverse block.
 
 .. image:: ../../images/toolbar_block_published.png
+
 
 
 .. _workflow:
