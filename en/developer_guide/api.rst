@@ -59,17 +59,18 @@ To obtain it, send the request:
 
 .. code-block:: none
 
-    /oauth/access_token?grant_type=password&username=USERNAME&password=PASSWORD
-
-Where USERNAME is user's name and PASSWORD is user's password.
+    /oauth/access_token?grant_type=password
 
 with the HTTP header:
 
 .. code-block:: none
 
     Authorization: Basic ENCODED_PAIR
+    password: USERNAME
+    username: PASSWORD
 
-Where ``ENCODED_PAIR`` is the string **key:secret** encoded in base64
+Where  ``USERNAME `` is user's name, ``PASSWORD `` is user's password.
+and ``ENCODED_PAIR`` is the string **key:secret** encoded in base64
 (obviously key and secret depend on the client).
 
 Refresh token
