@@ -16,7 +16,7 @@ BaseBundle
 This bundle will configure the base option for the whole application :
 
 * Language for the administration
-* Key to encrypt the preview token
+* Key to encrypt the preview token (this value should be common with the front, media and back office applications)
 * Alias for the object manager
 
 .. code-block:: yaml
@@ -28,7 +28,7 @@ This bundle will configure the base option for the whole application :
             # Defaults:
             - en
             - fr
-        encryption_key:       ThisKeyIsNotSecret
+        encryption_key:       ThisKeyIsNotSecret #This value should be common with the front, media and back office applications
 
 BaseApiMongoModelBundle
 ~~~~~~~~~~~~~~~~~~~~~~~
