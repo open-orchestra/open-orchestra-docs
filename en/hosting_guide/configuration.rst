@@ -195,24 +195,28 @@ This vcl is a basic configuration example to use the esi render.
             return (pass);
         }
     
-        
+        #=== Pass when private block ===#
+        if (req.url ~ ".*[?&]cache=private.*") {
+            return (pass);
+        }
+
         #=== Remove all cookies ===#
-        # unset req.http.Cookie;
+        unset req.http.Cookie;
     
         #=== If you want to keep the session #ID ===#
         #=== Comment the previous line          ===#
         #=== And uncomment the following block  ===#
-        if (req.http.Cookie) {
-            set req.http.Cookie = ";" + req.http.Cookie;
-            set req.http.Cookie = regsuball(req.http.Cookie, "; +", ";");
-            set req.http.Cookie = regsuball(req.http.Cookie, ";(PHPSESSID)=", "; \1=");
-            set req.http.Cookie = regsuball(req.http.Cookie, ";[^ ][^;]*", "");
-            set req.http.Cookie = regsuball(req.http.Cookie, "^[; ]+|[; ]+$", "");
-    
-            if (req.http.Cookie == "") {
-                unset req.http.Cookie;
-            }
-        }
+        #if (req.http.Cookie) {
+        #    set req.http.Cookie = ";" + req.http.Cookie;
+        #    set req.http.Cookie = regsuball(req.http.Cookie, "; +", ";");
+        #    set req.http.Cookie = regsuball(req.http.Cookie, ";(PHPSESSID)=", "; \1=");
+        #    set req.http.Cookie = regsuball(req.http.Cookie, ";[^ ][^;]*", "");
+        #    set req.http.Cookie = regsuball(req.http.Cookie, "^[; ]+|[; ]+$", "");
+        #
+        #    if (req.http.Cookie == "") {
+        #        unset req.http.Cookie;
+        #    }
+        #}
     
         return (hash);
     }
