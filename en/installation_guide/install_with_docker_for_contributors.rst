@@ -1,4 +1,4 @@
-    Install OpenOrchestra with Docker for contributors
+Install OpenOrchestra with Docker for contributors
 ==================================================
 
 Open Orchestra is composed of three projects: 
@@ -108,12 +108,11 @@ In the ``/etc/hosts`` file of your computer add the following lines:
     [IP] must be replaced by 127.0.0.1 for Linux
     [IP] must be replaced by the value gived by the command ``docker-machine ip default``
 
-.. code-block:: text
+    .. code-block:: text
 
-    [IP]   admin.openorchestra.dev
-    [IP]   demo.openorchestra.dev
-    [IP]   media.openorchestra.dev
-    [IP]   admin.openorchestra.stable
-    [IP]   demo.openorchestra.stable
-    [IP]   media.openorchestra.stable
-
+      [IP]   admin.openorchestra.dev
+      [IP]   demo.openorchestra.dev
+      [IP]   media.openorchestra.dev
+      [IP]   admin.openorchestra.stable
+      [IP]   demo.openorchestra.stable
+      [IP]   media.openorchestra.stable
