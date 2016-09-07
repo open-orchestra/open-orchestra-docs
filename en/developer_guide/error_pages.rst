@@ -83,3 +83,29 @@ language and a Symfony 404 page for others.
 Note: like 503 pages, 404 pages are also dumped by the console command orchestra:errorpages:generate. They
 can so be used with virtual hosts configuration on some cases if needed.
 
+Error inside a block
+--------------------
+
+In Orchestra applications when a block throws an error or an exception the
+`default mechanical of Symfony is used <http://symfony.com/doc/current/controller/error_pages.html#overriding-the-default-error-templates>`_
+
+But to determine the template filename, the format used is fragment.<format>, for instance to render an error 500 in html Open Orchestra
+find the template `error500.fragment.html.twig`.
+
+By default, Open Orchestra offers two templates `error.fragment.html.twig` and `exception.fragment.html.twig`
+
+To override this template or add other to manage more specifically an error, simply rely on the standard Symfony method for
+`overriding templates<http://symfony.com/doc/current/templating/overriding.html>`_: put them in the app/Resources/TwigBundle/views/Exception/ directory.
+
+For instance:
+
+.. code-block:: none
+
+    app/
+    └─ Resources/
+       └─ TwigBundle/
+          └─ views/
+             └─ Exception/
+                ├─ error404.fragment.html.twig # Error 404
+                ├─ error403.fragment.html.twig # Error 403
+                ├─ error.html.fragment.twig  # All other HTML errors
