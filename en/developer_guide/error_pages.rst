@@ -95,7 +95,7 @@ find the template `error500.fragment.html.twig`.
 By default, Open Orchestra offers two templates `error.fragment.html.twig` and `exception.fragment.html.twig`
 
 To override this template or add other to manage more specifically an error, simply rely on the standard Symfony method for
-`overriding templates<http://symfony.com/doc/current/templating/overriding.html>`_: put them in the app/Resources/TwigBundle/views/Exception/ directory.
+`overriding templates<http://symfony.com/doc/current/templating/overriding.html>`_ : put them in the app/Resources/TwigBundle/views/Exception/ directory.
 
 For instance:
 
