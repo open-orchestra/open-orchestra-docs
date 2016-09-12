@@ -390,7 +390,7 @@ Cron jobs typically automate system maintenance.
 Cron jobs on Open Orchestra
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Open Orchestra has 4 cron jobs created with the provisioning:
+Open Orchestra has 6 cron jobs created with the provisioning:
 
 Site maps
 ~~~~~~~~~
@@ -421,6 +421,24 @@ for more information about the 404 and 503 special pages see the documentation `
 .. code-block:: bash
 
     0 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:errorpages:generate 2>> /tmp/cron.error.message
+
+Nodes auto publish cron
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This cron publish nodes based on contributed publishing dates and status.
+
+.. code-block:: bash
+
+    0 2 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:publish:node 2>> /tmp/cron.error.message
+
+Nodes auto unpublish cron
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This cron unpublish nodes based on contributed unpublishing dates.
+
+.. code-block:: bash
+
+    30 2 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:unpublish:node 2>> /tmp/cron.error.message
 
 Error cron
 ~~~~~~~~~~
