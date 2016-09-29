@@ -28,6 +28,7 @@ Install OpenOrchestra
 Clone the Open Orchestra applications repository and Docker repository in the same folder:
 
   .. code-block:: bash
+
     $ cd <your_project_folder>/
     $ git clone git@github.com:open-orchestra/open-orchestra-provision-docker.git
     $ git clone git@github.com:open-orchestra/open-orchestra.git
@@ -38,6 +39,7 @@ Clone the Open Orchestra applications repository and Docker repository in the sa
 Build Docker containers:
 
   .. code-block:: bash
+
     $ cd <your_project_folder>/open-orchestra-provision-docker/
     $ docker-compose up -d
 
@@ -62,6 +64,7 @@ Back Office:
     media.directory: /var/www/uploaded-files
 
   .. code-block:: bash
+
     $ ./bin/grunt  #install assets
     $ app/console orchestra:mongo:fixtures:load --env=prod --type=all #load fixtures
     $ exit
