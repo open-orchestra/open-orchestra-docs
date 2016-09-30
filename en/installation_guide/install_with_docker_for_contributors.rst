@@ -116,6 +116,3 @@ In the ``/etc/hosts`` file of your computer add the following lines:
       [IP]   admin.openorchestra.dev
       [IP]   demo.openorchestra.dev
       [IP]   media.openorchestra.dev
-      [IP]   admin.openorchestra.stable
-      [IP]   demo.openorchestra.stable
-      [IP]   media.openorchestra.stable
