@@ -7,7 +7,7 @@ Versions 1.x.x
 .. toctree::
    :maxdepth: 1
 
-  changelog/CHANGELOG-1.1.0-to-1.2.0-beta
+   changelog/CHANGELOG-1.1.0-to-1.2.0-beta
 
 1.1.x
 -----
@@ -15,6 +15,11 @@ Versions 1.x.x
 .. toctree::
    :maxdepth: 1
 
+   changelog/CHANGELOG-1.1.4-to-1.1.5.rst
+   changelog/CHANGELOG-1.1.3-to-1.1.4.rst
+   changelog/CHANGELOG-1.1.2-to-1.1.3.rst
+   changelog/CHANGELOG-1.1.1-to-1.1.2.rst
+   changelog/CHANGELOG-1.1.0-to-1.1.1.rst
    changelog/CHANGELOG-1.0-to-1.1
    changelog/CHANGELOG-1.1.0-RC-to-1.1.0
    changelog/CHANGELOG-1.1.0-RC
