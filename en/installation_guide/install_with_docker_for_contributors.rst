@@ -17,15 +17,15 @@ Install Docker
 
 Install of Open Orchestra with docker require `Compose 1.6.0+` and `Docker Engine 1.10.+`.
 
- - Install Docker for `Linux  <https://docs.docker.com/docker-for-mac/>`_
+ - Install Docker for `Linux  <https://docs.docker.com/engine/installation/linux/>`_
  - Install Docker for `Mac  <https://docs.docker.com/docker-for-mac/>`_
- - Install Docker for `Windows  <https://docs.docker.com/engine/installation/linux/>`_
+ - Install Docker for `Windows  <https://docs.docker.com/docker-for-windows/>`_
 
 
 Install OpenOrchestra
 ---------------------
 
-Clone the Open Orchestra applications repository and Docker repository in the same folder:
+Clone the Open Orchestra applications repository and Docker repositories in the same folder:
 
   .. code-block:: bash
 
@@ -54,7 +54,7 @@ Back Office:
     $ docker exec -it -u www-data oo_apache_php /bin/bash
     $ cd /var/www/openorchestra/ && composer install #install vendors
 
-  Specific parameters for docker install (use default value for other):
+  When to complete the application settings, use these parameters (use default value for other)
 
   .. code-block:: yaml
 
@@ -79,7 +79,7 @@ Front Office:
     $ app/console assets:install
     $ exit
 
-  Specific parameters for docker install (use default value for other):
+  When to complete the application settings, use these parameters (use default value for other)
 
   .. code-block:: yaml
 
@@ -96,7 +96,7 @@ Media:
     $ cd /var/www/media-openorchestra/ && composer install
     $ exit
 
-  Specific parameters for docker install (use default value for other):
+  When to complete the application settings, use these parameters (use default value for other)
 
   .. code-block:: yaml
 
