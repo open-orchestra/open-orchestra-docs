@@ -61,18 +61,13 @@ see `Download Composer`_
 Install OpenOrchestra
 ---------------------
 
-To contribute on the project you have to install tree versions: the 1.2 version, 1.1 version and 1.0 version.
+To contribute on the project you have to install tree versions: the 1.2 version, 1.1 version and 2.0 version.
 The 1.2 version is the branch which should be used to add new features to the project.
 Here is the directory tree with your tree projects that we recommand:
 
 .. code-block:: none
 
     |_ install-directory
-          |_ open-orchestra-1.0
-                |_ open-orchestra
-                |_ open-orchestra-front-demo
-                |_ open-orchestra-media-demo
-                |_ open-orchestra-provision
           |_ open-orchestra-1.1
                 |_ open-orchestra
                 |_ open-orchestra-front-demo
@@ -83,10 +78,15 @@ Here is the directory tree with your tree projects that we recommand:
                 |_ open-orchestra-front-demo
                 |_ open-orchestra-media-demo
                 |_ open-orchestra-provision
+          |_ open-orchestra-2.0
+                |_ open-orchestra
+                |_ open-orchestra-front-demo
+                |_ open-orchestra-media-demo
+                |_ open-orchestra-provision
 
-- To install the 1.2 open-orchestra parts using ``composer``:
+- To install the 2.0 open-orchestra parts using ``composer``:
 
-  In your ``open-orchestra-1.2`` directory:
+  In your ``open-orchestra-2.0`` directory:
   
   .. code-block:: bash
 
@@ -99,6 +99,23 @@ Here is the directory tree with your tree projects that we recommand:
   .. code-block:: bash
 
     $ git clone git@github.com:open-orchestra/open-orchestra-provision.git
+
+- To install the 1.2 open-orchestra parts using ``composer``:
+
+  In your ``open-orchestra-1.2`` directory:
+
+  .. code-block:: bash
+
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.2.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.2.x
+    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.2.x
+
+  Clone the 1.2 provisioning repository. Don’t forget to specify the last 1.2 version branch
+  with the ``--branch`` option.
+
+  .. code-block:: bash
+
+    $ git clone git@github.com:open-orchestra/open-orchestra-provision.git --branch=1.2
 
 - To install the 1.1 version open-orchestra parts using ``composer``:
 
@@ -117,23 +134,6 @@ Here is the directory tree with your tree projects that we recommand:
 
     $ git clone git@github.com:open-orchestra/open-orchestra-provision.git --branch=1.1
 
-- To install the 1.0 version open-orchestra parts using ``composer``:
-
-  In your ``open-orchestra-1.0`` directory:
-
-  .. code-block:: bash
-
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra ./open-orchestra -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-front-demo ./open-orchestra-front-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
-    $ [path-to-composer]/composer.phar create-project open-orchestra/open-orchestra-media-demo ./open-orchestra-media-demo -s dev --ignore-platform-reqs --no-scripts --keep-vcs 1.0.x
-
-  Clone the 1.0 provisioning repository. Don’t forget to specify the last 1.0 version branch
-  with the ``--branch`` option.
-
-  .. code-block:: bash
-
-    $ git clone git@github.com:open-orchestra/open-orchestra-provision.git --branch=1.0
-
 Override the dns redirection
 ----------------------------
 
@@ -145,13 +145,13 @@ In the ``/etc/hosts`` file of your computer add the following lines:
     192.168.33.10   demo.openorchestra.1-1.dev
     192.168.33.10   media.openorchestra.1-1.dev
 
-    192.168.33.11   admin.openorchestra.1-0.dev
-    192.168.33.11   demo.openorchestra.1-0.dev
-    192.168.33.11   media.openorchestra.1-0.dev
-
     192.168.33.12   admin.openorchestra.1-2.dev
     192.168.33.12   demo.openorchestra.1-2.dev
     192.168.33.12   media.openorchestra.1-2.dev
+
+    192.168.33.13   admin.openorchestra.2-0.dev
+    192.168.33.13   demo.openorchestra.2-0.dev
+    192.168.33.13   media.openorchestra.2-0.dev
 
 You should follow the same steps to install each versions :
 
@@ -203,19 +203,12 @@ Then go in the Back Office project directory inside the box:
 
     $ cd /var/www/openorchestra
 
-If you are dealing with version 1.1 or superior, launch the grunt command to generate all assets:
+Launch the grunt command to generate all assets:
 
 .. code-block:: bash
 
     $ ./bin/grunt
 
-If you are dealing with the 1.0 version, the process differs, you have to install manually the dependencies
-then when it's ok, run grunt from the node_modules folder:
-
-.. code-block:: bash
-
-    $ npm install
-    $ ./node_modules/.bin/grunt
 
 
 Load the fixtures
@@ -230,6 +223,14 @@ In the symfony project directory ``/var/www/openorchestra`` you can load the fix
 Result
 ------
 
+2.0 version
+~~~~~~~~~~~
+
+You can log on http://admin.openorchestra.2-0.dev/app_dev.php/login with username=admin and
+password=admin for the CMS and see the result on http://demo.openorchestra.2-0.dev/app_dev.php.
+
+All the images will be visible on the http://media.openorchestra.2-0.dev/app_dev.php url.
+
 1.2 version
 ~~~~~~~~~~~
 
@@ -242,17 +243,9 @@ All the images will be visible on the http://media.openorchestra.1-2.dev/app_dev
 ~~~~~~~~~~~
 
 You can log on http://admin.openorchestra.1-1.dev/app_dev.php/login with username=admin and
-password=admin for the CMS and see the result on http://demo.openorchestra.1-1.dev/app_dev.php.
+password=admin and see the result on http://demo.openorchestra.1-1.dev/app_dev.php.
 
 All the images will be visible on the http://media.openorchestra.1-1.dev/app_dev.php url.
-
-1.0 version
-~~~~~~~~~~~
-
-You can log on http://admin.openorchestra.1-0.dev/app_dev.php/login with username=admin and
-password=admin for the CMS and see the result on http://demo.openorchestra.1-0.dev/app_dev.php.
-
-All the images will be visible on the http://media.openorchestra.1-0.dev/app_dev.php url.
 
 .. _`Download Composer`: https://getcomposer.org/download/
 .. _`Ansible installation documentation`: http://docs.ansible.com/ansible/intro_installation.html
