@@ -113,6 +113,6 @@ In the ``/etc/hosts`` file of your computer add the following lines:
 
     .. code-block:: text
 
-      [IP]   admin.openorchestra.dev
-      [IP]   demo.openorchestra.dev
-      [IP]   media.openorchestra.dev
+      [IP]   admin.openorchestra.2-0.dev
+      [IP]   demo.openorchestra.2-0.dev
+      [IP]   media.openorchestra.2-0.dev
