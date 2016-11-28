@@ -7,6 +7,7 @@ Versions 1.x.x
 .. toctree::
    :maxdepth: 1
 
+   changelog/CHANGELOG-1.2.0
    changelog/CHANGELOG-1.1.0-to-1.2.0-beta
 
 1.1.x
