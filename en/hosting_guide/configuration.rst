@@ -390,7 +390,7 @@ Cron jobs typically automate system maintenance.
 Cron jobs on Open Orchestra
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Open Orchestra has 6 cron jobs created with the provisioning:
+Open Orchestra has 8 cron jobs created with the provisioning:
 
 Site maps
 ~~~~~~~~~
@@ -409,7 +409,7 @@ further information about `robots`_
 
 .. code-block:: bash
 
-    0 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:robots:generate 2>> /tmp/cron.error.message
+    15 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:robots:generate 2>> /tmp/cron.error.message
 
 Error pages
 ~~~~~~~~~~~
@@ -420,7 +420,7 @@ for more information about the 404 and 503 special pages see the documentation `
 
 .. code-block:: bash
 
-    0 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:errorpages:generate 2>> /tmp/cron.error.message
+    30 2 * * * php /var/www/front-open-orchestra/current/app/console -e=prod orchestra:errorpages:generate 2>> /tmp/cron.error.message
 
 Nodes auto publish cron
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -429,7 +429,7 @@ This cron publish nodes based on contributed publishing dates and status.
 
 .. code-block:: bash
 
-    0 2 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:publish:node 2>> /tmp/cron.error.message
+    0 3 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:publish:node 2>> /tmp/cron.error.message
 
 Nodes auto unpublish cron
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -438,7 +438,25 @@ This cron unpublish nodes based on contributed unpublishing dates.
 
 .. code-block:: bash
 
-    30 2 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:unpublish:node 2>> /tmp/cron.error.message
+    30 3 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:unpublish:node 2>> /tmp/cron.error.message
+
+Contents auto publish cron
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This cron publish contents based on contributed publishing dates and status.
+
+.. code-block:: bash
+
+    0 4 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:publish:content 2>> /tmp/cron.error.message
+
+Contents auto unpublish cron
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This cron unpublish contents based on contributed unpublishing dates.
+
+.. code-block:: bash
+
+    30 4 * * * php /var/www/open-orchestra/current/app/console -e=prod orchestra:unpublish:content 2>> /tmp/cron.error.message
 
 Error cron
 ~~~~~~~~~~
