@@ -65,7 +65,7 @@ Back Office:
 
   .. code-block:: bash
 
-    $ ./bin/grunt  #install assets
+    $ ./bin/node ./node_modules/grunt-cli/bin/grunt  #install assets
     $ app/console orchestra:mongo:fixtures:load --env=prod --type=all #load fixtures
     $ exit
 
