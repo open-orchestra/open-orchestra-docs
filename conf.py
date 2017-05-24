@@ -309,6 +309,3 @@ config_block = {
     'rst': 'reStructuredText',
     'terminal': 'Terminal',
 }
-
-# use PHP as the primary domain
-primary_domain = 'php'
