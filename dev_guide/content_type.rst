@@ -29,17 +29,18 @@ contenu.
     :align: center
 
 OpenOrchestra vient avec un certain nombre de types de champs pré-définis :
-- Choix (champ select avec liste des options à renseigner)
-- Choix d'un contenu (champ select avec une liste filtrée de contenus)
-- Date (champ date avec calendrier ou trois champs texte numériques ...)
-- Adresse email (champ texte avec vérification du formatage email)
-- Champ caché
-- Entier (champ texte numérique)
-- Monnaie (champ texte numérique avec 2 décimales)
-- Ligne de texte (champ de type texte)
-- Zone de texte (champ de type textarea)
-- Texte riche (tinyMce)
-- Média (champ permettant de sélectionner un élément de la médiathèque)
+
+    - Choix (champ select avec liste des options à renseigner)
+    - Choix d'un contenu (champ select avec une liste filtrée de contenus)
+    - Date (champ date avec calendrier ou trois champs texte numériques ...)
+    - Adresse email (champ texte avec vérification du formatage email)
+    - Champ caché
+    - Entier (champ texte numérique)
+    - Monnaie (champ texte numérique avec 2 décimales)
+    - Ligne de texte (champ de type texte)
+    - Zone de texte (champ de type textarea)
+    - Texte riche (tinyMce)
+    - Média (champ permettant de sélectionner un élément de la médiathèque)
 
 L'une des tâches récurrentes pour l'intégrateur sera d'ajouter à cette liste de
 nouveaux types de champ en fonction des spécificités de son projet.
@@ -102,31 +103,37 @@ On remarque dans l'exemple la définition d'une nouvelle option "value" contribu
 d'un TextType, ayant pour valeur par défault "online" et qui sera passer à l'OptionResolver
 de notre checkbox. OpenOrchestra vient avec un certain nombre d'options pré-définies :
 
-- max_length
-- required
-- grouping
-- rounding_mode
-- multiple
-- expanded
-- choices
-- currency
-- precision
-- format
-- widget
-- input
-- content_search (pour ``OpenOrchestra\Backoffice\Form\Type\Component\ContentChoiceType``)
+    - max_length
+    - required
+    - grouping
+    - rounding_mode
+    - multiple
+    - expanded
+    - choices
+    - currency
+    - precision
+    - format
+    - widget
+    - input
+    - content_search (pour ``OpenOrchestra\Backoffice\Form\Type\Component\ContentChoiceType``)
 
 Tableau de consultation
 -----------------------
 
 Lors de la visualisation de ces contenus sous formes de tableau, il est nécessaire de mettre en
 place la brique permettant de transformer les différentes propriétés du contenu sous forme
-de chaîne de caractères. Cela se fait par la mise en place d'une stratégie de transformation de
+de chaîne de caractères.
+
+Cela se fait par la mise en place d'une stratégie de transformation de
 la propriété implémentant l'interface
 ``OpenOrchestra\Backoffice\ValueTransformer\ValueTransformerInterface`` et gérée par
-``OpenOrchestra\Backoffice\ValueTransformer\ValueTransformerManager``. L'inscription se fait
+``OpenOrchestra\Backoffice\ValueTransformer\ValueTransformerManager``.
+
+L'inscription se fait
 automatiquement lors de la passe de compilation en définissant la stratégie comme un service taggué
-``open_orchestra_backoffice.value_transformer.strategy``. Cette représentation de la propriété sous
+``open_orchestra_backoffice.value_transformer.strategy``.
+
+Cette représentation de la propriété sous
 forme de chaîne est générée à la création ou à la modification du contenu et pas à la volée lors
 de sa consultation.
 
@@ -237,7 +244,7 @@ La première étape est de créer la classe js permettant de générer l'afficha
     export default (new OnlineCheckboxForm);
 
 Ensuite il faut enregistrer cette classe auprès du manager responsable de son
-exploitation (pour plus de détail, voir la partie front js).
+exploitation (pour plus de détail, voir la partie `client js <application_js.html>`_).
 
 .. code-block:: js
 
@@ -295,7 +302,7 @@ Enfin, les données du moteur de recherche vont être, à la soumission,
 envoyées à l'API pour retourner les contenus correspondants. L'API va
 donc créer la requête permettant de filtrer les contenus. Cela se fait
 au niveau de la requête de repository
-findForPaginateFilterByContentTypeSiteAndLanguage de votre ContentRepository.
+``findForPaginateFilterByContentTypeSiteAndLanguage de votre ContentRepository``.
 
 .. note::
 
