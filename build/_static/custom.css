@@ -1,9 +1,13 @@
+code, .rst-content tt, .rst-content code {
+    font-size: 90%;
+}
+
 .highlight-bash, .highlight-terminal {
     border: solid #555 !important;
     border-width: 30px 3px 4px 4px  !important;
     border-radius: 3px 3px 0 0  !important;
     position: relative !important;
-    overflow-x: initial !important;
+    overflow-x: auto !important;
 }
 
 .highlight-bash .highlighttable, .highlight-terminal .highlighttable {
@@ -21,6 +25,7 @@
     position: absolute;
     top: -1.25em;
     width: .5em;
+
 }
 
 .highlighttable {
