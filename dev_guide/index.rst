@@ -6,4 +6,5 @@ Guide développeur
 
     install
     architecture_apps
+    api
     content_type
