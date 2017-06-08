@@ -70,18 +70,14 @@ code, .rst-content tt, .rst-content code {
 .highlight-yaml .highlight *,
 .highlight-text .highlight *,
 .highlight-php .highlight *,
-.highlight-javascript .highlight *
+.highlight-javascript .highlight *,
+.highlight-html .highlight *
 {
     border: 0;
     color: #fff;
 }
 
-.highlight-bash pre,
-.highlight-yaml pre,
-.highlight-terminal pre,
-.highlight-text pre,
-.highlight-php pre,
-.highlight-javascript pre
+.highlight>pre
 {
     line-height: 2 !important;
 }

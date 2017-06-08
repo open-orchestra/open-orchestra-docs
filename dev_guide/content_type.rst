@@ -207,7 +207,7 @@ le paramètre ``open_orchestra_backoffice.field_types.online_checkbox.search``
 sert à gérer entre autres l'affichage dans le moteur de filtres.
 La première étape est de créer la classe js permettant de générer l'affichage.
 
-.. code-block:: js
+.. code-block:: javascript
 
     // src/AcmeBundle/Ressources/public/ecmascript/Acme/Service/SearchFormGroup/OnlineCheckboxForm.js
     import TemplateManager         from '../../../../OpenOrchestra/Service/TemplateManager'
@@ -246,7 +246,7 @@ La première étape est de créer la classe js permettant de générer l'afficha
 Ensuite il faut enregistrer cette classe auprès du manager responsable de son
 exploitation (pour plus de détail, voir la partie `client js <application_js.html>`_).
 
-.. code-block:: js
+.. code-block:: javascript
 
     // src/AcmeBundle/Ressources/public/ecmascript/Acme/Application/AcmeSubApplication.js
     import SearchFormGroupManager  from '../../../../OpenOrchestra/Service/SearchFormGroup/Manager'
