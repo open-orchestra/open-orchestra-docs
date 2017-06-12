@@ -9,3 +9,4 @@ Guide développeur
     api
     application_js
     content_type
+    block
