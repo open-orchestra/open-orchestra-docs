@@ -11,7 +11,7 @@ Ces blocs nécessitent, en règle générale, un paramétrage se faisant à l'ai
 d'un formulaire. Ex : un bloc remontant une liste de contenus et ayant pour
 paramètres le type des contenus remontés, leur nombre... On distingue dans
 OpenOrchestra deux types de blocs, les blocs partagés listés dans le menu
-Configuration/Bloc Partagé et qui peuvent être utilisés dans plusieurs pages et
+Configuration/Bloc Partagé qui peuvent être utilisés dans plusieurs pages et
 les blocs non-partagés dont le paramétrage se fait directement au niveau de
 la page qui l'embarque et sont donc spécifiques à cette page.
 Dans cette documentation, nous allons donc voir comment créer un nouveau type
@@ -21,6 +21,7 @@ ses éléments de configuration et sa gestion ESI.
 Stratégie d'affichage frontoffice
 ---------------------------------
 
+Ce paragraphe nécessite la connaissance du design pattern strategy.
 Tout d'abord, une stratégie d'affichage pour le frontoffice est créée. Elle doit
 étendre
 ``OpenOrchestra\DisplayBundle\DisplayBlock\Strategies\AbstractDisplayBlockStrategy``.
@@ -171,7 +172,7 @@ d'une stratégie devant étendre
             $builder->add('name', 'text', array(
                 'group_id' => 'data', //onglet d'affichage dans le formulaire du bloc
                 'sub_group_id' => 'content', //fieldset d'affichage dans le formulaire du bloc
-            ));
+            ));TinyMCEWysiwyg
         }
 
         /**
@@ -238,3 +239,112 @@ Ainsi que son rendu en front
 
 .. image:: ../images/block_front.png
     :align: center
+
+
+Stratégie de rendu backoffice
+-----------------------------
+
+Tout bloc backoffice bénéficie, lors de sa visualisation dans un contexte de node, d'un rendu par
+défaut réalisé par ``OpenOrchestra\Backoffice\DisplayBlock\Strategies\DefaultStrategy``.
+
+.. image:: ../images/block_back_default.png
+    :align: center
+
+Il peut être nécessaire de personnaliser ce rendu et pour ce faire nous allons créer sa stratégie
+de rendu back.
+
+.. code-block:: php
+
+    // src/Acme/Bundle/BackBundle/DisplayBlock/HelloStrategy.php
+
+    namespace Acme\Bundle\BackBundle\DisplayBlock;
+
+    use OpenOrchestra\DisplayBundle\DisplayBlock\Strategies\HelloStrategy as BaseHelloStrategy;
+    use OpenOrchestra\Backoffice\DisplayBlock\Strategies\AbstractDisplayBlockStrategy;
+    use OpenOrchestra\ModelInterface\Model\ReadBlockInterface;
+
+    use Symfony\Component\HttpFoundation\Response;
+
+    /**
+     * Class HelloStrategy
+     */
+    class HelloStrategy extends AbstractDisplayBlockStrategy
+    {
+        /**
+         * Check if the strategy support this block
+         *
+         * @param ReadBlockInterface $block
+         *
+         * @return boolean
+         */
+        public function support(ReadBlockInterface $block)
+        {
+            return BaseHelloStrategy::NAME == $block->getComponent();
+        }
+
+        /**
+         * Perform the show action for a block
+         *
+         * @param ReadBlockInterface $block
+         *
+         * @return Response
+         */
+        public function show(ReadBlockInterface $block)
+        {
+            return $this->render(
+                'AcmeBackBundle:Block/Hello:show.html.twig',
+                array('htmlContent' => $this->toString($block))
+            );
+        }
+
+        /**
+         * @param ReadBlockInterface $block
+         *
+         * @return string
+         */
+        public function toString(ReadBlockInterface $block)
+        {
+            return strip_tags($block->getAttribute('name'));
+        }
+
+
+        /**
+         * Perform the show action for a block
+         *
+         * @param ReadBlockInterface $block
+         *
+         * @return Response
+         */
+        public function show(ReadBlockInterface $block)
+        {
+            return $this->render(
+                'AcmeBackBundle:Block/Hello:show.html.twig',
+                array('name' => $block->getAttribute('name'))
+            );
+        }
+
+        /**
+         * Get the name of the strategy
+         *
+         * @return string
+         */
+        public function getName()
+        {
+            return 'Hello';
+        }
+    }
+
+.. code-block:: twig
+
+    {# src/Acme/Bundle/BackBundle/Resources/views/Block/Hello/show.html.twig #}
+
+    <p>
+        Hello {{ htmlContent|raw() }}
+    </p>
+
+On obtient alors ce rendu :
+
+.. image:: ../images/block_back.png
+    :align: center
+
+
