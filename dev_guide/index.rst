@@ -10,3 +10,4 @@ Guide développeur
     application_js
     content_type
     block
+    advanced_block

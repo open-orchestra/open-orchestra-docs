@@ -1,4 +1,4 @@
-Block
+Blocs
 =====
 
 Présentation des concepts
@@ -342,9 +342,21 @@ de rendu back.
         Hello {{ htmlContent|raw() }}
     </p>
 
+Cette stratégie devra être enregistrée au prêt de
+``OpenOrchestra\Backoffice\DisplayBlock\DisplayBlockManager`` grâce à la configuration YAML
+suivante en la définissant comme un service taggué ``open_orchestra_backoffice.display_block.strategy``:
+
+.. code-block:: yaml
+
+    # src/Acme/Bundle/FrontBundle/Resources/config/services.yml
+
+    services:
+        acme_back.display.tiny_mce_wysiwyg:
+            class: Acme\Bundle\BackBundle\DisplayBlock\HelloStrategy
+            tags:
+                - { name: open_orchestra_backoffice.display_block.strategy }
+
 On obtient alors ce rendu :
 
 .. image:: ../images/block_back.png
     :align: center
-
-
