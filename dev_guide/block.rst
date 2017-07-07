@@ -348,7 +348,7 @@ suivante en la définissant comme un service taggué ``open_orchestra_backoffice
 
 .. code-block:: yaml
 
-    # src/Acme/Bundle/FrontBundle/Resources/config/services.yml
+    # src/Acme/Bundle/BackBundle/Resources/config/services.yml
 
     services:
         acme_back.display.tiny_mce_wysiwyg:
