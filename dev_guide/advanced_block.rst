@@ -1,5 +1,5 @@
-Blocs avancés
-=============
+Bloc, utilisation avancée
+=========================
 
 Présentation des concepts
 -------------------------
