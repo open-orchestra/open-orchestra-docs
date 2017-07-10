@@ -1,5 +1,6 @@
 API
 ===
+
 Open Orchestra fournit une API REST pour accéder aux différentes entités du CMS (pages, contenus, sites, etc).
 Afin de découpler le stockage des données et leur exposition dans l'API, Open Orchestra implémente
 le `design pattern facade <https://en.wikipedia.org/wiki/Facade_pattern>`_.

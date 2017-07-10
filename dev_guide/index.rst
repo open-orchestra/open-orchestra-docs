@@ -8,4 +8,5 @@ Guide développeur
     architecture_apps
     api
     application_js
+    node
     content_type
